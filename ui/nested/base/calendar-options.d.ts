@@ -1,0 +1,35 @@
+import { NestedOption } from '../../../core/nested-option';
+export declare abstract class DxoCalendarOptions extends NestedOption {
+    accessKey: string;
+    activeStateEnabled: boolean;
+    cellTemplate: any;
+    dateSerializationFormat: string;
+    disabled: boolean;
+    disabledDates: Function | Array<Date>;
+    elementAttr: any;
+    firstDayOfWeek: number | string;
+    focusStateEnabled: boolean;
+    height: number | Function | string;
+    hint: string;
+    hoverStateEnabled: boolean;
+    isValid: boolean;
+    max: Date | number | string;
+    maxZoomLevel: string;
+    min: Date | number | string;
+    minZoomLevel: string;
+    name: string;
+    onDisposing: Function;
+    onInitialized: Function;
+    onOptionChanged: Function;
+    onValueChanged: Function;
+    readOnly: boolean;
+    rtlEnabled: boolean;
+    showTodayButton: boolean;
+    tabIndex: number;
+    validationError: any;
+    validationMessageMode: string;
+    value: Date | number | string;
+    visible: boolean;
+    width: number | Function | string;
+    zoomLevel: string;
+}
