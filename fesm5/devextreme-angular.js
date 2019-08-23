@@ -17,6 +17,7 @@ import DxAutocomplete from 'devextreme/ui/autocomplete';
 import DxValidator from 'devextreme/ui/validator';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import DxBarGauge from 'devextreme/viz/bar_gauge';
+import DevExpress from 'devextreme/bundles/dx.all';
 import DxBox from 'devextreme/ui/box';
 import DxBullet from 'devextreme/viz/bullet';
 import DxButtonGroup from 'devextreme/ui/button_group';
@@ -64583,8 +64584,8 @@ var DxPivotGridFieldChooserComponent = /** @class */ (function (_super) {
     ], DxPivotGridFieldChooserComponent.prototype, "applyChangesMode", null);
     __decorate([
         Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
+        __metadata("design:type", DevExpress.data.PivotGridDataSource),
+        __metadata("design:paramtypes", [DevExpress.data.PivotGridDataSource])
     ], DxPivotGridFieldChooserComponent.prototype, "dataSource", null);
     __decorate([
         Input(),

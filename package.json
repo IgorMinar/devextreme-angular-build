@@ -69,6 +69,7 @@
     "yargs": "^6.0.0",
     "zone.js": "^0.8.25"
   },
+  "main": "bundles/devextreme-angular.umd.js",
   "keywords": [
     "angular",
     "devextreme",
