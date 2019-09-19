@@ -1,3 +1,15 @@
+/*!
+ * devextreme-angular
+ * Version: 19.1.6
+ * Build date: Thu Sep 19 2019
+ *
+ * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license. See the LICENSE file in the root of the project for details.
+ *
+ * https://github.com/DevExpress/devextreme-angular
+ */
 import { TransferState } from '@angular/platform-browser';
 import { ElementRef, NgZone, OnDestroy, EventEmitter, OnChanges, DoCheck, SimpleChanges, QueryList } from '@angular/core';
 import DevExpress from 'devextreme/bundles/dx.all';
@@ -111,6 +123,9 @@ export declare class DxDropDownButtonComponent extends DxComponent implements On
      * Contains the selected item's key and allows you to specify the initially selected item. Applies when useSelectMode is true.
      */
     selectedItemKey: number | string;
+    /**
+     * Specifies whether the arrow icon should be displayed.
+     */
     showArrowIcon: boolean;
     /**
      * Specifies whether to split the button in two: one executes an action, the other opens and closes the drop-down menu.

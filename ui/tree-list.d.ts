@@ -1,3 +1,15 @@
+/*!
+ * devextreme-angular
+ * Version: 19.1.6
+ * Build date: Thu Sep 19 2019
+ *
+ * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license. See the LICENSE file in the root of the project for details.
+ *
+ * https://github.com/DevExpress/devextreme-angular
+ */
 import { TransferState } from '@angular/platform-browser';
 import { ElementRef, NgZone, OnDestroy, EventEmitter, OnChanges, DoCheck, SimpleChanges, QueryList } from '@angular/core';
 import DevExpress from 'devextreme/bundles/dx.all';
@@ -43,9 +55,6 @@ export declare class DxTreeListComponent extends DxComponent implements OnDestro
      * Enables a hint that appears when a user hovers the mouse pointer over a cell with truncated content.
      */
     cellHintEnabled: boolean;
-    /**
-     * Specifies whether columns should adjust their widths to the content.
-     */
     columnAutoWidth: boolean;
     /**
      * Configures the column chooser.
@@ -105,7 +114,7 @@ export declare class DxTreeListComponent extends DxComponent implements OnDestro
      */
     dataStructure: string;
     /**
-     * Specifies date-time values' serialization format. Use it only if you do not specify the dataSource at design time.
+     * Specifies the format in which date-time values should be sent to the server. Use it only if you do not specify the dataSource at design time.
      */
     dateSerializationFormat: string;
     /**
@@ -260,7 +269,7 @@ export declare class DxTreeListComponent extends DxComponent implements OnDestro
      */
     height: number | Function | string;
     /**
-     * Specifies whether to highlight rows and cells whose data changed.
+     * Specifies whether to highlight rows and cells with edited data. repaintChangesOnly should be true.
      */
     highlightChanges: boolean;
     /**
@@ -490,11 +499,11 @@ export declare class DxTreeListComponent extends DxComponent implements OnDestro
      */
     onEditingStart: EventEmitter<any>;
     /**
-     * A function that is executed after an editor is created.
+     * A function that is executed after an editor is created. Not executed for cells with an editCellTemplate.
      */
     onEditorPrepared: EventEmitter<any>;
     /**
-     * A function that is executed before a cell's editor is created. Not executed for cells with an editCellTemplate.
+     * A function used to customize or replace default editors. Not executed for cells with an editCellTemplate.
      */
     onEditorPreparing: EventEmitter<any>;
     /**

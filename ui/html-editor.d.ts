@@ -1,3 +1,15 @@
+/*!
+ * devextreme-angular
+ * Version: 19.1.6
+ * Build date: Thu Sep 19 2019
+ *
+ * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license. See the LICENSE file in the root of the project for details.
+ *
+ * https://github.com/DevExpress/devextreme-angular
+ */
 import { TransferState } from '@angular/platform-browser';
 import { ElementRef, NgZone, OnDestroy, EventEmitter, OnInit, AfterViewInit, OnChanges, DoCheck, SimpleChanges, QueryList } from '@angular/core';
 import DevExpress from 'devextreme/bundles/dx.all';
@@ -11,7 +23,7 @@ import { WatcherHelper } from '../core/watcher-helper';
 import { IterableDifferHelper } from '../core/iterable-differ-helper';
 import { DxiMentionComponent } from './nested/mention-dxi';
 /**
- * [tags] ctp HtmlEditor is a WYSIWYG text editor build on top of Quill, designed to support HTML and Markdown output formats. #include common-ctp-note with { component: "HtmlEditor" }
+ * [tags] ctp HtmlEditor is a WYSIWYG editor that allows you to format textual and visual content and to output it in HTML or Markdown. HtmlEditor is built on top of and requires Quill. #include common-ctp-note with { component: "HtmlEditor" }
  */
 export declare class DxHtmlEditorComponent extends DxComponent implements OnDestroy, OnInit, AfterViewInit, ControlValueAccessor, OnChanges, DoCheck {
     private _watcherHelper;
