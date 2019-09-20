@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoPivotGridDataSource } from './base/pivot-grid-data-source';
-import { DxiFieldComponent } from './field-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var pivot_grid_data_source_1 = require("./base/pivot-grid-data-source");
+var field_dxi_1 = require("./field-dxi");
 var DxoDataSourceComponent = (function (_super) {
     __extends(DxoDataSourceComponent, _super);
     function DxoDataSourceComponent(parentOptionHost, optionHost) {
@@ -55,11 +57,11 @@ var DxoDataSourceComponent = (function (_super) {
         configurable: true
     });
     DxoDataSourceComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-data-source',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'fields',
                         'filter',
@@ -75,20 +77,20 @@ var DxoDataSourceComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoDataSourceComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoDataSourceComponent.propDecorators = {
-        "fieldsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiFieldComponent; }),] },],
+        "fieldsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return field_dxi_1.DxiFieldComponent; }),] },],
     };
     return DxoDataSourceComponent;
-}(DxoPivotGridDataSource));
-export { DxoDataSourceComponent };
+}(pivot_grid_data_source_1.DxoPivotGridDataSource));
+exports.DxoDataSourceComponent = DxoDataSourceComponent;
 var DxoDataSourceModule = (function () {
     function DxoDataSourceModule() {
     }
     DxoDataSourceModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoDataSourceComponent
                     ],
@@ -99,5 +101,5 @@ var DxoDataSourceModule = (function () {
     ];
     return DxoDataSourceModule;
 }());
-export { DxoDataSourceModule };
+exports.DxoDataSourceModule = DxoDataSourceModule;
 //# sourceMappingURL=data-source.js.map

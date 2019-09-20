@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoZoomAndPanComponent = (function (_super) {
     __extends(DxoZoomAndPanComponent, _super);
     function DxoZoomAndPanComponent(parentOptionHost, optionHost) {
@@ -109,35 +111,35 @@ var DxoZoomAndPanComponent = (function (_super) {
         configurable: true
     });
     DxoZoomAndPanComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-zoom-and-pan',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoZoomAndPanComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoZoomAndPanComponent.propDecorators = {
-        "allowMouseWheel": [{ type: Input },],
-        "allowTouchGestures": [{ type: Input },],
-        "argumentAxis": [{ type: Input },],
-        "dragBoxStyle": [{ type: Input },],
-        "dragToZoom": [{ type: Input },],
-        "panKey": [{ type: Input },],
-        "valueAxis": [{ type: Input },],
+        "allowMouseWheel": [{ type: core_1.Input },],
+        "allowTouchGestures": [{ type: core_1.Input },],
+        "argumentAxis": [{ type: core_1.Input },],
+        "dragBoxStyle": [{ type: core_1.Input },],
+        "dragToZoom": [{ type: core_1.Input },],
+        "panKey": [{ type: core_1.Input },],
+        "valueAxis": [{ type: core_1.Input },],
     };
     return DxoZoomAndPanComponent;
-}(NestedOption));
-export { DxoZoomAndPanComponent };
+}(nested_option_2.NestedOption));
+exports.DxoZoomAndPanComponent = DxoZoomAndPanComponent;
 var DxoZoomAndPanModule = (function () {
     function DxoZoomAndPanModule() {
     }
     DxoZoomAndPanModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoZoomAndPanComponent
                     ],
@@ -148,5 +150,5 @@ var DxoZoomAndPanModule = (function () {
     ];
     return DxoZoomAndPanModule;
 }());
-export { DxoZoomAndPanModule };
+exports.DxoZoomAndPanModule = DxoZoomAndPanModule;
 //# sourceMappingURL=zoom-and-pan.js.map

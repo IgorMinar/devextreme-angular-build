@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,12 +21,13 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, Output, EventEmitter, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
-import { DxiBreakComponent } from './break-dxi';
-import { DxiConstantLineComponent } from './constant-line-dxi';
-import { DxiStripComponent } from './strip-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var break_dxi_1 = require("./break-dxi");
+var constant_line_dxi_1 = require("./constant-line-dxi");
+var strip_dxi_1 = require("./strip-dxi");
 var DxoArgumentAxisComponent = (function (_super) {
     __extends(DxoArgumentAxisComponent, _super);
     function DxoArgumentAxisComponent(parentOptionHost, optionHost) {
@@ -575,82 +577,82 @@ var DxoArgumentAxisComponent = (function (_super) {
         configurable: true
     });
     DxoArgumentAxisComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-argument-axis',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoArgumentAxisComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoArgumentAxisComponent.propDecorators = {
-        "aggregationGroupWidth": [{ type: Input },],
-        "aggregationInterval": [{ type: Input },],
-        "allowDecimals": [{ type: Input },],
-        "argumentType": [{ type: Input },],
-        "axisDivisionFactor": [{ type: Input },],
-        "breaks": [{ type: Input },],
-        "breakStyle": [{ type: Input },],
-        "categories": [{ type: Input },],
-        "color": [{ type: Input },],
-        "constantLines": [{ type: Input },],
-        "constantLineStyle": [{ type: Input },],
-        "discreteAxisDivisionMode": [{ type: Input },],
-        "endOnTick": [{ type: Input },],
-        "grid": [{ type: Input },],
-        "holidays": [{ type: Input },],
-        "hoverMode": [{ type: Input },],
-        "inverted": [{ type: Input },],
-        "label": [{ type: Input },],
-        "logarithmBase": [{ type: Input },],
-        "max": [{ type: Input },],
-        "maxValueMargin": [{ type: Input },],
-        "min": [{ type: Input },],
-        "minorGrid": [{ type: Input },],
-        "minorTick": [{ type: Input },],
-        "minorTickCount": [{ type: Input },],
-        "minorTickInterval": [{ type: Input },],
-        "minValueMargin": [{ type: Input },],
-        "minVisualRangeLength": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "placeholderSize": [{ type: Input },],
-        "position": [{ type: Input },],
-        "singleWorkdays": [{ type: Input },],
-        "strips": [{ type: Input },],
-        "stripStyle": [{ type: Input },],
-        "tick": [{ type: Input },],
-        "tickInterval": [{ type: Input },],
-        "title": [{ type: Input },],
-        "type": [{ type: Input },],
-        "valueMarginsEnabled": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "visualRange": [{ type: Input },],
-        "visualRangeUpdateMode": [{ type: Input },],
-        "wholeRange": [{ type: Input },],
-        "width": [{ type: Input },],
-        "workdaysOnly": [{ type: Input },],
-        "workWeek": [{ type: Input },],
-        "firstPointOnStartAngle": [{ type: Input },],
-        "originValue": [{ type: Input },],
-        "period": [{ type: Input },],
-        "startAngle": [{ type: Input },],
-        "visualRangeChange": [{ type: Output },],
-        "breaksChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiBreakComponent; }),] },],
-        "constantLinesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiConstantLineComponent; }),] },],
-        "stripsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiStripComponent; }),] },],
+        "aggregationGroupWidth": [{ type: core_1.Input },],
+        "aggregationInterval": [{ type: core_1.Input },],
+        "allowDecimals": [{ type: core_1.Input },],
+        "argumentType": [{ type: core_1.Input },],
+        "axisDivisionFactor": [{ type: core_1.Input },],
+        "breaks": [{ type: core_1.Input },],
+        "breakStyle": [{ type: core_1.Input },],
+        "categories": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "constantLines": [{ type: core_1.Input },],
+        "constantLineStyle": [{ type: core_1.Input },],
+        "discreteAxisDivisionMode": [{ type: core_1.Input },],
+        "endOnTick": [{ type: core_1.Input },],
+        "grid": [{ type: core_1.Input },],
+        "holidays": [{ type: core_1.Input },],
+        "hoverMode": [{ type: core_1.Input },],
+        "inverted": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "logarithmBase": [{ type: core_1.Input },],
+        "max": [{ type: core_1.Input },],
+        "maxValueMargin": [{ type: core_1.Input },],
+        "min": [{ type: core_1.Input },],
+        "minorGrid": [{ type: core_1.Input },],
+        "minorTick": [{ type: core_1.Input },],
+        "minorTickCount": [{ type: core_1.Input },],
+        "minorTickInterval": [{ type: core_1.Input },],
+        "minValueMargin": [{ type: core_1.Input },],
+        "minVisualRangeLength": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "placeholderSize": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "singleWorkdays": [{ type: core_1.Input },],
+        "strips": [{ type: core_1.Input },],
+        "stripStyle": [{ type: core_1.Input },],
+        "tick": [{ type: core_1.Input },],
+        "tickInterval": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "valueMarginsEnabled": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "visualRange": [{ type: core_1.Input },],
+        "visualRangeUpdateMode": [{ type: core_1.Input },],
+        "wholeRange": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "workdaysOnly": [{ type: core_1.Input },],
+        "workWeek": [{ type: core_1.Input },],
+        "firstPointOnStartAngle": [{ type: core_1.Input },],
+        "originValue": [{ type: core_1.Input },],
+        "period": [{ type: core_1.Input },],
+        "startAngle": [{ type: core_1.Input },],
+        "visualRangeChange": [{ type: core_1.Output },],
+        "breaksChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return break_dxi_1.DxiBreakComponent; }),] },],
+        "constantLinesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return constant_line_dxi_1.DxiConstantLineComponent; }),] },],
+        "stripsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return strip_dxi_1.DxiStripComponent; }),] },],
     };
     return DxoArgumentAxisComponent;
-}(NestedOption));
-export { DxoArgumentAxisComponent };
+}(nested_option_2.NestedOption));
+exports.DxoArgumentAxisComponent = DxoArgumentAxisComponent;
 var DxoArgumentAxisModule = (function () {
     function DxoArgumentAxisModule() {
     }
     DxoArgumentAxisModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoArgumentAxisComponent
                     ],
@@ -661,5 +663,5 @@ var DxoArgumentAxisModule = (function () {
     ];
     return DxoArgumentAxisModule;
 }());
-export { DxoArgumentAxisModule };
+exports.DxoArgumentAxisModule = DxoArgumentAxisModule;
 //# sourceMappingURL=argument-axis.js.map

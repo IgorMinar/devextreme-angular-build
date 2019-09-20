@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiColComponent = (function (_super) {
     __extends(DxiColComponent, _super);
     function DxiColComponent(parentOptionHost, optionHost) {
@@ -79,32 +81,32 @@ var DxiColComponent = (function (_super) {
         configurable: true
     });
     DxiColComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-col',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiColComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiColComponent.propDecorators = {
-        "baseSize": [{ type: Input },],
-        "ratio": [{ type: Input },],
-        "screen": [{ type: Input },],
-        "shrink": [{ type: Input },],
+        "baseSize": [{ type: core_1.Input },],
+        "ratio": [{ type: core_1.Input },],
+        "screen": [{ type: core_1.Input },],
+        "shrink": [{ type: core_1.Input },],
     };
     return DxiColComponent;
-}(CollectionNestedOption));
-export { DxiColComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiColComponent = DxiColComponent;
 var DxiColModule = (function () {
     function DxiColModule() {
     }
     DxiColModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiColComponent
                     ],
@@ -115,5 +117,5 @@ var DxiColModule = (function () {
     ];
     return DxiColModule;
 }());
-export { DxiColModule };
+exports.DxiColModule = DxiColModule;
 //# sourceMappingURL=col-dxi.js.map

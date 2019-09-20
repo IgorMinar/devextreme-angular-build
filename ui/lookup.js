@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,34 +21,35 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxLookup from 'devextreme/ui/lookup';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoHideModule } from './nested/hide';
-import { DxoShowModule } from './nested/show';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxoPositionModule } from './nested/position';
-import { DxoAtModule } from './nested/at';
-import { DxoBoundaryOffsetModule } from './nested/boundary-offset';
-import { DxoCollisionModule } from './nested/collision';
-import { DxoMyModule } from './nested/my';
-import { DxoOffsetModule } from './nested/offset';
-import { DxiItemComponent } from './nested/item-dxi';
+var lookup_1 = require("devextreme/ui/lookup");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var animation_1 = require("./nested/animation");
+var hide_1 = require("./nested/hide");
+var show_1 = require("./nested/show");
+var item_dxi_1 = require("./nested/item-dxi");
+var position_1 = require("./nested/position");
+var at_1 = require("./nested/at");
+var boundary_offset_1 = require("./nested/boundary-offset");
+var collision_1 = require("./nested/collision");
+var my_1 = require("./nested/my");
+var offset_1 = require("./nested/offset");
+var item_dxi_2 = require("./nested/item-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxLookupComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxLookupComponent; }),
     multi: true
 };
 /**
@@ -1044,7 +1046,7 @@ var DxLookupComponent = (function (_super) {
         configurable: true
     });
     DxLookupComponent.prototype._createInstance = function (element, options) {
-        return new DxLookup(element, options);
+        return new lookup_1.default(element, options);
     };
     DxLookupComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -1105,228 +1107,228 @@ var DxLookupComponent = (function (_super) {
         }
     };
     DxLookupComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-lookup',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxLookupComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxLookupComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "animation": [{ type: Input },],
-        "applyButtonText": [{ type: Input },],
-        "applyValueMode": [{ type: Input },],
-        "cancelButtonText": [{ type: Input },],
-        "cleanSearchOnOpening": [{ type: Input },],
-        "clearButtonText": [{ type: Input },],
-        "closeOnOutsideClick": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "displayValue": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "fieldTemplate": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "fullScreen": [{ type: Input },],
-        "grouped": [{ type: Input },],
-        "groupTemplate": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "inputAttr": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "minSearchLength": [{ type: Input },],
-        "name": [{ type: Input },],
-        "nextButtonText": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "opened": [{ type: Input },],
-        "pageLoadingText": [{ type: Input },],
-        "pageLoadMode": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "popupHeight": [{ type: Input },],
-        "popupWidth": [{ type: Input },],
-        "position": [{ type: Input },],
-        "pulledDownText": [{ type: Input },],
-        "pullingDownText": [{ type: Input },],
-        "pullRefreshEnabled": [{ type: Input },],
-        "refreshingText": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "searchEnabled": [{ type: Input },],
-        "searchExpr": [{ type: Input },],
-        "searchMode": [{ type: Input },],
-        "searchPlaceholder": [{ type: Input },],
-        "searchTimeout": [{ type: Input },],
-        "selectedItem": [{ type: Input },],
-        "shading": [{ type: Input },],
-        "showCancelButton": [{ type: Input },],
-        "showClearButton": [{ type: Input },],
-        "showDataBeforeSearch": [{ type: Input },],
-        "showPopupTitle": [{ type: Input },],
-        "stylingMode": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "text": [{ type: Input },],
-        "title": [{ type: Input },],
-        "titleTemplate": [{ type: Input },],
-        "useNativeScrolling": [{ type: Input },],
-        "usePopover": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueChangeEvent": [{ type: Input },],
-        "valueExpr": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onClosed": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onOpened": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPageLoading": [{ type: Output },],
-        "onPullRefresh": [{ type: Output },],
-        "onScroll": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "onTitleRendered": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "applyButtonTextChange": [{ type: Output },],
-        "applyValueModeChange": [{ type: Output },],
-        "cancelButtonTextChange": [{ type: Output },],
-        "cleanSearchOnOpeningChange": [{ type: Output },],
-        "clearButtonTextChange": [{ type: Output },],
-        "closeOnOutsideClickChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "displayExprChange": [{ type: Output },],
-        "displayValueChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "fieldTemplateChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "fullScreenChange": [{ type: Output },],
-        "groupedChange": [{ type: Output },],
-        "groupTemplateChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "inputAttrChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "minSearchLengthChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "nextButtonTextChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "openedChange": [{ type: Output },],
-        "pageLoadingTextChange": [{ type: Output },],
-        "pageLoadModeChange": [{ type: Output },],
-        "placeholderChange": [{ type: Output },],
-        "popupHeightChange": [{ type: Output },],
-        "popupWidthChange": [{ type: Output },],
-        "positionChange": [{ type: Output },],
-        "pulledDownTextChange": [{ type: Output },],
-        "pullingDownTextChange": [{ type: Output },],
-        "pullRefreshEnabledChange": [{ type: Output },],
-        "refreshingTextChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "searchEnabledChange": [{ type: Output },],
-        "searchExprChange": [{ type: Output },],
-        "searchModeChange": [{ type: Output },],
-        "searchPlaceholderChange": [{ type: Output },],
-        "searchTimeoutChange": [{ type: Output },],
-        "selectedItemChange": [{ type: Output },],
-        "shadingChange": [{ type: Output },],
-        "showCancelButtonChange": [{ type: Output },],
-        "showClearButtonChange": [{ type: Output },],
-        "showDataBeforeSearchChange": [{ type: Output },],
-        "showPopupTitleChange": [{ type: Output },],
-        "stylingModeChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "titleTemplateChange": [{ type: Output },],
-        "useNativeScrollingChange": [{ type: Output },],
-        "usePopoverChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueChangeEventChange": [{ type: Output },],
-        "valueExprChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "animation": [{ type: core_1.Input },],
+        "applyButtonText": [{ type: core_1.Input },],
+        "applyValueMode": [{ type: core_1.Input },],
+        "cancelButtonText": [{ type: core_1.Input },],
+        "cleanSearchOnOpening": [{ type: core_1.Input },],
+        "clearButtonText": [{ type: core_1.Input },],
+        "closeOnOutsideClick": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "displayValue": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "fieldTemplate": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "fullScreen": [{ type: core_1.Input },],
+        "grouped": [{ type: core_1.Input },],
+        "groupTemplate": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "inputAttr": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "minSearchLength": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "nextButtonText": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "opened": [{ type: core_1.Input },],
+        "pageLoadingText": [{ type: core_1.Input },],
+        "pageLoadMode": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "popupHeight": [{ type: core_1.Input },],
+        "popupWidth": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "pulledDownText": [{ type: core_1.Input },],
+        "pullingDownText": [{ type: core_1.Input },],
+        "pullRefreshEnabled": [{ type: core_1.Input },],
+        "refreshingText": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "searchEnabled": [{ type: core_1.Input },],
+        "searchExpr": [{ type: core_1.Input },],
+        "searchMode": [{ type: core_1.Input },],
+        "searchPlaceholder": [{ type: core_1.Input },],
+        "searchTimeout": [{ type: core_1.Input },],
+        "selectedItem": [{ type: core_1.Input },],
+        "shading": [{ type: core_1.Input },],
+        "showCancelButton": [{ type: core_1.Input },],
+        "showClearButton": [{ type: core_1.Input },],
+        "showDataBeforeSearch": [{ type: core_1.Input },],
+        "showPopupTitle": [{ type: core_1.Input },],
+        "stylingMode": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "titleTemplate": [{ type: core_1.Input },],
+        "useNativeScrolling": [{ type: core_1.Input },],
+        "usePopover": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueChangeEvent": [{ type: core_1.Input },],
+        "valueExpr": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onClosed": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onOpened": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPageLoading": [{ type: core_1.Output },],
+        "onPullRefresh": [{ type: core_1.Output },],
+        "onScroll": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "onTitleRendered": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "applyButtonTextChange": [{ type: core_1.Output },],
+        "applyValueModeChange": [{ type: core_1.Output },],
+        "cancelButtonTextChange": [{ type: core_1.Output },],
+        "cleanSearchOnOpeningChange": [{ type: core_1.Output },],
+        "clearButtonTextChange": [{ type: core_1.Output },],
+        "closeOnOutsideClickChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "displayExprChange": [{ type: core_1.Output },],
+        "displayValueChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "fieldTemplateChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "fullScreenChange": [{ type: core_1.Output },],
+        "groupedChange": [{ type: core_1.Output },],
+        "groupTemplateChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "inputAttrChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "minSearchLengthChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "nextButtonTextChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "openedChange": [{ type: core_1.Output },],
+        "pageLoadingTextChange": [{ type: core_1.Output },],
+        "pageLoadModeChange": [{ type: core_1.Output },],
+        "placeholderChange": [{ type: core_1.Output },],
+        "popupHeightChange": [{ type: core_1.Output },],
+        "popupWidthChange": [{ type: core_1.Output },],
+        "positionChange": [{ type: core_1.Output },],
+        "pulledDownTextChange": [{ type: core_1.Output },],
+        "pullingDownTextChange": [{ type: core_1.Output },],
+        "pullRefreshEnabledChange": [{ type: core_1.Output },],
+        "refreshingTextChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "searchEnabledChange": [{ type: core_1.Output },],
+        "searchExprChange": [{ type: core_1.Output },],
+        "searchModeChange": [{ type: core_1.Output },],
+        "searchPlaceholderChange": [{ type: core_1.Output },],
+        "searchTimeoutChange": [{ type: core_1.Output },],
+        "selectedItemChange": [{ type: core_1.Output },],
+        "shadingChange": [{ type: core_1.Output },],
+        "showCancelButtonChange": [{ type: core_1.Output },],
+        "showClearButtonChange": [{ type: core_1.Output },],
+        "showDataBeforeSearchChange": [{ type: core_1.Output },],
+        "showPopupTitleChange": [{ type: core_1.Output },],
+        "stylingModeChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "titleTemplateChange": [{ type: core_1.Output },],
+        "useNativeScrollingChange": [{ type: core_1.Output },],
+        "usePopoverChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueChangeEventChange": [{ type: core_1.Output },],
+        "valueExprChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxLookupComponent;
-}(DxComponent));
-export { DxLookupComponent };
+}(component_1.DxComponent));
+exports.DxLookupComponent = DxLookupComponent;
 var DxLookupModule = (function () {
     function DxLookupModule() {
     }
     DxLookupModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxiItemModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        item_dxi_1.DxiItemModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxLookupComponent
                     ],
                     exports: [
                         DxLookupComponent,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxiItemModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxTemplateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        item_dxi_1.DxiItemModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxLookupModule;
 }());
-export { DxLookupModule };
+exports.DxLookupModule = DxLookupModule;
 //# sourceMappingURL=lookup.js.map

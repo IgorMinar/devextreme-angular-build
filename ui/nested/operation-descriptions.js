@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoOperationDescriptionsComponent = (function (_super) {
     __extends(DxoOperationDescriptionsComponent, _super);
     function DxoOperationDescriptionsComponent(parentOptionHost, optionHost) {
@@ -149,39 +151,39 @@ var DxoOperationDescriptionsComponent = (function (_super) {
         configurable: true
     });
     DxoOperationDescriptionsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-operation-descriptions',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoOperationDescriptionsComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoOperationDescriptionsComponent.propDecorators = {
-        "between": [{ type: Input },],
-        "contains": [{ type: Input },],
-        "endsWith": [{ type: Input },],
-        "equal": [{ type: Input },],
-        "greaterThan": [{ type: Input },],
-        "greaterThanOrEqual": [{ type: Input },],
-        "lessThan": [{ type: Input },],
-        "lessThanOrEqual": [{ type: Input },],
-        "notContains": [{ type: Input },],
-        "notEqual": [{ type: Input },],
-        "startsWith": [{ type: Input },],
+        "between": [{ type: core_1.Input },],
+        "contains": [{ type: core_1.Input },],
+        "endsWith": [{ type: core_1.Input },],
+        "equal": [{ type: core_1.Input },],
+        "greaterThan": [{ type: core_1.Input },],
+        "greaterThanOrEqual": [{ type: core_1.Input },],
+        "lessThan": [{ type: core_1.Input },],
+        "lessThanOrEqual": [{ type: core_1.Input },],
+        "notContains": [{ type: core_1.Input },],
+        "notEqual": [{ type: core_1.Input },],
+        "startsWith": [{ type: core_1.Input },],
     };
     return DxoOperationDescriptionsComponent;
-}(NestedOption));
-export { DxoOperationDescriptionsComponent };
+}(nested_option_2.NestedOption));
+exports.DxoOperationDescriptionsComponent = DxoOperationDescriptionsComponent;
 var DxoOperationDescriptionsModule = (function () {
     function DxoOperationDescriptionsModule() {
     }
     DxoOperationDescriptionsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoOperationDescriptionsComponent
                     ],
@@ -192,5 +194,5 @@ var DxoOperationDescriptionsModule = (function () {
     ];
     return DxoOperationDescriptionsModule;
 }());
-export { DxoOperationDescriptionsModule };
+exports.DxoOperationDescriptionsModule = DxoOperationDescriptionsModule;
 //# sourceMappingURL=operation-descriptions.js.map

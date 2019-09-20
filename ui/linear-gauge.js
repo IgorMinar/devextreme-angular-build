@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,40 +21,41 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxLinearGauge from 'devextreme/viz/linear_gauge';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoExportModule } from './nested/export';
-import { DxoGeometryModule } from './nested/geometry';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxoFontModule } from './nested/font';
-import { DxoMarginModule } from './nested/margin';
-import { DxoRangeContainerModule } from './nested/range-container';
-import { DxiRangeModule } from './nested/range-dxi';
-import { DxoWidthModule } from './nested/width';
-import { DxoScaleModule } from './nested/scale';
-import { DxoLabelModule } from './nested/label';
-import { DxoFormatModule } from './nested/format';
-import { DxoMinorTickModule } from './nested/minor-tick';
-import { DxoTickModule } from './nested/tick';
-import { DxoSizeModule } from './nested/size';
-import { DxoSubvalueIndicatorModule } from './nested/subvalue-indicator';
-import { DxoTextModule } from './nested/text';
-import { DxoTitleModule } from './nested/title';
-import { DxoSubtitleModule } from './nested/subtitle';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoBorderModule } from './nested/border';
-import { DxoShadowModule } from './nested/shadow';
-import { DxoValueIndicatorModule } from './nested/value-indicator';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var linear_gauge_1 = require("devextreme/viz/linear_gauge");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var animation_1 = require("./nested/animation");
+var export_1 = require("./nested/export");
+var geometry_1 = require("./nested/geometry");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var font_1 = require("./nested/font");
+var margin_1 = require("./nested/margin");
+var range_container_1 = require("./nested/range-container");
+var range_dxi_1 = require("./nested/range-dxi");
+var width_1 = require("./nested/width");
+var scale_1 = require("./nested/scale");
+var label_1 = require("./nested/label");
+var format_1 = require("./nested/format");
+var minor_tick_1 = require("./nested/minor-tick");
+var tick_1 = require("./nested/tick");
+var size_1 = require("./nested/size");
+var subvalue_indicator_1 = require("./nested/subvalue-indicator");
+var text_1 = require("./nested/text");
+var title_1 = require("./nested/title");
+var subtitle_1 = require("./nested/subtitle");
+var tooltip_1 = require("./nested/tooltip");
+var border_1 = require("./nested/border");
+var shadow_1 = require("./nested/shadow");
+var value_indicator_1 = require("./nested/value-indicator");
 /**
  * The LinearGauge is a widget that indicates values on a linear numeric scale.
  */
@@ -374,7 +376,7 @@ var DxLinearGaugeComponent = (function (_super) {
         configurable: true
     });
     DxLinearGaugeComponent.prototype._createInstance = function (element, options) {
-        return new DxLinearGauge(element, options);
+        return new linear_gauge_1.default(element, options);
     };
     DxLinearGaugeComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -402,152 +404,152 @@ var DxLinearGaugeComponent = (function (_super) {
         }
     };
     DxLinearGaugeComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-linear-gauge',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxLinearGaugeComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxLinearGaugeComponent.propDecorators = {
-        "animation": [{ type: Input },],
-        "containerBackgroundColor": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "geometry": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "rangeContainer": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scale": [{ type: Input },],
-        "size": [{ type: Input },],
-        "subvalueIndicator": [{ type: Input },],
-        "subvalues": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "title": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueIndicator": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onTooltipHidden": [{ type: Output },],
-        "onTooltipShown": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "containerBackgroundColorChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "geometryChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "rangeContainerChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scaleChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "subvalueIndicatorChange": [{ type: Output },],
-        "subvaluesChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueIndicatorChange": [{ type: Output },],
+        "animation": [{ type: core_1.Input },],
+        "containerBackgroundColor": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "geometry": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "rangeContainer": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scale": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "subvalueIndicator": [{ type: core_1.Input },],
+        "subvalues": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueIndicator": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onTooltipHidden": [{ type: core_1.Output },],
+        "onTooltipShown": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "containerBackgroundColorChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "geometryChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "rangeContainerChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scaleChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "subvalueIndicatorChange": [{ type: core_1.Output },],
+        "subvaluesChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueIndicatorChange": [{ type: core_1.Output },],
     };
     return DxLinearGaugeComponent;
-}(DxComponent));
-export { DxLinearGaugeComponent };
+}(component_1.DxComponent));
+exports.DxLinearGaugeComponent = DxLinearGaugeComponent;
 var DxLinearGaugeModule = (function () {
     function DxLinearGaugeModule() {
     }
     DxLinearGaugeModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAnimationModule,
-                        DxoExportModule,
-                        DxoGeometryModule,
-                        DxoLoadingIndicatorModule,
-                        DxoFontModule,
-                        DxoMarginModule,
-                        DxoRangeContainerModule,
-                        DxiRangeModule,
-                        DxoWidthModule,
-                        DxoScaleModule,
-                        DxoLabelModule,
-                        DxoFormatModule,
-                        DxoMinorTickModule,
-                        DxoTickModule,
-                        DxoSizeModule,
-                        DxoSubvalueIndicatorModule,
-                        DxoTextModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoTooltipModule,
-                        DxoBorderModule,
-                        DxoShadowModule,
-                        DxoValueIndicatorModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        animation_1.DxoAnimationModule,
+                        export_1.DxoExportModule,
+                        geometry_1.DxoGeometryModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        font_1.DxoFontModule,
+                        margin_1.DxoMarginModule,
+                        range_container_1.DxoRangeContainerModule,
+                        range_dxi_1.DxiRangeModule,
+                        width_1.DxoWidthModule,
+                        scale_1.DxoScaleModule,
+                        label_1.DxoLabelModule,
+                        format_1.DxoFormatModule,
+                        minor_tick_1.DxoMinorTickModule,
+                        tick_1.DxoTickModule,
+                        size_1.DxoSizeModule,
+                        subvalue_indicator_1.DxoSubvalueIndicatorModule,
+                        text_1.DxoTextModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        tooltip_1.DxoTooltipModule,
+                        border_1.DxoBorderModule,
+                        shadow_1.DxoShadowModule,
+                        value_indicator_1.DxoValueIndicatorModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxLinearGaugeComponent
                     ],
                     exports: [
                         DxLinearGaugeComponent,
-                        DxoAnimationModule,
-                        DxoExportModule,
-                        DxoGeometryModule,
-                        DxoLoadingIndicatorModule,
-                        DxoFontModule,
-                        DxoMarginModule,
-                        DxoRangeContainerModule,
-                        DxiRangeModule,
-                        DxoWidthModule,
-                        DxoScaleModule,
-                        DxoLabelModule,
-                        DxoFormatModule,
-                        DxoMinorTickModule,
-                        DxoTickModule,
-                        DxoSizeModule,
-                        DxoSubvalueIndicatorModule,
-                        DxoTextModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoTooltipModule,
-                        DxoBorderModule,
-                        DxoShadowModule,
-                        DxoValueIndicatorModule,
-                        DxTemplateModule
+                        animation_1.DxoAnimationModule,
+                        export_1.DxoExportModule,
+                        geometry_1.DxoGeometryModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        font_1.DxoFontModule,
+                        margin_1.DxoMarginModule,
+                        range_container_1.DxoRangeContainerModule,
+                        range_dxi_1.DxiRangeModule,
+                        width_1.DxoWidthModule,
+                        scale_1.DxoScaleModule,
+                        label_1.DxoLabelModule,
+                        format_1.DxoFormatModule,
+                        minor_tick_1.DxoMinorTickModule,
+                        tick_1.DxoTickModule,
+                        size_1.DxoSizeModule,
+                        subvalue_indicator_1.DxoSubvalueIndicatorModule,
+                        text_1.DxoTextModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        tooltip_1.DxoTooltipModule,
+                        border_1.DxoBorderModule,
+                        shadow_1.DxoShadowModule,
+                        value_indicator_1.DxoValueIndicatorModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxLinearGaugeModule;
 }());
-export { DxLinearGaugeModule };
+exports.DxLinearGaugeModule = DxLinearGaugeModule;
 //# sourceMappingURL=linear-gauge.js.map

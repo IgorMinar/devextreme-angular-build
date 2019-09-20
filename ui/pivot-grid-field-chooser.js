@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,20 +21,21 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxPivotGridFieldChooser from 'devextreme/ui/pivot_grid_field_chooser';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoHeaderFilterModule } from './nested/header-filter';
-import { DxoTextsModule } from './nested/texts';
+var pivot_grid_field_chooser_1 = require("devextreme/ui/pivot_grid_field_chooser");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var header_filter_1 = require("./nested/header-filter");
+var texts_1 = require("./nested/texts");
 /**
  * A complementary widget for the PivotGrid that allows you to manage data displayed in the PivotGrid. The field chooser is already integrated in the PivotGrid and can be invoked using the context menu. If you need to continuously display the field chooser near the PivotGrid widget, use the PivotGridFieldChooser widget.
  */
@@ -335,7 +337,7 @@ var DxPivotGridFieldChooserComponent = (function (_super) {
         configurable: true
     });
     DxPivotGridFieldChooserComponent.prototype._createInstance = function (element, options) {
-        return new DxPivotGridFieldChooser(element, options);
+        return new pivot_grid_field_chooser_1.default(element, options);
     };
     DxPivotGridFieldChooserComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -363,102 +365,102 @@ var DxPivotGridFieldChooserComponent = (function (_super) {
         }
     };
     DxPivotGridFieldChooserComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-pivot-grid-field-chooser',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxPivotGridFieldChooserComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxPivotGridFieldChooserComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "allowSearch": [{ type: Input },],
-        "applyChangesMode": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "headerFilter": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "layout": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "searchTimeout": [{ type: Input },],
-        "state": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "texts": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onContextMenuPreparing": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "allowSearchChange": [{ type: Output },],
-        "applyChangesModeChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "headerFilterChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "layoutChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "searchTimeoutChange": [{ type: Output },],
-        "stateChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textsChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "allowSearch": [{ type: core_1.Input },],
+        "applyChangesMode": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "headerFilter": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "layout": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "searchTimeout": [{ type: core_1.Input },],
+        "state": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onContextMenuPreparing": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "allowSearchChange": [{ type: core_1.Output },],
+        "applyChangesModeChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "headerFilterChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "layoutChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "searchTimeoutChange": [{ type: core_1.Output },],
+        "stateChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textsChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
     };
     return DxPivotGridFieldChooserComponent;
-}(DxComponent));
-export { DxPivotGridFieldChooserComponent };
+}(component_1.DxComponent));
+exports.DxPivotGridFieldChooserComponent = DxPivotGridFieldChooserComponent;
 var DxPivotGridFieldChooserModule = (function () {
     function DxPivotGridFieldChooserModule() {
     }
     DxPivotGridFieldChooserModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoHeaderFilterModule,
-                        DxoTextsModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        header_filter_1.DxoHeaderFilterModule,
+                        texts_1.DxoTextsModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxPivotGridFieldChooserComponent
                     ],
                     exports: [
                         DxPivotGridFieldChooserComponent,
-                        DxoHeaderFilterModule,
-                        DxoTextsModule,
-                        DxTemplateModule
+                        header_filter_1.DxoHeaderFilterModule,
+                        texts_1.DxoTextsModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxPivotGridFieldChooserModule;
 }());
-export { DxPivotGridFieldChooserModule };
+exports.DxPivotGridFieldChooserModule = DxPivotGridFieldChooserModule;
 //# sourceMappingURL=pivot-grid-field-chooser.js.map

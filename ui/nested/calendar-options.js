@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Output, EventEmitter } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoCalendarOptions } from './base/calendar-options';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var calendar_options_1 = require("./base/calendar-options");
 var DxoCalendarOptionsComponent = (function (_super) {
     __extends(DxoCalendarOptionsComponent, _super);
     function DxoCalendarOptionsComponent(parentOptionHost, optionHost) {
@@ -43,11 +45,11 @@ var DxoCalendarOptionsComponent = (function (_super) {
         configurable: true
     });
     DxoCalendarOptionsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-calendar-options',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'accessKey',
                         'activeStateEnabled',
@@ -86,21 +88,21 @@ var DxoCalendarOptionsComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoCalendarOptionsComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoCalendarOptionsComponent.propDecorators = {
-        "valueChange": [{ type: Output },],
-        "zoomLevelChange": [{ type: Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "zoomLevelChange": [{ type: core_1.Output },],
     };
     return DxoCalendarOptionsComponent;
-}(DxoCalendarOptions));
-export { DxoCalendarOptionsComponent };
+}(calendar_options_1.DxoCalendarOptions));
+exports.DxoCalendarOptionsComponent = DxoCalendarOptionsComponent;
 var DxoCalendarOptionsModule = (function () {
     function DxoCalendarOptionsModule() {
     }
     DxoCalendarOptionsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoCalendarOptionsComponent
                     ],
@@ -111,5 +113,5 @@ var DxoCalendarOptionsModule = (function () {
     ];
     return DxoCalendarOptionsModule;
 }());
-export { DxoCalendarOptionsModule };
+exports.DxoCalendarOptionsModule = DxoCalendarOptionsModule;
 //# sourceMappingURL=calendar-options.js.map

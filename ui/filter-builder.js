@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,30 +21,31 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
-import DxFilterBuilder from 'devextreme/ui/filter_builder';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiCustomOperationModule } from './nested/custom-operation-dxi';
-import { DxiFieldModule } from './nested/field-dxi';
-import { DxoFormatModule } from './nested/format';
-import { DxoLookupModule } from './nested/lookup';
-import { DxoFilterOperationDescriptionsModule } from './nested/filter-operation-descriptions';
-import { DxoGroupOperationDescriptionsModule } from './nested/group-operation-descriptions';
-import { DxiCustomOperationComponent } from './nested/custom-operation-dxi';
-import { DxiFieldComponent } from './nested/field-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var filter_builder_1 = require("devextreme/ui/filter_builder");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var custom_operation_dxi_1 = require("./nested/custom-operation-dxi");
+var field_dxi_1 = require("./nested/field-dxi");
+var format_1 = require("./nested/format");
+var lookup_1 = require("./nested/lookup");
+var filter_operation_descriptions_1 = require("./nested/filter-operation-descriptions");
+var group_operation_descriptions_1 = require("./nested/group-operation-descriptions");
+var custom_operation_dxi_2 = require("./nested/custom-operation-dxi");
+var field_dxi_2 = require("./nested/field-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxFilterBuilderComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxFilterBuilderComponent; }),
     multi: true
 };
 /**
@@ -372,7 +374,7 @@ var DxFilterBuilderComponent = (function (_super) {
         configurable: true
     });
     DxFilterBuilderComponent.prototype._createInstance = function (element, options) {
-        return new DxFilterBuilder(element, options);
+        return new filter_builder_1.default(element, options);
     };
     DxFilterBuilderComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -433,119 +435,119 @@ var DxFilterBuilderComponent = (function (_super) {
         }
     };
     DxFilterBuilderComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-filter-builder',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxFilterBuilderComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxFilterBuilderComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "allowHierarchicalFields": [{ type: Input },],
-        "customOperations": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "fields": [{ type: Input },],
-        "filterOperationDescriptions": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "groupOperationDescriptions": [{ type: Input },],
-        "groupOperations": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "maxGroupLevel": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "value": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEditorPrepared": [{ type: Output },],
-        "onEditorPreparing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "allowHierarchicalFieldsChange": [{ type: Output },],
-        "customOperationsChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "fieldsChange": [{ type: Output },],
-        "filterOperationDescriptionsChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "groupOperationDescriptionsChange": [{ type: Output },],
-        "groupOperationsChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "maxGroupLevelChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "customOperationsChildren": [{ type: ContentChildren, args: [DxiCustomOperationComponent,] },],
-        "fieldsChildren": [{ type: ContentChildren, args: [DxiFieldComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "allowHierarchicalFields": [{ type: core_1.Input },],
+        "customOperations": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "fields": [{ type: core_1.Input },],
+        "filterOperationDescriptions": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "groupOperationDescriptions": [{ type: core_1.Input },],
+        "groupOperations": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "maxGroupLevel": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEditorPrepared": [{ type: core_1.Output },],
+        "onEditorPreparing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "allowHierarchicalFieldsChange": [{ type: core_1.Output },],
+        "customOperationsChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "fieldsChange": [{ type: core_1.Output },],
+        "filterOperationDescriptionsChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "groupOperationDescriptionsChange": [{ type: core_1.Output },],
+        "groupOperationsChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "maxGroupLevelChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "customOperationsChildren": [{ type: core_1.ContentChildren, args: [custom_operation_dxi_2.DxiCustomOperationComponent,] },],
+        "fieldsChildren": [{ type: core_1.ContentChildren, args: [field_dxi_2.DxiFieldComponent,] },],
     };
     return DxFilterBuilderComponent;
-}(DxComponent));
-export { DxFilterBuilderComponent };
+}(component_1.DxComponent));
+exports.DxFilterBuilderComponent = DxFilterBuilderComponent;
 var DxFilterBuilderModule = (function () {
     function DxFilterBuilderModule() {
     }
     DxFilterBuilderModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiCustomOperationModule,
-                        DxiFieldModule,
-                        DxoFormatModule,
-                        DxoLookupModule,
-                        DxoFilterOperationDescriptionsModule,
-                        DxoGroupOperationDescriptionsModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        custom_operation_dxi_1.DxiCustomOperationModule,
+                        field_dxi_1.DxiFieldModule,
+                        format_1.DxoFormatModule,
+                        lookup_1.DxoLookupModule,
+                        filter_operation_descriptions_1.DxoFilterOperationDescriptionsModule,
+                        group_operation_descriptions_1.DxoGroupOperationDescriptionsModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxFilterBuilderComponent
                     ],
                     exports: [
                         DxFilterBuilderComponent,
-                        DxiCustomOperationModule,
-                        DxiFieldModule,
-                        DxoFormatModule,
-                        DxoLookupModule,
-                        DxoFilterOperationDescriptionsModule,
-                        DxoGroupOperationDescriptionsModule,
-                        DxTemplateModule
+                        custom_operation_dxi_1.DxiCustomOperationModule,
+                        field_dxi_1.DxiFieldModule,
+                        format_1.DxoFormatModule,
+                        lookup_1.DxoLookupModule,
+                        filter_operation_descriptions_1.DxoFilterOperationDescriptionsModule,
+                        group_operation_descriptions_1.DxoGroupOperationDescriptionsModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxFilterBuilderModule;
 }());
-export { DxFilterBuilderModule };
+exports.DxFilterBuilderModule = DxFilterBuilderModule;
 //# sourceMappingURL=filter-builder.js.map

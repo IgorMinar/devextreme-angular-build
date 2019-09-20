@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoFormSimpleItem } from './base/form-simple-item';
-import { DxiValidationRuleComponent } from './validation-rule-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var form_simple_item_1 = require("./base/form-simple-item");
+var validation_rule_dxi_1 = require("./validation-rule-dxi");
 var DxoFormItemComponent = (function (_super) {
     __extends(DxoFormItemComponent, _super);
     function DxoFormItemComponent(parentOptionHost, optionHost) {
@@ -50,11 +52,11 @@ var DxoFormItemComponent = (function (_super) {
         configurable: true
     });
     DxoFormItemComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-form-item',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'colSpan',
                         'cssClass',
@@ -75,20 +77,20 @@ var DxoFormItemComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoFormItemComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoFormItemComponent.propDecorators = {
-        "validationRulesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiValidationRuleComponent; }),] },],
+        "validationRulesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return validation_rule_dxi_1.DxiValidationRuleComponent; }),] },],
     };
     return DxoFormItemComponent;
-}(DxoFormSimpleItem));
-export { DxoFormItemComponent };
+}(form_simple_item_1.DxoFormSimpleItem));
+exports.DxoFormItemComponent = DxoFormItemComponent;
 var DxoFormItemModule = (function () {
     function DxoFormItemModule() {
     }
     DxoFormItemModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFormItemComponent
                     ],
@@ -99,5 +101,5 @@ var DxoFormItemModule = (function () {
     ];
     return DxoFormItemModule;
 }());
-export { DxoFormItemModule };
+exports.DxoFormItemModule = DxoFormItemModule;
 //# sourceMappingURL=form-item.js.map

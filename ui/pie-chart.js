@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,42 +21,43 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxPieChart from 'devextreme/viz/pie_chart';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAdaptiveLayoutModule } from './nested/adaptive-layout';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoCommonSeriesSettingsModule } from './nested/common-series-settings';
-import { DxoBorderModule } from './nested/border';
-import { DxoHoverStyleModule } from './nested/hover-style';
-import { DxoHatchingModule } from './nested/hatching';
-import { DxoLabelModule } from './nested/label';
-import { DxoArgumentFormatModule } from './nested/argument-format';
-import { DxoConnectorModule } from './nested/connector';
-import { DxoFontModule } from './nested/font';
-import { DxoFormatModule } from './nested/format';
-import { DxoSelectionStyleModule } from './nested/selection-style';
-import { DxoSmallValuesGroupingModule } from './nested/small-values-grouping';
-import { DxoExportModule } from './nested/export';
-import { DxoLegendModule } from './nested/legend';
-import { DxoMarginModule } from './nested/margin';
-import { DxoTitleModule } from './nested/title';
-import { DxoSubtitleModule } from './nested/subtitle';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxiSeriesModule } from './nested/series-dxi';
-import { DxoSeriesTemplateModule } from './nested/series-template';
-import { DxoSizeModule } from './nested/size';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoShadowModule } from './nested/shadow';
-import { DxiSeriesComponent } from './nested/series-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var pie_chart_1 = require("devextreme/viz/pie_chart");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var adaptive_layout_1 = require("./nested/adaptive-layout");
+var animation_1 = require("./nested/animation");
+var common_series_settings_1 = require("./nested/common-series-settings");
+var border_1 = require("./nested/border");
+var hover_style_1 = require("./nested/hover-style");
+var hatching_1 = require("./nested/hatching");
+var label_1 = require("./nested/label");
+var argument_format_1 = require("./nested/argument-format");
+var connector_1 = require("./nested/connector");
+var font_1 = require("./nested/font");
+var format_1 = require("./nested/format");
+var selection_style_1 = require("./nested/selection-style");
+var small_values_grouping_1 = require("./nested/small-values-grouping");
+var export_1 = require("./nested/export");
+var legend_1 = require("./nested/legend");
+var margin_1 = require("./nested/margin");
+var title_1 = require("./nested/title");
+var subtitle_1 = require("./nested/subtitle");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var series_dxi_1 = require("./nested/series-dxi");
+var series_template_1 = require("./nested/series-template");
+var size_1 = require("./nested/size");
+var tooltip_1 = require("./nested/tooltip");
+var shadow_1 = require("./nested/shadow");
+var series_dxi_2 = require("./nested/series-dxi");
 /**
  * The PieChart is a widget that visualizes data as a circle divided into sectors that each represents a portion of the whole.
  */
@@ -545,7 +547,7 @@ var DxPieChartComponent = (function (_super) {
         configurable: true
     });
     DxPieChartComponent.prototype._createInstance = function (element, options) {
-        return new DxPieChart(element, options);
+        return new pie_chart_1.default(element, options);
     };
     DxPieChartComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -577,182 +579,182 @@ var DxPieChartComponent = (function (_super) {
         }
     };
     DxPieChartComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-pie-chart',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxPieChartComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxPieChartComponent.propDecorators = {
-        "adaptiveLayout": [{ type: Input },],
-        "animation": [{ type: Input },],
-        "commonSeriesSettings": [{ type: Input },],
-        "customizeLabel": [{ type: Input },],
-        "customizePoint": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "diameter": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "innerRadius": [{ type: Input },],
-        "legend": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "minDiameter": [{ type: Input },],
-        "palette": [{ type: Input },],
-        "paletteExtensionMode": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "pointSelectionMode": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "resolveLabelOverlapping": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "segmentsDirection": [{ type: Input },],
-        "series": [{ type: Input },],
-        "seriesTemplate": [{ type: Input },],
-        "size": [{ type: Input },],
-        "sizeGroup": [{ type: Input },],
-        "startAngle": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "title": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "type": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onDone": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onLegendClick": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPointClick": [{ type: Output },],
-        "onPointHoverChanged": [{ type: Output },],
-        "onPointSelectionChanged": [{ type: Output },],
-        "onTooltipHidden": [{ type: Output },],
-        "onTooltipShown": [{ type: Output },],
-        "adaptiveLayoutChange": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "commonSeriesSettingsChange": [{ type: Output },],
-        "customizeLabelChange": [{ type: Output },],
-        "customizePointChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "diameterChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "innerRadiusChange": [{ type: Output },],
-        "legendChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "minDiameterChange": [{ type: Output },],
-        "paletteChange": [{ type: Output },],
-        "paletteExtensionModeChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "pointSelectionModeChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "resolveLabelOverlappingChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "segmentsDirectionChange": [{ type: Output },],
-        "seriesChange": [{ type: Output },],
-        "seriesTemplateChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "sizeGroupChange": [{ type: Output },],
-        "startAngleChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "typeChange": [{ type: Output },],
-        "seriesChildren": [{ type: ContentChildren, args: [DxiSeriesComponent,] },],
+        "adaptiveLayout": [{ type: core_1.Input },],
+        "animation": [{ type: core_1.Input },],
+        "commonSeriesSettings": [{ type: core_1.Input },],
+        "customizeLabel": [{ type: core_1.Input },],
+        "customizePoint": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "diameter": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "innerRadius": [{ type: core_1.Input },],
+        "legend": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "minDiameter": [{ type: core_1.Input },],
+        "palette": [{ type: core_1.Input },],
+        "paletteExtensionMode": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "pointSelectionMode": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "resolveLabelOverlapping": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "segmentsDirection": [{ type: core_1.Input },],
+        "series": [{ type: core_1.Input },],
+        "seriesTemplate": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "sizeGroup": [{ type: core_1.Input },],
+        "startAngle": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDone": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onLegendClick": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPointClick": [{ type: core_1.Output },],
+        "onPointHoverChanged": [{ type: core_1.Output },],
+        "onPointSelectionChanged": [{ type: core_1.Output },],
+        "onTooltipHidden": [{ type: core_1.Output },],
+        "onTooltipShown": [{ type: core_1.Output },],
+        "adaptiveLayoutChange": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "commonSeriesSettingsChange": [{ type: core_1.Output },],
+        "customizeLabelChange": [{ type: core_1.Output },],
+        "customizePointChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "diameterChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "innerRadiusChange": [{ type: core_1.Output },],
+        "legendChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "minDiameterChange": [{ type: core_1.Output },],
+        "paletteChange": [{ type: core_1.Output },],
+        "paletteExtensionModeChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "pointSelectionModeChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "resolveLabelOverlappingChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "segmentsDirectionChange": [{ type: core_1.Output },],
+        "seriesChange": [{ type: core_1.Output },],
+        "seriesTemplateChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "sizeGroupChange": [{ type: core_1.Output },],
+        "startAngleChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "typeChange": [{ type: core_1.Output },],
+        "seriesChildren": [{ type: core_1.ContentChildren, args: [series_dxi_2.DxiSeriesComponent,] },],
     };
     return DxPieChartComponent;
-}(DxComponent));
-export { DxPieChartComponent };
+}(component_1.DxComponent));
+exports.DxPieChartComponent = DxPieChartComponent;
 var DxPieChartModule = (function () {
     function DxPieChartModule() {
     }
     DxPieChartModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAdaptiveLayoutModule,
-                        DxoAnimationModule,
-                        DxoCommonSeriesSettingsModule,
-                        DxoBorderModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoLabelModule,
-                        DxoArgumentFormatModule,
-                        DxoConnectorModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoSelectionStyleModule,
-                        DxoSmallValuesGroupingModule,
-                        DxoExportModule,
-                        DxoLegendModule,
-                        DxoMarginModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoLoadingIndicatorModule,
-                        DxiSeriesModule,
-                        DxoSeriesTemplateModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoShadowModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        adaptive_layout_1.DxoAdaptiveLayoutModule,
+                        animation_1.DxoAnimationModule,
+                        common_series_settings_1.DxoCommonSeriesSettingsModule,
+                        border_1.DxoBorderModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        label_1.DxoLabelModule,
+                        argument_format_1.DxoArgumentFormatModule,
+                        connector_1.DxoConnectorModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        small_values_grouping_1.DxoSmallValuesGroupingModule,
+                        export_1.DxoExportModule,
+                        legend_1.DxoLegendModule,
+                        margin_1.DxoMarginModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        series_dxi_1.DxiSeriesModule,
+                        series_template_1.DxoSeriesTemplateModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        shadow_1.DxoShadowModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxPieChartComponent
                     ],
                     exports: [
                         DxPieChartComponent,
-                        DxoAdaptiveLayoutModule,
-                        DxoAnimationModule,
-                        DxoCommonSeriesSettingsModule,
-                        DxoBorderModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoLabelModule,
-                        DxoArgumentFormatModule,
-                        DxoConnectorModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoSelectionStyleModule,
-                        DxoSmallValuesGroupingModule,
-                        DxoExportModule,
-                        DxoLegendModule,
-                        DxoMarginModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoLoadingIndicatorModule,
-                        DxiSeriesModule,
-                        DxoSeriesTemplateModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoShadowModule,
-                        DxTemplateModule
+                        adaptive_layout_1.DxoAdaptiveLayoutModule,
+                        animation_1.DxoAnimationModule,
+                        common_series_settings_1.DxoCommonSeriesSettingsModule,
+                        border_1.DxoBorderModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        label_1.DxoLabelModule,
+                        argument_format_1.DxoArgumentFormatModule,
+                        connector_1.DxoConnectorModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        small_values_grouping_1.DxoSmallValuesGroupingModule,
+                        export_1.DxoExportModule,
+                        legend_1.DxoLegendModule,
+                        margin_1.DxoMarginModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        series_dxi_1.DxiSeriesModule,
+                        series_template_1.DxoSeriesTemplateModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        shadow_1.DxoShadowModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxPieChartModule;
 }());
-export { DxPieChartModule };
+exports.DxPieChartModule = DxPieChartModule;
 //# sourceMappingURL=pie-chart.js.map

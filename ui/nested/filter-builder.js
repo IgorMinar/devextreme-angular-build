@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,11 +21,12 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Output, EventEmitter, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoFilterBuilderOptions } from './base/filter-builder-options';
-import { DxiCustomOperationComponent } from './custom-operation-dxi';
-import { DxiFieldComponent } from './field-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var filter_builder_options_1 = require("./base/filter-builder-options");
+var custom_operation_dxi_1 = require("./custom-operation-dxi");
+var field_dxi_1 = require("./field-dxi");
 var DxoFilterBuilderComponent = (function (_super) {
     __extends(DxoFilterBuilderComponent, _super);
     function DxoFilterBuilderComponent(parentOptionHost, optionHost) {
@@ -64,11 +66,11 @@ var DxoFilterBuilderComponent = (function (_super) {
         configurable: true
     });
     DxoFilterBuilderComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-filter-builder',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'accessKey',
                         'activeStateEnabled',
@@ -102,22 +104,22 @@ var DxoFilterBuilderComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoFilterBuilderComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoFilterBuilderComponent.propDecorators = {
-        "valueChange": [{ type: Output },],
-        "customOperationsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiCustomOperationComponent; }),] },],
-        "fieldsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiFieldComponent; }),] },],
+        "valueChange": [{ type: core_1.Output },],
+        "customOperationsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return custom_operation_dxi_1.DxiCustomOperationComponent; }),] },],
+        "fieldsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return field_dxi_1.DxiFieldComponent; }),] },],
     };
     return DxoFilterBuilderComponent;
-}(DxoFilterBuilderOptions));
-export { DxoFilterBuilderComponent };
+}(filter_builder_options_1.DxoFilterBuilderOptions));
+exports.DxoFilterBuilderComponent = DxoFilterBuilderComponent;
 var DxoFilterBuilderModule = (function () {
     function DxoFilterBuilderModule() {
     }
     DxoFilterBuilderModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFilterBuilderComponent
                     ],
@@ -128,5 +130,5 @@ var DxoFilterBuilderModule = (function () {
     ];
     return DxoFilterBuilderModule;
 }());
-export { DxoFilterBuilderModule };
+exports.DxoFilterBuilderModule = DxoFilterBuilderModule;
 //# sourceMappingURL=filter-builder.js.map

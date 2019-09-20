@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxiChartAnnotationConfig } from './base/chart-annotation-config-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var chart_annotation_config_dxi_1 = require("./base/chart-annotation-config-dxi");
 var DxiAnnotationComponent = (function (_super) {
     __extends(DxiAnnotationComponent, _super);
     function DxiAnnotationComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxiAnnotationComponent = (function (_super) {
         configurable: true
     });
     DxiAnnotationComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-annotation',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'allowDragging',
                         'argument',
@@ -79,17 +81,17 @@ var DxiAnnotationComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxiAnnotationComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxiAnnotationComponent;
-}(DxiChartAnnotationConfig));
-export { DxiAnnotationComponent };
+}(chart_annotation_config_dxi_1.DxiChartAnnotationConfig));
+exports.DxiAnnotationComponent = DxiAnnotationComponent;
 var DxiAnnotationModule = (function () {
     function DxiAnnotationModule() {
     }
     DxiAnnotationModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiAnnotationComponent
                     ],
@@ -100,5 +102,5 @@ var DxiAnnotationModule = (function () {
     ];
     return DxiAnnotationModule;
 }());
-export { DxiAnnotationModule };
+exports.DxiAnnotationModule = DxiAnnotationModule;
 //# sourceMappingURL=annotation-dxi.js.map

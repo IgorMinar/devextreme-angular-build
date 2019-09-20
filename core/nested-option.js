@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,11 +21,12 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { EventEmitter } from '@angular/core';
-import { DX_TEMPLATE_WRAPPER_CLASS } from './template';
-import { getElement } from './utils';
-import * as render from 'devextreme/core/renderer';
-import * as events from 'devextreme/events';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var template_1 = require("./template");
+var utils_1 = require("./utils");
+var render = require("devextreme/core/renderer");
+var events = require("devextreme/events");
 var VISIBILITY_CHANGE_SELECTOR = 'dx-visibility-change-handler';
 var BaseNestedOption = (function () {
     function BaseNestedOption() {
@@ -44,7 +46,7 @@ var BaseNestedOption = (function () {
     BaseNestedOption.prototype._createEventEmitters = function (events) {
         var _this = this;
         events.forEach(function (event) {
-            _this[event.emit] = new EventEmitter();
+            _this[event.emit] = new core_1.EventEmitter();
         });
     };
     BaseNestedOption.prototype._getOption = function (name) {
@@ -98,7 +100,7 @@ var BaseNestedOption = (function () {
     });
     return BaseNestedOption;
 }());
-export { BaseNestedOption };
+exports.BaseNestedOption = BaseNestedOption;
 var CollectionNestedOptionContainerImpl = (function () {
     function CollectionNestedOptionContainerImpl(_setOption, _filterItems) {
         this._setOption = _setOption;
@@ -122,7 +124,7 @@ var CollectionNestedOptionContainerImpl = (function () {
     };
     return CollectionNestedOptionContainerImpl;
 }());
-export { CollectionNestedOptionContainerImpl };
+exports.CollectionNestedOptionContainerImpl = CollectionNestedOptionContainerImpl;
 var NestedOption = (function (_super) {
     __extends(NestedOption, _super);
     function NestedOption() {
@@ -137,7 +139,7 @@ var NestedOption = (function (_super) {
     };
     return NestedOption;
 }(BaseNestedOption));
-export { NestedOption };
+exports.NestedOption = NestedOption;
 var CollectionNestedOption = (function (_super) {
     __extends(CollectionNestedOption, _super);
     function CollectionNestedOption() {
@@ -162,7 +164,7 @@ var CollectionNestedOption = (function (_super) {
     });
     return CollectionNestedOption;
 }(BaseNestedOption));
-export { CollectionNestedOption };
+exports.CollectionNestedOption = CollectionNestedOption;
 var triggerShownEvent = function (element) {
     var changeHandlers = [];
     if (!render(element).hasClass(VISIBILITY_CHANGE_SELECTOR)) {
@@ -174,7 +176,8 @@ var triggerShownEvent = function (element) {
     }
 };
 var ɵ0 = triggerShownEvent;
-export function extractTemplate(option, element, renderer, document) {
+exports.ɵ0 = ɵ0;
+function extractTemplate(option, element, renderer, document) {
     if (!option.template === undefined || !element.nativeElement.hasChildNodes()) {
         return;
     }
@@ -194,9 +197,9 @@ export function extractTemplate(option, element, renderer, document) {
     option.template = {
         render: function (renderData) {
             var result = element.nativeElement;
-            renderer.addClass(result, DX_TEMPLATE_WRAPPER_CLASS);
+            renderer.addClass(result, template_1.DX_TEMPLATE_WRAPPER_CLASS);
             if (renderData.container) {
-                var container = getElement(renderData.container);
+                var container = utils_1.getElement(renderData.container);
                 var resultInContainer = container.contains(element.nativeElement);
                 renderer.appendChild(container, element.nativeElement);
                 if (!resultInContainer) {
@@ -210,6 +213,7 @@ export function extractTemplate(option, element, renderer, document) {
         }
     };
 }
+exports.extractTemplate = extractTemplate;
 var NestedOptionHost = (function () {
     function NestedOptionHost() {
     }
@@ -222,6 +226,5 @@ var NestedOptionHost = (function () {
     };
     return NestedOptionHost;
 }());
-export { NestedOptionHost };
-export { ɵ0 };
+exports.NestedOptionHost = NestedOptionHost;
 //# sourceMappingURL=nested-option.js.map

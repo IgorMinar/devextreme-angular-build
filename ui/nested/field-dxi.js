@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxiFilterBuilderField } from './base/filter-builder-field-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var filter_builder_field_dxi_1 = require("./base/filter-builder-field-dxi");
 var DxiFieldComponent = (function (_super) {
     __extends(DxiFieldComponent, _super);
     function DxiFieldComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxiFieldComponent = (function (_super) {
         configurable: true
     });
     DxiFieldComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-field',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'calculateFilterExpression',
                         'caption',
@@ -97,17 +99,17 @@ var DxiFieldComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxiFieldComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxiFieldComponent;
-}(DxiFilterBuilderField));
-export { DxiFieldComponent };
+}(filter_builder_field_dxi_1.DxiFilterBuilderField));
+exports.DxiFieldComponent = DxiFieldComponent;
 var DxiFieldModule = (function () {
     function DxiFieldModule() {
     }
     DxiFieldModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiFieldComponent
                     ],
@@ -118,5 +120,5 @@ var DxiFieldModule = (function () {
     ];
     return DxiFieldModule;
 }());
-export { DxiFieldModule };
+exports.DxiFieldModule = DxiFieldModule;
 //# sourceMappingURL=field-dxi.js.map

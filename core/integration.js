@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,13 +11,14 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { NgModule, Inject, NgZone, Optional } from '@angular/core';
-import { XhrFactory } from '@angular/common/http';
-import * as httpRequest from 'devextreme/core/http_request';
-import { DOCUMENT } from '@angular/common';
-import * as domAdapter from 'devextreme/core/dom_adapter';
-import * as readyCallbacks from 'devextreme/core/utils/ready_callbacks';
-import * as eventsEngine from 'devextreme/events/core/events_engine';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/common/http");
+var httpRequest = require("devextreme/core/http_request");
+var common_1 = require("@angular/common");
+var domAdapter = require("devextreme/core/dom_adapter");
+var readyCallbacks = require("devextreme/core/utils/ready_callbacks");
+var eventsEngine = require("devextreme/events/core/events_engine");
 var outsideZoneEvents = ['mousemove', 'mouseover', 'mouseout'];
 var insideZoneEvents = ['mouseup', 'click', 'mousedown', 'transitionend', 'wheel'];
 var originalAdd;
@@ -80,15 +82,15 @@ var DxIntegrationModule = (function () {
         });
     }
     DxIntegrationModule.decorators = [
-        { type: NgModule, args: [{},] },
+        { type: core_1.NgModule, args: [{},] },
     ];
     /** @nocollapse */
     DxIntegrationModule.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: Inject, args: [DOCUMENT,] },] },
-        { type: NgZone, },
-        { type: XhrFactory, decorators: [{ type: Optional },] },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [common_1.DOCUMENT,] },] },
+        { type: core_1.NgZone, },
+        { type: http_1.XhrFactory, decorators: [{ type: core_1.Optional },] },
     ]; };
     return DxIntegrationModule;
 }());
-export { DxIntegrationModule };
+exports.DxIntegrationModule = DxIntegrationModule;
 //# sourceMappingURL=integration.js.map

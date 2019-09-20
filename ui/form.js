@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,25 +21,26 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxForm from 'devextreme/ui/form';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoColCountByScreenModule } from './nested/col-count-by-screen';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxoLabelModule } from './nested/label';
-import { DxiValidationRuleModule } from './nested/validation-rule-dxi';
-import { DxoTabPanelOptionsModule } from './nested/tab-panel-options';
-import { DxiTabModule } from './nested/tab-dxi';
-import { DxoButtonOptionsModule } from './nested/button-options';
-import { DxiItemComponent } from './nested/item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var form_1 = require("devextreme/ui/form");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var col_count_by_screen_1 = require("./nested/col-count-by-screen");
+var item_dxi_1 = require("./nested/item-dxi");
+var label_1 = require("./nested/label");
+var validation_rule_dxi_1 = require("./nested/validation-rule-dxi");
+var tab_panel_options_1 = require("./nested/tab-panel-options");
+var tab_dxi_1 = require("./nested/tab-dxi");
+var button_options_1 = require("./nested/button-options");
+var item_dxi_2 = require("./nested/item-dxi");
 /**
  * The Form widget represents fields of a data object as a collection of label-editor pairs. These pairs can be arranged in several groups, tabs and columns.
  */
@@ -519,7 +521,7 @@ var DxFormComponent = (function (_super) {
         configurable: true
     });
     DxFormComponent.prototype._createInstance = function (element, options) {
-        return new DxForm(element, options);
+        return new form_1.default(element, options);
     };
     DxFormComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -547,138 +549,138 @@ var DxFormComponent = (function (_super) {
         }
     };
     DxFormComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-form',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxFormComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxFormComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "alignItemLabels": [{ type: Input },],
-        "alignItemLabelsInAllGroups": [{ type: Input },],
-        "colCount": [{ type: Input },],
-        "colCountByScreen": [{ type: Input },],
-        "customizeItem": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "formData": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "items": [{ type: Input },],
-        "labelLocation": [{ type: Input },],
-        "minColWidth": [{ type: Input },],
-        "optionalMark": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "requiredMark": [{ type: Input },],
-        "requiredMessage": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "screenByWidth": [{ type: Input },],
-        "scrollingEnabled": [{ type: Input },],
-        "showColonAfterLabel": [{ type: Input },],
-        "showOptionalMark": [{ type: Input },],
-        "showRequiredMark": [{ type: Input },],
-        "showValidationSummary": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "validationGroup": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEditorEnterKey": [{ type: Output },],
-        "onFieldDataChanged": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "alignItemLabelsChange": [{ type: Output },],
-        "alignItemLabelsInAllGroupsChange": [{ type: Output },],
-        "colCountChange": [{ type: Output },],
-        "colCountByScreenChange": [{ type: Output },],
-        "customizeItemChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "formDataChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "labelLocationChange": [{ type: Output },],
-        "minColWidthChange": [{ type: Output },],
-        "optionalMarkChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "requiredMarkChange": [{ type: Output },],
-        "requiredMessageChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "screenByWidthChange": [{ type: Output },],
-        "scrollingEnabledChange": [{ type: Output },],
-        "showColonAfterLabelChange": [{ type: Output },],
-        "showOptionalMarkChange": [{ type: Output },],
-        "showRequiredMarkChange": [{ type: Output },],
-        "showValidationSummaryChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "validationGroupChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "alignItemLabels": [{ type: core_1.Input },],
+        "alignItemLabelsInAllGroups": [{ type: core_1.Input },],
+        "colCount": [{ type: core_1.Input },],
+        "colCountByScreen": [{ type: core_1.Input },],
+        "customizeItem": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "formData": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "labelLocation": [{ type: core_1.Input },],
+        "minColWidth": [{ type: core_1.Input },],
+        "optionalMark": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "requiredMark": [{ type: core_1.Input },],
+        "requiredMessage": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "screenByWidth": [{ type: core_1.Input },],
+        "scrollingEnabled": [{ type: core_1.Input },],
+        "showColonAfterLabel": [{ type: core_1.Input },],
+        "showOptionalMark": [{ type: core_1.Input },],
+        "showRequiredMark": [{ type: core_1.Input },],
+        "showValidationSummary": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "validationGroup": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEditorEnterKey": [{ type: core_1.Output },],
+        "onFieldDataChanged": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "alignItemLabelsChange": [{ type: core_1.Output },],
+        "alignItemLabelsInAllGroupsChange": [{ type: core_1.Output },],
+        "colCountChange": [{ type: core_1.Output },],
+        "colCountByScreenChange": [{ type: core_1.Output },],
+        "customizeItemChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "formDataChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "labelLocationChange": [{ type: core_1.Output },],
+        "minColWidthChange": [{ type: core_1.Output },],
+        "optionalMarkChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "requiredMarkChange": [{ type: core_1.Output },],
+        "requiredMessageChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "screenByWidthChange": [{ type: core_1.Output },],
+        "scrollingEnabledChange": [{ type: core_1.Output },],
+        "showColonAfterLabelChange": [{ type: core_1.Output },],
+        "showOptionalMarkChange": [{ type: core_1.Output },],
+        "showRequiredMarkChange": [{ type: core_1.Output },],
+        "showValidationSummaryChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "validationGroupChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxFormComponent;
-}(DxComponent));
-export { DxFormComponent };
+}(component_1.DxComponent));
+exports.DxFormComponent = DxFormComponent;
 var DxFormModule = (function () {
     function DxFormModule() {
     }
     DxFormModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoColCountByScreenModule,
-                        DxiItemModule,
-                        DxoLabelModule,
-                        DxiValidationRuleModule,
-                        DxoTabPanelOptionsModule,
-                        DxiTabModule,
-                        DxoButtonOptionsModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        col_count_by_screen_1.DxoColCountByScreenModule,
+                        item_dxi_1.DxiItemModule,
+                        label_1.DxoLabelModule,
+                        validation_rule_dxi_1.DxiValidationRuleModule,
+                        tab_panel_options_1.DxoTabPanelOptionsModule,
+                        tab_dxi_1.DxiTabModule,
+                        button_options_1.DxoButtonOptionsModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxFormComponent
                     ],
                     exports: [
                         DxFormComponent,
-                        DxoColCountByScreenModule,
-                        DxiItemModule,
-                        DxoLabelModule,
-                        DxiValidationRuleModule,
-                        DxoTabPanelOptionsModule,
-                        DxiTabModule,
-                        DxoButtonOptionsModule,
-                        DxTemplateModule
+                        col_count_by_screen_1.DxoColCountByScreenModule,
+                        item_dxi_1.DxiItemModule,
+                        label_1.DxoLabelModule,
+                        validation_rule_dxi_1.DxiValidationRuleModule,
+                        tab_panel_options_1.DxoTabPanelOptionsModule,
+                        tab_dxi_1.DxiTabModule,
+                        button_options_1.DxoButtonOptionsModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxFormModule;
 }());
-export { DxFormModule };
+exports.DxFormModule = DxFormModule;
 //# sourceMappingURL=form.js.map

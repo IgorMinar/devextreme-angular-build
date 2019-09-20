@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
-import { DxiSeriesComponent } from './series-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var series_dxi_1 = require("./series-dxi");
 var DxoChartComponent = (function (_super) {
     __extends(DxoChartComponent, _super);
     function DxoChartComponent(parentOptionHost, optionHost) {
@@ -220,46 +222,46 @@ var DxoChartComponent = (function (_super) {
         configurable: true
     });
     DxoChartComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-chart',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoChartComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoChartComponent.propDecorators = {
-        "barGroupPadding": [{ type: Input },],
-        "barGroupWidth": [{ type: Input },],
-        "barWidth": [{ type: Input },],
-        "bottomIndent": [{ type: Input },],
-        "commonSeriesSettings": [{ type: Input },],
-        "dataPrepareSettings": [{ type: Input },],
-        "equalBarWidth": [{ type: Input },],
-        "maxBubbleSize": [{ type: Input },],
-        "minBubbleSize": [{ type: Input },],
-        "negativesAsZeroes": [{ type: Input },],
-        "palette": [{ type: Input },],
-        "paletteExtensionMode": [{ type: Input },],
-        "series": [{ type: Input },],
-        "seriesTemplate": [{ type: Input },],
-        "topIndent": [{ type: Input },],
-        "useAggregation": [{ type: Input },],
-        "valueAxis": [{ type: Input },],
-        "seriesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiSeriesComponent; }),] },],
+        "barGroupPadding": [{ type: core_1.Input },],
+        "barGroupWidth": [{ type: core_1.Input },],
+        "barWidth": [{ type: core_1.Input },],
+        "bottomIndent": [{ type: core_1.Input },],
+        "commonSeriesSettings": [{ type: core_1.Input },],
+        "dataPrepareSettings": [{ type: core_1.Input },],
+        "equalBarWidth": [{ type: core_1.Input },],
+        "maxBubbleSize": [{ type: core_1.Input },],
+        "minBubbleSize": [{ type: core_1.Input },],
+        "negativesAsZeroes": [{ type: core_1.Input },],
+        "palette": [{ type: core_1.Input },],
+        "paletteExtensionMode": [{ type: core_1.Input },],
+        "series": [{ type: core_1.Input },],
+        "seriesTemplate": [{ type: core_1.Input },],
+        "topIndent": [{ type: core_1.Input },],
+        "useAggregation": [{ type: core_1.Input },],
+        "valueAxis": [{ type: core_1.Input },],
+        "seriesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return series_dxi_1.DxiSeriesComponent; }),] },],
     };
     return DxoChartComponent;
-}(NestedOption));
-export { DxoChartComponent };
+}(nested_option_2.NestedOption));
+exports.DxoChartComponent = DxoChartComponent;
 var DxoChartModule = (function () {
     function DxoChartModule() {
     }
     DxoChartModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoChartComponent
                     ],
@@ -270,5 +272,5 @@ var DxoChartModule = (function () {
     ];
     return DxoChartModule;
 }());
-export { DxoChartModule };
+exports.DxoChartModule = DxoChartModule;
 //# sourceMappingURL=chart.js.map

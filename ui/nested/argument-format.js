@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoFormat } from './base/format';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var format_1 = require("./base/format");
 var DxoArgumentFormatComponent = (function (_super) {
     __extends(DxoArgumentFormatComponent, _super);
     function DxoArgumentFormatComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxoArgumentFormatComponent = (function (_super) {
         configurable: true
     });
     DxoArgumentFormatComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-argument-format',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'currency',
                         'formatter',
@@ -55,17 +57,17 @@ var DxoArgumentFormatComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoArgumentFormatComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxoArgumentFormatComponent;
-}(DxoFormat));
-export { DxoArgumentFormatComponent };
+}(format_1.DxoFormat));
+exports.DxoArgumentFormatComponent = DxoArgumentFormatComponent;
 var DxoArgumentFormatModule = (function () {
     function DxoArgumentFormatModule() {
     }
     DxoArgumentFormatModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoArgumentFormatComponent
                     ],
@@ -76,5 +78,5 @@ var DxoArgumentFormatModule = (function () {
     ];
     return DxoArgumentFormatModule;
 }());
-export { DxoArgumentFormatModule };
+exports.DxoArgumentFormatModule = DxoArgumentFormatModule;
 //# sourceMappingURL=argument-format.js.map

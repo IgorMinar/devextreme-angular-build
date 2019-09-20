@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,11 +21,12 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Output, EventEmitter, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxiDataGridColumn } from './base/data-grid-column-dxi';
-import { DxiButtonComponent } from './button-dxi';
-import { DxiValidationRuleComponent } from './validation-rule-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var data_grid_column_dxi_1 = require("./base/data-grid-column-dxi");
+var button_dxi_1 = require("./button-dxi");
+var validation_rule_dxi_1 = require("./validation-rule-dxi");
 var DxiColumnComponent = (function (_super) {
     __extends(DxiColumnComponent, _super);
     function DxiColumnComponent(parentOptionHost, optionHost) {
@@ -81,11 +83,11 @@ var DxiColumnComponent = (function (_super) {
         configurable: true
     });
     DxiColumnComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-column',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'alignment',
                         'allowEditing',
@@ -155,30 +157,30 @@ var DxiColumnComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxiColumnComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiColumnComponent.propDecorators = {
-        "filterValueChange": [{ type: Output },],
-        "filterValuesChange": [{ type: Output },],
-        "groupIndexChange": [{ type: Output },],
-        "selectedFilterOperationChange": [{ type: Output },],
-        "sortIndexChange": [{ type: Output },],
-        "sortOrderChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "visibleIndexChange": [{ type: Output },],
-        "buttonsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiButtonComponent; }),] },],
-        "columnsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiColumnComponent; }),] },],
-        "validationRulesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiValidationRuleComponent; }),] },],
+        "filterValueChange": [{ type: core_1.Output },],
+        "filterValuesChange": [{ type: core_1.Output },],
+        "groupIndexChange": [{ type: core_1.Output },],
+        "selectedFilterOperationChange": [{ type: core_1.Output },],
+        "sortIndexChange": [{ type: core_1.Output },],
+        "sortOrderChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "visibleIndexChange": [{ type: core_1.Output },],
+        "buttonsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return button_dxi_1.DxiButtonComponent; }),] },],
+        "columnsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return DxiColumnComponent; }),] },],
+        "validationRulesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return validation_rule_dxi_1.DxiValidationRuleComponent; }),] },],
     };
     return DxiColumnComponent;
-}(DxiDataGridColumn));
-export { DxiColumnComponent };
+}(data_grid_column_dxi_1.DxiDataGridColumn));
+exports.DxiColumnComponent = DxiColumnComponent;
 var DxiColumnModule = (function () {
     function DxiColumnModule() {
     }
     DxiColumnModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiColumnComponent
                     ],
@@ -189,5 +191,5 @@ var DxiColumnModule = (function () {
     ];
     return DxiColumnModule;
 }());
-export { DxiColumnModule };
+exports.DxiColumnModule = DxiColumnModule;
 //# sourceMappingURL=column-dxi.js.map

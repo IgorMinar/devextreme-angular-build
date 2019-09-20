@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoGaugeIndicator } from './base/gauge-indicator';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var gauge_indicator_1 = require("./base/gauge-indicator");
 var DxoValueIndicatorComponent = (function (_super) {
     __extends(DxoValueIndicatorComponent, _super);
     function DxoValueIndicatorComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxoValueIndicatorComponent = (function (_super) {
         configurable: true
     });
     DxoValueIndicatorComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-value-indicator',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'arrowLength',
                         'backgroundColor',
@@ -69,17 +71,17 @@ var DxoValueIndicatorComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoValueIndicatorComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxoValueIndicatorComponent;
-}(DxoGaugeIndicator));
-export { DxoValueIndicatorComponent };
+}(gauge_indicator_1.DxoGaugeIndicator));
+exports.DxoValueIndicatorComponent = DxoValueIndicatorComponent;
 var DxoValueIndicatorModule = (function () {
     function DxoValueIndicatorModule() {
     }
     DxoValueIndicatorModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoValueIndicatorComponent
                     ],
@@ -90,5 +92,5 @@ var DxoValueIndicatorModule = (function () {
     ];
     return DxoValueIndicatorModule;
 }());
-export { DxoValueIndicatorModule };
+exports.DxoValueIndicatorModule = DxoValueIndicatorModule;
 //# sourceMappingURL=value-indicator.js.map

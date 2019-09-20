@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiGroupItemComponent = (function (_super) {
     __extends(DxiGroupItemComponent, _super);
     function DxiGroupItemComponent(parentOptionHost, optionHost) {
@@ -139,38 +141,38 @@ var DxiGroupItemComponent = (function (_super) {
         configurable: true
     });
     DxiGroupItemComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-group-item',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiGroupItemComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiGroupItemComponent.propDecorators = {
-        "alignByColumn": [{ type: Input },],
-        "column": [{ type: Input },],
-        "customizeText": [{ type: Input },],
-        "displayFormat": [{ type: Input },],
-        "name": [{ type: Input },],
-        "showInColumn": [{ type: Input },],
-        "showInGroupFooter": [{ type: Input },],
-        "skipEmptyValues": [{ type: Input },],
-        "summaryType": [{ type: Input },],
-        "valueFormat": [{ type: Input },],
+        "alignByColumn": [{ type: core_1.Input },],
+        "column": [{ type: core_1.Input },],
+        "customizeText": [{ type: core_1.Input },],
+        "displayFormat": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "showInColumn": [{ type: core_1.Input },],
+        "showInGroupFooter": [{ type: core_1.Input },],
+        "skipEmptyValues": [{ type: core_1.Input },],
+        "summaryType": [{ type: core_1.Input },],
+        "valueFormat": [{ type: core_1.Input },],
     };
     return DxiGroupItemComponent;
-}(CollectionNestedOption));
-export { DxiGroupItemComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiGroupItemComponent = DxiGroupItemComponent;
 var DxiGroupItemModule = (function () {
     function DxiGroupItemModule() {
     }
     DxiGroupItemModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiGroupItemComponent
                     ],
@@ -181,5 +183,5 @@ var DxiGroupItemModule = (function () {
     ];
     return DxiGroupItemModule;
 }());
-export { DxiGroupItemModule };
+exports.DxiGroupItemModule = DxiGroupItemModule;
 //# sourceMappingURL=group-item-dxi.js.map

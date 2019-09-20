@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,34 +21,35 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxTreeMap from 'devextreme/viz/tree_map';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoColorizerModule } from './nested/colorizer';
-import { DxoExportModule } from './nested/export';
-import { DxoGroupModule } from './nested/group';
-import { DxoBorderModule } from './nested/border';
-import { DxoHoverStyleModule } from './nested/hover-style';
-import { DxoLabelModule } from './nested/label';
-import { DxoFontModule } from './nested/font';
-import { DxoSelectionStyleModule } from './nested/selection-style';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxoSizeModule } from './nested/size';
-import { DxoTileModule } from './nested/tile';
-import { DxoTitleModule } from './nested/title';
-import { DxoMarginModule } from './nested/margin';
-import { DxoSubtitleModule } from './nested/subtitle';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoFormatModule } from './nested/format';
-import { DxoShadowModule } from './nested/shadow';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var tree_map_1 = require("devextreme/viz/tree_map");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var colorizer_1 = require("./nested/colorizer");
+var export_1 = require("./nested/export");
+var group_1 = require("./nested/group");
+var border_1 = require("./nested/border");
+var hover_style_1 = require("./nested/hover-style");
+var label_1 = require("./nested/label");
+var font_1 = require("./nested/font");
+var selection_style_1 = require("./nested/selection-style");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var size_1 = require("./nested/size");
+var tile_1 = require("./nested/tile");
+var title_1 = require("./nested/title");
+var margin_1 = require("./nested/margin");
+var subtitle_1 = require("./nested/subtitle");
+var tooltip_1 = require("./nested/tooltip");
+var format_1 = require("./nested/format");
+var shadow_1 = require("./nested/shadow");
 /**
  * The TreeMap is a widget that displays hierarchical data by using nested rectangles.
  */
@@ -470,7 +472,7 @@ var DxTreeMapComponent = (function (_super) {
         configurable: true
     });
     DxTreeMapComponent.prototype._createInstance = function (element, options) {
-        return new DxTreeMap(element, options);
+        return new tree_map_1.default(element, options);
     };
     DxTreeMapComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -498,158 +500,158 @@ var DxTreeMapComponent = (function (_super) {
         }
     };
     DxTreeMapComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-tree-map',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxTreeMapComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxTreeMapComponent.propDecorators = {
-        "childrenField": [{ type: Input },],
-        "colorField": [{ type: Input },],
-        "colorizer": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "group": [{ type: Input },],
-        "hoverEnabled": [{ type: Input },],
-        "idField": [{ type: Input },],
-        "interactWithGroup": [{ type: Input },],
-        "labelField": [{ type: Input },],
-        "layoutAlgorithm": [{ type: Input },],
-        "layoutDirection": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "maxDepth": [{ type: Input },],
-        "parentField": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "resolveLabelOverflow": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "selectionMode": [{ type: Input },],
-        "size": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "tile": [{ type: Input },],
-        "title": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "valueField": [{ type: Input },],
-        "onClick": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onDrill": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onHoverChanged": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onNodesInitialized": [{ type: Output },],
-        "onNodesRendering": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "childrenFieldChange": [{ type: Output },],
-        "colorFieldChange": [{ type: Output },],
-        "colorizerChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "groupChange": [{ type: Output },],
-        "hoverEnabledChange": [{ type: Output },],
-        "idFieldChange": [{ type: Output },],
-        "interactWithGroupChange": [{ type: Output },],
-        "labelFieldChange": [{ type: Output },],
-        "layoutAlgorithmChange": [{ type: Output },],
-        "layoutDirectionChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "maxDepthChange": [{ type: Output },],
-        "parentFieldChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "resolveLabelOverflowChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "selectionModeChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "tileChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "valueFieldChange": [{ type: Output },],
+        "childrenField": [{ type: core_1.Input },],
+        "colorField": [{ type: core_1.Input },],
+        "colorizer": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "group": [{ type: core_1.Input },],
+        "hoverEnabled": [{ type: core_1.Input },],
+        "idField": [{ type: core_1.Input },],
+        "interactWithGroup": [{ type: core_1.Input },],
+        "labelField": [{ type: core_1.Input },],
+        "layoutAlgorithm": [{ type: core_1.Input },],
+        "layoutDirection": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "maxDepth": [{ type: core_1.Input },],
+        "parentField": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "resolveLabelOverflow": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "selectionMode": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "tile": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "valueField": [{ type: core_1.Input },],
+        "onClick": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onDrill": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onHoverChanged": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onNodesInitialized": [{ type: core_1.Output },],
+        "onNodesRendering": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "childrenFieldChange": [{ type: core_1.Output },],
+        "colorFieldChange": [{ type: core_1.Output },],
+        "colorizerChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "groupChange": [{ type: core_1.Output },],
+        "hoverEnabledChange": [{ type: core_1.Output },],
+        "idFieldChange": [{ type: core_1.Output },],
+        "interactWithGroupChange": [{ type: core_1.Output },],
+        "labelFieldChange": [{ type: core_1.Output },],
+        "layoutAlgorithmChange": [{ type: core_1.Output },],
+        "layoutDirectionChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "maxDepthChange": [{ type: core_1.Output },],
+        "parentFieldChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "resolveLabelOverflowChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "selectionModeChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "tileChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "valueFieldChange": [{ type: core_1.Output },],
     };
     return DxTreeMapComponent;
-}(DxComponent));
-export { DxTreeMapComponent };
+}(component_1.DxComponent));
+exports.DxTreeMapComponent = DxTreeMapComponent;
 var DxTreeMapModule = (function () {
     function DxTreeMapModule() {
     }
     DxTreeMapModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoColorizerModule,
-                        DxoExportModule,
-                        DxoGroupModule,
-                        DxoBorderModule,
-                        DxoHoverStyleModule,
-                        DxoLabelModule,
-                        DxoFontModule,
-                        DxoSelectionStyleModule,
-                        DxoLoadingIndicatorModule,
-                        DxoSizeModule,
-                        DxoTileModule,
-                        DxoTitleModule,
-                        DxoMarginModule,
-                        DxoSubtitleModule,
-                        DxoTooltipModule,
-                        DxoFormatModule,
-                        DxoShadowModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        colorizer_1.DxoColorizerModule,
+                        export_1.DxoExportModule,
+                        group_1.DxoGroupModule,
+                        border_1.DxoBorderModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        label_1.DxoLabelModule,
+                        font_1.DxoFontModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        size_1.DxoSizeModule,
+                        tile_1.DxoTileModule,
+                        title_1.DxoTitleModule,
+                        margin_1.DxoMarginModule,
+                        subtitle_1.DxoSubtitleModule,
+                        tooltip_1.DxoTooltipModule,
+                        format_1.DxoFormatModule,
+                        shadow_1.DxoShadowModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxTreeMapComponent
                     ],
                     exports: [
                         DxTreeMapComponent,
-                        DxoColorizerModule,
-                        DxoExportModule,
-                        DxoGroupModule,
-                        DxoBorderModule,
-                        DxoHoverStyleModule,
-                        DxoLabelModule,
-                        DxoFontModule,
-                        DxoSelectionStyleModule,
-                        DxoLoadingIndicatorModule,
-                        DxoSizeModule,
-                        DxoTileModule,
-                        DxoTitleModule,
-                        DxoMarginModule,
-                        DxoSubtitleModule,
-                        DxoTooltipModule,
-                        DxoFormatModule,
-                        DxoShadowModule,
-                        DxTemplateModule
+                        colorizer_1.DxoColorizerModule,
+                        export_1.DxoExportModule,
+                        group_1.DxoGroupModule,
+                        border_1.DxoBorderModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        label_1.DxoLabelModule,
+                        font_1.DxoFontModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        size_1.DxoSizeModule,
+                        tile_1.DxoTileModule,
+                        title_1.DxoTitleModule,
+                        margin_1.DxoMarginModule,
+                        subtitle_1.DxoSubtitleModule,
+                        tooltip_1.DxoTooltipModule,
+                        format_1.DxoFormatModule,
+                        shadow_1.DxoShadowModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxTreeMapModule;
 }());
-export { DxTreeMapModule };
+exports.DxTreeMapModule = DxTreeMapModule;
 //# sourceMappingURL=tree-map.js.map

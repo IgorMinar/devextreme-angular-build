@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoShowSubmenuModeComponent = (function (_super) {
     __extends(DxoShowSubmenuModeComponent, _super);
     function DxoShowSubmenuModeComponent(parentOptionHost, optionHost) {
@@ -59,30 +61,30 @@ var DxoShowSubmenuModeComponent = (function (_super) {
         configurable: true
     });
     DxoShowSubmenuModeComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-show-submenu-mode',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoShowSubmenuModeComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoShowSubmenuModeComponent.propDecorators = {
-        "delay": [{ type: Input },],
-        "name": [{ type: Input },],
+        "delay": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
     };
     return DxoShowSubmenuModeComponent;
-}(NestedOption));
-export { DxoShowSubmenuModeComponent };
+}(nested_option_2.NestedOption));
+exports.DxoShowSubmenuModeComponent = DxoShowSubmenuModeComponent;
 var DxoShowSubmenuModeModule = (function () {
     function DxoShowSubmenuModeModule() {
     }
     DxoShowSubmenuModeModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoShowSubmenuModeComponent
                     ],
@@ -93,5 +95,5 @@ var DxoShowSubmenuModeModule = (function () {
     ];
     return DxoShowSubmenuModeModule;
 }());
-export { DxoShowSubmenuModeModule };
+exports.DxoShowSubmenuModeModule = DxoShowSubmenuModeModule;
 //# sourceMappingURL=show-submenu-mode.js.map

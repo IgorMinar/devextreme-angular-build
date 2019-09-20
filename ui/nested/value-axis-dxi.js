@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,12 +21,13 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, Output, EventEmitter, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
-import { DxiBreakComponent } from './break-dxi';
-import { DxiConstantLineComponent } from './constant-line-dxi';
-import { DxiStripComponent } from './strip-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var break_dxi_1 = require("./break-dxi");
+var constant_line_dxi_1 = require("./constant-line-dxi");
+var strip_dxi_1 = require("./strip-dxi");
 var DxiValueAxisComponent = (function (_super) {
     __extends(DxiValueAxisComponent, _super);
     function DxiValueAxisComponent(parentOptionHost, optionHost) {
@@ -535,78 +537,78 @@ var DxiValueAxisComponent = (function (_super) {
         configurable: true
     });
     DxiValueAxisComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-value-axis',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiValueAxisComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiValueAxisComponent.propDecorators = {
-        "allowDecimals": [{ type: Input },],
-        "autoBreaksEnabled": [{ type: Input },],
-        "axisDivisionFactor": [{ type: Input },],
-        "breaks": [{ type: Input },],
-        "breakStyle": [{ type: Input },],
-        "categories": [{ type: Input },],
-        "color": [{ type: Input },],
-        "constantLines": [{ type: Input },],
-        "constantLineStyle": [{ type: Input },],
-        "discreteAxisDivisionMode": [{ type: Input },],
-        "endOnTick": [{ type: Input },],
-        "grid": [{ type: Input },],
-        "inverted": [{ type: Input },],
-        "label": [{ type: Input },],
-        "logarithmBase": [{ type: Input },],
-        "max": [{ type: Input },],
-        "maxAutoBreakCount": [{ type: Input },],
-        "maxValueMargin": [{ type: Input },],
-        "min": [{ type: Input },],
-        "minorGrid": [{ type: Input },],
-        "minorTick": [{ type: Input },],
-        "minorTickCount": [{ type: Input },],
-        "minorTickInterval": [{ type: Input },],
-        "minValueMargin": [{ type: Input },],
-        "minVisualRangeLength": [{ type: Input },],
-        "multipleAxesSpacing": [{ type: Input },],
-        "name": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "pane": [{ type: Input },],
-        "placeholderSize": [{ type: Input },],
-        "position": [{ type: Input },],
-        "showZero": [{ type: Input },],
-        "strips": [{ type: Input },],
-        "stripStyle": [{ type: Input },],
-        "synchronizedValue": [{ type: Input },],
-        "tick": [{ type: Input },],
-        "tickInterval": [{ type: Input },],
-        "title": [{ type: Input },],
-        "type": [{ type: Input },],
-        "valueMarginsEnabled": [{ type: Input },],
-        "valueType": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "visualRange": [{ type: Input },],
-        "visualRangeUpdateMode": [{ type: Input },],
-        "wholeRange": [{ type: Input },],
-        "width": [{ type: Input },],
-        "visualRangeChange": [{ type: Output },],
-        "breaksChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiBreakComponent; }),] },],
-        "constantLinesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiConstantLineComponent; }),] },],
-        "stripsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiStripComponent; }),] },],
+        "allowDecimals": [{ type: core_1.Input },],
+        "autoBreaksEnabled": [{ type: core_1.Input },],
+        "axisDivisionFactor": [{ type: core_1.Input },],
+        "breaks": [{ type: core_1.Input },],
+        "breakStyle": [{ type: core_1.Input },],
+        "categories": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "constantLines": [{ type: core_1.Input },],
+        "constantLineStyle": [{ type: core_1.Input },],
+        "discreteAxisDivisionMode": [{ type: core_1.Input },],
+        "endOnTick": [{ type: core_1.Input },],
+        "grid": [{ type: core_1.Input },],
+        "inverted": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "logarithmBase": [{ type: core_1.Input },],
+        "max": [{ type: core_1.Input },],
+        "maxAutoBreakCount": [{ type: core_1.Input },],
+        "maxValueMargin": [{ type: core_1.Input },],
+        "min": [{ type: core_1.Input },],
+        "minorGrid": [{ type: core_1.Input },],
+        "minorTick": [{ type: core_1.Input },],
+        "minorTickCount": [{ type: core_1.Input },],
+        "minorTickInterval": [{ type: core_1.Input },],
+        "minValueMargin": [{ type: core_1.Input },],
+        "minVisualRangeLength": [{ type: core_1.Input },],
+        "multipleAxesSpacing": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "pane": [{ type: core_1.Input },],
+        "placeholderSize": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "showZero": [{ type: core_1.Input },],
+        "strips": [{ type: core_1.Input },],
+        "stripStyle": [{ type: core_1.Input },],
+        "synchronizedValue": [{ type: core_1.Input },],
+        "tick": [{ type: core_1.Input },],
+        "tickInterval": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "valueMarginsEnabled": [{ type: core_1.Input },],
+        "valueType": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "visualRange": [{ type: core_1.Input },],
+        "visualRangeUpdateMode": [{ type: core_1.Input },],
+        "wholeRange": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "visualRangeChange": [{ type: core_1.Output },],
+        "breaksChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return break_dxi_1.DxiBreakComponent; }),] },],
+        "constantLinesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return constant_line_dxi_1.DxiConstantLineComponent; }),] },],
+        "stripsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return strip_dxi_1.DxiStripComponent; }),] },],
     };
     return DxiValueAxisComponent;
-}(CollectionNestedOption));
-export { DxiValueAxisComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiValueAxisComponent = DxiValueAxisComponent;
 var DxiValueAxisModule = (function () {
     function DxiValueAxisModule() {
     }
     DxiValueAxisModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiValueAxisComponent
                     ],
@@ -617,5 +619,5 @@ var DxiValueAxisModule = (function () {
     ];
     return DxiValueAxisModule;
 }());
-export { DxiValueAxisModule };
+exports.DxiValueAxisModule = DxiValueAxisModule;
 //# sourceMappingURL=value-axis-dxi.js.map

@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,8 +11,9 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Injectable } from '@angular/core';
-import * as commonUtils from 'devextreme/core/utils/common';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var commonUtils = require("devextreme/core/utils/common");
 var WatcherHelper = (function () {
     function WatcherHelper() {
         this._watchers = [];
@@ -76,9 +78,9 @@ var WatcherHelper = (function () {
         }
     };
     WatcherHelper.decorators = [
-        { type: Injectable },
+        { type: core_1.Injectable },
     ];
     return WatcherHelper;
 }());
-export { WatcherHelper };
+exports.WatcherHelper = WatcherHelper;
 //# sourceMappingURL=watcher-helper.js.map

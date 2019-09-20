@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoLookupComponent = (function (_super) {
     __extends(DxoLookupComponent, _super);
     function DxoLookupComponent(parentOptionHost, optionHost) {
@@ -79,32 +81,32 @@ var DxoLookupComponent = (function (_super) {
         configurable: true
     });
     DxoLookupComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-lookup',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoLookupComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoLookupComponent.propDecorators = {
-        "allowClearing": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "valueExpr": [{ type: Input },],
+        "allowClearing": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "valueExpr": [{ type: core_1.Input },],
     };
     return DxoLookupComponent;
-}(NestedOption));
-export { DxoLookupComponent };
+}(nested_option_2.NestedOption));
+exports.DxoLookupComponent = DxoLookupComponent;
 var DxoLookupModule = (function () {
     function DxoLookupModule() {
     }
     DxoLookupModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoLookupComponent
                     ],
@@ -115,5 +117,5 @@ var DxoLookupModule = (function () {
     ];
     return DxoLookupModule;
 }());
-export { DxoLookupModule };
+exports.DxoLookupModule = DxoLookupModule;
 //# sourceMappingURL=lookup.js.map

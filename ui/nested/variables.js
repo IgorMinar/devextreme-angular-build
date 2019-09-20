@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoHtmlEditorVariables } from './base/html-editor-variables';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var html_editor_variables_1 = require("./base/html-editor-variables");
 var DxoVariablesComponent = (function (_super) {
     __extends(DxoVariablesComponent, _super);
     function DxoVariablesComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxoVariablesComponent = (function (_super) {
         configurable: true
     });
     DxoVariablesComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-variables',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'dataSource',
                         'escapeChar'
@@ -52,17 +54,17 @@ var DxoVariablesComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoVariablesComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxoVariablesComponent;
-}(DxoHtmlEditorVariables));
-export { DxoVariablesComponent };
+}(html_editor_variables_1.DxoHtmlEditorVariables));
+exports.DxoVariablesComponent = DxoVariablesComponent;
 var DxoVariablesModule = (function () {
     function DxoVariablesModule() {
     }
     DxoVariablesModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoVariablesComponent
                     ],
@@ -73,5 +75,5 @@ var DxoVariablesModule = (function () {
     ];
     return DxoVariablesModule;
 }());
-export { DxoVariablesModule };
+exports.DxoVariablesModule = DxoVariablesModule;
 //# sourceMappingURL=variables.js.map

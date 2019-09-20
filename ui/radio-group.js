@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,24 +21,25 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
-import DxRadioGroup from 'devextreme/ui/radio_group';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiItemComponent } from './nested/item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var radio_group_1 = require("devextreme/ui/radio_group");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var item_dxi_1 = require("./nested/item-dxi");
+var item_dxi_2 = require("./nested/item-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxRadioGroupComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxRadioGroupComponent; }),
     multi: true
 };
 /**
@@ -410,7 +412,7 @@ var DxRadioGroupComponent = (function (_super) {
         configurable: true
     });
     DxRadioGroupComponent.prototype._createInstance = function (element, options) {
-        return new DxRadioGroup(element, options);
+        return new radio_group_1.default(element, options);
     };
     DxRadioGroupComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -469,114 +471,114 @@ var DxRadioGroupComponent = (function (_super) {
         }
     };
     DxRadioGroupComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-radio-group',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxRadioGroupComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxRadioGroupComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "layout": [{ type: Input },],
-        "name": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueExpr": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "displayExprChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "layoutChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueExprChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "layout": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueExpr": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "displayExprChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "layoutChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueExprChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxRadioGroupComponent;
-}(DxComponent));
-export { DxRadioGroupComponent };
+}(component_1.DxComponent));
+exports.DxRadioGroupComponent = DxRadioGroupComponent;
 var DxRadioGroupModule = (function () {
     function DxRadioGroupModule() {
     }
     DxRadioGroupModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        item_dxi_1.DxiItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxRadioGroupComponent
                     ],
                     exports: [
                         DxRadioGroupComponent,
-                        DxiItemModule,
-                        DxTemplateModule
+                        item_dxi_1.DxiItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxRadioGroupModule;
 }());
-export { DxRadioGroupModule };
+exports.DxRadioGroupModule = DxRadioGroupModule;
 //# sourceMappingURL=radio-group.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,22 +21,23 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener } from '@angular/core';
-import DxFileUploader from 'devextreme/ui/file_uploader';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var file_uploader_1 = require("devextreme/ui/file_uploader");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxFileUploaderComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxFileUploaderComponent; }),
     multi: true
 };
 /**
@@ -613,7 +615,7 @@ var DxFileUploaderComponent = (function (_super) {
     });
     DxFileUploaderComponent.prototype.change = function (_) { };
     DxFileUploaderComponent.prototype._createInstance = function (element, options) {
-        return new DxFileUploader(element, options);
+        return new file_uploader_1.default(element, options);
     };
     DxFileUploaderComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -672,146 +674,146 @@ var DxFileUploaderComponent = (function (_super) {
         }
     };
     DxFileUploaderComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-file-uploader',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxFileUploaderComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxFileUploaderComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "accept": [{ type: Input },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "allowCanceling": [{ type: Input },],
-        "allowedFileExtensions": [{ type: Input },],
-        "chunkSize": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "invalidFileExtensionMessage": [{ type: Input },],
-        "invalidMaxFileSizeMessage": [{ type: Input },],
-        "invalidMinFileSizeMessage": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "labelText": [{ type: Input },],
-        "maxFileSize": [{ type: Input },],
-        "minFileSize": [{ type: Input },],
-        "multiple": [{ type: Input },],
-        "name": [{ type: Input },],
-        "progress": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "readyToUploadMessage": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "selectButtonText": [{ type: Input },],
-        "showFileList": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "uploadButtonText": [{ type: Input },],
-        "uploadedMessage": [{ type: Input },],
-        "uploadFailedMessage": [{ type: Input },],
-        "uploadHeaders": [{ type: Input },],
-        "uploadMethod": [{ type: Input },],
-        "uploadMode": [{ type: Input },],
-        "uploadUrl": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "value": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onProgress": [{ type: Output },],
-        "onUploadAborted": [{ type: Output },],
-        "onUploaded": [{ type: Output },],
-        "onUploadError": [{ type: Output },],
-        "onUploadStarted": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "acceptChange": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "allowCancelingChange": [{ type: Output },],
-        "allowedFileExtensionsChange": [{ type: Output },],
-        "chunkSizeChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "invalidFileExtensionMessageChange": [{ type: Output },],
-        "invalidMaxFileSizeMessageChange": [{ type: Output },],
-        "invalidMinFileSizeMessageChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "labelTextChange": [{ type: Output },],
-        "maxFileSizeChange": [{ type: Output },],
-        "minFileSizeChange": [{ type: Output },],
-        "multipleChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "progressChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "readyToUploadMessageChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "selectButtonTextChange": [{ type: Output },],
-        "showFileListChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "uploadButtonTextChange": [{ type: Output },],
-        "uploadedMessageChange": [{ type: Output },],
-        "uploadFailedMessageChange": [{ type: Output },],
-        "uploadHeadersChange": [{ type: Output },],
-        "uploadMethodChange": [{ type: Output },],
-        "uploadModeChange": [{ type: Output },],
-        "uploadUrlChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "accept": [{ type: core_1.Input },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "allowCanceling": [{ type: core_1.Input },],
+        "allowedFileExtensions": [{ type: core_1.Input },],
+        "chunkSize": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "invalidFileExtensionMessage": [{ type: core_1.Input },],
+        "invalidMaxFileSizeMessage": [{ type: core_1.Input },],
+        "invalidMinFileSizeMessage": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "labelText": [{ type: core_1.Input },],
+        "maxFileSize": [{ type: core_1.Input },],
+        "minFileSize": [{ type: core_1.Input },],
+        "multiple": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "progress": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "readyToUploadMessage": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "selectButtonText": [{ type: core_1.Input },],
+        "showFileList": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "uploadButtonText": [{ type: core_1.Input },],
+        "uploadedMessage": [{ type: core_1.Input },],
+        "uploadFailedMessage": [{ type: core_1.Input },],
+        "uploadHeaders": [{ type: core_1.Input },],
+        "uploadMethod": [{ type: core_1.Input },],
+        "uploadMode": [{ type: core_1.Input },],
+        "uploadUrl": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onProgress": [{ type: core_1.Output },],
+        "onUploadAborted": [{ type: core_1.Output },],
+        "onUploaded": [{ type: core_1.Output },],
+        "onUploadError": [{ type: core_1.Output },],
+        "onUploadStarted": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "acceptChange": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "allowCancelingChange": [{ type: core_1.Output },],
+        "allowedFileExtensionsChange": [{ type: core_1.Output },],
+        "chunkSizeChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "invalidFileExtensionMessageChange": [{ type: core_1.Output },],
+        "invalidMaxFileSizeMessageChange": [{ type: core_1.Output },],
+        "invalidMinFileSizeMessageChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "labelTextChange": [{ type: core_1.Output },],
+        "maxFileSizeChange": [{ type: core_1.Output },],
+        "minFileSizeChange": [{ type: core_1.Output },],
+        "multipleChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "progressChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "readyToUploadMessageChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "selectButtonTextChange": [{ type: core_1.Output },],
+        "showFileListChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "uploadButtonTextChange": [{ type: core_1.Output },],
+        "uploadedMessageChange": [{ type: core_1.Output },],
+        "uploadFailedMessageChange": [{ type: core_1.Output },],
+        "uploadHeadersChange": [{ type: core_1.Output },],
+        "uploadMethodChange": [{ type: core_1.Output },],
+        "uploadModeChange": [{ type: core_1.Output },],
+        "uploadUrlChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
     };
     return DxFileUploaderComponent;
-}(DxComponent));
-export { DxFileUploaderComponent };
+}(component_1.DxComponent));
+exports.DxFileUploaderComponent = DxFileUploaderComponent;
 var DxFileUploaderModule = (function () {
     function DxFileUploaderModule() {
     }
     DxFileUploaderModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxFileUploaderComponent
                     ],
                     exports: [
                         DxFileUploaderComponent,
-                        DxTemplateModule
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxFileUploaderModule;
 }());
-export { DxFileUploaderModule };
+exports.DxFileUploaderModule = DxFileUploaderModule;
 //# sourceMappingURL=file-uploader.js.map

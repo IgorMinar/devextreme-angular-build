@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiLayerComponent = (function (_super) {
     __extends(DxiLayerComponent, _super);
     function DxiLayerComponent(parentOptionHost, optionHost) {
@@ -319,56 +321,56 @@ var DxiLayerComponent = (function (_super) {
         configurable: true
     });
     DxiLayerComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-layer',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiLayerComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiLayerComponent.propDecorators = {
-        "borderColor": [{ type: Input },],
-        "borderWidth": [{ type: Input },],
-        "color": [{ type: Input },],
-        "colorGroupingField": [{ type: Input },],
-        "colorGroups": [{ type: Input },],
-        "customize": [{ type: Input },],
-        "dataField": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "elementType": [{ type: Input },],
-        "hoveredBorderColor": [{ type: Input },],
-        "hoveredBorderWidth": [{ type: Input },],
-        "hoveredColor": [{ type: Input },],
-        "hoverEnabled": [{ type: Input },],
-        "label": [{ type: Input },],
-        "maxSize": [{ type: Input },],
-        "minSize": [{ type: Input },],
-        "name": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "palette": [{ type: Input },],
-        "paletteSize": [{ type: Input },],
-        "selectedBorderColor": [{ type: Input },],
-        "selectedBorderWidth": [{ type: Input },],
-        "selectedColor": [{ type: Input },],
-        "selectionMode": [{ type: Input },],
-        "size": [{ type: Input },],
-        "sizeGroupingField": [{ type: Input },],
-        "sizeGroups": [{ type: Input },],
-        "type": [{ type: Input },],
+        "borderColor": [{ type: core_1.Input },],
+        "borderWidth": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "colorGroupingField": [{ type: core_1.Input },],
+        "colorGroups": [{ type: core_1.Input },],
+        "customize": [{ type: core_1.Input },],
+        "dataField": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "elementType": [{ type: core_1.Input },],
+        "hoveredBorderColor": [{ type: core_1.Input },],
+        "hoveredBorderWidth": [{ type: core_1.Input },],
+        "hoveredColor": [{ type: core_1.Input },],
+        "hoverEnabled": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "maxSize": [{ type: core_1.Input },],
+        "minSize": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "palette": [{ type: core_1.Input },],
+        "paletteSize": [{ type: core_1.Input },],
+        "selectedBorderColor": [{ type: core_1.Input },],
+        "selectedBorderWidth": [{ type: core_1.Input },],
+        "selectedColor": [{ type: core_1.Input },],
+        "selectionMode": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "sizeGroupingField": [{ type: core_1.Input },],
+        "sizeGroups": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
     };
     return DxiLayerComponent;
-}(CollectionNestedOption));
-export { DxiLayerComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiLayerComponent = DxiLayerComponent;
 var DxiLayerModule = (function () {
     function DxiLayerModule() {
     }
     DxiLayerModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiLayerComponent
                     ],
@@ -379,5 +381,5 @@ var DxiLayerModule = (function () {
     ];
     return DxiLayerModule;
 }());
-export { DxiLayerModule };
+exports.DxiLayerModule = DxiLayerModule;
 //# sourceMappingURL=layer-dxi.js.map

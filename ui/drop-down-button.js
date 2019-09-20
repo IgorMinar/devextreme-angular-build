@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,31 +21,32 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxDropDownButton from 'devextreme/ui/drop_down_button';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoDropDownOptionsModule } from './nested/drop-down-options';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoHideModule } from './nested/hide';
-import { DxoShowModule } from './nested/show';
-import { DxoPositionModule } from './nested/position';
-import { DxoAtModule } from './nested/at';
-import { DxoBoundaryOffsetModule } from './nested/boundary-offset';
-import { DxoCollisionModule } from './nested/collision';
-import { DxoMyModule } from './nested/my';
-import { DxoOffsetModule } from './nested/offset';
-import { DxiToolbarItemModule } from './nested/toolbar-item-dxi';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiItemComponent } from './nested/item-dxi';
+var drop_down_button_1 = require("devextreme/ui/drop_down_button");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var drop_down_options_1 = require("./nested/drop-down-options");
+var animation_1 = require("./nested/animation");
+var hide_1 = require("./nested/hide");
+var show_1 = require("./nested/show");
+var position_1 = require("./nested/position");
+var at_1 = require("./nested/at");
+var boundary_offset_1 = require("./nested/boundary-offset");
+var collision_1 = require("./nested/collision");
+var my_1 = require("./nested/my");
+var offset_1 = require("./nested/offset");
+var toolbar_item_dxi_1 = require("./nested/toolbar-item-dxi");
+var item_dxi_1 = require("./nested/item-dxi");
+var item_dxi_2 = require("./nested/item-dxi");
 /**
  * The DropDownButton is a button that opens a drop-down menu.
  */
@@ -498,7 +500,7 @@ var DxDropDownButtonComponent = (function (_super) {
         configurable: true
     });
     DxDropDownButtonComponent.prototype._createInstance = function (element, options) {
-        return new DxDropDownButton(element, options);
+        return new drop_down_button_1.default(element, options);
     };
     DxDropDownButtonComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -528,145 +530,145 @@ var DxDropDownButtonComponent = (function (_super) {
         }
     };
     DxDropDownButtonComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-drop-down-button',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxDropDownButtonComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxDropDownButtonComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "dropDownContentTemplate": [{ type: Input },],
-        "dropDownOptions": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "icon": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "keyExpr": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "opened": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "selectedItem": [{ type: Input },],
-        "selectedItemKey": [{ type: Input },],
-        "showArrowIcon": [{ type: Input },],
-        "splitButton": [{ type: Input },],
-        "stylingMode": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "text": [{ type: Input },],
-        "useSelectMode": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onButtonClick": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "displayExprChange": [{ type: Output },],
-        "dropDownContentTemplateChange": [{ type: Output },],
-        "dropDownOptionsChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "iconChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "keyExprChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "openedChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "selectedItemChange": [{ type: Output },],
-        "selectedItemKeyChange": [{ type: Output },],
-        "showArrowIconChange": [{ type: Output },],
-        "splitButtonChange": [{ type: Output },],
-        "stylingModeChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textChange": [{ type: Output },],
-        "useSelectModeChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "dropDownContentTemplate": [{ type: core_1.Input },],
+        "dropDownOptions": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "icon": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "keyExpr": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "opened": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "selectedItem": [{ type: core_1.Input },],
+        "selectedItemKey": [{ type: core_1.Input },],
+        "showArrowIcon": [{ type: core_1.Input },],
+        "splitButton": [{ type: core_1.Input },],
+        "stylingMode": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "useSelectMode": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onButtonClick": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "displayExprChange": [{ type: core_1.Output },],
+        "dropDownContentTemplateChange": [{ type: core_1.Output },],
+        "dropDownOptionsChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "iconChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "keyExprChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "openedChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "selectedItemChange": [{ type: core_1.Output },],
+        "selectedItemKeyChange": [{ type: core_1.Output },],
+        "showArrowIconChange": [{ type: core_1.Output },],
+        "splitButtonChange": [{ type: core_1.Output },],
+        "stylingModeChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textChange": [{ type: core_1.Output },],
+        "useSelectModeChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxDropDownButtonComponent;
-}(DxComponent));
-export { DxDropDownButtonComponent };
+}(component_1.DxComponent));
+exports.DxDropDownButtonComponent = DxDropDownButtonComponent;
 var DxDropDownButtonModule = (function () {
     function DxDropDownButtonModule() {
     }
     DxDropDownButtonModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoDropDownOptionsModule,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxiToolbarItemModule,
-                        DxiItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        drop_down_options_1.DxoDropDownOptionsModule,
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        toolbar_item_dxi_1.DxiToolbarItemModule,
+                        item_dxi_1.DxiItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxDropDownButtonComponent
                     ],
                     exports: [
                         DxDropDownButtonComponent,
-                        DxoDropDownOptionsModule,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxiToolbarItemModule,
-                        DxiItemModule,
-                        DxTemplateModule
+                        drop_down_options_1.DxoDropDownOptionsModule,
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        toolbar_item_dxi_1.DxiToolbarItemModule,
+                        item_dxi_1.DxiItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxDropDownButtonModule;
 }());
-export { DxDropDownButtonModule };
+exports.DxDropDownButtonModule = DxDropDownButtonModule;
 //# sourceMappingURL=drop-down-button.js.map

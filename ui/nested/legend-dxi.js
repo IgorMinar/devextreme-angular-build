@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiLegendComponent = (function (_super) {
     __extends(DxiLegendComponent, _super);
     function DxiLegendComponent(parentOptionHost, optionHost) {
@@ -280,52 +282,52 @@ var DxiLegendComponent = (function (_super) {
         configurable: true
     });
     DxiLegendComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-legend',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiLegendComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiLegendComponent.propDecorators = {
-        "backgroundColor": [{ type: Input },],
-        "border": [{ type: Input },],
-        "columnCount": [{ type: Input },],
-        "columnItemSpacing": [{ type: Input },],
-        "customizeHint": [{ type: Input },],
-        "customizeItems": [{ type: Input },],
-        "customizeText": [{ type: Input },],
-        "font": [{ type: Input },],
-        "horizontalAlignment": [{ type: Input },],
-        "itemsAlignment": [{ type: Input },],
-        "itemTextPosition": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "markerColor": [{ type: Input },],
-        "markerShape": [{ type: Input },],
-        "markerSize": [{ type: Input },],
-        "orientation": [{ type: Input },],
-        "paddingLeftRight": [{ type: Input },],
-        "paddingTopBottom": [{ type: Input },],
-        "rowCount": [{ type: Input },],
-        "rowItemSpacing": [{ type: Input },],
-        "source": [{ type: Input },],
-        "title": [{ type: Input },],
-        "verticalAlignment": [{ type: Input },],
-        "visible": [{ type: Input },],
+        "backgroundColor": [{ type: core_1.Input },],
+        "border": [{ type: core_1.Input },],
+        "columnCount": [{ type: core_1.Input },],
+        "columnItemSpacing": [{ type: core_1.Input },],
+        "customizeHint": [{ type: core_1.Input },],
+        "customizeItems": [{ type: core_1.Input },],
+        "customizeText": [{ type: core_1.Input },],
+        "font": [{ type: core_1.Input },],
+        "horizontalAlignment": [{ type: core_1.Input },],
+        "itemsAlignment": [{ type: core_1.Input },],
+        "itemTextPosition": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "markerColor": [{ type: core_1.Input },],
+        "markerShape": [{ type: core_1.Input },],
+        "markerSize": [{ type: core_1.Input },],
+        "orientation": [{ type: core_1.Input },],
+        "paddingLeftRight": [{ type: core_1.Input },],
+        "paddingTopBottom": [{ type: core_1.Input },],
+        "rowCount": [{ type: core_1.Input },],
+        "rowItemSpacing": [{ type: core_1.Input },],
+        "source": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "verticalAlignment": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
     };
     return DxiLegendComponent;
-}(CollectionNestedOption));
-export { DxiLegendComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiLegendComponent = DxiLegendComponent;
 var DxiLegendModule = (function () {
     function DxiLegendModule() {
     }
     DxiLegendModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiLegendComponent
                     ],
@@ -336,5 +338,5 @@ var DxiLegendModule = (function () {
     ];
     return DxiLegendModule;
 }());
-export { DxiLegendModule };
+exports.DxiLegendModule = DxiLegendModule;
 //# sourceMappingURL=legend-dxi.js.map

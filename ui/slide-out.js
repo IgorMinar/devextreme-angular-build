@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,19 +21,20 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxSlideOut from 'devextreme/ui/slide_out';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiItemComponent } from './nested/item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var slide_out_1 = require("devextreme/ui/slide_out");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var item_dxi_1 = require("./nested/item-dxi");
+var item_dxi_2 = require("./nested/item-dxi");
 /**
  * The SlideOut widget is a classic slide-out menu paired with a view. An end user opens the menu by swiping away the view.
  */
@@ -392,7 +394,7 @@ var DxSlideOutComponent = (function (_super) {
         configurable: true
     });
     DxSlideOutComponent.prototype._createInstance = function (element, options) {
-        return new DxSlideOut(element, options);
+        return new slide_out_1.default(element, options);
     };
     DxSlideOutComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -422,113 +424,113 @@ var DxSlideOutComponent = (function (_super) {
         }
     };
     DxSlideOutComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-slide-out',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxSlideOutComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxSlideOutComponent.propDecorators = {
-        "activeStateEnabled": [{ type: Input },],
-        "contentTemplate": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "itemHoldTimeout": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "menuGrouped": [{ type: Input },],
-        "menuGroupTemplate": [{ type: Input },],
-        "menuItemTemplate": [{ type: Input },],
-        "menuPosition": [{ type: Input },],
-        "menuVisible": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "selectedIndex": [{ type: Input },],
-        "selectedItem": [{ type: Input },],
-        "swipeEnabled": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onItemContextMenu": [{ type: Output },],
-        "onItemHold": [{ type: Output },],
-        "onItemRendered": [{ type: Output },],
-        "onMenuGroupRendered": [{ type: Output },],
-        "onMenuItemRendered": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "contentTemplateChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "itemHoldTimeoutChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "menuGroupedChange": [{ type: Output },],
-        "menuGroupTemplateChange": [{ type: Output },],
-        "menuItemTemplateChange": [{ type: Output },],
-        "menuPositionChange": [{ type: Output },],
-        "menuVisibleChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "selectedIndexChange": [{ type: Output },],
-        "selectedItemChange": [{ type: Output },],
-        "swipeEnabledChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "contentTemplate": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "itemHoldTimeout": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "menuGrouped": [{ type: core_1.Input },],
+        "menuGroupTemplate": [{ type: core_1.Input },],
+        "menuItemTemplate": [{ type: core_1.Input },],
+        "menuPosition": [{ type: core_1.Input },],
+        "menuVisible": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "selectedIndex": [{ type: core_1.Input },],
+        "selectedItem": [{ type: core_1.Input },],
+        "swipeEnabled": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onItemContextMenu": [{ type: core_1.Output },],
+        "onItemHold": [{ type: core_1.Output },],
+        "onItemRendered": [{ type: core_1.Output },],
+        "onMenuGroupRendered": [{ type: core_1.Output },],
+        "onMenuItemRendered": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "contentTemplateChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "itemHoldTimeoutChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "menuGroupedChange": [{ type: core_1.Output },],
+        "menuGroupTemplateChange": [{ type: core_1.Output },],
+        "menuItemTemplateChange": [{ type: core_1.Output },],
+        "menuPositionChange": [{ type: core_1.Output },],
+        "menuVisibleChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "selectedIndexChange": [{ type: core_1.Output },],
+        "selectedItemChange": [{ type: core_1.Output },],
+        "swipeEnabledChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxSlideOutComponent;
-}(DxComponent));
-export { DxSlideOutComponent };
+}(component_1.DxComponent));
+exports.DxSlideOutComponent = DxSlideOutComponent;
 var DxSlideOutModule = (function () {
     function DxSlideOutModule() {
     }
     DxSlideOutModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        item_dxi_1.DxiItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxSlideOutComponent
                     ],
                     exports: [
                         DxSlideOutComponent,
-                        DxiItemModule,
-                        DxTemplateModule
+                        item_dxi_1.DxiItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxSlideOutModule;
 }());
-export { DxSlideOutModule };
+exports.DxSlideOutModule = DxSlideOutModule;
 //# sourceMappingURL=slide-out.js.map

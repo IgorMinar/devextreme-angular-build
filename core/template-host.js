@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,6 +11,7 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 ;
 var DxTemplateHost = (function () {
     function DxTemplateHost() {
@@ -22,5 +24,5 @@ var DxTemplateHost = (function () {
     };
     return DxTemplateHost;
 }());
-export { DxTemplateHost };
+exports.DxTemplateHost = DxTemplateHost;
 //# sourceMappingURL=template-host.js.map

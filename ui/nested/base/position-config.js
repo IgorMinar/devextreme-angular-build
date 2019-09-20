@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,7 +21,8 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { NestedOption } from '../../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var nested_option_1 = require("../../../core/nested-option");
 var DxoPositionConfig = (function (_super) {
     __extends(DxoPositionConfig, _super);
     function DxoPositionConfig() {
@@ -97,6 +99,6 @@ var DxoPositionConfig = (function (_super) {
         configurable: true
     });
     return DxoPositionConfig;
-}(NestedOption));
-export { DxoPositionConfig };
+}(nested_option_1.NestedOption));
+exports.DxoPositionConfig = DxoPositionConfig;
 //# sourceMappingURL=position-config.js.map

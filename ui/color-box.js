@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,25 +21,26 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
-import DxColorBox from 'devextreme/ui/color_box';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiButtonModule } from './nested/button-dxi';
-import { DxoOptionsModule } from './nested/options';
-import { DxiButtonComponent } from './nested/button-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var color_box_1 = require("devextreme/ui/color_box");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var button_dxi_1 = require("./nested/button-dxi");
+var options_1 = require("./nested/options");
+var button_dxi_2 = require("./nested/button-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxColorBoxComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxColorBoxComponent; }),
     multi: true
 };
 /**
@@ -549,7 +551,7 @@ var DxColorBoxComponent = (function (_super) {
         configurable: true
     });
     DxColorBoxComponent.prototype._createInstance = function (element, options) {
-        return new DxColorBox(element, options);
+        return new color_box_1.default(element, options);
     };
     DxColorBoxComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -606,146 +608,146 @@ var DxColorBoxComponent = (function (_super) {
         }
     };
     DxColorBoxComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-color-box',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxColorBoxComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxColorBoxComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "acceptCustomValue": [{ type: Input },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "applyButtonText": [{ type: Input },],
-        "applyValueMode": [{ type: Input },],
-        "buttons": [{ type: Input },],
-        "cancelButtonText": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "dropDownButtonTemplate": [{ type: Input },],
-        "editAlphaChannel": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "fieldTemplate": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "inputAttr": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "keyStep": [{ type: Input },],
-        "name": [{ type: Input },],
-        "opened": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "stylingMode": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "text": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onChange": [{ type: Output },],
-        "onClosed": [{ type: Output },],
-        "onCopy": [{ type: Output },],
-        "onCut": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEnterKey": [{ type: Output },],
-        "onFocusIn": [{ type: Output },],
-        "onFocusOut": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onInput": [{ type: Output },],
-        "onKeyDown": [{ type: Output },],
-        "onKeyPress": [{ type: Output },],
-        "onKeyUp": [{ type: Output },],
-        "onOpened": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPaste": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "acceptCustomValueChange": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "applyButtonTextChange": [{ type: Output },],
-        "applyValueModeChange": [{ type: Output },],
-        "buttonsChange": [{ type: Output },],
-        "cancelButtonTextChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "dropDownButtonTemplateChange": [{ type: Output },],
-        "editAlphaChannelChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "fieldTemplateChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "inputAttrChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "keyStepChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "openedChange": [{ type: Output },],
-        "placeholderChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "stylingModeChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "buttonsChildren": [{ type: ContentChildren, args: [DxiButtonComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "acceptCustomValue": [{ type: core_1.Input },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "applyButtonText": [{ type: core_1.Input },],
+        "applyValueMode": [{ type: core_1.Input },],
+        "buttons": [{ type: core_1.Input },],
+        "cancelButtonText": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "dropDownButtonTemplate": [{ type: core_1.Input },],
+        "editAlphaChannel": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "fieldTemplate": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "inputAttr": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "keyStep": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "opened": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "stylingMode": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onChange": [{ type: core_1.Output },],
+        "onClosed": [{ type: core_1.Output },],
+        "onCopy": [{ type: core_1.Output },],
+        "onCut": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEnterKey": [{ type: core_1.Output },],
+        "onFocusIn": [{ type: core_1.Output },],
+        "onFocusOut": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onInput": [{ type: core_1.Output },],
+        "onKeyDown": [{ type: core_1.Output },],
+        "onKeyPress": [{ type: core_1.Output },],
+        "onKeyUp": [{ type: core_1.Output },],
+        "onOpened": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPaste": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "acceptCustomValueChange": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "applyButtonTextChange": [{ type: core_1.Output },],
+        "applyValueModeChange": [{ type: core_1.Output },],
+        "buttonsChange": [{ type: core_1.Output },],
+        "cancelButtonTextChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "dropDownButtonTemplateChange": [{ type: core_1.Output },],
+        "editAlphaChannelChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "fieldTemplateChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "inputAttrChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "keyStepChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "openedChange": [{ type: core_1.Output },],
+        "placeholderChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "stylingModeChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "buttonsChildren": [{ type: core_1.ContentChildren, args: [button_dxi_2.DxiButtonComponent,] },],
     };
     return DxColorBoxComponent;
-}(DxComponent));
-export { DxColorBoxComponent };
+}(component_1.DxComponent));
+exports.DxColorBoxComponent = DxColorBoxComponent;
 var DxColorBoxModule = (function () {
     function DxColorBoxModule() {
     }
     DxColorBoxModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxColorBoxComponent
                     ],
                     exports: [
                         DxColorBoxComponent,
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxTemplateModule
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxColorBoxModule;
 }());
-export { DxColorBoxModule };
+exports.DxColorBoxModule = DxColorBoxModule;
 //# sourceMappingURL=color-box.js.map

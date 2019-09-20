@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,25 +21,26 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxList from 'devextreme/ui/list';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiMenuItemModule } from './nested/menu-item-dxi';
-import { DxoSearchEditorOptionsModule } from './nested/search-editor-options';
-import { DxiButtonModule } from './nested/button-dxi';
-import { DxoOptionsModule } from './nested/options';
-import { DxiItemComponent } from './nested/item-dxi';
-import { DxiMenuItemComponent } from './nested/menu-item-dxi';
+var list_1 = require("devextreme/ui/list");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var item_dxi_1 = require("./nested/item-dxi");
+var menu_item_dxi_1 = require("./nested/menu-item-dxi");
+var search_editor_options_1 = require("./nested/search-editor-options");
+var button_dxi_1 = require("./nested/button-dxi");
+var options_1 = require("./nested/options");
+var item_dxi_2 = require("./nested/item-dxi");
+var menu_item_dxi_2 = require("./nested/menu-item-dxi");
 /**
  * The List is a widget that represents a collection of items in a scrollable list.
  */
@@ -835,7 +837,7 @@ var DxListComponent = (function (_super) {
         configurable: true
     });
     DxListComponent.prototype._createInstance = function (element, options) {
-        return new DxList(element, options);
+        return new list_1.default(element, options);
     };
     DxListComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -873,189 +875,189 @@ var DxListComponent = (function (_super) {
         }
     };
     DxListComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-list',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxListComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxListComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "allowItemDeleting": [{ type: Input },],
-        "allowItemReordering": [{ type: Input },],
-        "bounceEnabled": [{ type: Input },],
-        "collapsibleGroups": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "grouped": [{ type: Input },],
-        "groupTemplate": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "indicateLoading": [{ type: Input },],
-        "itemDeleteMode": [{ type: Input },],
-        "itemHoldTimeout": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "keyExpr": [{ type: Input },],
-        "menuItems": [{ type: Input },],
-        "menuMode": [{ type: Input },],
-        "nextButtonText": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "pageLoadingText": [{ type: Input },],
-        "pageLoadMode": [{ type: Input },],
-        "pulledDownText": [{ type: Input },],
-        "pullingDownText": [{ type: Input },],
-        "pullRefreshEnabled": [{ type: Input },],
-        "refreshingText": [{ type: Input },],
-        "repaintChangesOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scrollByContent": [{ type: Input },],
-        "scrollByThumb": [{ type: Input },],
-        "scrollingEnabled": [{ type: Input },],
-        "searchEditorOptions": [{ type: Input },],
-        "searchEnabled": [{ type: Input },],
-        "searchExpr": [{ type: Input },],
-        "searchMode": [{ type: Input },],
-        "searchTimeout": [{ type: Input },],
-        "searchValue": [{ type: Input },],
-        "selectAllMode": [{ type: Input },],
-        "selectedItemKeys": [{ type: Input },],
-        "selectedItems": [{ type: Input },],
-        "selectionMode": [{ type: Input },],
-        "showScrollbar": [{ type: Input },],
-        "showSelectionControls": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "useNativeScrolling": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onGroupRendered": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onItemContextMenu": [{ type: Output },],
-        "onItemDeleted": [{ type: Output },],
-        "onItemDeleting": [{ type: Output },],
-        "onItemHold": [{ type: Output },],
-        "onItemRendered": [{ type: Output },],
-        "onItemReordered": [{ type: Output },],
-        "onItemSwipe": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPageLoading": [{ type: Output },],
-        "onPullRefresh": [{ type: Output },],
-        "onScroll": [{ type: Output },],
-        "onSelectAllValueChanged": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "allowItemDeletingChange": [{ type: Output },],
-        "allowItemReorderingChange": [{ type: Output },],
-        "bounceEnabledChange": [{ type: Output },],
-        "collapsibleGroupsChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "displayExprChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "groupedChange": [{ type: Output },],
-        "groupTemplateChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "indicateLoadingChange": [{ type: Output },],
-        "itemDeleteModeChange": [{ type: Output },],
-        "itemHoldTimeoutChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "keyExprChange": [{ type: Output },],
-        "menuItemsChange": [{ type: Output },],
-        "menuModeChange": [{ type: Output },],
-        "nextButtonTextChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "pageLoadingTextChange": [{ type: Output },],
-        "pageLoadModeChange": [{ type: Output },],
-        "pulledDownTextChange": [{ type: Output },],
-        "pullingDownTextChange": [{ type: Output },],
-        "pullRefreshEnabledChange": [{ type: Output },],
-        "refreshingTextChange": [{ type: Output },],
-        "repaintChangesOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scrollByContentChange": [{ type: Output },],
-        "scrollByThumbChange": [{ type: Output },],
-        "scrollingEnabledChange": [{ type: Output },],
-        "searchEditorOptionsChange": [{ type: Output },],
-        "searchEnabledChange": [{ type: Output },],
-        "searchExprChange": [{ type: Output },],
-        "searchModeChange": [{ type: Output },],
-        "searchTimeoutChange": [{ type: Output },],
-        "searchValueChange": [{ type: Output },],
-        "selectAllModeChange": [{ type: Output },],
-        "selectedItemKeysChange": [{ type: Output },],
-        "selectedItemsChange": [{ type: Output },],
-        "selectionModeChange": [{ type: Output },],
-        "showScrollbarChange": [{ type: Output },],
-        "showSelectionControlsChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "useNativeScrollingChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
-        "menuItemsChildren": [{ type: ContentChildren, args: [DxiMenuItemComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "allowItemDeleting": [{ type: core_1.Input },],
+        "allowItemReordering": [{ type: core_1.Input },],
+        "bounceEnabled": [{ type: core_1.Input },],
+        "collapsibleGroups": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "grouped": [{ type: core_1.Input },],
+        "groupTemplate": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "indicateLoading": [{ type: core_1.Input },],
+        "itemDeleteMode": [{ type: core_1.Input },],
+        "itemHoldTimeout": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "keyExpr": [{ type: core_1.Input },],
+        "menuItems": [{ type: core_1.Input },],
+        "menuMode": [{ type: core_1.Input },],
+        "nextButtonText": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "pageLoadingText": [{ type: core_1.Input },],
+        "pageLoadMode": [{ type: core_1.Input },],
+        "pulledDownText": [{ type: core_1.Input },],
+        "pullingDownText": [{ type: core_1.Input },],
+        "pullRefreshEnabled": [{ type: core_1.Input },],
+        "refreshingText": [{ type: core_1.Input },],
+        "repaintChangesOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scrollByContent": [{ type: core_1.Input },],
+        "scrollByThumb": [{ type: core_1.Input },],
+        "scrollingEnabled": [{ type: core_1.Input },],
+        "searchEditorOptions": [{ type: core_1.Input },],
+        "searchEnabled": [{ type: core_1.Input },],
+        "searchExpr": [{ type: core_1.Input },],
+        "searchMode": [{ type: core_1.Input },],
+        "searchTimeout": [{ type: core_1.Input },],
+        "searchValue": [{ type: core_1.Input },],
+        "selectAllMode": [{ type: core_1.Input },],
+        "selectedItemKeys": [{ type: core_1.Input },],
+        "selectedItems": [{ type: core_1.Input },],
+        "selectionMode": [{ type: core_1.Input },],
+        "showScrollbar": [{ type: core_1.Input },],
+        "showSelectionControls": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "useNativeScrolling": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onGroupRendered": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onItemContextMenu": [{ type: core_1.Output },],
+        "onItemDeleted": [{ type: core_1.Output },],
+        "onItemDeleting": [{ type: core_1.Output },],
+        "onItemHold": [{ type: core_1.Output },],
+        "onItemRendered": [{ type: core_1.Output },],
+        "onItemReordered": [{ type: core_1.Output },],
+        "onItemSwipe": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPageLoading": [{ type: core_1.Output },],
+        "onPullRefresh": [{ type: core_1.Output },],
+        "onScroll": [{ type: core_1.Output },],
+        "onSelectAllValueChanged": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "allowItemDeletingChange": [{ type: core_1.Output },],
+        "allowItemReorderingChange": [{ type: core_1.Output },],
+        "bounceEnabledChange": [{ type: core_1.Output },],
+        "collapsibleGroupsChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "displayExprChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "groupedChange": [{ type: core_1.Output },],
+        "groupTemplateChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "indicateLoadingChange": [{ type: core_1.Output },],
+        "itemDeleteModeChange": [{ type: core_1.Output },],
+        "itemHoldTimeoutChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "keyExprChange": [{ type: core_1.Output },],
+        "menuItemsChange": [{ type: core_1.Output },],
+        "menuModeChange": [{ type: core_1.Output },],
+        "nextButtonTextChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "pageLoadingTextChange": [{ type: core_1.Output },],
+        "pageLoadModeChange": [{ type: core_1.Output },],
+        "pulledDownTextChange": [{ type: core_1.Output },],
+        "pullingDownTextChange": [{ type: core_1.Output },],
+        "pullRefreshEnabledChange": [{ type: core_1.Output },],
+        "refreshingTextChange": [{ type: core_1.Output },],
+        "repaintChangesOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scrollByContentChange": [{ type: core_1.Output },],
+        "scrollByThumbChange": [{ type: core_1.Output },],
+        "scrollingEnabledChange": [{ type: core_1.Output },],
+        "searchEditorOptionsChange": [{ type: core_1.Output },],
+        "searchEnabledChange": [{ type: core_1.Output },],
+        "searchExprChange": [{ type: core_1.Output },],
+        "searchModeChange": [{ type: core_1.Output },],
+        "searchTimeoutChange": [{ type: core_1.Output },],
+        "searchValueChange": [{ type: core_1.Output },],
+        "selectAllModeChange": [{ type: core_1.Output },],
+        "selectedItemKeysChange": [{ type: core_1.Output },],
+        "selectedItemsChange": [{ type: core_1.Output },],
+        "selectionModeChange": [{ type: core_1.Output },],
+        "showScrollbarChange": [{ type: core_1.Output },],
+        "showSelectionControlsChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "useNativeScrollingChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
+        "menuItemsChildren": [{ type: core_1.ContentChildren, args: [menu_item_dxi_2.DxiMenuItemComponent,] },],
     };
     return DxListComponent;
-}(DxComponent));
-export { DxListComponent };
+}(component_1.DxComponent));
+exports.DxListComponent = DxListComponent;
 var DxListModule = (function () {
     function DxListModule() {
     }
     DxListModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiItemModule,
-                        DxiMenuItemModule,
-                        DxoSearchEditorOptionsModule,
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        item_dxi_1.DxiItemModule,
+                        menu_item_dxi_1.DxiMenuItemModule,
+                        search_editor_options_1.DxoSearchEditorOptionsModule,
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxListComponent
                     ],
                     exports: [
                         DxListComponent,
-                        DxiItemModule,
-                        DxiMenuItemModule,
-                        DxoSearchEditorOptionsModule,
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxTemplateModule
+                        item_dxi_1.DxiItemModule,
+                        menu_item_dxi_1.DxiMenuItemModule,
+                        search_editor_options_1.DxoSearchEditorOptionsModule,
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxListModule;
 }());
-export { DxListModule };
+exports.DxListModule = DxListModule;
 //# sourceMappingURL=list.js.map

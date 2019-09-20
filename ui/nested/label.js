@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoLabelComponent = (function (_super) {
     __extends(DxoLabelComponent, _super);
     function DxoLabelComponent(parentOptionHost, optionHost) {
@@ -420,66 +422,66 @@ var DxoLabelComponent = (function (_super) {
         configurable: true
     });
     DxoLabelComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-label',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoLabelComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoLabelComponent.propDecorators = {
-        "connectorColor": [{ type: Input },],
-        "connectorWidth": [{ type: Input },],
-        "customizeText": [{ type: Input },],
-        "font": [{ type: Input },],
-        "format": [{ type: Input },],
-        "indent": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "horizontalAlignment": [{ type: Input },],
-        "position": [{ type: Input },],
-        "text": [{ type: Input },],
-        "verticalAlignment": [{ type: Input },],
-        "alignment": [{ type: Input },],
-        "customizeHint": [{ type: Input },],
-        "displayMode": [{ type: Input },],
-        "indentFromAxis": [{ type: Input },],
-        "overlappingBehavior": [{ type: Input },],
-        "rotationAngle": [{ type: Input },],
-        "staggeringSpacing": [{ type: Input },],
-        "textOverflow": [{ type: Input },],
-        "wordWrap": [{ type: Input },],
-        "argumentFormat": [{ type: Input },],
-        "backgroundColor": [{ type: Input },],
-        "border": [{ type: Input },],
-        "connector": [{ type: Input },],
-        "horizontalOffset": [{ type: Input },],
-        "showForZeroValues": [{ type: Input },],
-        "verticalOffset": [{ type: Input },],
-        "hideFirstOrLast": [{ type: Input },],
-        "indentFromTick": [{ type: Input },],
-        "useRangeColors": [{ type: Input },],
-        "location": [{ type: Input },],
-        "showColon": [{ type: Input },],
-        "radialOffset": [{ type: Input },],
-        "topIndent": [{ type: Input },],
-        "shadow": [{ type: Input },],
-        "useNodeColors": [{ type: Input },],
-        "dataField": [{ type: Input },],
-        "enabled": [{ type: Input },],
+        "connectorColor": [{ type: core_1.Input },],
+        "connectorWidth": [{ type: core_1.Input },],
+        "customizeText": [{ type: core_1.Input },],
+        "font": [{ type: core_1.Input },],
+        "format": [{ type: core_1.Input },],
+        "indent": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "horizontalAlignment": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "verticalAlignment": [{ type: core_1.Input },],
+        "alignment": [{ type: core_1.Input },],
+        "customizeHint": [{ type: core_1.Input },],
+        "displayMode": [{ type: core_1.Input },],
+        "indentFromAxis": [{ type: core_1.Input },],
+        "overlappingBehavior": [{ type: core_1.Input },],
+        "rotationAngle": [{ type: core_1.Input },],
+        "staggeringSpacing": [{ type: core_1.Input },],
+        "textOverflow": [{ type: core_1.Input },],
+        "wordWrap": [{ type: core_1.Input },],
+        "argumentFormat": [{ type: core_1.Input },],
+        "backgroundColor": [{ type: core_1.Input },],
+        "border": [{ type: core_1.Input },],
+        "connector": [{ type: core_1.Input },],
+        "horizontalOffset": [{ type: core_1.Input },],
+        "showForZeroValues": [{ type: core_1.Input },],
+        "verticalOffset": [{ type: core_1.Input },],
+        "hideFirstOrLast": [{ type: core_1.Input },],
+        "indentFromTick": [{ type: core_1.Input },],
+        "useRangeColors": [{ type: core_1.Input },],
+        "location": [{ type: core_1.Input },],
+        "showColon": [{ type: core_1.Input },],
+        "radialOffset": [{ type: core_1.Input },],
+        "topIndent": [{ type: core_1.Input },],
+        "shadow": [{ type: core_1.Input },],
+        "useNodeColors": [{ type: core_1.Input },],
+        "dataField": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
     };
     return DxoLabelComponent;
-}(NestedOption));
-export { DxoLabelComponent };
+}(nested_option_2.NestedOption));
+exports.DxoLabelComponent = DxoLabelComponent;
 var DxoLabelModule = (function () {
     function DxoLabelModule() {
     }
     DxoLabelModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoLabelComponent
                     ],
@@ -490,5 +492,5 @@ var DxoLabelModule = (function () {
     ];
     return DxoLabelModule;
 }());
-export { DxoLabelModule };
+exports.DxoLabelModule = DxoLabelModule;
 //# sourceMappingURL=label.js.map

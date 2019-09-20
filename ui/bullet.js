@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,23 +21,24 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxBullet from 'devextreme/viz/bullet';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { DxoMarginModule } from './nested/margin';
-import { DxoSizeModule } from './nested/size';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoBorderModule } from './nested/border';
-import { DxoFontModule } from './nested/font';
-import { DxoFormatModule } from './nested/format';
-import { DxoShadowModule } from './nested/shadow';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var bullet_1 = require("devextreme/viz/bullet");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var margin_1 = require("./nested/margin");
+var size_1 = require("./nested/size");
+var tooltip_1 = require("./nested/tooltip");
+var border_1 = require("./nested/border");
+var font_1 = require("./nested/font");
+var format_1 = require("./nested/format");
+var shadow_1 = require("./nested/shadow");
 /**
  * The Bullet widget is useful when you need to compare a single measure to a target value. The widget comprises a horizontal bar indicating the measure and a vertical line indicating the target value.
  */
@@ -298,116 +300,116 @@ var DxBulletComponent = (function (_super) {
         configurable: true
     });
     DxBulletComponent.prototype._createInstance = function (element, options) {
-        return new DxBullet(element, options);
+        return new bullet_1.default(element, options);
     };
     DxBulletComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
     };
     DxBulletComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-bullet',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxBulletComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxBulletComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "endScaleValue": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "showTarget": [{ type: Input },],
-        "showZeroLevel": [{ type: Input },],
-        "size": [{ type: Input },],
-        "startScaleValue": [{ type: Input },],
-        "target": [{ type: Input },],
-        "targetColor": [{ type: Input },],
-        "targetWidth": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "value": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onTooltipHidden": [{ type: Output },],
-        "onTooltipShown": [{ type: Output },],
-        "colorChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "endScaleValueChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "showTargetChange": [{ type: Output },],
-        "showZeroLevelChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "startScaleValueChange": [{ type: Output },],
-        "targetChange": [{ type: Output },],
-        "targetColorChange": [{ type: Output },],
-        "targetWidthChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
+        "color": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "endScaleValue": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "showTarget": [{ type: core_1.Input },],
+        "showZeroLevel": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "startScaleValue": [{ type: core_1.Input },],
+        "target": [{ type: core_1.Input },],
+        "targetColor": [{ type: core_1.Input },],
+        "targetWidth": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onTooltipHidden": [{ type: core_1.Output },],
+        "onTooltipShown": [{ type: core_1.Output },],
+        "colorChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "endScaleValueChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "showTargetChange": [{ type: core_1.Output },],
+        "showZeroLevelChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "startScaleValueChange": [{ type: core_1.Output },],
+        "targetChange": [{ type: core_1.Output },],
+        "targetColorChange": [{ type: core_1.Output },],
+        "targetWidthChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
     };
     return DxBulletComponent;
-}(DxComponent));
-export { DxBulletComponent };
+}(component_1.DxComponent));
+exports.DxBulletComponent = DxBulletComponent;
 var DxBulletModule = (function () {
     function DxBulletModule() {
     }
     DxBulletModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoMarginModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoShadowModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        margin_1.DxoMarginModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        shadow_1.DxoShadowModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxBulletComponent
                     ],
                     exports: [
                         DxBulletComponent,
-                        DxoMarginModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoShadowModule,
-                        DxTemplateModule
+                        margin_1.DxoMarginModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        shadow_1.DxoShadowModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxBulletModule;
 }());
-export { DxBulletModule };
+exports.DxBulletModule = DxBulletModule;
 //# sourceMappingURL=bullet.js.map

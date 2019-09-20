@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoChartCommonSeriesSettings } from './base/chart-common-series-settings';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var chart_common_series_settings_1 = require("./base/chart-common-series-settings");
 var DxoStepareaComponent = (function (_super) {
     __extends(DxoStepareaComponent, _super);
     function DxoStepareaComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxoStepareaComponent = (function (_super) {
         configurable: true
     });
     DxoStepareaComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-steparea',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'aggregation',
                         'area',
@@ -111,17 +113,17 @@ var DxoStepareaComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoStepareaComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxoStepareaComponent;
-}(DxoChartCommonSeriesSettings));
-export { DxoStepareaComponent };
+}(chart_common_series_settings_1.DxoChartCommonSeriesSettings));
+exports.DxoStepareaComponent = DxoStepareaComponent;
 var DxoStepareaModule = (function () {
     function DxoStepareaModule() {
     }
     DxoStepareaModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoStepareaComponent
                     ],
@@ -132,5 +134,5 @@ var DxoStepareaModule = (function () {
     ];
     return DxoStepareaModule;
 }());
-export { DxoStepareaModule };
+exports.DxoStepareaModule = DxoStepareaModule;
 //# sourceMappingURL=steparea.js.map

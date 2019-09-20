@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoCommonAxisSettingsComponent = (function (_super) {
     __extends(DxoCommonAxisSettingsComponent, _super);
     function DxoCommonAxisSettingsComponent(parentOptionHost, optionHost) {
@@ -249,49 +251,49 @@ var DxoCommonAxisSettingsComponent = (function (_super) {
         configurable: true
     });
     DxoCommonAxisSettingsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-common-axis-settings',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoCommonAxisSettingsComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoCommonAxisSettingsComponent.propDecorators = {
-        "allowDecimals": [{ type: Input },],
-        "breakStyle": [{ type: Input },],
-        "color": [{ type: Input },],
-        "constantLineStyle": [{ type: Input },],
-        "discreteAxisDivisionMode": [{ type: Input },],
-        "endOnTick": [{ type: Input },],
-        "grid": [{ type: Input },],
-        "inverted": [{ type: Input },],
-        "label": [{ type: Input },],
-        "maxValueMargin": [{ type: Input },],
-        "minorGrid": [{ type: Input },],
-        "minorTick": [{ type: Input },],
-        "minValueMargin": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "placeholderSize": [{ type: Input },],
-        "stripStyle": [{ type: Input },],
-        "tick": [{ type: Input },],
-        "title": [{ type: Input },],
-        "valueMarginsEnabled": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
+        "allowDecimals": [{ type: core_1.Input },],
+        "breakStyle": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "constantLineStyle": [{ type: core_1.Input },],
+        "discreteAxisDivisionMode": [{ type: core_1.Input },],
+        "endOnTick": [{ type: core_1.Input },],
+        "grid": [{ type: core_1.Input },],
+        "inverted": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "maxValueMargin": [{ type: core_1.Input },],
+        "minorGrid": [{ type: core_1.Input },],
+        "minorTick": [{ type: core_1.Input },],
+        "minValueMargin": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "placeholderSize": [{ type: core_1.Input },],
+        "stripStyle": [{ type: core_1.Input },],
+        "tick": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "valueMarginsEnabled": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
     };
     return DxoCommonAxisSettingsComponent;
-}(NestedOption));
-export { DxoCommonAxisSettingsComponent };
+}(nested_option_2.NestedOption));
+exports.DxoCommonAxisSettingsComponent = DxoCommonAxisSettingsComponent;
 var DxoCommonAxisSettingsModule = (function () {
     function DxoCommonAxisSettingsModule() {
     }
     DxoCommonAxisSettingsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoCommonAxisSettingsComponent
                     ],
@@ -302,5 +304,5 @@ var DxoCommonAxisSettingsModule = (function () {
     ];
     return DxoCommonAxisSettingsModule;
 }());
-export { DxoCommonAxisSettingsModule };
+exports.DxoCommonAxisSettingsModule = DxoCommonAxisSettingsModule;
 //# sourceMappingURL=common-axis-settings.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoFieldPanelComponent = (function (_super) {
     __extends(DxoFieldPanelComponent, _super);
     function DxoFieldPanelComponent(parentOptionHost, optionHost) {
@@ -109,35 +111,35 @@ var DxoFieldPanelComponent = (function (_super) {
         configurable: true
     });
     DxoFieldPanelComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-field-panel',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoFieldPanelComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoFieldPanelComponent.propDecorators = {
-        "allowFieldDragging": [{ type: Input },],
-        "showColumnFields": [{ type: Input },],
-        "showDataFields": [{ type: Input },],
-        "showFilterFields": [{ type: Input },],
-        "showRowFields": [{ type: Input },],
-        "texts": [{ type: Input },],
-        "visible": [{ type: Input },],
+        "allowFieldDragging": [{ type: core_1.Input },],
+        "showColumnFields": [{ type: core_1.Input },],
+        "showDataFields": [{ type: core_1.Input },],
+        "showFilterFields": [{ type: core_1.Input },],
+        "showRowFields": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
     };
     return DxoFieldPanelComponent;
-}(NestedOption));
-export { DxoFieldPanelComponent };
+}(nested_option_2.NestedOption));
+exports.DxoFieldPanelComponent = DxoFieldPanelComponent;
 var DxoFieldPanelModule = (function () {
     function DxoFieldPanelModule() {
     }
     DxoFieldPanelModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFieldPanelComponent
                     ],
@@ -148,5 +150,5 @@ var DxoFieldPanelModule = (function () {
     ];
     return DxoFieldPanelModule;
 }());
-export { DxoFieldPanelModule };
+exports.DxoFieldPanelModule = DxoFieldPanelModule;
 //# sourceMappingURL=field-panel.js.map

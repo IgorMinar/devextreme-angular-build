@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,14 +21,15 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, ElementRef, Renderer2, Inject, SkipSelf, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { NestedOptionHost, extractTemplate } from '../../core/nested-option';
-import { DxTemplateHost } from '../../core/template-host';
-import { DxiButtonGroupItem } from './base/button-group-item-dxi';
-import { DxiValidationRuleComponent } from './validation-rule-dxi';
-import { DxiTabComponent } from './tab-dxi';
-import { DxiLocationComponent } from './location-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var nested_option_1 = require("../../core/nested-option");
+var template_host_1 = require("../../core/template-host");
+var button_group_item_dxi_1 = require("./base/button-group-item-dxi");
+var validation_rule_dxi_1 = require("./validation-rule-dxi");
+var tab_dxi_1 = require("./tab-dxi");
+var location_dxi_1 = require("./location-dxi");
 var DxiItemComponent = (function (_super) {
     __extends(DxiItemComponent, _super);
     function DxiItemComponent(parentOptionHost, optionHost, renderer, document, templateHost, element) {
@@ -91,14 +93,14 @@ var DxiItemComponent = (function (_super) {
         this.template = template;
     };
     DxiItemComponent.prototype.ngAfterViewInit = function () {
-        extractTemplate(this, this.element, this.renderer, this.document);
+        nested_option_1.extractTemplate(this, this.element, this.renderer, this.document);
     };
     DxiItemComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-item',
                     template: '<ng-content></ng-content>',
                     styles: [':host { display: block; }'],
-                    providers: [NestedOptionHost, DxTemplateHost],
+                    providers: [nested_option_1.NestedOptionHost, template_host_1.DxTemplateHost],
                     inputs: [
                         'disabled',
                         'html',
@@ -166,27 +168,27 @@ var DxiItemComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxiItemComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
-        { type: Renderer2, },
-        { type: undefined, decorators: [{ type: Inject, args: [DOCUMENT,] },] },
-        { type: DxTemplateHost, decorators: [{ type: Host },] },
-        { type: ElementRef, },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
+        { type: core_1.Renderer2, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [common_1.DOCUMENT,] },] },
+        { type: template_host_1.DxTemplateHost, decorators: [{ type: core_1.Host },] },
+        { type: core_1.ElementRef, },
     ]; };
     DxiItemComponent.propDecorators = {
-        "itemsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiItemComponent; }),] },],
-        "validationRulesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiValidationRuleComponent; }),] },],
-        "tabsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiTabComponent; }),] },],
-        "locationChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiLocationComponent; }),] },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return DxiItemComponent; }),] },],
+        "validationRulesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return validation_rule_dxi_1.DxiValidationRuleComponent; }),] },],
+        "tabsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return tab_dxi_1.DxiTabComponent; }),] },],
+        "locationChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return location_dxi_1.DxiLocationComponent; }),] },],
     };
     return DxiItemComponent;
-}(DxiButtonGroupItem));
-export { DxiItemComponent };
+}(button_group_item_dxi_1.DxiButtonGroupItem));
+exports.DxiItemComponent = DxiItemComponent;
 var DxiItemModule = (function () {
     function DxiItemModule() {
     }
     DxiItemModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiItemComponent
                     ],
@@ -197,5 +199,5 @@ var DxiItemModule = (function () {
     ];
     return DxiItemModule;
 }());
-export { DxiItemModule };
+exports.DxiItemModule = DxiItemModule;
 //# sourceMappingURL=item-dxi.js.map

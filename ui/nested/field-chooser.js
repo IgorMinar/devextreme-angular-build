@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoFieldChooserComponent = (function (_super) {
     __extends(DxoFieldChooserComponent, _super);
     function DxoFieldChooserComponent(parentOptionHost, optionHost) {
@@ -129,37 +131,37 @@ var DxoFieldChooserComponent = (function (_super) {
         configurable: true
     });
     DxoFieldChooserComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-field-chooser',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoFieldChooserComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoFieldChooserComponent.propDecorators = {
-        "allowSearch": [{ type: Input },],
-        "applyChangesMode": [{ type: Input },],
-        "enabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "layout": [{ type: Input },],
-        "searchTimeout": [{ type: Input },],
-        "texts": [{ type: Input },],
-        "title": [{ type: Input },],
-        "width": [{ type: Input },],
+        "allowSearch": [{ type: core_1.Input },],
+        "applyChangesMode": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "layout": [{ type: core_1.Input },],
+        "searchTimeout": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
     };
     return DxoFieldChooserComponent;
-}(NestedOption));
-export { DxoFieldChooserComponent };
+}(nested_option_2.NestedOption));
+exports.DxoFieldChooserComponent = DxoFieldChooserComponent;
 var DxoFieldChooserModule = (function () {
     function DxoFieldChooserModule() {
     }
     DxoFieldChooserModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFieldChooserComponent
                     ],
@@ -170,5 +172,5 @@ var DxoFieldChooserModule = (function () {
     ];
     return DxoFieldChooserModule;
 }());
-export { DxoFieldChooserModule };
+exports.DxoFieldChooserModule = DxoFieldChooserModule;
 //# sourceMappingURL=field-chooser.js.map

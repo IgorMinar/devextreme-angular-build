@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,16 +21,17 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxValidationGroup from 'devextreme/ui/validation_group';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var validation_group_1 = require("devextreme/ui/validation_group");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
 /**
  * The ValidationGroup is a widget that allows you to validate several editors simultaneously.
  */
@@ -88,66 +90,66 @@ var DxValidationGroupComponent = (function (_super) {
         configurable: true
     });
     DxValidationGroupComponent.prototype._createInstance = function (element, options) {
-        return new DxValidationGroup(element, options);
+        return new validation_group_1.default(element, options);
     };
     DxValidationGroupComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
     };
     DxValidationGroupComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-validation-group',
                     template: '<ng-content></ng-content>',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxValidationGroupComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxValidationGroupComponent.propDecorators = {
-        "elementAttr": [{ type: Input },],
-        "height": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
+        "elementAttr": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
     };
     return DxValidationGroupComponent;
-}(DxComponent));
-export { DxValidationGroupComponent };
+}(component_1.DxComponent));
+exports.DxValidationGroupComponent = DxValidationGroupComponent;
 var DxValidationGroupModule = (function () {
     function DxValidationGroupModule() {
     }
     DxValidationGroupModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxValidationGroupComponent
                     ],
                     exports: [
                         DxValidationGroupComponent,
-                        DxTemplateModule
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxValidationGroupModule;
 }());
-export { DxValidationGroupModule };
+exports.DxValidationGroupModule = DxValidationGroupModule;
 //# sourceMappingURL=validation-group.js.map

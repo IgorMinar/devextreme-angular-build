@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, Output, EventEmitter } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoSearchPanelComponent = (function (_super) {
     __extends(DxoSearchPanelComponent, _super);
     function DxoSearchPanelComponent(parentOptionHost, optionHost) {
@@ -112,36 +114,36 @@ var DxoSearchPanelComponent = (function (_super) {
         configurable: true
     });
     DxoSearchPanelComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-search-panel',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoSearchPanelComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoSearchPanelComponent.propDecorators = {
-        "highlightCaseSensitive": [{ type: Input },],
-        "highlightSearchText": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "searchVisibleColumnsOnly": [{ type: Input },],
-        "text": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "textChange": [{ type: Output },],
+        "highlightCaseSensitive": [{ type: core_1.Input },],
+        "highlightSearchText": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "searchVisibleColumnsOnly": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "textChange": [{ type: core_1.Output },],
     };
     return DxoSearchPanelComponent;
-}(NestedOption));
-export { DxoSearchPanelComponent };
+}(nested_option_2.NestedOption));
+exports.DxoSearchPanelComponent = DxoSearchPanelComponent;
 var DxoSearchPanelModule = (function () {
     function DxoSearchPanelModule() {
     }
     DxoSearchPanelModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoSearchPanelComponent
                     ],
@@ -152,5 +154,5 @@ var DxoSearchPanelModule = (function () {
     ];
     return DxoSearchPanelModule;
 }());
-export { DxoSearchPanelModule };
+exports.DxoSearchPanelModule = DxoSearchPanelModule;
 //# sourceMappingURL=search-panel.js.map

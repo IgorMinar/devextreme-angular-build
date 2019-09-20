@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,77 +21,78 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxDataGrid from 'devextreme/ui/data_grid';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoColumnChooserModule } from './nested/column-chooser';
-import { DxoColumnFixingModule } from './nested/column-fixing';
-import { DxoTextsModule } from './nested/texts';
-import { DxiColumnModule } from './nested/column-dxi';
-import { DxiButtonModule } from './nested/button-dxi';
-import { DxoHeaderFilterModule } from './nested/header-filter';
-import { DxoLookupModule } from './nested/lookup';
-import { DxoFormatModule } from './nested/format';
-import { DxoFormItemModule } from './nested/form-item';
-import { DxoLabelModule } from './nested/label';
-import { DxiValidationRuleModule } from './nested/validation-rule-dxi';
-import { DxoEditingModule } from './nested/editing';
-import { DxoFormModule } from './nested/form';
-import { DxoColCountByScreenModule } from './nested/col-count-by-screen';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxoTabPanelOptionsModule } from './nested/tab-panel-options';
-import { DxiTabModule } from './nested/tab-dxi';
-import { DxoButtonOptionsModule } from './nested/button-options';
-import { DxoPopupModule } from './nested/popup';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoHideModule } from './nested/hide';
-import { DxoShowModule } from './nested/show';
-import { DxoPositionModule } from './nested/position';
-import { DxoAtModule } from './nested/at';
-import { DxoBoundaryOffsetModule } from './nested/boundary-offset';
-import { DxoCollisionModule } from './nested/collision';
-import { DxoMyModule } from './nested/my';
-import { DxoOffsetModule } from './nested/offset';
-import { DxiToolbarItemModule } from './nested/toolbar-item-dxi';
-import { DxoExportModule } from './nested/export';
-import { DxoFilterBuilderModule } from './nested/filter-builder';
-import { DxiCustomOperationModule } from './nested/custom-operation-dxi';
-import { DxiFieldModule } from './nested/field-dxi';
-import { DxoFilterOperationDescriptionsModule } from './nested/filter-operation-descriptions';
-import { DxoGroupOperationDescriptionsModule } from './nested/group-operation-descriptions';
-import { DxoFilterBuilderPopupModule } from './nested/filter-builder-popup';
-import { DxoFilterPanelModule } from './nested/filter-panel';
-import { DxoFilterRowModule } from './nested/filter-row';
-import { DxoOperationDescriptionsModule } from './nested/operation-descriptions';
-import { DxoGroupingModule } from './nested/grouping';
-import { DxoGroupPanelModule } from './nested/group-panel';
-import { DxoKeyboardNavigationModule } from './nested/keyboard-navigation';
-import { DxoLoadPanelModule } from './nested/load-panel';
-import { DxoMasterDetailModule } from './nested/master-detail';
-import { DxoPagerModule } from './nested/pager';
-import { DxoPagingModule } from './nested/paging';
-import { DxoRemoteOperationsModule } from './nested/remote-operations';
-import { DxoScrollingModule } from './nested/scrolling';
-import { DxoSearchPanelModule } from './nested/search-panel';
-import { DxoSelectionModule } from './nested/selection';
-import { DxiSortByGroupSummaryInfoModule } from './nested/sort-by-group-summary-info-dxi';
-import { DxoSortingModule } from './nested/sorting';
-import { DxoStateStoringModule } from './nested/state-storing';
-import { DxoSummaryModule } from './nested/summary';
-import { DxiGroupItemModule } from './nested/group-item-dxi';
-import { DxoValueFormatModule } from './nested/value-format';
-import { DxiTotalItemModule } from './nested/total-item-dxi';
-import { DxiColumnComponent } from './nested/column-dxi';
-import { DxiSortByGroupSummaryInfoComponent } from './nested/sort-by-group-summary-info-dxi';
+var data_grid_1 = require("devextreme/ui/data_grid");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var column_chooser_1 = require("./nested/column-chooser");
+var column_fixing_1 = require("./nested/column-fixing");
+var texts_1 = require("./nested/texts");
+var column_dxi_1 = require("./nested/column-dxi");
+var button_dxi_1 = require("./nested/button-dxi");
+var header_filter_1 = require("./nested/header-filter");
+var lookup_1 = require("./nested/lookup");
+var format_1 = require("./nested/format");
+var form_item_1 = require("./nested/form-item");
+var label_1 = require("./nested/label");
+var validation_rule_dxi_1 = require("./nested/validation-rule-dxi");
+var editing_1 = require("./nested/editing");
+var form_1 = require("./nested/form");
+var col_count_by_screen_1 = require("./nested/col-count-by-screen");
+var item_dxi_1 = require("./nested/item-dxi");
+var tab_panel_options_1 = require("./nested/tab-panel-options");
+var tab_dxi_1 = require("./nested/tab-dxi");
+var button_options_1 = require("./nested/button-options");
+var popup_1 = require("./nested/popup");
+var animation_1 = require("./nested/animation");
+var hide_1 = require("./nested/hide");
+var show_1 = require("./nested/show");
+var position_1 = require("./nested/position");
+var at_1 = require("./nested/at");
+var boundary_offset_1 = require("./nested/boundary-offset");
+var collision_1 = require("./nested/collision");
+var my_1 = require("./nested/my");
+var offset_1 = require("./nested/offset");
+var toolbar_item_dxi_1 = require("./nested/toolbar-item-dxi");
+var export_1 = require("./nested/export");
+var filter_builder_1 = require("./nested/filter-builder");
+var custom_operation_dxi_1 = require("./nested/custom-operation-dxi");
+var field_dxi_1 = require("./nested/field-dxi");
+var filter_operation_descriptions_1 = require("./nested/filter-operation-descriptions");
+var group_operation_descriptions_1 = require("./nested/group-operation-descriptions");
+var filter_builder_popup_1 = require("./nested/filter-builder-popup");
+var filter_panel_1 = require("./nested/filter-panel");
+var filter_row_1 = require("./nested/filter-row");
+var operation_descriptions_1 = require("./nested/operation-descriptions");
+var grouping_1 = require("./nested/grouping");
+var group_panel_1 = require("./nested/group-panel");
+var keyboard_navigation_1 = require("./nested/keyboard-navigation");
+var load_panel_1 = require("./nested/load-panel");
+var master_detail_1 = require("./nested/master-detail");
+var pager_1 = require("./nested/pager");
+var paging_1 = require("./nested/paging");
+var remote_operations_1 = require("./nested/remote-operations");
+var scrolling_1 = require("./nested/scrolling");
+var search_panel_1 = require("./nested/search-panel");
+var selection_1 = require("./nested/selection");
+var sort_by_group_summary_info_dxi_1 = require("./nested/sort-by-group-summary-info-dxi");
+var sorting_1 = require("./nested/sorting");
+var state_storing_1 = require("./nested/state-storing");
+var summary_1 = require("./nested/summary");
+var group_item_dxi_1 = require("./nested/group-item-dxi");
+var value_format_1 = require("./nested/value-format");
+var total_item_dxi_1 = require("./nested/total-item-dxi");
+var column_dxi_2 = require("./nested/column-dxi");
+var sort_by_group_summary_info_dxi_2 = require("./nested/sort-by-group-summary-info-dxi");
 /**
  * The DataGrid is a widget that represents data from a local or remote source in the form of a grid. This widget offers such basic features as sorting, grouping, filtering, as well as more advanced capabilities, like state storing, export to Excel, master-detail interface, and many others.
  */
@@ -1171,7 +1173,7 @@ var DxDataGridComponent = (function (_super) {
         configurable: true
     });
     DxDataGridComponent.prototype._createInstance = function (element, options) {
-        return new DxDataGrid(element, options);
+        return new data_grid_1.default(element, options);
     };
     DxDataGridComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -1207,352 +1209,352 @@ var DxDataGridComponent = (function (_super) {
         }
     };
     DxDataGridComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-data-grid',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxDataGridComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxDataGridComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "allowColumnReordering": [{ type: Input },],
-        "allowColumnResizing": [{ type: Input },],
-        "cacheEnabled": [{ type: Input },],
-        "cellHintEnabled": [{ type: Input },],
-        "columnAutoWidth": [{ type: Input },],
-        "columnChooser": [{ type: Input },],
-        "columnFixing": [{ type: Input },],
-        "columnHidingEnabled": [{ type: Input },],
-        "columnMinWidth": [{ type: Input },],
-        "columnResizingMode": [{ type: Input },],
-        "columns": [{ type: Input },],
-        "columnWidth": [{ type: Input },],
-        "customizeColumns": [{ type: Input },],
-        "customizeExportData": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "dateSerializationFormat": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "editing": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "errorRowEnabled": [{ type: Input },],
-        "export": [{ type: Input },],
-        "filterBuilder": [{ type: Input },],
-        "filterBuilderPopup": [{ type: Input },],
-        "filterPanel": [{ type: Input },],
-        "filterRow": [{ type: Input },],
-        "filterSyncEnabled": [{ type: Input },],
-        "filterValue": [{ type: Input },],
-        "focusedColumnIndex": [{ type: Input },],
-        "focusedRowEnabled": [{ type: Input },],
-        "focusedRowIndex": [{ type: Input },],
-        "focusedRowKey": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "grouping": [{ type: Input },],
-        "groupPanel": [{ type: Input },],
-        "headerFilter": [{ type: Input },],
-        "height": [{ type: Input },],
-        "highlightChanges": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "keyboardNavigation": [{ type: Input },],
-        "keyExpr": [{ type: Input },],
-        "loadPanel": [{ type: Input },],
-        "masterDetail": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "pager": [{ type: Input },],
-        "paging": [{ type: Input },],
-        "remoteOperations": [{ type: Input },],
-        "renderAsync": [{ type: Input },],
-        "repaintChangesOnly": [{ type: Input },],
-        "rowAlternationEnabled": [{ type: Input },],
-        "rowTemplate": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scrolling": [{ type: Input },],
-        "searchPanel": [{ type: Input },],
-        "selectedRowKeys": [{ type: Input },],
-        "selection": [{ type: Input },],
-        "selectionFilter": [{ type: Input },],
-        "showBorders": [{ type: Input },],
-        "showColumnHeaders": [{ type: Input },],
-        "showColumnLines": [{ type: Input },],
-        "showRowLines": [{ type: Input },],
-        "sortByGroupSummaryInfo": [{ type: Input },],
-        "sorting": [{ type: Input },],
-        "stateStoring": [{ type: Input },],
-        "summary": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "twoWayBindingEnabled": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "wordWrapEnabled": [{ type: Input },],
-        "onAdaptiveDetailRowPreparing": [{ type: Output },],
-        "onCellClick": [{ type: Output },],
-        "onCellDblClick": [{ type: Output },],
-        "onCellHoverChanged": [{ type: Output },],
-        "onCellPrepared": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onContextMenuPreparing": [{ type: Output },],
-        "onDataErrorOccurred": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEditingStart": [{ type: Output },],
-        "onEditorPrepared": [{ type: Output },],
-        "onEditorPreparing": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onFocusedCellChanged": [{ type: Output },],
-        "onFocusedCellChanging": [{ type: Output },],
-        "onFocusedRowChanged": [{ type: Output },],
-        "onFocusedRowChanging": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onInitNewRow": [{ type: Output },],
-        "onKeyDown": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onRowClick": [{ type: Output },],
-        "onRowCollapsed": [{ type: Output },],
-        "onRowCollapsing": [{ type: Output },],
-        "onRowDblClick": [{ type: Output },],
-        "onRowExpanded": [{ type: Output },],
-        "onRowExpanding": [{ type: Output },],
-        "onRowInserted": [{ type: Output },],
-        "onRowInserting": [{ type: Output },],
-        "onRowPrepared": [{ type: Output },],
-        "onRowRemoved": [{ type: Output },],
-        "onRowRemoving": [{ type: Output },],
-        "onRowUpdated": [{ type: Output },],
-        "onRowUpdating": [{ type: Output },],
-        "onRowValidating": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "onToolbarPreparing": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "allowColumnReorderingChange": [{ type: Output },],
-        "allowColumnResizingChange": [{ type: Output },],
-        "cacheEnabledChange": [{ type: Output },],
-        "cellHintEnabledChange": [{ type: Output },],
-        "columnAutoWidthChange": [{ type: Output },],
-        "columnChooserChange": [{ type: Output },],
-        "columnFixingChange": [{ type: Output },],
-        "columnHidingEnabledChange": [{ type: Output },],
-        "columnMinWidthChange": [{ type: Output },],
-        "columnResizingModeChange": [{ type: Output },],
-        "columnsChange": [{ type: Output },],
-        "columnWidthChange": [{ type: Output },],
-        "customizeColumnsChange": [{ type: Output },],
-        "customizeExportDataChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "dateSerializationFormatChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "editingChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "errorRowEnabledChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "filterBuilderChange": [{ type: Output },],
-        "filterBuilderPopupChange": [{ type: Output },],
-        "filterPanelChange": [{ type: Output },],
-        "filterRowChange": [{ type: Output },],
-        "filterSyncEnabledChange": [{ type: Output },],
-        "filterValueChange": [{ type: Output },],
-        "focusedColumnIndexChange": [{ type: Output },],
-        "focusedRowEnabledChange": [{ type: Output },],
-        "focusedRowIndexChange": [{ type: Output },],
-        "focusedRowKeyChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "groupingChange": [{ type: Output },],
-        "groupPanelChange": [{ type: Output },],
-        "headerFilterChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "highlightChangesChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "keyboardNavigationChange": [{ type: Output },],
-        "keyExprChange": [{ type: Output },],
-        "loadPanelChange": [{ type: Output },],
-        "masterDetailChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "pagerChange": [{ type: Output },],
-        "pagingChange": [{ type: Output },],
-        "remoteOperationsChange": [{ type: Output },],
-        "renderAsyncChange": [{ type: Output },],
-        "repaintChangesOnlyChange": [{ type: Output },],
-        "rowAlternationEnabledChange": [{ type: Output },],
-        "rowTemplateChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scrollingChange": [{ type: Output },],
-        "searchPanelChange": [{ type: Output },],
-        "selectedRowKeysChange": [{ type: Output },],
-        "selectionChange": [{ type: Output },],
-        "selectionFilterChange": [{ type: Output },],
-        "showBordersChange": [{ type: Output },],
-        "showColumnHeadersChange": [{ type: Output },],
-        "showColumnLinesChange": [{ type: Output },],
-        "showRowLinesChange": [{ type: Output },],
-        "sortByGroupSummaryInfoChange": [{ type: Output },],
-        "sortingChange": [{ type: Output },],
-        "stateStoringChange": [{ type: Output },],
-        "summaryChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "twoWayBindingEnabledChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "wordWrapEnabledChange": [{ type: Output },],
-        "columnsChildren": [{ type: ContentChildren, args: [DxiColumnComponent,] },],
-        "sortByGroupSummaryInfoChildren": [{ type: ContentChildren, args: [DxiSortByGroupSummaryInfoComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "allowColumnReordering": [{ type: core_1.Input },],
+        "allowColumnResizing": [{ type: core_1.Input },],
+        "cacheEnabled": [{ type: core_1.Input },],
+        "cellHintEnabled": [{ type: core_1.Input },],
+        "columnAutoWidth": [{ type: core_1.Input },],
+        "columnChooser": [{ type: core_1.Input },],
+        "columnFixing": [{ type: core_1.Input },],
+        "columnHidingEnabled": [{ type: core_1.Input },],
+        "columnMinWidth": [{ type: core_1.Input },],
+        "columnResizingMode": [{ type: core_1.Input },],
+        "columns": [{ type: core_1.Input },],
+        "columnWidth": [{ type: core_1.Input },],
+        "customizeColumns": [{ type: core_1.Input },],
+        "customizeExportData": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "dateSerializationFormat": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "editing": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "errorRowEnabled": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "filterBuilder": [{ type: core_1.Input },],
+        "filterBuilderPopup": [{ type: core_1.Input },],
+        "filterPanel": [{ type: core_1.Input },],
+        "filterRow": [{ type: core_1.Input },],
+        "filterSyncEnabled": [{ type: core_1.Input },],
+        "filterValue": [{ type: core_1.Input },],
+        "focusedColumnIndex": [{ type: core_1.Input },],
+        "focusedRowEnabled": [{ type: core_1.Input },],
+        "focusedRowIndex": [{ type: core_1.Input },],
+        "focusedRowKey": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "grouping": [{ type: core_1.Input },],
+        "groupPanel": [{ type: core_1.Input },],
+        "headerFilter": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "highlightChanges": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "keyboardNavigation": [{ type: core_1.Input },],
+        "keyExpr": [{ type: core_1.Input },],
+        "loadPanel": [{ type: core_1.Input },],
+        "masterDetail": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "pager": [{ type: core_1.Input },],
+        "paging": [{ type: core_1.Input },],
+        "remoteOperations": [{ type: core_1.Input },],
+        "renderAsync": [{ type: core_1.Input },],
+        "repaintChangesOnly": [{ type: core_1.Input },],
+        "rowAlternationEnabled": [{ type: core_1.Input },],
+        "rowTemplate": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scrolling": [{ type: core_1.Input },],
+        "searchPanel": [{ type: core_1.Input },],
+        "selectedRowKeys": [{ type: core_1.Input },],
+        "selection": [{ type: core_1.Input },],
+        "selectionFilter": [{ type: core_1.Input },],
+        "showBorders": [{ type: core_1.Input },],
+        "showColumnHeaders": [{ type: core_1.Input },],
+        "showColumnLines": [{ type: core_1.Input },],
+        "showRowLines": [{ type: core_1.Input },],
+        "sortByGroupSummaryInfo": [{ type: core_1.Input },],
+        "sorting": [{ type: core_1.Input },],
+        "stateStoring": [{ type: core_1.Input },],
+        "summary": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "twoWayBindingEnabled": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "wordWrapEnabled": [{ type: core_1.Input },],
+        "onAdaptiveDetailRowPreparing": [{ type: core_1.Output },],
+        "onCellClick": [{ type: core_1.Output },],
+        "onCellDblClick": [{ type: core_1.Output },],
+        "onCellHoverChanged": [{ type: core_1.Output },],
+        "onCellPrepared": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onContextMenuPreparing": [{ type: core_1.Output },],
+        "onDataErrorOccurred": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEditingStart": [{ type: core_1.Output },],
+        "onEditorPrepared": [{ type: core_1.Output },],
+        "onEditorPreparing": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onFocusedCellChanged": [{ type: core_1.Output },],
+        "onFocusedCellChanging": [{ type: core_1.Output },],
+        "onFocusedRowChanged": [{ type: core_1.Output },],
+        "onFocusedRowChanging": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onInitNewRow": [{ type: core_1.Output },],
+        "onKeyDown": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onRowClick": [{ type: core_1.Output },],
+        "onRowCollapsed": [{ type: core_1.Output },],
+        "onRowCollapsing": [{ type: core_1.Output },],
+        "onRowDblClick": [{ type: core_1.Output },],
+        "onRowExpanded": [{ type: core_1.Output },],
+        "onRowExpanding": [{ type: core_1.Output },],
+        "onRowInserted": [{ type: core_1.Output },],
+        "onRowInserting": [{ type: core_1.Output },],
+        "onRowPrepared": [{ type: core_1.Output },],
+        "onRowRemoved": [{ type: core_1.Output },],
+        "onRowRemoving": [{ type: core_1.Output },],
+        "onRowUpdated": [{ type: core_1.Output },],
+        "onRowUpdating": [{ type: core_1.Output },],
+        "onRowValidating": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "onToolbarPreparing": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "allowColumnReorderingChange": [{ type: core_1.Output },],
+        "allowColumnResizingChange": [{ type: core_1.Output },],
+        "cacheEnabledChange": [{ type: core_1.Output },],
+        "cellHintEnabledChange": [{ type: core_1.Output },],
+        "columnAutoWidthChange": [{ type: core_1.Output },],
+        "columnChooserChange": [{ type: core_1.Output },],
+        "columnFixingChange": [{ type: core_1.Output },],
+        "columnHidingEnabledChange": [{ type: core_1.Output },],
+        "columnMinWidthChange": [{ type: core_1.Output },],
+        "columnResizingModeChange": [{ type: core_1.Output },],
+        "columnsChange": [{ type: core_1.Output },],
+        "columnWidthChange": [{ type: core_1.Output },],
+        "customizeColumnsChange": [{ type: core_1.Output },],
+        "customizeExportDataChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "dateSerializationFormatChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "editingChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "errorRowEnabledChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "filterBuilderChange": [{ type: core_1.Output },],
+        "filterBuilderPopupChange": [{ type: core_1.Output },],
+        "filterPanelChange": [{ type: core_1.Output },],
+        "filterRowChange": [{ type: core_1.Output },],
+        "filterSyncEnabledChange": [{ type: core_1.Output },],
+        "filterValueChange": [{ type: core_1.Output },],
+        "focusedColumnIndexChange": [{ type: core_1.Output },],
+        "focusedRowEnabledChange": [{ type: core_1.Output },],
+        "focusedRowIndexChange": [{ type: core_1.Output },],
+        "focusedRowKeyChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "groupingChange": [{ type: core_1.Output },],
+        "groupPanelChange": [{ type: core_1.Output },],
+        "headerFilterChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "highlightChangesChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "keyboardNavigationChange": [{ type: core_1.Output },],
+        "keyExprChange": [{ type: core_1.Output },],
+        "loadPanelChange": [{ type: core_1.Output },],
+        "masterDetailChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "pagerChange": [{ type: core_1.Output },],
+        "pagingChange": [{ type: core_1.Output },],
+        "remoteOperationsChange": [{ type: core_1.Output },],
+        "renderAsyncChange": [{ type: core_1.Output },],
+        "repaintChangesOnlyChange": [{ type: core_1.Output },],
+        "rowAlternationEnabledChange": [{ type: core_1.Output },],
+        "rowTemplateChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scrollingChange": [{ type: core_1.Output },],
+        "searchPanelChange": [{ type: core_1.Output },],
+        "selectedRowKeysChange": [{ type: core_1.Output },],
+        "selectionChange": [{ type: core_1.Output },],
+        "selectionFilterChange": [{ type: core_1.Output },],
+        "showBordersChange": [{ type: core_1.Output },],
+        "showColumnHeadersChange": [{ type: core_1.Output },],
+        "showColumnLinesChange": [{ type: core_1.Output },],
+        "showRowLinesChange": [{ type: core_1.Output },],
+        "sortByGroupSummaryInfoChange": [{ type: core_1.Output },],
+        "sortingChange": [{ type: core_1.Output },],
+        "stateStoringChange": [{ type: core_1.Output },],
+        "summaryChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "twoWayBindingEnabledChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "wordWrapEnabledChange": [{ type: core_1.Output },],
+        "columnsChildren": [{ type: core_1.ContentChildren, args: [column_dxi_2.DxiColumnComponent,] },],
+        "sortByGroupSummaryInfoChildren": [{ type: core_1.ContentChildren, args: [sort_by_group_summary_info_dxi_2.DxiSortByGroupSummaryInfoComponent,] },],
     };
     return DxDataGridComponent;
-}(DxComponent));
-export { DxDataGridComponent };
+}(component_1.DxComponent));
+exports.DxDataGridComponent = DxDataGridComponent;
 var DxDataGridModule = (function () {
     function DxDataGridModule() {
     }
     DxDataGridModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoColumnChooserModule,
-                        DxoColumnFixingModule,
-                        DxoTextsModule,
-                        DxiColumnModule,
-                        DxiButtonModule,
-                        DxoHeaderFilterModule,
-                        DxoLookupModule,
-                        DxoFormatModule,
-                        DxoFormItemModule,
-                        DxoLabelModule,
-                        DxiValidationRuleModule,
-                        DxoEditingModule,
-                        DxoFormModule,
-                        DxoColCountByScreenModule,
-                        DxiItemModule,
-                        DxoTabPanelOptionsModule,
-                        DxiTabModule,
-                        DxoButtonOptionsModule,
-                        DxoPopupModule,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxiToolbarItemModule,
-                        DxoExportModule,
-                        DxoFilterBuilderModule,
-                        DxiCustomOperationModule,
-                        DxiFieldModule,
-                        DxoFilterOperationDescriptionsModule,
-                        DxoGroupOperationDescriptionsModule,
-                        DxoFilterBuilderPopupModule,
-                        DxoFilterPanelModule,
-                        DxoFilterRowModule,
-                        DxoOperationDescriptionsModule,
-                        DxoGroupingModule,
-                        DxoGroupPanelModule,
-                        DxoKeyboardNavigationModule,
-                        DxoLoadPanelModule,
-                        DxoMasterDetailModule,
-                        DxoPagerModule,
-                        DxoPagingModule,
-                        DxoRemoteOperationsModule,
-                        DxoScrollingModule,
-                        DxoSearchPanelModule,
-                        DxoSelectionModule,
-                        DxiSortByGroupSummaryInfoModule,
-                        DxoSortingModule,
-                        DxoStateStoringModule,
-                        DxoSummaryModule,
-                        DxiGroupItemModule,
-                        DxoValueFormatModule,
-                        DxiTotalItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        column_chooser_1.DxoColumnChooserModule,
+                        column_fixing_1.DxoColumnFixingModule,
+                        texts_1.DxoTextsModule,
+                        column_dxi_1.DxiColumnModule,
+                        button_dxi_1.DxiButtonModule,
+                        header_filter_1.DxoHeaderFilterModule,
+                        lookup_1.DxoLookupModule,
+                        format_1.DxoFormatModule,
+                        form_item_1.DxoFormItemModule,
+                        label_1.DxoLabelModule,
+                        validation_rule_dxi_1.DxiValidationRuleModule,
+                        editing_1.DxoEditingModule,
+                        form_1.DxoFormModule,
+                        col_count_by_screen_1.DxoColCountByScreenModule,
+                        item_dxi_1.DxiItemModule,
+                        tab_panel_options_1.DxoTabPanelOptionsModule,
+                        tab_dxi_1.DxiTabModule,
+                        button_options_1.DxoButtonOptionsModule,
+                        popup_1.DxoPopupModule,
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        toolbar_item_dxi_1.DxiToolbarItemModule,
+                        export_1.DxoExportModule,
+                        filter_builder_1.DxoFilterBuilderModule,
+                        custom_operation_dxi_1.DxiCustomOperationModule,
+                        field_dxi_1.DxiFieldModule,
+                        filter_operation_descriptions_1.DxoFilterOperationDescriptionsModule,
+                        group_operation_descriptions_1.DxoGroupOperationDescriptionsModule,
+                        filter_builder_popup_1.DxoFilterBuilderPopupModule,
+                        filter_panel_1.DxoFilterPanelModule,
+                        filter_row_1.DxoFilterRowModule,
+                        operation_descriptions_1.DxoOperationDescriptionsModule,
+                        grouping_1.DxoGroupingModule,
+                        group_panel_1.DxoGroupPanelModule,
+                        keyboard_navigation_1.DxoKeyboardNavigationModule,
+                        load_panel_1.DxoLoadPanelModule,
+                        master_detail_1.DxoMasterDetailModule,
+                        pager_1.DxoPagerModule,
+                        paging_1.DxoPagingModule,
+                        remote_operations_1.DxoRemoteOperationsModule,
+                        scrolling_1.DxoScrollingModule,
+                        search_panel_1.DxoSearchPanelModule,
+                        selection_1.DxoSelectionModule,
+                        sort_by_group_summary_info_dxi_1.DxiSortByGroupSummaryInfoModule,
+                        sorting_1.DxoSortingModule,
+                        state_storing_1.DxoStateStoringModule,
+                        summary_1.DxoSummaryModule,
+                        group_item_dxi_1.DxiGroupItemModule,
+                        value_format_1.DxoValueFormatModule,
+                        total_item_dxi_1.DxiTotalItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxDataGridComponent
                     ],
                     exports: [
                         DxDataGridComponent,
-                        DxoColumnChooserModule,
-                        DxoColumnFixingModule,
-                        DxoTextsModule,
-                        DxiColumnModule,
-                        DxiButtonModule,
-                        DxoHeaderFilterModule,
-                        DxoLookupModule,
-                        DxoFormatModule,
-                        DxoFormItemModule,
-                        DxoLabelModule,
-                        DxiValidationRuleModule,
-                        DxoEditingModule,
-                        DxoFormModule,
-                        DxoColCountByScreenModule,
-                        DxiItemModule,
-                        DxoTabPanelOptionsModule,
-                        DxiTabModule,
-                        DxoButtonOptionsModule,
-                        DxoPopupModule,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxiToolbarItemModule,
-                        DxoExportModule,
-                        DxoFilterBuilderModule,
-                        DxiCustomOperationModule,
-                        DxiFieldModule,
-                        DxoFilterOperationDescriptionsModule,
-                        DxoGroupOperationDescriptionsModule,
-                        DxoFilterBuilderPopupModule,
-                        DxoFilterPanelModule,
-                        DxoFilterRowModule,
-                        DxoOperationDescriptionsModule,
-                        DxoGroupingModule,
-                        DxoGroupPanelModule,
-                        DxoKeyboardNavigationModule,
-                        DxoLoadPanelModule,
-                        DxoMasterDetailModule,
-                        DxoPagerModule,
-                        DxoPagingModule,
-                        DxoRemoteOperationsModule,
-                        DxoScrollingModule,
-                        DxoSearchPanelModule,
-                        DxoSelectionModule,
-                        DxiSortByGroupSummaryInfoModule,
-                        DxoSortingModule,
-                        DxoStateStoringModule,
-                        DxoSummaryModule,
-                        DxiGroupItemModule,
-                        DxoValueFormatModule,
-                        DxiTotalItemModule,
-                        DxTemplateModule
+                        column_chooser_1.DxoColumnChooserModule,
+                        column_fixing_1.DxoColumnFixingModule,
+                        texts_1.DxoTextsModule,
+                        column_dxi_1.DxiColumnModule,
+                        button_dxi_1.DxiButtonModule,
+                        header_filter_1.DxoHeaderFilterModule,
+                        lookup_1.DxoLookupModule,
+                        format_1.DxoFormatModule,
+                        form_item_1.DxoFormItemModule,
+                        label_1.DxoLabelModule,
+                        validation_rule_dxi_1.DxiValidationRuleModule,
+                        editing_1.DxoEditingModule,
+                        form_1.DxoFormModule,
+                        col_count_by_screen_1.DxoColCountByScreenModule,
+                        item_dxi_1.DxiItemModule,
+                        tab_panel_options_1.DxoTabPanelOptionsModule,
+                        tab_dxi_1.DxiTabModule,
+                        button_options_1.DxoButtonOptionsModule,
+                        popup_1.DxoPopupModule,
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        toolbar_item_dxi_1.DxiToolbarItemModule,
+                        export_1.DxoExportModule,
+                        filter_builder_1.DxoFilterBuilderModule,
+                        custom_operation_dxi_1.DxiCustomOperationModule,
+                        field_dxi_1.DxiFieldModule,
+                        filter_operation_descriptions_1.DxoFilterOperationDescriptionsModule,
+                        group_operation_descriptions_1.DxoGroupOperationDescriptionsModule,
+                        filter_builder_popup_1.DxoFilterBuilderPopupModule,
+                        filter_panel_1.DxoFilterPanelModule,
+                        filter_row_1.DxoFilterRowModule,
+                        operation_descriptions_1.DxoOperationDescriptionsModule,
+                        grouping_1.DxoGroupingModule,
+                        group_panel_1.DxoGroupPanelModule,
+                        keyboard_navigation_1.DxoKeyboardNavigationModule,
+                        load_panel_1.DxoLoadPanelModule,
+                        master_detail_1.DxoMasterDetailModule,
+                        pager_1.DxoPagerModule,
+                        paging_1.DxoPagingModule,
+                        remote_operations_1.DxoRemoteOperationsModule,
+                        scrolling_1.DxoScrollingModule,
+                        search_panel_1.DxoSearchPanelModule,
+                        selection_1.DxoSelectionModule,
+                        sort_by_group_summary_info_dxi_1.DxiSortByGroupSummaryInfoModule,
+                        sorting_1.DxoSortingModule,
+                        state_storing_1.DxoStateStoringModule,
+                        summary_1.DxoSummaryModule,
+                        group_item_dxi_1.DxiGroupItemModule,
+                        value_format_1.DxoValueFormatModule,
+                        total_item_dxi_1.DxiTotalItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxDataGridModule;
 }());
-export { DxDataGridModule };
+exports.DxDataGridModule = DxDataGridModule;
 //# sourceMappingURL=data-grid.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,24 +21,25 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxSparkline from 'devextreme/viz/sparkline';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoMarginModule } from './nested/margin';
-import { DxoSizeModule } from './nested/size';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoBorderModule } from './nested/border';
-import { DxoFontModule } from './nested/font';
-import { DxoFormatModule } from './nested/format';
-import { DxoShadowModule } from './nested/shadow';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var sparkline_1 = require("devextreme/viz/sparkline");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var margin_1 = require("./nested/margin");
+var size_1 = require("./nested/size");
+var tooltip_1 = require("./nested/tooltip");
+var border_1 = require("./nested/border");
+var font_1 = require("./nested/font");
+var format_1 = require("./nested/format");
+var shadow_1 = require("./nested/shadow");
 /**
  * The Sparkline widget is a compact chart that contains only one series. Owing to their size, sparklines occupy very little space and can be easily collected in a table or embedded straight in text.
  */
@@ -484,7 +486,7 @@ var DxSparklineComponent = (function (_super) {
         configurable: true
     });
     DxSparklineComponent.prototype._createInstance = function (element, options) {
-        return new DxSparkline(element, options);
+        return new sparkline_1.default(element, options);
     };
     DxSparklineComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -512,138 +514,138 @@ var DxSparklineComponent = (function (_super) {
         }
     };
     DxSparklineComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-sparkline',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxSparklineComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxSparklineComponent.propDecorators = {
-        "argumentField": [{ type: Input },],
-        "barNegativeColor": [{ type: Input },],
-        "barPositiveColor": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "firstLastColor": [{ type: Input },],
-        "ignoreEmptyPoints": [{ type: Input },],
-        "lineColor": [{ type: Input },],
-        "lineWidth": [{ type: Input },],
-        "lossColor": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "maxColor": [{ type: Input },],
-        "maxValue": [{ type: Input },],
-        "minColor": [{ type: Input },],
-        "minValue": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "pointColor": [{ type: Input },],
-        "pointSize": [{ type: Input },],
-        "pointSymbol": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "showFirstLast": [{ type: Input },],
-        "showMinMax": [{ type: Input },],
-        "size": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "type": [{ type: Input },],
-        "valueField": [{ type: Input },],
-        "winColor": [{ type: Input },],
-        "winlossThreshold": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onTooltipHidden": [{ type: Output },],
-        "onTooltipShown": [{ type: Output },],
-        "argumentFieldChange": [{ type: Output },],
-        "barNegativeColorChange": [{ type: Output },],
-        "barPositiveColorChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "firstLastColorChange": [{ type: Output },],
-        "ignoreEmptyPointsChange": [{ type: Output },],
-        "lineColorChange": [{ type: Output },],
-        "lineWidthChange": [{ type: Output },],
-        "lossColorChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "maxColorChange": [{ type: Output },],
-        "maxValueChange": [{ type: Output },],
-        "minColorChange": [{ type: Output },],
-        "minValueChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "pointColorChange": [{ type: Output },],
-        "pointSizeChange": [{ type: Output },],
-        "pointSymbolChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "showFirstLastChange": [{ type: Output },],
-        "showMinMaxChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "typeChange": [{ type: Output },],
-        "valueFieldChange": [{ type: Output },],
-        "winColorChange": [{ type: Output },],
-        "winlossThresholdChange": [{ type: Output },],
+        "argumentField": [{ type: core_1.Input },],
+        "barNegativeColor": [{ type: core_1.Input },],
+        "barPositiveColor": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "firstLastColor": [{ type: core_1.Input },],
+        "ignoreEmptyPoints": [{ type: core_1.Input },],
+        "lineColor": [{ type: core_1.Input },],
+        "lineWidth": [{ type: core_1.Input },],
+        "lossColor": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "maxColor": [{ type: core_1.Input },],
+        "maxValue": [{ type: core_1.Input },],
+        "minColor": [{ type: core_1.Input },],
+        "minValue": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "pointColor": [{ type: core_1.Input },],
+        "pointSize": [{ type: core_1.Input },],
+        "pointSymbol": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "showFirstLast": [{ type: core_1.Input },],
+        "showMinMax": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "valueField": [{ type: core_1.Input },],
+        "winColor": [{ type: core_1.Input },],
+        "winlossThreshold": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onTooltipHidden": [{ type: core_1.Output },],
+        "onTooltipShown": [{ type: core_1.Output },],
+        "argumentFieldChange": [{ type: core_1.Output },],
+        "barNegativeColorChange": [{ type: core_1.Output },],
+        "barPositiveColorChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "firstLastColorChange": [{ type: core_1.Output },],
+        "ignoreEmptyPointsChange": [{ type: core_1.Output },],
+        "lineColorChange": [{ type: core_1.Output },],
+        "lineWidthChange": [{ type: core_1.Output },],
+        "lossColorChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "maxColorChange": [{ type: core_1.Output },],
+        "maxValueChange": [{ type: core_1.Output },],
+        "minColorChange": [{ type: core_1.Output },],
+        "minValueChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "pointColorChange": [{ type: core_1.Output },],
+        "pointSizeChange": [{ type: core_1.Output },],
+        "pointSymbolChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "showFirstLastChange": [{ type: core_1.Output },],
+        "showMinMaxChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "typeChange": [{ type: core_1.Output },],
+        "valueFieldChange": [{ type: core_1.Output },],
+        "winColorChange": [{ type: core_1.Output },],
+        "winlossThresholdChange": [{ type: core_1.Output },],
     };
     return DxSparklineComponent;
-}(DxComponent));
-export { DxSparklineComponent };
+}(component_1.DxComponent));
+exports.DxSparklineComponent = DxSparklineComponent;
 var DxSparklineModule = (function () {
     function DxSparklineModule() {
     }
     DxSparklineModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoMarginModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoShadowModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        margin_1.DxoMarginModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        shadow_1.DxoShadowModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxSparklineComponent
                     ],
                     exports: [
                         DxSparklineComponent,
-                        DxoMarginModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoShadowModule,
-                        DxTemplateModule
+                        margin_1.DxoMarginModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        shadow_1.DxoShadowModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxSparklineModule;
 }());
-export { DxSparklineModule };
+exports.DxSparklineModule = DxSparklineModule;
 //# sourceMappingURL=sparkline.js.map

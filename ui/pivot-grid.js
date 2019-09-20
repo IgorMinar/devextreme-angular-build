@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,29 +21,30 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxPivotGrid from 'devextreme/ui/pivot_grid';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoDataSourceModule } from './nested/data-source';
-import { DxiFieldModule } from './nested/field-dxi';
-import { DxoFormatModule } from './nested/format';
-import { DxoHeaderFilterModule } from './nested/header-filter';
-import { DxoStoreModule } from './nested/store';
-import { DxoExportModule } from './nested/export';
-import { DxoFieldChooserModule } from './nested/field-chooser';
-import { DxoTextsModule } from './nested/texts';
-import { DxoFieldPanelModule } from './nested/field-panel';
-import { DxoLoadPanelModule } from './nested/load-panel';
-import { DxoScrollingModule } from './nested/scrolling';
-import { DxoStateStoringModule } from './nested/state-storing';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var pivot_grid_1 = require("devextreme/ui/pivot_grid");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var data_source_1 = require("./nested/data-source");
+var field_dxi_1 = require("./nested/field-dxi");
+var format_1 = require("./nested/format");
+var header_filter_1 = require("./nested/header-filter");
+var store_1 = require("./nested/store");
+var export_1 = require("./nested/export");
+var field_chooser_1 = require("./nested/field-chooser");
+var texts_1 = require("./nested/texts");
+var field_panel_1 = require("./nested/field-panel");
+var load_panel_1 = require("./nested/load-panel");
+var scrolling_1 = require("./nested/scrolling");
+var state_storing_1 = require("./nested/state-storing");
 /**
  * The PivotGrid is a widget that allows you to display and analyze multi-dimensional data from a local storage or an OLAP cube.
  */
@@ -503,7 +505,7 @@ var DxPivotGridComponent = (function (_super) {
         configurable: true
     });
     DxPivotGridComponent.prototype._createInstance = function (element, options) {
-        return new DxPivotGrid(element, options);
+        return new pivot_grid_1.default(element, options);
     };
     DxPivotGridComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -531,149 +533,149 @@ var DxPivotGridComponent = (function (_super) {
         }
     };
     DxPivotGridComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-pivot-grid',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxPivotGridComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxPivotGridComponent.propDecorators = {
-        "allowExpandAll": [{ type: Input },],
-        "allowFiltering": [{ type: Input },],
-        "allowSorting": [{ type: Input },],
-        "allowSortingBySummary": [{ type: Input },],
-        "dataFieldArea": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "fieldChooser": [{ type: Input },],
-        "fieldPanel": [{ type: Input },],
-        "headerFilter": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hideEmptySummaryCells": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "loadPanel": [{ type: Input },],
-        "rowHeaderLayout": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scrolling": [{ type: Input },],
-        "showBorders": [{ type: Input },],
-        "showColumnGrandTotals": [{ type: Input },],
-        "showColumnTotals": [{ type: Input },],
-        "showRowGrandTotals": [{ type: Input },],
-        "showRowTotals": [{ type: Input },],
-        "showTotalsPrior": [{ type: Input },],
-        "stateStoring": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "texts": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "wordWrapEnabled": [{ type: Input },],
-        "onCellClick": [{ type: Output },],
-        "onCellPrepared": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onContextMenuPreparing": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "allowExpandAllChange": [{ type: Output },],
-        "allowFilteringChange": [{ type: Output },],
-        "allowSortingChange": [{ type: Output },],
-        "allowSortingBySummaryChange": [{ type: Output },],
-        "dataFieldAreaChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "fieldChooserChange": [{ type: Output },],
-        "fieldPanelChange": [{ type: Output },],
-        "headerFilterChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hideEmptySummaryCellsChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "loadPanelChange": [{ type: Output },],
-        "rowHeaderLayoutChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scrollingChange": [{ type: Output },],
-        "showBordersChange": [{ type: Output },],
-        "showColumnGrandTotalsChange": [{ type: Output },],
-        "showColumnTotalsChange": [{ type: Output },],
-        "showRowGrandTotalsChange": [{ type: Output },],
-        "showRowTotalsChange": [{ type: Output },],
-        "showTotalsPriorChange": [{ type: Output },],
-        "stateStoringChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textsChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "wordWrapEnabledChange": [{ type: Output },],
+        "allowExpandAll": [{ type: core_1.Input },],
+        "allowFiltering": [{ type: core_1.Input },],
+        "allowSorting": [{ type: core_1.Input },],
+        "allowSortingBySummary": [{ type: core_1.Input },],
+        "dataFieldArea": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "fieldChooser": [{ type: core_1.Input },],
+        "fieldPanel": [{ type: core_1.Input },],
+        "headerFilter": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hideEmptySummaryCells": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "loadPanel": [{ type: core_1.Input },],
+        "rowHeaderLayout": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scrolling": [{ type: core_1.Input },],
+        "showBorders": [{ type: core_1.Input },],
+        "showColumnGrandTotals": [{ type: core_1.Input },],
+        "showColumnTotals": [{ type: core_1.Input },],
+        "showRowGrandTotals": [{ type: core_1.Input },],
+        "showRowTotals": [{ type: core_1.Input },],
+        "showTotalsPrior": [{ type: core_1.Input },],
+        "stateStoring": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "wordWrapEnabled": [{ type: core_1.Input },],
+        "onCellClick": [{ type: core_1.Output },],
+        "onCellPrepared": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onContextMenuPreparing": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "allowExpandAllChange": [{ type: core_1.Output },],
+        "allowFilteringChange": [{ type: core_1.Output },],
+        "allowSortingChange": [{ type: core_1.Output },],
+        "allowSortingBySummaryChange": [{ type: core_1.Output },],
+        "dataFieldAreaChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "fieldChooserChange": [{ type: core_1.Output },],
+        "fieldPanelChange": [{ type: core_1.Output },],
+        "headerFilterChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hideEmptySummaryCellsChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "loadPanelChange": [{ type: core_1.Output },],
+        "rowHeaderLayoutChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scrollingChange": [{ type: core_1.Output },],
+        "showBordersChange": [{ type: core_1.Output },],
+        "showColumnGrandTotalsChange": [{ type: core_1.Output },],
+        "showColumnTotalsChange": [{ type: core_1.Output },],
+        "showRowGrandTotalsChange": [{ type: core_1.Output },],
+        "showRowTotalsChange": [{ type: core_1.Output },],
+        "showTotalsPriorChange": [{ type: core_1.Output },],
+        "stateStoringChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textsChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "wordWrapEnabledChange": [{ type: core_1.Output },],
     };
     return DxPivotGridComponent;
-}(DxComponent));
-export { DxPivotGridComponent };
+}(component_1.DxComponent));
+exports.DxPivotGridComponent = DxPivotGridComponent;
 var DxPivotGridModule = (function () {
     function DxPivotGridModule() {
     }
     DxPivotGridModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoDataSourceModule,
-                        DxiFieldModule,
-                        DxoFormatModule,
-                        DxoHeaderFilterModule,
-                        DxoStoreModule,
-                        DxoExportModule,
-                        DxoFieldChooserModule,
-                        DxoTextsModule,
-                        DxoFieldPanelModule,
-                        DxoLoadPanelModule,
-                        DxoScrollingModule,
-                        DxoStateStoringModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        data_source_1.DxoDataSourceModule,
+                        field_dxi_1.DxiFieldModule,
+                        format_1.DxoFormatModule,
+                        header_filter_1.DxoHeaderFilterModule,
+                        store_1.DxoStoreModule,
+                        export_1.DxoExportModule,
+                        field_chooser_1.DxoFieldChooserModule,
+                        texts_1.DxoTextsModule,
+                        field_panel_1.DxoFieldPanelModule,
+                        load_panel_1.DxoLoadPanelModule,
+                        scrolling_1.DxoScrollingModule,
+                        state_storing_1.DxoStateStoringModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxPivotGridComponent
                     ],
                     exports: [
                         DxPivotGridComponent,
-                        DxoDataSourceModule,
-                        DxiFieldModule,
-                        DxoFormatModule,
-                        DxoHeaderFilterModule,
-                        DxoStoreModule,
-                        DxoExportModule,
-                        DxoFieldChooserModule,
-                        DxoTextsModule,
-                        DxoFieldPanelModule,
-                        DxoLoadPanelModule,
-                        DxoScrollingModule,
-                        DxoStateStoringModule,
-                        DxTemplateModule
+                        data_source_1.DxoDataSourceModule,
+                        field_dxi_1.DxiFieldModule,
+                        format_1.DxoFormatModule,
+                        header_filter_1.DxoHeaderFilterModule,
+                        store_1.DxoStoreModule,
+                        export_1.DxoExportModule,
+                        field_chooser_1.DxoFieldChooserModule,
+                        texts_1.DxoTextsModule,
+                        field_panel_1.DxoFieldPanelModule,
+                        load_panel_1.DxoLoadPanelModule,
+                        scrolling_1.DxoScrollingModule,
+                        state_storing_1.DxoStateStoringModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxPivotGridModule;
 }());
-export { DxPivotGridModule };
+exports.DxPivotGridModule = DxPivotGridModule;
 //# sourceMappingURL=pivot-grid.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoSubtitleComponent = (function (_super) {
     __extends(DxoSubtitleComponent, _super);
     function DxoSubtitleComponent(parentOptionHost, optionHost) {
@@ -90,33 +92,33 @@ var DxoSubtitleComponent = (function (_super) {
         configurable: true
     });
     DxoSubtitleComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-subtitle',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoSubtitleComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoSubtitleComponent.propDecorators = {
-        "font": [{ type: Input },],
-        "offset": [{ type: Input },],
-        "text": [{ type: Input },],
-        "textOverflow": [{ type: Input },],
-        "wordWrap": [{ type: Input },],
+        "font": [{ type: core_1.Input },],
+        "offset": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "textOverflow": [{ type: core_1.Input },],
+        "wordWrap": [{ type: core_1.Input },],
     };
     return DxoSubtitleComponent;
-}(NestedOption));
-export { DxoSubtitleComponent };
+}(nested_option_2.NestedOption));
+exports.DxoSubtitleComponent = DxoSubtitleComponent;
 var DxoSubtitleModule = (function () {
     function DxoSubtitleModule() {
     }
     DxoSubtitleModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoSubtitleComponent
                     ],
@@ -127,5 +129,5 @@ var DxoSubtitleModule = (function () {
     ];
     return DxoSubtitleModule;
 }());
-export { DxoSubtitleModule };
+exports.DxoSubtitleModule = DxoSubtitleModule;
 //# sourceMappingURL=subtitle.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoExportComponent = (function (_super) {
     __extends(DxoExportComponent, _super);
     function DxoExportComponent(parentOptionHost, optionHost) {
@@ -169,41 +171,41 @@ var DxoExportComponent = (function (_super) {
         configurable: true
     });
     DxoExportComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-export',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoExportComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoExportComponent.propDecorators = {
-        "backgroundColor": [{ type: Input },],
-        "enabled": [{ type: Input },],
-        "fileName": [{ type: Input },],
-        "formats": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "printingEnabled": [{ type: Input },],
-        "proxyUrl": [{ type: Input },],
-        "allowExportSelectedData": [{ type: Input },],
-        "customizeExcelCell": [{ type: Input },],
-        "excelFilterEnabled": [{ type: Input },],
-        "excelWrapTextEnabled": [{ type: Input },],
-        "ignoreExcelErrors": [{ type: Input },],
-        "texts": [{ type: Input },],
+        "backgroundColor": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
+        "fileName": [{ type: core_1.Input },],
+        "formats": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "printingEnabled": [{ type: core_1.Input },],
+        "proxyUrl": [{ type: core_1.Input },],
+        "allowExportSelectedData": [{ type: core_1.Input },],
+        "customizeExcelCell": [{ type: core_1.Input },],
+        "excelFilterEnabled": [{ type: core_1.Input },],
+        "excelWrapTextEnabled": [{ type: core_1.Input },],
+        "ignoreExcelErrors": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
     };
     return DxoExportComponent;
-}(NestedOption));
-export { DxoExportComponent };
+}(nested_option_2.NestedOption));
+exports.DxoExportComponent = DxoExportComponent;
 var DxoExportModule = (function () {
     function DxoExportModule() {
     }
     DxoExportModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoExportComponent
                     ],
@@ -214,5 +216,5 @@ var DxoExportModule = (function () {
     ];
     return DxoExportModule;
 }());
-export { DxoExportModule };
+exports.DxoExportModule = DxoExportModule;
 //# sourceMappingURL=export.js.map

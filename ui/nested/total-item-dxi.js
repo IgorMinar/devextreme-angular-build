@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiTotalItemComponent = (function (_super) {
     __extends(DxiTotalItemComponent, _super);
     function DxiTotalItemComponent(parentOptionHost, optionHost) {
@@ -139,38 +141,38 @@ var DxiTotalItemComponent = (function (_super) {
         configurable: true
     });
     DxiTotalItemComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-total-item',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiTotalItemComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiTotalItemComponent.propDecorators = {
-        "alignment": [{ type: Input },],
-        "column": [{ type: Input },],
-        "cssClass": [{ type: Input },],
-        "customizeText": [{ type: Input },],
-        "displayFormat": [{ type: Input },],
-        "name": [{ type: Input },],
-        "showInColumn": [{ type: Input },],
-        "skipEmptyValues": [{ type: Input },],
-        "summaryType": [{ type: Input },],
-        "valueFormat": [{ type: Input },],
+        "alignment": [{ type: core_1.Input },],
+        "column": [{ type: core_1.Input },],
+        "cssClass": [{ type: core_1.Input },],
+        "customizeText": [{ type: core_1.Input },],
+        "displayFormat": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "showInColumn": [{ type: core_1.Input },],
+        "skipEmptyValues": [{ type: core_1.Input },],
+        "summaryType": [{ type: core_1.Input },],
+        "valueFormat": [{ type: core_1.Input },],
     };
     return DxiTotalItemComponent;
-}(CollectionNestedOption));
-export { DxiTotalItemComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiTotalItemComponent = DxiTotalItemComponent;
 var DxiTotalItemModule = (function () {
     function DxiTotalItemModule() {
     }
     DxiTotalItemModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiTotalItemComponent
                     ],
@@ -181,5 +183,5 @@ var DxiTotalItemModule = (function () {
     ];
     return DxiTotalItemModule;
 }());
-export { DxiTotalItemModule };
+exports.DxiTotalItemModule = DxiTotalItemModule;
 //# sourceMappingURL=total-item-dxi.js.map

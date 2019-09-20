@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoChartCommonSeriesSettings } from './base/chart-common-series-settings';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var chart_common_series_settings_1 = require("./base/chart-common-series-settings");
 var DxoFullstackedbarComponent = (function (_super) {
     __extends(DxoFullstackedbarComponent, _super);
     function DxoFullstackedbarComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxoFullstackedbarComponent = (function (_super) {
         configurable: true
     });
     DxoFullstackedbarComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-fullstackedbar',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'aggregation',
                         'area',
@@ -111,17 +113,17 @@ var DxoFullstackedbarComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoFullstackedbarComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxoFullstackedbarComponent;
-}(DxoChartCommonSeriesSettings));
-export { DxoFullstackedbarComponent };
+}(chart_common_series_settings_1.DxoChartCommonSeriesSettings));
+exports.DxoFullstackedbarComponent = DxoFullstackedbarComponent;
 var DxoFullstackedbarModule = (function () {
     function DxoFullstackedbarModule() {
     }
     DxoFullstackedbarModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFullstackedbarComponent
                     ],
@@ -132,5 +134,5 @@ var DxoFullstackedbarModule = (function () {
     ];
     return DxoFullstackedbarModule;
 }());
-export { DxoFullstackedbarModule };
+exports.DxoFullstackedbarModule = DxoFullstackedbarModule;
 //# sourceMappingURL=fullstackedbar.js.map

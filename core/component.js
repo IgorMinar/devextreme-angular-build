@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,14 +21,15 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { PLATFORM_ID, Inject, EventEmitter } from '@angular/core';
-import { isPlatformServer } from '@angular/common';
-import { makeStateKey } from '@angular/platform-browser';
-import { EmitterHelper, NgEventsStrategy } from './events-strategy';
-import * as domAdapter from 'devextreme/core/dom_adapter';
-import * as events from 'devextreme/events';
-import { CollectionNestedOptionContainerImpl } from './nested-option';
-export var IS_PLATFORM_SERVER = makeStateKey('DX_isPlatformServer');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var platform_browser_1 = require("@angular/platform-browser");
+var events_strategy_1 = require("./events-strategy");
+var domAdapter = require("devextreme/core/dom_adapter");
+var events = require("devextreme/events");
+var nested_option_1 = require("./nested-option");
+exports.IS_PLATFORM_SERVER = platform_browser_1.makeStateKey('DX_isPlatformServer');
 var DxComponent = (function () {
     function DxComponent(element, ngZone, templateHost, watcherHelper, transferState, platformId) {
         this.element = element;
@@ -36,15 +38,15 @@ var DxComponent = (function () {
         this.platformId = platformId;
         this._initialOptions = {};
         this._optionsToUpdate = {};
-        this.optionChangedHandlers = new EventEmitter();
+        this.optionChangedHandlers = new core_1.EventEmitter();
         this.isLinked = true;
         this.changedOptions = {};
         this.createInstanceOnInit = true;
         this.widgetUpdateLocked = false;
         this.templates = [];
         templateHost.setHost(this);
-        this._collectionContainerImpl = new CollectionNestedOptionContainerImpl(this._setOption.bind(this));
-        this.eventHelper = new EmitterHelper(ngZone, this);
+        this._collectionContainerImpl = new nested_option_1.CollectionNestedOptionContainerImpl(this._setOption.bind(this));
+        this.eventHelper = new events_strategy_1.EmitterHelper(ngZone, this);
     }
     DxComponent.prototype._initTemplates = function () {
         if (this.templates.length) {
@@ -68,18 +70,18 @@ var DxComponent = (function () {
         this._initialOptions.integrationOptions.watchMethod = this.watcherHelper.getWatchMethod();
     };
     DxComponent.prototype._initPlatform = function () {
-        if (this.transferState.hasKey(IS_PLATFORM_SERVER)) {
-            this._initialOptions.integrationOptions.renderedOnServer = this.transferState.get(IS_PLATFORM_SERVER, null);
+        if (this.transferState.hasKey(exports.IS_PLATFORM_SERVER)) {
+            this._initialOptions.integrationOptions.renderedOnServer = this.transferState.get(exports.IS_PLATFORM_SERVER, null);
         }
-        else if (isPlatformServer(this.platformId)) {
-            this.transferState.set(IS_PLATFORM_SERVER, true);
+        else if (common_1.isPlatformServer(this.platformId)) {
+            this.transferState.set(exports.IS_PLATFORM_SERVER, true);
         }
     };
     DxComponent.prototype._createEventEmitters = function (events) {
         var _this = this;
         this.eventHelper.createEmitters(events);
         this._initialOptions.eventsStrategy = function (instance) {
-            var strategy = new NgEventsStrategy(instance);
+            var strategy = new events_strategy_1.NgEventsStrategy(instance);
             events.filter(function (event) { return event.subscribe; }).forEach(function (event) {
                 strategy.addEmitter(event.subscribe, _this[event.emit]);
             });
@@ -87,7 +89,7 @@ var DxComponent = (function () {
         };
         this._initialOptions.nestedComponentOptions = function (component) {
             return {
-                eventsStrategy: function (instance) { return new NgEventsStrategy(instance); },
+                eventsStrategy: function (instance) { return new events_strategy_1.NgEventsStrategy(instance); },
                 nestedComponentOptions: component.option('nestedComponentOptions')
             };
         };
@@ -196,16 +198,16 @@ var DxComponent = (function () {
     };
     /** @nocollapse */
     DxComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: platform_browser_1.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     return DxComponent;
 }());
-export { DxComponent };
+exports.DxComponent = DxComponent;
 var DxComponentExtension = (function (_super) {
     __extends(DxComponentExtension, _super);
     function DxComponentExtension() {
@@ -216,5 +218,5 @@ var DxComponentExtension = (function (_super) {
     };
     return DxComponentExtension;
 }(DxComponent));
-export { DxComponentExtension };
+exports.DxComponentExtension = DxComponentExtension;
 //# sourceMappingURL=component.js.map

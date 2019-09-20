@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoTooltipComponent = (function (_super) {
     __extends(DxoTooltipComponent, _super);
     function DxoTooltipComponent(parentOptionHost, optionHost) {
@@ -270,51 +272,51 @@ var DxoTooltipComponent = (function (_super) {
         configurable: true
     });
     DxoTooltipComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-tooltip',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoTooltipComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoTooltipComponent.propDecorators = {
-        "arrowLength": [{ type: Input },],
-        "border": [{ type: Input },],
-        "color": [{ type: Input },],
-        "container": [{ type: Input },],
-        "cornerRadius": [{ type: Input },],
-        "customizeTooltip": [{ type: Input },],
-        "enabled": [{ type: Input },],
-        "font": [{ type: Input },],
-        "format": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "paddingLeftRight": [{ type: Input },],
-        "paddingTopBottom": [{ type: Input },],
-        "shadow": [{ type: Input },],
-        "zIndex": [{ type: Input },],
-        "argumentFormat": [{ type: Input },],
-        "location": [{ type: Input },],
-        "shared": [{ type: Input },],
-        "isShown": [{ type: Input },],
-        "text": [{ type: Input },],
-        "position": [{ type: Input },],
-        "showMode": [{ type: Input },],
-        "customizeLinkTooltip": [{ type: Input },],
-        "customizeNodeTooltip": [{ type: Input },],
+        "arrowLength": [{ type: core_1.Input },],
+        "border": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "container": [{ type: core_1.Input },],
+        "cornerRadius": [{ type: core_1.Input },],
+        "customizeTooltip": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
+        "font": [{ type: core_1.Input },],
+        "format": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "paddingLeftRight": [{ type: core_1.Input },],
+        "paddingTopBottom": [{ type: core_1.Input },],
+        "shadow": [{ type: core_1.Input },],
+        "zIndex": [{ type: core_1.Input },],
+        "argumentFormat": [{ type: core_1.Input },],
+        "location": [{ type: core_1.Input },],
+        "shared": [{ type: core_1.Input },],
+        "isShown": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "showMode": [{ type: core_1.Input },],
+        "customizeLinkTooltip": [{ type: core_1.Input },],
+        "customizeNodeTooltip": [{ type: core_1.Input },],
     };
     return DxoTooltipComponent;
-}(NestedOption));
-export { DxoTooltipComponent };
+}(nested_option_2.NestedOption));
+exports.DxoTooltipComponent = DxoTooltipComponent;
 var DxoTooltipModule = (function () {
     function DxoTooltipModule() {
     }
     DxoTooltipModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoTooltipComponent
                     ],
@@ -325,5 +327,5 @@ var DxoTooltipModule = (function () {
     ];
     return DxoTooltipModule;
 }());
-export { DxoTooltipModule };
+exports.DxoTooltipModule = DxoTooltipModule;
 //# sourceMappingURL=tooltip.js.map

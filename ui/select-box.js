@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,27 +21,28 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
-import DxSelectBox from 'devextreme/ui/select_box';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiButtonModule } from './nested/button-dxi';
-import { DxoOptionsModule } from './nested/options';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiButtonComponent } from './nested/button-dxi';
-import { DxiItemComponent } from './nested/item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var select_box_1 = require("devextreme/ui/select_box");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var button_dxi_1 = require("./nested/button-dxi");
+var options_1 = require("./nested/options");
+var item_dxi_1 = require("./nested/item-dxi");
+var button_dxi_2 = require("./nested/button-dxi");
+var item_dxi_2 = require("./nested/item-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxSelectBoxComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxSelectBoxComponent; }),
     multi: true
 };
 /**
@@ -817,7 +819,7 @@ var DxSelectBoxComponent = (function (_super) {
         configurable: true
     });
     DxSelectBoxComponent.prototype._createInstance = function (element, options) {
-        return new DxSelectBox(element, options);
+        return new select_box_1.default(element, options);
     };
     DxSelectBoxComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -880,189 +882,189 @@ var DxSelectBoxComponent = (function (_super) {
         }
     };
     DxSelectBoxComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-select-box',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxSelectBoxComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxSelectBoxComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "acceptCustomValue": [{ type: Input },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "buttons": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "displayValue": [{ type: Input },],
-        "dropDownButtonTemplate": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "fieldTemplate": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "grouped": [{ type: Input },],
-        "groupTemplate": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "inputAttr": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "maxLength": [{ type: Input },],
-        "minSearchLength": [{ type: Input },],
-        "name": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "opened": [{ type: Input },],
-        "openOnFieldClick": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "searchEnabled": [{ type: Input },],
-        "searchExpr": [{ type: Input },],
-        "searchMode": [{ type: Input },],
-        "searchTimeout": [{ type: Input },],
-        "selectedItem": [{ type: Input },],
-        "showClearButton": [{ type: Input },],
-        "showDataBeforeSearch": [{ type: Input },],
-        "showDropDownButton": [{ type: Input },],
-        "showSelectionControls": [{ type: Input },],
-        "spellcheck": [{ type: Input },],
-        "stylingMode": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "text": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueChangeEvent": [{ type: Input },],
-        "valueExpr": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onChange": [{ type: Output },],
-        "onClosed": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onCopy": [{ type: Output },],
-        "onCustomItemCreating": [{ type: Output },],
-        "onCut": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEnterKey": [{ type: Output },],
-        "onFocusIn": [{ type: Output },],
-        "onFocusOut": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onInput": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onKeyDown": [{ type: Output },],
-        "onKeyPress": [{ type: Output },],
-        "onKeyUp": [{ type: Output },],
-        "onOpened": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPaste": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "acceptCustomValueChange": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "buttonsChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "displayExprChange": [{ type: Output },],
-        "displayValueChange": [{ type: Output },],
-        "dropDownButtonTemplateChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "fieldTemplateChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "groupedChange": [{ type: Output },],
-        "groupTemplateChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "inputAttrChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "maxLengthChange": [{ type: Output },],
-        "minSearchLengthChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "openedChange": [{ type: Output },],
-        "openOnFieldClickChange": [{ type: Output },],
-        "placeholderChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "searchEnabledChange": [{ type: Output },],
-        "searchExprChange": [{ type: Output },],
-        "searchModeChange": [{ type: Output },],
-        "searchTimeoutChange": [{ type: Output },],
-        "selectedItemChange": [{ type: Output },],
-        "showClearButtonChange": [{ type: Output },],
-        "showDataBeforeSearchChange": [{ type: Output },],
-        "showDropDownButtonChange": [{ type: Output },],
-        "showSelectionControlsChange": [{ type: Output },],
-        "spellcheckChange": [{ type: Output },],
-        "stylingModeChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueChangeEventChange": [{ type: Output },],
-        "valueExprChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "buttonsChildren": [{ type: ContentChildren, args: [DxiButtonComponent,] },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "acceptCustomValue": [{ type: core_1.Input },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "buttons": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "displayValue": [{ type: core_1.Input },],
+        "dropDownButtonTemplate": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "fieldTemplate": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "grouped": [{ type: core_1.Input },],
+        "groupTemplate": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "inputAttr": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "maxLength": [{ type: core_1.Input },],
+        "minSearchLength": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "opened": [{ type: core_1.Input },],
+        "openOnFieldClick": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "searchEnabled": [{ type: core_1.Input },],
+        "searchExpr": [{ type: core_1.Input },],
+        "searchMode": [{ type: core_1.Input },],
+        "searchTimeout": [{ type: core_1.Input },],
+        "selectedItem": [{ type: core_1.Input },],
+        "showClearButton": [{ type: core_1.Input },],
+        "showDataBeforeSearch": [{ type: core_1.Input },],
+        "showDropDownButton": [{ type: core_1.Input },],
+        "showSelectionControls": [{ type: core_1.Input },],
+        "spellcheck": [{ type: core_1.Input },],
+        "stylingMode": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueChangeEvent": [{ type: core_1.Input },],
+        "valueExpr": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onChange": [{ type: core_1.Output },],
+        "onClosed": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onCopy": [{ type: core_1.Output },],
+        "onCustomItemCreating": [{ type: core_1.Output },],
+        "onCut": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEnterKey": [{ type: core_1.Output },],
+        "onFocusIn": [{ type: core_1.Output },],
+        "onFocusOut": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onInput": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onKeyDown": [{ type: core_1.Output },],
+        "onKeyPress": [{ type: core_1.Output },],
+        "onKeyUp": [{ type: core_1.Output },],
+        "onOpened": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPaste": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "acceptCustomValueChange": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "buttonsChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "displayExprChange": [{ type: core_1.Output },],
+        "displayValueChange": [{ type: core_1.Output },],
+        "dropDownButtonTemplateChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "fieldTemplateChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "groupedChange": [{ type: core_1.Output },],
+        "groupTemplateChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "inputAttrChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "maxLengthChange": [{ type: core_1.Output },],
+        "minSearchLengthChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "openedChange": [{ type: core_1.Output },],
+        "openOnFieldClickChange": [{ type: core_1.Output },],
+        "placeholderChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "searchEnabledChange": [{ type: core_1.Output },],
+        "searchExprChange": [{ type: core_1.Output },],
+        "searchModeChange": [{ type: core_1.Output },],
+        "searchTimeoutChange": [{ type: core_1.Output },],
+        "selectedItemChange": [{ type: core_1.Output },],
+        "showClearButtonChange": [{ type: core_1.Output },],
+        "showDataBeforeSearchChange": [{ type: core_1.Output },],
+        "showDropDownButtonChange": [{ type: core_1.Output },],
+        "showSelectionControlsChange": [{ type: core_1.Output },],
+        "spellcheckChange": [{ type: core_1.Output },],
+        "stylingModeChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueChangeEventChange": [{ type: core_1.Output },],
+        "valueExprChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "buttonsChildren": [{ type: core_1.ContentChildren, args: [button_dxi_2.DxiButtonComponent,] },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxSelectBoxComponent;
-}(DxComponent));
-export { DxSelectBoxComponent };
+}(component_1.DxComponent));
+exports.DxSelectBoxComponent = DxSelectBoxComponent;
 var DxSelectBoxModule = (function () {
     function DxSelectBoxModule() {
     }
     DxSelectBoxModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxiItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        item_dxi_1.DxiItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxSelectBoxComponent
                     ],
                     exports: [
                         DxSelectBoxComponent,
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxiItemModule,
-                        DxTemplateModule
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        item_dxi_1.DxiItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxSelectBoxModule;
 }());
-export { DxSelectBoxModule };
+exports.DxSelectBoxModule = DxSelectBoxModule;
 //# sourceMappingURL=select-box.js.map

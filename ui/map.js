@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,26 +21,27 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxMap from 'devextreme/ui/map';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiCenterModule } from './nested/center-dxi';
-import { DxoKeyModule } from './nested/key';
-import { DxiMarkerModule } from './nested/marker-dxi';
-import { DxiLocationModule } from './nested/location-dxi';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxiRouteModule } from './nested/route-dxi';
-import { DxiCenterComponent } from './nested/center-dxi';
-import { DxiMarkerComponent } from './nested/marker-dxi';
-import { DxiRouteComponent } from './nested/route-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var map_1 = require("devextreme/ui/map");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var center_dxi_1 = require("./nested/center-dxi");
+var key_1 = require("./nested/key");
+var marker_dxi_1 = require("./nested/marker-dxi");
+var location_dxi_1 = require("./nested/location-dxi");
+var tooltip_1 = require("./nested/tooltip");
+var route_dxi_1 = require("./nested/route-dxi");
+var center_dxi_2 = require("./nested/center-dxi");
+var marker_dxi_2 = require("./nested/marker-dxi");
+var route_dxi_2 = require("./nested/route-dxi");
 /**
  * The Map is an interactive widget that displays a geographic map with markers and routes.
  */
@@ -403,7 +405,7 @@ var DxMapComponent = (function (_super) {
         configurable: true
     });
     DxMapComponent.prototype._createInstance = function (element, options) {
-        return new DxMap(element, options);
+        return new map_1.default(element, options);
     };
     DxMapComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -435,121 +437,121 @@ var DxMapComponent = (function (_super) {
         }
     };
     DxMapComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-map',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxMapComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxMapComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "autoAdjust": [{ type: Input },],
-        "center": [{ type: Input },],
-        "controls": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "key": [{ type: Input },],
-        "markerIconSrc": [{ type: Input },],
-        "markers": [{ type: Input },],
-        "provider": [{ type: Input },],
-        "routes": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "type": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "zoom": [{ type: Input },],
-        "onClick": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onMarkerAdded": [{ type: Output },],
-        "onMarkerRemoved": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onReady": [{ type: Output },],
-        "onRouteAdded": [{ type: Output },],
-        "onRouteRemoved": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "autoAdjustChange": [{ type: Output },],
-        "centerChange": [{ type: Output },],
-        "controlsChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "keyChange": [{ type: Output },],
-        "markerIconSrcChange": [{ type: Output },],
-        "markersChange": [{ type: Output },],
-        "providerChange": [{ type: Output },],
-        "routesChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "typeChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "zoomChange": [{ type: Output },],
-        "centerChildren": [{ type: ContentChildren, args: [DxiCenterComponent,] },],
-        "markersChildren": [{ type: ContentChildren, args: [DxiMarkerComponent,] },],
-        "routesChildren": [{ type: ContentChildren, args: [DxiRouteComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "autoAdjust": [{ type: core_1.Input },],
+        "center": [{ type: core_1.Input },],
+        "controls": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "key": [{ type: core_1.Input },],
+        "markerIconSrc": [{ type: core_1.Input },],
+        "markers": [{ type: core_1.Input },],
+        "provider": [{ type: core_1.Input },],
+        "routes": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "zoom": [{ type: core_1.Input },],
+        "onClick": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onMarkerAdded": [{ type: core_1.Output },],
+        "onMarkerRemoved": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onReady": [{ type: core_1.Output },],
+        "onRouteAdded": [{ type: core_1.Output },],
+        "onRouteRemoved": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "autoAdjustChange": [{ type: core_1.Output },],
+        "centerChange": [{ type: core_1.Output },],
+        "controlsChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "keyChange": [{ type: core_1.Output },],
+        "markerIconSrcChange": [{ type: core_1.Output },],
+        "markersChange": [{ type: core_1.Output },],
+        "providerChange": [{ type: core_1.Output },],
+        "routesChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "typeChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "zoomChange": [{ type: core_1.Output },],
+        "centerChildren": [{ type: core_1.ContentChildren, args: [center_dxi_2.DxiCenterComponent,] },],
+        "markersChildren": [{ type: core_1.ContentChildren, args: [marker_dxi_2.DxiMarkerComponent,] },],
+        "routesChildren": [{ type: core_1.ContentChildren, args: [route_dxi_2.DxiRouteComponent,] },],
     };
     return DxMapComponent;
-}(DxComponent));
-export { DxMapComponent };
+}(component_1.DxComponent));
+exports.DxMapComponent = DxMapComponent;
 var DxMapModule = (function () {
     function DxMapModule() {
     }
     DxMapModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiCenterModule,
-                        DxoKeyModule,
-                        DxiMarkerModule,
-                        DxiLocationModule,
-                        DxoTooltipModule,
-                        DxiRouteModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        center_dxi_1.DxiCenterModule,
+                        key_1.DxoKeyModule,
+                        marker_dxi_1.DxiMarkerModule,
+                        location_dxi_1.DxiLocationModule,
+                        tooltip_1.DxoTooltipModule,
+                        route_dxi_1.DxiRouteModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxMapComponent
                     ],
                     exports: [
                         DxMapComponent,
-                        DxiCenterModule,
-                        DxoKeyModule,
-                        DxiMarkerModule,
-                        DxiLocationModule,
-                        DxoTooltipModule,
-                        DxiRouteModule,
-                        DxTemplateModule
+                        center_dxi_1.DxiCenterModule,
+                        key_1.DxoKeyModule,
+                        marker_dxi_1.DxiMarkerModule,
+                        location_dxi_1.DxiLocationModule,
+                        tooltip_1.DxoTooltipModule,
+                        route_dxi_1.DxiRouteModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxMapModule;
 }());
-export { DxMapModule };
+exports.DxMapModule = DxMapModule;
 //# sourceMappingURL=map.js.map

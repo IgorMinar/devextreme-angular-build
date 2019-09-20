@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoGeometryComponent = (function (_super) {
     __extends(DxoGeometryComponent, _super);
     function DxoGeometryComponent(parentOptionHost, optionHost) {
@@ -69,31 +71,31 @@ var DxoGeometryComponent = (function (_super) {
         configurable: true
     });
     DxoGeometryComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-geometry',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoGeometryComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoGeometryComponent.propDecorators = {
-        "endAngle": [{ type: Input },],
-        "startAngle": [{ type: Input },],
-        "orientation": [{ type: Input },],
+        "endAngle": [{ type: core_1.Input },],
+        "startAngle": [{ type: core_1.Input },],
+        "orientation": [{ type: core_1.Input },],
     };
     return DxoGeometryComponent;
-}(NestedOption));
-export { DxoGeometryComponent };
+}(nested_option_2.NestedOption));
+exports.DxoGeometryComponent = DxoGeometryComponent;
 var DxoGeometryModule = (function () {
     function DxoGeometryModule() {
     }
     DxoGeometryModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoGeometryComponent
                     ],
@@ -104,5 +106,5 @@ var DxoGeometryModule = (function () {
     ];
     return DxoGeometryModule;
 }());
-export { DxoGeometryModule };
+exports.DxoGeometryModule = DxoGeometryModule;
 //# sourceMappingURL=geometry.js.map

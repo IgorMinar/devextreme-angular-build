@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoAnimationConfig } from './base/animation-config';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var animation_config_1 = require("./base/animation-config");
 var DxoHideComponent = (function (_super) {
     __extends(DxoHideComponent, _super);
     function DxoHideComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxoHideComponent = (function (_super) {
         configurable: true
     });
     DxoHideComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-hide',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'complete',
                         'delay',
@@ -60,17 +62,17 @@ var DxoHideComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoHideComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxoHideComponent;
-}(DxoAnimationConfig));
-export { DxoHideComponent };
+}(animation_config_1.DxoAnimationConfig));
+exports.DxoHideComponent = DxoHideComponent;
 var DxoHideModule = (function () {
     function DxoHideModule() {
     }
     DxoHideModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoHideComponent
                     ],
@@ -81,5 +83,5 @@ var DxoHideModule = (function () {
     ];
     return DxoHideModule;
 }());
-export { DxoHideModule };
+exports.DxoHideModule = DxoHideModule;
 //# sourceMappingURL=hide.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
-import { DxiLocationComponent } from './location-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var location_dxi_1 = require("./location-dxi");
 var DxiMarkerComponent = (function (_super) {
     __extends(DxiMarkerComponent, _super);
     function DxiMarkerComponent(parentOptionHost, optionHost) {
@@ -90,33 +92,33 @@ var DxiMarkerComponent = (function (_super) {
         configurable: true
     });
     DxiMarkerComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-marker',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiMarkerComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiMarkerComponent.propDecorators = {
-        "iconSrc": [{ type: Input },],
-        "location": [{ type: Input },],
-        "onClick": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "locationChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiLocationComponent; }),] },],
+        "iconSrc": [{ type: core_1.Input },],
+        "location": [{ type: core_1.Input },],
+        "onClick": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "locationChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return location_dxi_1.DxiLocationComponent; }),] },],
     };
     return DxiMarkerComponent;
-}(CollectionNestedOption));
-export { DxiMarkerComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiMarkerComponent = DxiMarkerComponent;
 var DxiMarkerModule = (function () {
     function DxiMarkerModule() {
     }
     DxiMarkerModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiMarkerComponent
                     ],
@@ -127,5 +129,5 @@ var DxiMarkerModule = (function () {
     ];
     return DxiMarkerModule;
 }());
-export { DxiMarkerModule };
+exports.DxiMarkerModule = DxiMarkerModule;
 //# sourceMappingURL=marker-dxi.js.map

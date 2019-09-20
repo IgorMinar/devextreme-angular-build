@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoLegendComponent = (function (_super) {
     __extends(DxoLegendComponent, _super);
     function DxoLegendComponent(parentOptionHost, optionHost) {
@@ -280,52 +282,52 @@ var DxoLegendComponent = (function (_super) {
         configurable: true
     });
     DxoLegendComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-legend',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoLegendComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoLegendComponent.propDecorators = {
-        "backgroundColor": [{ type: Input },],
-        "border": [{ type: Input },],
-        "columnCount": [{ type: Input },],
-        "columnItemSpacing": [{ type: Input },],
-        "customizeHint": [{ type: Input },],
-        "customizeItems": [{ type: Input },],
-        "customizeText": [{ type: Input },],
-        "font": [{ type: Input },],
-        "horizontalAlignment": [{ type: Input },],
-        "itemsAlignment": [{ type: Input },],
-        "itemTextFormat": [{ type: Input },],
-        "itemTextPosition": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "markerSize": [{ type: Input },],
-        "orientation": [{ type: Input },],
-        "paddingLeftRight": [{ type: Input },],
-        "paddingTopBottom": [{ type: Input },],
-        "rowCount": [{ type: Input },],
-        "rowItemSpacing": [{ type: Input },],
-        "title": [{ type: Input },],
-        "verticalAlignment": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "hoverMode": [{ type: Input },],
-        "position": [{ type: Input },],
+        "backgroundColor": [{ type: core_1.Input },],
+        "border": [{ type: core_1.Input },],
+        "columnCount": [{ type: core_1.Input },],
+        "columnItemSpacing": [{ type: core_1.Input },],
+        "customizeHint": [{ type: core_1.Input },],
+        "customizeItems": [{ type: core_1.Input },],
+        "customizeText": [{ type: core_1.Input },],
+        "font": [{ type: core_1.Input },],
+        "horizontalAlignment": [{ type: core_1.Input },],
+        "itemsAlignment": [{ type: core_1.Input },],
+        "itemTextFormat": [{ type: core_1.Input },],
+        "itemTextPosition": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "markerSize": [{ type: core_1.Input },],
+        "orientation": [{ type: core_1.Input },],
+        "paddingLeftRight": [{ type: core_1.Input },],
+        "paddingTopBottom": [{ type: core_1.Input },],
+        "rowCount": [{ type: core_1.Input },],
+        "rowItemSpacing": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "verticalAlignment": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "hoverMode": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
     };
     return DxoLegendComponent;
-}(NestedOption));
-export { DxoLegendComponent };
+}(nested_option_2.NestedOption));
+exports.DxoLegendComponent = DxoLegendComponent;
 var DxoLegendModule = (function () {
     function DxoLegendModule() {
     }
     DxoLegendModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoLegendComponent
                     ],
@@ -336,5 +338,5 @@ var DxoLegendModule = (function () {
     ];
     return DxoLegendModule;
 }());
-export { DxoLegendModule };
+exports.DxoLegendModule = DxoLegendModule;
 //# sourceMappingURL=legend.js.map

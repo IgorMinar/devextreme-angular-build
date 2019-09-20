@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoRemoteOperationsComponent = (function (_super) {
     __extends(DxoRemoteOperationsComponent, _super);
     function DxoRemoteOperationsComponent(parentOptionHost, optionHost) {
@@ -99,34 +101,34 @@ var DxoRemoteOperationsComponent = (function (_super) {
         configurable: true
     });
     DxoRemoteOperationsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-remote-operations',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoRemoteOperationsComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoRemoteOperationsComponent.propDecorators = {
-        "filtering": [{ type: Input },],
-        "grouping": [{ type: Input },],
-        "groupPaging": [{ type: Input },],
-        "paging": [{ type: Input },],
-        "sorting": [{ type: Input },],
-        "summary": [{ type: Input },],
+        "filtering": [{ type: core_1.Input },],
+        "grouping": [{ type: core_1.Input },],
+        "groupPaging": [{ type: core_1.Input },],
+        "paging": [{ type: core_1.Input },],
+        "sorting": [{ type: core_1.Input },],
+        "summary": [{ type: core_1.Input },],
     };
     return DxoRemoteOperationsComponent;
-}(NestedOption));
-export { DxoRemoteOperationsComponent };
+}(nested_option_2.NestedOption));
+exports.DxoRemoteOperationsComponent = DxoRemoteOperationsComponent;
 var DxoRemoteOperationsModule = (function () {
     function DxoRemoteOperationsModule() {
     }
     DxoRemoteOperationsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoRemoteOperationsComponent
                     ],
@@ -137,5 +139,5 @@ var DxoRemoteOperationsModule = (function () {
     ];
     return DxoRemoteOperationsModule;
 }());
-export { DxoRemoteOperationsModule };
+exports.DxoRemoteOperationsModule = DxoRemoteOperationsModule;
 //# sourceMappingURL=remote-operations.js.map

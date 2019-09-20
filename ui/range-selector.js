@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,91 +21,92 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener } from '@angular/core';
-import DxRangeSelector from 'devextreme/viz/range_selector';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoBackgroundModule } from './nested/background';
-import { DxoImageModule } from './nested/image';
-import { DxoBehaviorModule } from './nested/behavior';
-import { DxoChartModule } from './nested/chart';
-import { DxoCommonSeriesSettingsModule } from './nested/common-series-settings';
-import { DxoAggregationModule } from './nested/aggregation';
-import { DxoAreaModule } from './nested/area';
-import { DxoBorderModule } from './nested/border';
-import { DxoHoverStyleModule } from './nested/hover-style';
-import { DxoHatchingModule } from './nested/hatching';
-import { DxoLabelModule } from './nested/label';
-import { DxoConnectorModule } from './nested/connector';
-import { DxoPointModule } from './nested/point';
-import { DxoHeightModule } from './nested/height';
-import { DxoUrlModule } from './nested/url';
-import { DxoWidthModule } from './nested/width';
-import { DxoSelectionStyleModule } from './nested/selection-style';
-import { DxoReductionModule } from './nested/reduction';
-import { DxoValueErrorBarModule } from './nested/value-error-bar';
-import { DxoBarModule } from './nested/bar';
-import { DxoBubbleModule } from './nested/bubble';
-import { DxoCandlestickModule } from './nested/candlestick';
-import { DxoFullstackedareaModule } from './nested/fullstackedarea';
-import { DxoFullstackedbarModule } from './nested/fullstackedbar';
-import { DxoFullstackedlineModule } from './nested/fullstackedline';
-import { DxoFullstackedsplineModule } from './nested/fullstackedspline';
-import { DxoFullstackedsplineareaModule } from './nested/fullstackedsplinearea';
-import { DxoArgumentFormatModule } from './nested/argument-format';
-import { DxoFontModule } from './nested/font';
-import { DxoFormatModule } from './nested/format';
-import { DxoLineModule } from './nested/line';
-import { DxoRangeareaModule } from './nested/rangearea';
-import { DxoRangebarModule } from './nested/rangebar';
-import { DxoScatterModule } from './nested/scatter';
-import { DxoSplineModule } from './nested/spline';
-import { DxoSplineareaModule } from './nested/splinearea';
-import { DxoStackedareaModule } from './nested/stackedarea';
-import { DxoStackedbarModule } from './nested/stackedbar';
-import { DxoStackedlineModule } from './nested/stackedline';
-import { DxoStackedsplineModule } from './nested/stackedspline';
-import { DxoStackedsplineareaModule } from './nested/stackedsplinearea';
-import { DxoStepareaModule } from './nested/steparea';
-import { DxoSteplineModule } from './nested/stepline';
-import { DxoStockModule } from './nested/stock';
-import { DxoDataPrepareSettingsModule } from './nested/data-prepare-settings';
-import { DxiSeriesModule } from './nested/series-dxi';
-import { DxoSeriesTemplateModule } from './nested/series-template';
-import { DxoValueAxisModule } from './nested/value-axis';
-import { DxoExportModule } from './nested/export';
-import { DxoIndentModule } from './nested/indent';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxoMarginModule } from './nested/margin';
-import { DxoScaleModule } from './nested/scale';
-import { DxoAggregationIntervalModule } from './nested/aggregation-interval';
-import { DxiBreakModule } from './nested/break-dxi';
-import { DxoBreakStyleModule } from './nested/break-style';
-import { DxoMarkerModule } from './nested/marker';
-import { DxoMaxRangeModule } from './nested/max-range';
-import { DxoMinorTickModule } from './nested/minor-tick';
-import { DxoMinorTickIntervalModule } from './nested/minor-tick-interval';
-import { DxoMinRangeModule } from './nested/min-range';
-import { DxoTickModule } from './nested/tick';
-import { DxoTickIntervalModule } from './nested/tick-interval';
-import { DxoShutterModule } from './nested/shutter';
-import { DxoSizeModule } from './nested/size';
-import { DxoSliderHandleModule } from './nested/slider-handle';
-import { DxoSliderMarkerModule } from './nested/slider-marker';
-import { DxoTitleModule } from './nested/title';
-import { DxoSubtitleModule } from './nested/subtitle';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var range_selector_1 = require("devextreme/viz/range_selector");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var background_1 = require("./nested/background");
+var image_1 = require("./nested/image");
+var behavior_1 = require("./nested/behavior");
+var chart_1 = require("./nested/chart");
+var common_series_settings_1 = require("./nested/common-series-settings");
+var aggregation_1 = require("./nested/aggregation");
+var area_1 = require("./nested/area");
+var border_1 = require("./nested/border");
+var hover_style_1 = require("./nested/hover-style");
+var hatching_1 = require("./nested/hatching");
+var label_1 = require("./nested/label");
+var connector_1 = require("./nested/connector");
+var point_1 = require("./nested/point");
+var height_1 = require("./nested/height");
+var url_1 = require("./nested/url");
+var width_1 = require("./nested/width");
+var selection_style_1 = require("./nested/selection-style");
+var reduction_1 = require("./nested/reduction");
+var value_error_bar_1 = require("./nested/value-error-bar");
+var bar_1 = require("./nested/bar");
+var bubble_1 = require("./nested/bubble");
+var candlestick_1 = require("./nested/candlestick");
+var fullstackedarea_1 = require("./nested/fullstackedarea");
+var fullstackedbar_1 = require("./nested/fullstackedbar");
+var fullstackedline_1 = require("./nested/fullstackedline");
+var fullstackedspline_1 = require("./nested/fullstackedspline");
+var fullstackedsplinearea_1 = require("./nested/fullstackedsplinearea");
+var argument_format_1 = require("./nested/argument-format");
+var font_1 = require("./nested/font");
+var format_1 = require("./nested/format");
+var line_1 = require("./nested/line");
+var rangearea_1 = require("./nested/rangearea");
+var rangebar_1 = require("./nested/rangebar");
+var scatter_1 = require("./nested/scatter");
+var spline_1 = require("./nested/spline");
+var splinearea_1 = require("./nested/splinearea");
+var stackedarea_1 = require("./nested/stackedarea");
+var stackedbar_1 = require("./nested/stackedbar");
+var stackedline_1 = require("./nested/stackedline");
+var stackedspline_1 = require("./nested/stackedspline");
+var stackedsplinearea_1 = require("./nested/stackedsplinearea");
+var steparea_1 = require("./nested/steparea");
+var stepline_1 = require("./nested/stepline");
+var stock_1 = require("./nested/stock");
+var data_prepare_settings_1 = require("./nested/data-prepare-settings");
+var series_dxi_1 = require("./nested/series-dxi");
+var series_template_1 = require("./nested/series-template");
+var value_axis_1 = require("./nested/value-axis");
+var export_1 = require("./nested/export");
+var indent_1 = require("./nested/indent");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var margin_1 = require("./nested/margin");
+var scale_1 = require("./nested/scale");
+var aggregation_interval_1 = require("./nested/aggregation-interval");
+var break_dxi_1 = require("./nested/break-dxi");
+var break_style_1 = require("./nested/break-style");
+var marker_1 = require("./nested/marker");
+var max_range_1 = require("./nested/max-range");
+var minor_tick_1 = require("./nested/minor-tick");
+var minor_tick_interval_1 = require("./nested/minor-tick-interval");
+var min_range_1 = require("./nested/min-range");
+var tick_1 = require("./nested/tick");
+var tick_interval_1 = require("./nested/tick-interval");
+var shutter_1 = require("./nested/shutter");
+var size_1 = require("./nested/size");
+var slider_handle_1 = require("./nested/slider-handle");
+var slider_marker_1 = require("./nested/slider-marker");
+var title_1 = require("./nested/title");
+var subtitle_1 = require("./nested/subtitle");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxRangeSelectorComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxRangeSelectorComponent; }),
     multi: true
 };
 /**
@@ -485,7 +487,7 @@ var DxRangeSelectorComponent = (function (_super) {
     });
     DxRangeSelectorComponent.prototype.change = function (_) { };
     DxRangeSelectorComponent.prototype._createInstance = function (element, options) {
-        return new DxRangeSelector(element, options);
+        return new range_selector_1.default(element, options);
     };
     DxRangeSelectorComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -541,256 +543,256 @@ var DxRangeSelectorComponent = (function (_super) {
         }
     };
     DxRangeSelectorComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-range-selector',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxRangeSelectorComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxRangeSelectorComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "background": [{ type: Input },],
-        "behavior": [{ type: Input },],
-        "chart": [{ type: Input },],
-        "containerBackgroundColor": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "dataSourceField": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "indent": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scale": [{ type: Input },],
-        "selectedRangeColor": [{ type: Input },],
-        "selectedRangeUpdateMode": [{ type: Input },],
-        "shutter": [{ type: Input },],
-        "size": [{ type: Input },],
-        "sliderHandle": [{ type: Input },],
-        "sliderMarker": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "title": [{ type: Input },],
-        "value": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "backgroundChange": [{ type: Output },],
-        "behaviorChange": [{ type: Output },],
-        "chartChange": [{ type: Output },],
-        "containerBackgroundColorChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "dataSourceFieldChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "indentChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scaleChange": [{ type: Output },],
-        "selectedRangeColorChange": [{ type: Output },],
-        "selectedRangeUpdateModeChange": [{ type: Output },],
-        "shutterChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "sliderHandleChange": [{ type: Output },],
-        "sliderMarkerChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "background": [{ type: core_1.Input },],
+        "behavior": [{ type: core_1.Input },],
+        "chart": [{ type: core_1.Input },],
+        "containerBackgroundColor": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "dataSourceField": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "indent": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scale": [{ type: core_1.Input },],
+        "selectedRangeColor": [{ type: core_1.Input },],
+        "selectedRangeUpdateMode": [{ type: core_1.Input },],
+        "shutter": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "sliderHandle": [{ type: core_1.Input },],
+        "sliderMarker": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "backgroundChange": [{ type: core_1.Output },],
+        "behaviorChange": [{ type: core_1.Output },],
+        "chartChange": [{ type: core_1.Output },],
+        "containerBackgroundColorChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "dataSourceFieldChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "indentChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scaleChange": [{ type: core_1.Output },],
+        "selectedRangeColorChange": [{ type: core_1.Output },],
+        "selectedRangeUpdateModeChange": [{ type: core_1.Output },],
+        "shutterChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "sliderHandleChange": [{ type: core_1.Output },],
+        "sliderMarkerChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
     };
     return DxRangeSelectorComponent;
-}(DxComponent));
-export { DxRangeSelectorComponent };
+}(component_1.DxComponent));
+exports.DxRangeSelectorComponent = DxRangeSelectorComponent;
 var DxRangeSelectorModule = (function () {
     function DxRangeSelectorModule() {
     }
     DxRangeSelectorModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoBackgroundModule,
-                        DxoImageModule,
-                        DxoBehaviorModule,
-                        DxoChartModule,
-                        DxoCommonSeriesSettingsModule,
-                        DxoAggregationModule,
-                        DxoAreaModule,
-                        DxoBorderModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoLabelModule,
-                        DxoConnectorModule,
-                        DxoPointModule,
-                        DxoHeightModule,
-                        DxoUrlModule,
-                        DxoWidthModule,
-                        DxoSelectionStyleModule,
-                        DxoReductionModule,
-                        DxoValueErrorBarModule,
-                        DxoBarModule,
-                        DxoBubbleModule,
-                        DxoCandlestickModule,
-                        DxoFullstackedareaModule,
-                        DxoFullstackedbarModule,
-                        DxoFullstackedlineModule,
-                        DxoFullstackedsplineModule,
-                        DxoFullstackedsplineareaModule,
-                        DxoArgumentFormatModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoLineModule,
-                        DxoRangeareaModule,
-                        DxoRangebarModule,
-                        DxoScatterModule,
-                        DxoSplineModule,
-                        DxoSplineareaModule,
-                        DxoStackedareaModule,
-                        DxoStackedbarModule,
-                        DxoStackedlineModule,
-                        DxoStackedsplineModule,
-                        DxoStackedsplineareaModule,
-                        DxoStepareaModule,
-                        DxoSteplineModule,
-                        DxoStockModule,
-                        DxoDataPrepareSettingsModule,
-                        DxiSeriesModule,
-                        DxoSeriesTemplateModule,
-                        DxoValueAxisModule,
-                        DxoExportModule,
-                        DxoIndentModule,
-                        DxoLoadingIndicatorModule,
-                        DxoMarginModule,
-                        DxoScaleModule,
-                        DxoAggregationIntervalModule,
-                        DxiBreakModule,
-                        DxoBreakStyleModule,
-                        DxoMarkerModule,
-                        DxoMaxRangeModule,
-                        DxoMinorTickModule,
-                        DxoMinorTickIntervalModule,
-                        DxoMinRangeModule,
-                        DxoTickModule,
-                        DxoTickIntervalModule,
-                        DxoShutterModule,
-                        DxoSizeModule,
-                        DxoSliderHandleModule,
-                        DxoSliderMarkerModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        background_1.DxoBackgroundModule,
+                        image_1.DxoImageModule,
+                        behavior_1.DxoBehaviorModule,
+                        chart_1.DxoChartModule,
+                        common_series_settings_1.DxoCommonSeriesSettingsModule,
+                        aggregation_1.DxoAggregationModule,
+                        area_1.DxoAreaModule,
+                        border_1.DxoBorderModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        label_1.DxoLabelModule,
+                        connector_1.DxoConnectorModule,
+                        point_1.DxoPointModule,
+                        height_1.DxoHeightModule,
+                        url_1.DxoUrlModule,
+                        width_1.DxoWidthModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        reduction_1.DxoReductionModule,
+                        value_error_bar_1.DxoValueErrorBarModule,
+                        bar_1.DxoBarModule,
+                        bubble_1.DxoBubbleModule,
+                        candlestick_1.DxoCandlestickModule,
+                        fullstackedarea_1.DxoFullstackedareaModule,
+                        fullstackedbar_1.DxoFullstackedbarModule,
+                        fullstackedline_1.DxoFullstackedlineModule,
+                        fullstackedspline_1.DxoFullstackedsplineModule,
+                        fullstackedsplinearea_1.DxoFullstackedsplineareaModule,
+                        argument_format_1.DxoArgumentFormatModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        line_1.DxoLineModule,
+                        rangearea_1.DxoRangeareaModule,
+                        rangebar_1.DxoRangebarModule,
+                        scatter_1.DxoScatterModule,
+                        spline_1.DxoSplineModule,
+                        splinearea_1.DxoSplineareaModule,
+                        stackedarea_1.DxoStackedareaModule,
+                        stackedbar_1.DxoStackedbarModule,
+                        stackedline_1.DxoStackedlineModule,
+                        stackedspline_1.DxoStackedsplineModule,
+                        stackedsplinearea_1.DxoStackedsplineareaModule,
+                        steparea_1.DxoStepareaModule,
+                        stepline_1.DxoSteplineModule,
+                        stock_1.DxoStockModule,
+                        data_prepare_settings_1.DxoDataPrepareSettingsModule,
+                        series_dxi_1.DxiSeriesModule,
+                        series_template_1.DxoSeriesTemplateModule,
+                        value_axis_1.DxoValueAxisModule,
+                        export_1.DxoExportModule,
+                        indent_1.DxoIndentModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        margin_1.DxoMarginModule,
+                        scale_1.DxoScaleModule,
+                        aggregation_interval_1.DxoAggregationIntervalModule,
+                        break_dxi_1.DxiBreakModule,
+                        break_style_1.DxoBreakStyleModule,
+                        marker_1.DxoMarkerModule,
+                        max_range_1.DxoMaxRangeModule,
+                        minor_tick_1.DxoMinorTickModule,
+                        minor_tick_interval_1.DxoMinorTickIntervalModule,
+                        min_range_1.DxoMinRangeModule,
+                        tick_1.DxoTickModule,
+                        tick_interval_1.DxoTickIntervalModule,
+                        shutter_1.DxoShutterModule,
+                        size_1.DxoSizeModule,
+                        slider_handle_1.DxoSliderHandleModule,
+                        slider_marker_1.DxoSliderMarkerModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxRangeSelectorComponent
                     ],
                     exports: [
                         DxRangeSelectorComponent,
-                        DxoBackgroundModule,
-                        DxoImageModule,
-                        DxoBehaviorModule,
-                        DxoChartModule,
-                        DxoCommonSeriesSettingsModule,
-                        DxoAggregationModule,
-                        DxoAreaModule,
-                        DxoBorderModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoLabelModule,
-                        DxoConnectorModule,
-                        DxoPointModule,
-                        DxoHeightModule,
-                        DxoUrlModule,
-                        DxoWidthModule,
-                        DxoSelectionStyleModule,
-                        DxoReductionModule,
-                        DxoValueErrorBarModule,
-                        DxoBarModule,
-                        DxoBubbleModule,
-                        DxoCandlestickModule,
-                        DxoFullstackedareaModule,
-                        DxoFullstackedbarModule,
-                        DxoFullstackedlineModule,
-                        DxoFullstackedsplineModule,
-                        DxoFullstackedsplineareaModule,
-                        DxoArgumentFormatModule,
-                        DxoFontModule,
-                        DxoFormatModule,
-                        DxoLineModule,
-                        DxoRangeareaModule,
-                        DxoRangebarModule,
-                        DxoScatterModule,
-                        DxoSplineModule,
-                        DxoSplineareaModule,
-                        DxoStackedareaModule,
-                        DxoStackedbarModule,
-                        DxoStackedlineModule,
-                        DxoStackedsplineModule,
-                        DxoStackedsplineareaModule,
-                        DxoStepareaModule,
-                        DxoSteplineModule,
-                        DxoStockModule,
-                        DxoDataPrepareSettingsModule,
-                        DxiSeriesModule,
-                        DxoSeriesTemplateModule,
-                        DxoValueAxisModule,
-                        DxoExportModule,
-                        DxoIndentModule,
-                        DxoLoadingIndicatorModule,
-                        DxoMarginModule,
-                        DxoScaleModule,
-                        DxoAggregationIntervalModule,
-                        DxiBreakModule,
-                        DxoBreakStyleModule,
-                        DxoMarkerModule,
-                        DxoMaxRangeModule,
-                        DxoMinorTickModule,
-                        DxoMinorTickIntervalModule,
-                        DxoMinRangeModule,
-                        DxoTickModule,
-                        DxoTickIntervalModule,
-                        DxoShutterModule,
-                        DxoSizeModule,
-                        DxoSliderHandleModule,
-                        DxoSliderMarkerModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxTemplateModule
+                        background_1.DxoBackgroundModule,
+                        image_1.DxoImageModule,
+                        behavior_1.DxoBehaviorModule,
+                        chart_1.DxoChartModule,
+                        common_series_settings_1.DxoCommonSeriesSettingsModule,
+                        aggregation_1.DxoAggregationModule,
+                        area_1.DxoAreaModule,
+                        border_1.DxoBorderModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        label_1.DxoLabelModule,
+                        connector_1.DxoConnectorModule,
+                        point_1.DxoPointModule,
+                        height_1.DxoHeightModule,
+                        url_1.DxoUrlModule,
+                        width_1.DxoWidthModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        reduction_1.DxoReductionModule,
+                        value_error_bar_1.DxoValueErrorBarModule,
+                        bar_1.DxoBarModule,
+                        bubble_1.DxoBubbleModule,
+                        candlestick_1.DxoCandlestickModule,
+                        fullstackedarea_1.DxoFullstackedareaModule,
+                        fullstackedbar_1.DxoFullstackedbarModule,
+                        fullstackedline_1.DxoFullstackedlineModule,
+                        fullstackedspline_1.DxoFullstackedsplineModule,
+                        fullstackedsplinearea_1.DxoFullstackedsplineareaModule,
+                        argument_format_1.DxoArgumentFormatModule,
+                        font_1.DxoFontModule,
+                        format_1.DxoFormatModule,
+                        line_1.DxoLineModule,
+                        rangearea_1.DxoRangeareaModule,
+                        rangebar_1.DxoRangebarModule,
+                        scatter_1.DxoScatterModule,
+                        spline_1.DxoSplineModule,
+                        splinearea_1.DxoSplineareaModule,
+                        stackedarea_1.DxoStackedareaModule,
+                        stackedbar_1.DxoStackedbarModule,
+                        stackedline_1.DxoStackedlineModule,
+                        stackedspline_1.DxoStackedsplineModule,
+                        stackedsplinearea_1.DxoStackedsplineareaModule,
+                        steparea_1.DxoStepareaModule,
+                        stepline_1.DxoSteplineModule,
+                        stock_1.DxoStockModule,
+                        data_prepare_settings_1.DxoDataPrepareSettingsModule,
+                        series_dxi_1.DxiSeriesModule,
+                        series_template_1.DxoSeriesTemplateModule,
+                        value_axis_1.DxoValueAxisModule,
+                        export_1.DxoExportModule,
+                        indent_1.DxoIndentModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        margin_1.DxoMarginModule,
+                        scale_1.DxoScaleModule,
+                        aggregation_interval_1.DxoAggregationIntervalModule,
+                        break_dxi_1.DxiBreakModule,
+                        break_style_1.DxoBreakStyleModule,
+                        marker_1.DxoMarkerModule,
+                        max_range_1.DxoMaxRangeModule,
+                        minor_tick_1.DxoMinorTickModule,
+                        minor_tick_interval_1.DxoMinorTickIntervalModule,
+                        min_range_1.DxoMinRangeModule,
+                        tick_1.DxoTickModule,
+                        tick_interval_1.DxoTickIntervalModule,
+                        shutter_1.DxoShutterModule,
+                        size_1.DxoSizeModule,
+                        slider_handle_1.DxoSliderHandleModule,
+                        slider_marker_1.DxoSliderMarkerModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxRangeSelectorModule;
 }());
-export { DxRangeSelectorModule };
+exports.DxRangeSelectorModule = DxRangeSelectorModule;
 //# sourceMappingURL=range-selector.js.map

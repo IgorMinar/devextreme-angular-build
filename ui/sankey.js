@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,34 +21,35 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxSankey from 'devextreme/viz/sankey';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAdaptiveLayoutModule } from './nested/adaptive-layout';
-import { DxoExportModule } from './nested/export';
-import { DxoLabelModule } from './nested/label';
-import { DxoBorderModule } from './nested/border';
-import { DxoFontModule } from './nested/font';
-import { DxoShadowModule } from './nested/shadow';
-import { DxoLinkModule } from './nested/link';
-import { DxoHoverStyleModule } from './nested/hover-style';
-import { DxoHatchingModule } from './nested/hatching';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxoMarginModule } from './nested/margin';
-import { DxoNodeModule } from './nested/node';
-import { DxoSizeModule } from './nested/size';
-import { DxoTitleModule } from './nested/title';
-import { DxoSubtitleModule } from './nested/subtitle';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoFormatModule } from './nested/format';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var sankey_1 = require("devextreme/viz/sankey");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var adaptive_layout_1 = require("./nested/adaptive-layout");
+var export_1 = require("./nested/export");
+var label_1 = require("./nested/label");
+var border_1 = require("./nested/border");
+var font_1 = require("./nested/font");
+var shadow_1 = require("./nested/shadow");
+var link_1 = require("./nested/link");
+var hover_style_1 = require("./nested/hover-style");
+var hatching_1 = require("./nested/hatching");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var margin_1 = require("./nested/margin");
+var node_1 = require("./nested/node");
+var size_1 = require("./nested/size");
+var title_1 = require("./nested/title");
+var subtitle_1 = require("./nested/subtitle");
+var tooltip_1 = require("./nested/tooltip");
+var format_1 = require("./nested/format");
 /**
  * The Sankey is a widget that visualizes the flow magnitude between value sets. The values being connected are called nodes; the connections - links. The higher the flow magnitude, the wider the link is.
  */
@@ -426,7 +428,7 @@ var DxSankeyComponent = (function (_super) {
         configurable: true
     });
     DxSankeyComponent.prototype._createInstance = function (element, options) {
-        return new DxSankey(element, options);
+        return new sankey_1.default(element, options);
     };
     DxSankeyComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -458,150 +460,150 @@ var DxSankeyComponent = (function (_super) {
         }
     };
     DxSankeyComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-sankey',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxSankeyComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxSankeyComponent.propDecorators = {
-        "adaptiveLayout": [{ type: Input },],
-        "alignment": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "hoverEnabled": [{ type: Input },],
-        "label": [{ type: Input },],
-        "link": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "node": [{ type: Input },],
-        "palette": [{ type: Input },],
-        "paletteExtensionMode": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "size": [{ type: Input },],
-        "sortData": [{ type: Input },],
-        "sourceField": [{ type: Input },],
-        "targetField": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "title": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "weightField": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onLinkClick": [{ type: Output },],
-        "onLinkHoverChanged": [{ type: Output },],
-        "onNodeClick": [{ type: Output },],
-        "onNodeHoverChanged": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "adaptiveLayoutChange": [{ type: Output },],
-        "alignmentChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "hoverEnabledChange": [{ type: Output },],
-        "labelChange": [{ type: Output },],
-        "linkChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "nodeChange": [{ type: Output },],
-        "paletteChange": [{ type: Output },],
-        "paletteExtensionModeChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "sortDataChange": [{ type: Output },],
-        "sourceFieldChange": [{ type: Output },],
-        "targetFieldChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "weightFieldChange": [{ type: Output },],
+        "adaptiveLayout": [{ type: core_1.Input },],
+        "alignment": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "hoverEnabled": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "link": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "node": [{ type: core_1.Input },],
+        "palette": [{ type: core_1.Input },],
+        "paletteExtensionMode": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "sortData": [{ type: core_1.Input },],
+        "sourceField": [{ type: core_1.Input },],
+        "targetField": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "weightField": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onLinkClick": [{ type: core_1.Output },],
+        "onLinkHoverChanged": [{ type: core_1.Output },],
+        "onNodeClick": [{ type: core_1.Output },],
+        "onNodeHoverChanged": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "adaptiveLayoutChange": [{ type: core_1.Output },],
+        "alignmentChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "hoverEnabledChange": [{ type: core_1.Output },],
+        "labelChange": [{ type: core_1.Output },],
+        "linkChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "nodeChange": [{ type: core_1.Output },],
+        "paletteChange": [{ type: core_1.Output },],
+        "paletteExtensionModeChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "sortDataChange": [{ type: core_1.Output },],
+        "sourceFieldChange": [{ type: core_1.Output },],
+        "targetFieldChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "weightFieldChange": [{ type: core_1.Output },],
     };
     return DxSankeyComponent;
-}(DxComponent));
-export { DxSankeyComponent };
+}(component_1.DxComponent));
+exports.DxSankeyComponent = DxSankeyComponent;
 var DxSankeyModule = (function () {
     function DxSankeyModule() {
     }
     DxSankeyModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAdaptiveLayoutModule,
-                        DxoExportModule,
-                        DxoLabelModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoShadowModule,
-                        DxoLinkModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoLoadingIndicatorModule,
-                        DxoMarginModule,
-                        DxoNodeModule,
-                        DxoSizeModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoTooltipModule,
-                        DxoFormatModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        adaptive_layout_1.DxoAdaptiveLayoutModule,
+                        export_1.DxoExportModule,
+                        label_1.DxoLabelModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        shadow_1.DxoShadowModule,
+                        link_1.DxoLinkModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        margin_1.DxoMarginModule,
+                        node_1.DxoNodeModule,
+                        size_1.DxoSizeModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        tooltip_1.DxoTooltipModule,
+                        format_1.DxoFormatModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxSankeyComponent
                     ],
                     exports: [
                         DxSankeyComponent,
-                        DxoAdaptiveLayoutModule,
-                        DxoExportModule,
-                        DxoLabelModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoShadowModule,
-                        DxoLinkModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoLoadingIndicatorModule,
-                        DxoMarginModule,
-                        DxoNodeModule,
-                        DxoSizeModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoTooltipModule,
-                        DxoFormatModule,
-                        DxTemplateModule
+                        adaptive_layout_1.DxoAdaptiveLayoutModule,
+                        export_1.DxoExportModule,
+                        label_1.DxoLabelModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        shadow_1.DxoShadowModule,
+                        link_1.DxoLinkModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        margin_1.DxoMarginModule,
+                        node_1.DxoNodeModule,
+                        size_1.DxoSizeModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        tooltip_1.DxoTooltipModule,
+                        format_1.DxoFormatModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxSankeyModule;
 }());
-export { DxSankeyModule };
+exports.DxSankeyModule = DxSankeyModule;
 //# sourceMappingURL=sankey.js.map

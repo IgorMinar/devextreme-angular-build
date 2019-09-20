@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoControlBarComponent = (function (_super) {
     __extends(DxoControlBarComponent, _super);
     function DxoControlBarComponent(parentOptionHost, optionHost) {
@@ -109,35 +111,35 @@ var DxoControlBarComponent = (function (_super) {
         configurable: true
     });
     DxoControlBarComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-control-bar',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoControlBarComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoControlBarComponent.propDecorators = {
-        "borderColor": [{ type: Input },],
-        "color": [{ type: Input },],
-        "enabled": [{ type: Input },],
-        "horizontalAlignment": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "verticalAlignment": [{ type: Input },],
+        "borderColor": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
+        "horizontalAlignment": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "verticalAlignment": [{ type: core_1.Input },],
     };
     return DxoControlBarComponent;
-}(NestedOption));
-export { DxoControlBarComponent };
+}(nested_option_2.NestedOption));
+exports.DxoControlBarComponent = DxoControlBarComponent;
 var DxoControlBarModule = (function () {
     function DxoControlBarModule() {
     }
     DxoControlBarModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoControlBarComponent
                     ],
@@ -148,5 +150,5 @@ var DxoControlBarModule = (function () {
     ];
     return DxoControlBarModule;
 }());
-export { DxoControlBarModule };
+exports.DxoControlBarModule = DxoControlBarModule;
 //# sourceMappingURL=control-bar.js.map

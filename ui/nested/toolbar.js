@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoHtmlEditorToolbar } from './base/html-editor-toolbar';
-import { DxiItemComponent } from './item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var html_editor_toolbar_1 = require("./base/html-editor-toolbar");
+var item_dxi_1 = require("./item-dxi");
 var DxoToolbarComponent = (function (_super) {
     __extends(DxoToolbarComponent, _super);
     function DxoToolbarComponent(parentOptionHost, optionHost) {
@@ -50,11 +52,11 @@ var DxoToolbarComponent = (function (_super) {
         configurable: true
     });
     DxoToolbarComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-toolbar',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'container',
                         'items'
@@ -63,20 +65,20 @@ var DxoToolbarComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoToolbarComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoToolbarComponent.propDecorators = {
-        "itemsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiItemComponent; }),] },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return item_dxi_1.DxiItemComponent; }),] },],
     };
     return DxoToolbarComponent;
-}(DxoHtmlEditorToolbar));
-export { DxoToolbarComponent };
+}(html_editor_toolbar_1.DxoHtmlEditorToolbar));
+exports.DxoToolbarComponent = DxoToolbarComponent;
 var DxoToolbarModule = (function () {
     function DxoToolbarModule() {
     }
     DxoToolbarModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoToolbarComponent
                     ],
@@ -87,5 +89,5 @@ var DxoToolbarModule = (function () {
     ];
     return DxoToolbarModule;
 }());
-export { DxoToolbarModule };
+exports.DxoToolbarModule = DxoToolbarModule;
 //# sourceMappingURL=toolbar.js.map

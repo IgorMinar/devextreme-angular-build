@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoTextsComponent = (function (_super) {
     __extends(DxoTextsComponent, _super);
     function DxoTextsComponent(parentOptionHost, optionHost) {
@@ -629,87 +631,87 @@ var DxoTextsComponent = (function (_super) {
         configurable: true
     });
     DxoTextsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-texts',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoTextsComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoTextsComponent.propDecorators = {
-        "fix": [{ type: Input },],
-        "leftPosition": [{ type: Input },],
-        "rightPosition": [{ type: Input },],
-        "unfix": [{ type: Input },],
-        "addRow": [{ type: Input },],
-        "cancelAllChanges": [{ type: Input },],
-        "cancelRowChanges": [{ type: Input },],
-        "confirmDeleteMessage": [{ type: Input },],
-        "confirmDeleteTitle": [{ type: Input },],
-        "deleteRow": [{ type: Input },],
-        "editRow": [{ type: Input },],
-        "saveAllChanges": [{ type: Input },],
-        "saveRowChanges": [{ type: Input },],
-        "undeleteRow": [{ type: Input },],
-        "validationCancelChanges": [{ type: Input },],
-        "exportAll": [{ type: Input },],
-        "exportSelectedRows": [{ type: Input },],
-        "exportTo": [{ type: Input },],
-        "clearFilter": [{ type: Input },],
-        "createFilter": [{ type: Input },],
-        "filterEnabledHint": [{ type: Input },],
-        "groupByThisColumn": [{ type: Input },],
-        "groupContinuedMessage": [{ type: Input },],
-        "groupContinuesMessage": [{ type: Input },],
-        "ungroup": [{ type: Input },],
-        "ungroupAll": [{ type: Input },],
-        "cancel": [{ type: Input },],
-        "emptyValue": [{ type: Input },],
-        "ok": [{ type: Input },],
-        "avg": [{ type: Input },],
-        "avgOtherColumn": [{ type: Input },],
-        "count": [{ type: Input },],
-        "max": [{ type: Input },],
-        "maxOtherColumn": [{ type: Input },],
-        "min": [{ type: Input },],
-        "minOtherColumn": [{ type: Input },],
-        "sum": [{ type: Input },],
-        "sumOtherColumn": [{ type: Input },],
-        "allFields": [{ type: Input },],
-        "columnFields": [{ type: Input },],
-        "dataFields": [{ type: Input },],
-        "filterFields": [{ type: Input },],
-        "rowFields": [{ type: Input },],
-        "columnFieldArea": [{ type: Input },],
-        "dataFieldArea": [{ type: Input },],
-        "filterFieldArea": [{ type: Input },],
-        "rowFieldArea": [{ type: Input },],
-        "collapseAll": [{ type: Input },],
-        "dataNotAvailable": [{ type: Input },],
-        "expandAll": [{ type: Input },],
-        "exportToExcel": [{ type: Input },],
-        "grandTotal": [{ type: Input },],
-        "noData": [{ type: Input },],
-        "removeAllSorting": [{ type: Input },],
-        "showFieldChooser": [{ type: Input },],
-        "sortColumnBySummary": [{ type: Input },],
-        "sortRowBySummary": [{ type: Input },],
-        "total": [{ type: Input },],
-        "addRowToNode": [{ type: Input },],
+        "fix": [{ type: core_1.Input },],
+        "leftPosition": [{ type: core_1.Input },],
+        "rightPosition": [{ type: core_1.Input },],
+        "unfix": [{ type: core_1.Input },],
+        "addRow": [{ type: core_1.Input },],
+        "cancelAllChanges": [{ type: core_1.Input },],
+        "cancelRowChanges": [{ type: core_1.Input },],
+        "confirmDeleteMessage": [{ type: core_1.Input },],
+        "confirmDeleteTitle": [{ type: core_1.Input },],
+        "deleteRow": [{ type: core_1.Input },],
+        "editRow": [{ type: core_1.Input },],
+        "saveAllChanges": [{ type: core_1.Input },],
+        "saveRowChanges": [{ type: core_1.Input },],
+        "undeleteRow": [{ type: core_1.Input },],
+        "validationCancelChanges": [{ type: core_1.Input },],
+        "exportAll": [{ type: core_1.Input },],
+        "exportSelectedRows": [{ type: core_1.Input },],
+        "exportTo": [{ type: core_1.Input },],
+        "clearFilter": [{ type: core_1.Input },],
+        "createFilter": [{ type: core_1.Input },],
+        "filterEnabledHint": [{ type: core_1.Input },],
+        "groupByThisColumn": [{ type: core_1.Input },],
+        "groupContinuedMessage": [{ type: core_1.Input },],
+        "groupContinuesMessage": [{ type: core_1.Input },],
+        "ungroup": [{ type: core_1.Input },],
+        "ungroupAll": [{ type: core_1.Input },],
+        "cancel": [{ type: core_1.Input },],
+        "emptyValue": [{ type: core_1.Input },],
+        "ok": [{ type: core_1.Input },],
+        "avg": [{ type: core_1.Input },],
+        "avgOtherColumn": [{ type: core_1.Input },],
+        "count": [{ type: core_1.Input },],
+        "max": [{ type: core_1.Input },],
+        "maxOtherColumn": [{ type: core_1.Input },],
+        "min": [{ type: core_1.Input },],
+        "minOtherColumn": [{ type: core_1.Input },],
+        "sum": [{ type: core_1.Input },],
+        "sumOtherColumn": [{ type: core_1.Input },],
+        "allFields": [{ type: core_1.Input },],
+        "columnFields": [{ type: core_1.Input },],
+        "dataFields": [{ type: core_1.Input },],
+        "filterFields": [{ type: core_1.Input },],
+        "rowFields": [{ type: core_1.Input },],
+        "columnFieldArea": [{ type: core_1.Input },],
+        "dataFieldArea": [{ type: core_1.Input },],
+        "filterFieldArea": [{ type: core_1.Input },],
+        "rowFieldArea": [{ type: core_1.Input },],
+        "collapseAll": [{ type: core_1.Input },],
+        "dataNotAvailable": [{ type: core_1.Input },],
+        "expandAll": [{ type: core_1.Input },],
+        "exportToExcel": [{ type: core_1.Input },],
+        "grandTotal": [{ type: core_1.Input },],
+        "noData": [{ type: core_1.Input },],
+        "removeAllSorting": [{ type: core_1.Input },],
+        "showFieldChooser": [{ type: core_1.Input },],
+        "sortColumnBySummary": [{ type: core_1.Input },],
+        "sortRowBySummary": [{ type: core_1.Input },],
+        "total": [{ type: core_1.Input },],
+        "addRowToNode": [{ type: core_1.Input },],
     };
     return DxoTextsComponent;
-}(NestedOption));
-export { DxoTextsComponent };
+}(nested_option_2.NestedOption));
+exports.DxoTextsComponent = DxoTextsComponent;
 var DxoTextsModule = (function () {
     function DxoTextsModule() {
     }
     DxoTextsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoTextsComponent
                     ],
@@ -720,5 +722,5 @@ var DxoTextsModule = (function () {
     ];
     return DxoTextsModule;
 }());
-export { DxoTextsModule };
+exports.DxoTextsModule = DxoTextsModule;
 //# sourceMappingURL=texts.js.map

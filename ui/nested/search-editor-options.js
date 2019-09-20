@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Output, EventEmitter, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoTextBoxOptions } from './base/text-box-options';
-import { DxiButtonComponent } from './button-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var text_box_options_1 = require("./base/text-box-options");
+var button_dxi_1 = require("./button-dxi");
 var DxoSearchEditorOptionsComponent = (function (_super) {
     __extends(DxoSearchEditorOptionsComponent, _super);
     function DxoSearchEditorOptionsComponent(parentOptionHost, optionHost) {
@@ -54,11 +56,11 @@ var DxoSearchEditorOptionsComponent = (function (_super) {
         configurable: true
     });
     DxoSearchEditorOptionsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-search-editor-options',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'accessKey',
                         'activeStateEnabled',
@@ -115,22 +117,22 @@ var DxoSearchEditorOptionsComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoSearchEditorOptionsComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoSearchEditorOptionsComponent.propDecorators = {
-        "textChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "buttonsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiButtonComponent; }),] },],
+        "textChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "buttonsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return button_dxi_1.DxiButtonComponent; }),] },],
     };
     return DxoSearchEditorOptionsComponent;
-}(DxoTextBoxOptions));
-export { DxoSearchEditorOptionsComponent };
+}(text_box_options_1.DxoTextBoxOptions));
+exports.DxoSearchEditorOptionsComponent = DxoSearchEditorOptionsComponent;
 var DxoSearchEditorOptionsModule = (function () {
     function DxoSearchEditorOptionsModule() {
     }
     DxoSearchEditorOptionsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoSearchEditorOptionsComponent
                     ],
@@ -141,5 +143,5 @@ var DxoSearchEditorOptionsModule = (function () {
     ];
     return DxoSearchEditorOptionsModule;
 }());
-export { DxoSearchEditorOptionsModule };
+exports.DxoSearchEditorOptionsModule = DxoSearchEditorOptionsModule;
 //# sourceMappingURL=search-editor-options.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoBorderComponent = (function (_super) {
     __extends(DxoBorderComponent, _super);
     function DxoBorderComponent(parentOptionHost, optionHost) {
@@ -139,38 +141,38 @@ var DxoBorderComponent = (function (_super) {
         configurable: true
     });
     DxoBorderComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-border',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoBorderComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoBorderComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "cornerRadius": [{ type: Input },],
-        "dashStyle": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "bottom": [{ type: Input },],
-        "left": [{ type: Input },],
-        "right": [{ type: Input },],
-        "top": [{ type: Input },],
+        "color": [{ type: core_1.Input },],
+        "cornerRadius": [{ type: core_1.Input },],
+        "dashStyle": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "bottom": [{ type: core_1.Input },],
+        "left": [{ type: core_1.Input },],
+        "right": [{ type: core_1.Input },],
+        "top": [{ type: core_1.Input },],
     };
     return DxoBorderComponent;
-}(NestedOption));
-export { DxoBorderComponent };
+}(nested_option_2.NestedOption));
+exports.DxoBorderComponent = DxoBorderComponent;
 var DxoBorderModule = (function () {
     function DxoBorderModule() {
     }
     DxoBorderModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoBorderComponent
                     ],
@@ -181,5 +183,5 @@ var DxoBorderModule = (function () {
     ];
     return DxoBorderModule;
 }());
-export { DxoBorderModule };
+exports.DxoBorderModule = DxoBorderModule;
 //# sourceMappingURL=border.js.map

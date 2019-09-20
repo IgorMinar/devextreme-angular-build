@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,11 +21,12 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, ElementRef, Renderer2, Inject, SkipSelf, Input } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { NestedOptionHost, extractTemplate } from '../../core/nested-option';
-import { DxTemplateHost } from '../../core/template-host';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var nested_option_1 = require("../../core/nested-option");
+var template_host_1 = require("../../core/template-host");
+var nested_option_2 = require("../../core/nested-option");
 var DxoMasterDetailComponent = (function (_super) {
     __extends(DxoMasterDetailComponent, _super);
     function DxoMasterDetailComponent(parentOptionHost, optionHost, renderer, document, templateHost, element) {
@@ -78,38 +80,38 @@ var DxoMasterDetailComponent = (function (_super) {
         this.template = template;
     };
     DxoMasterDetailComponent.prototype.ngAfterViewInit = function () {
-        extractTemplate(this, this.element, this.renderer, this.document);
+        nested_option_1.extractTemplate(this, this.element, this.renderer, this.document);
     };
     DxoMasterDetailComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-master-detail',
                     template: '<ng-content></ng-content>',
                     styles: [':host { display: block; }'],
-                    providers: [NestedOptionHost, DxTemplateHost]
+                    providers: [nested_option_1.NestedOptionHost, template_host_1.DxTemplateHost]
                 },] },
     ];
     /** @nocollapse */
     DxoMasterDetailComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
-        { type: Renderer2, },
-        { type: undefined, decorators: [{ type: Inject, args: [DOCUMENT,] },] },
-        { type: DxTemplateHost, decorators: [{ type: Host },] },
-        { type: ElementRef, },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
+        { type: core_1.Renderer2, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [common_1.DOCUMENT,] },] },
+        { type: template_host_1.DxTemplateHost, decorators: [{ type: core_1.Host },] },
+        { type: core_1.ElementRef, },
     ]; };
     DxoMasterDetailComponent.propDecorators = {
-        "autoExpandAll": [{ type: Input },],
-        "enabled": [{ type: Input },],
-        "template": [{ type: Input },],
+        "autoExpandAll": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
+        "template": [{ type: core_1.Input },],
     };
     return DxoMasterDetailComponent;
-}(NestedOption));
-export { DxoMasterDetailComponent };
+}(nested_option_2.NestedOption));
+exports.DxoMasterDetailComponent = DxoMasterDetailComponent;
 var DxoMasterDetailModule = (function () {
     function DxoMasterDetailModule() {
     }
     DxoMasterDetailModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoMasterDetailComponent
                     ],
@@ -120,5 +122,5 @@ var DxoMasterDetailModule = (function () {
     ];
     return DxoMasterDetailModule;
 }());
-export { DxoMasterDetailModule };
+exports.DxoMasterDetailModule = DxoMasterDetailModule;
 //# sourceMappingURL=master-detail.js.map

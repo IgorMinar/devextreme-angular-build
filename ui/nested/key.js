@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoKeyComponent = (function (_super) {
     __extends(DxoKeyComponent, _super);
     function DxoKeyComponent(parentOptionHost, optionHost) {
@@ -69,31 +71,31 @@ var DxoKeyComponent = (function (_super) {
         configurable: true
     });
     DxoKeyComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-key',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoKeyComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoKeyComponent.propDecorators = {
-        "bing": [{ type: Input },],
-        "google": [{ type: Input },],
-        "googleStatic": [{ type: Input },],
+        "bing": [{ type: core_1.Input },],
+        "google": [{ type: core_1.Input },],
+        "googleStatic": [{ type: core_1.Input },],
     };
     return DxoKeyComponent;
-}(NestedOption));
-export { DxoKeyComponent };
+}(nested_option_2.NestedOption));
+exports.DxoKeyComponent = DxoKeyComponent;
 var DxoKeyModule = (function () {
     function DxoKeyModule() {
     }
     DxoKeyModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoKeyComponent
                     ],
@@ -104,5 +106,5 @@ var DxoKeyModule = (function () {
     ];
     return DxoKeyModule;
 }());
-export { DxoKeyModule };
+exports.DxoKeyModule = DxoKeyModule;
 //# sourceMappingURL=key.js.map

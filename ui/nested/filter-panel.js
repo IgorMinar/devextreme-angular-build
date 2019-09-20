@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, Output, EventEmitter } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoFilterPanelComponent = (function (_super) {
     __extends(DxoFilterPanelComponent, _super);
     function DxoFilterPanelComponent(parentOptionHost, optionHost) {
@@ -82,33 +84,33 @@ var DxoFilterPanelComponent = (function (_super) {
         configurable: true
     });
     DxoFilterPanelComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-filter-panel',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoFilterPanelComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoFilterPanelComponent.propDecorators = {
-        "customizeText": [{ type: Input },],
-        "filterEnabled": [{ type: Input },],
-        "texts": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "filterEnabledChange": [{ type: Output },],
+        "customizeText": [{ type: core_1.Input },],
+        "filterEnabled": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "filterEnabledChange": [{ type: core_1.Output },],
     };
     return DxoFilterPanelComponent;
-}(NestedOption));
-export { DxoFilterPanelComponent };
+}(nested_option_2.NestedOption));
+exports.DxoFilterPanelComponent = DxoFilterPanelComponent;
 var DxoFilterPanelModule = (function () {
     function DxoFilterPanelModule() {
     }
     DxoFilterPanelModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFilterPanelComponent
                     ],
@@ -119,5 +121,5 @@ var DxoFilterPanelModule = (function () {
     ];
     return DxoFilterPanelModule;
 }());
-export { DxoFilterPanelModule };
+exports.DxoFilterPanelModule = DxoFilterPanelModule;
 //# sourceMappingURL=filter-panel.js.map

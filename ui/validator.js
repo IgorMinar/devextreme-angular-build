@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,20 +21,21 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxValidator from 'devextreme/ui/validator';
-import { DxComponentExtension } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAdapterModule } from './nested/adapter';
-import { DxiValidationRuleModule } from './nested/validation-rule-dxi';
-import { DxiValidationRuleComponent } from './nested/validation-rule-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var validator_1 = require("devextreme/ui/validator");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var adapter_1 = require("./nested/adapter");
+var validation_rule_dxi_1 = require("./nested/validation-rule-dxi");
+var validation_rule_dxi_2 = require("./nested/validation-rule-dxi");
 /**
  * A widget that is used to validate the associated DevExtreme editors against the defined validation rules.
  */
@@ -162,7 +164,7 @@ var DxValidatorComponent = (function (_super) {
         configurable: true
     });
     DxValidatorComponent.prototype._createInstance = function (element, options) {
-        return new DxValidator(element, options);
+        return new validator_1.default(element, options);
     };
     DxValidatorComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -190,76 +192,76 @@ var DxValidatorComponent = (function (_super) {
         }
     };
     DxValidatorComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-validator',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxValidatorComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxValidatorComponent.propDecorators = {
-        "adapter": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "height": [{ type: Input },],
-        "name": [{ type: Input },],
-        "validationGroup": [{ type: Input },],
-        "validationRules": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onValidated": [{ type: Output },],
-        "adapterChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "validationGroupChange": [{ type: Output },],
-        "validationRulesChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "validationRulesChildren": [{ type: ContentChildren, args: [DxiValidationRuleComponent,] },],
+        "adapter": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "validationGroup": [{ type: core_1.Input },],
+        "validationRules": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onValidated": [{ type: core_1.Output },],
+        "adapterChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "validationGroupChange": [{ type: core_1.Output },],
+        "validationRulesChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "validationRulesChildren": [{ type: core_1.ContentChildren, args: [validation_rule_dxi_2.DxiValidationRuleComponent,] },],
     };
     return DxValidatorComponent;
-}(DxComponentExtension));
-export { DxValidatorComponent };
+}(component_1.DxComponentExtension));
+exports.DxValidatorComponent = DxValidatorComponent;
 var DxValidatorModule = (function () {
     function DxValidatorModule() {
     }
     DxValidatorModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAdapterModule,
-                        DxiValidationRuleModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        adapter_1.DxoAdapterModule,
+                        validation_rule_dxi_1.DxiValidationRuleModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxValidatorComponent
                     ],
                     exports: [
                         DxValidatorComponent,
-                        DxoAdapterModule,
-                        DxiValidationRuleModule,
-                        DxTemplateModule
+                        adapter_1.DxoAdapterModule,
+                        validation_rule_dxi_1.DxiValidationRuleModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxValidatorModule;
 }());
-export { DxValidatorModule };
+exports.DxValidatorModule = DxValidatorModule;
 //# sourceMappingURL=validator.js.map

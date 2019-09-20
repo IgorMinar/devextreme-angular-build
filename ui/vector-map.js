@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,35 +21,36 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxVectorMap from 'devextreme/viz/vector_map';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoBackgroundModule } from './nested/background';
-import { DxoControlBarModule } from './nested/control-bar';
-import { DxoExportModule } from './nested/export';
-import { DxiLayerModule } from './nested/layer-dxi';
-import { DxoLabelModule } from './nested/label';
-import { DxoFontModule } from './nested/font';
-import { DxiLegendModule } from './nested/legend-dxi';
-import { DxoBorderModule } from './nested/border';
-import { DxoMarginModule } from './nested/margin';
-import { DxoSourceModule } from './nested/source';
-import { DxoTitleModule } from './nested/title';
-import { DxoSubtitleModule } from './nested/subtitle';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxoSizeModule } from './nested/size';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxoShadowModule } from './nested/shadow';
-import { DxiLayerComponent } from './nested/layer-dxi';
-import { DxiLegendComponent } from './nested/legend-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var vector_map_1 = require("devextreme/viz/vector_map");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var background_1 = require("./nested/background");
+var control_bar_1 = require("./nested/control-bar");
+var export_1 = require("./nested/export");
+var layer_dxi_1 = require("./nested/layer-dxi");
+var label_1 = require("./nested/label");
+var font_1 = require("./nested/font");
+var legend_dxi_1 = require("./nested/legend-dxi");
+var border_1 = require("./nested/border");
+var margin_1 = require("./nested/margin");
+var source_1 = require("./nested/source");
+var title_1 = require("./nested/title");
+var subtitle_1 = require("./nested/subtitle");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var size_1 = require("./nested/size");
+var tooltip_1 = require("./nested/tooltip");
+var shadow_1 = require("./nested/shadow");
+var layer_dxi_2 = require("./nested/layer-dxi");
+var legend_dxi_2 = require("./nested/legend-dxi");
 /**
  * The VectorMap is a widget that visualizes geographical locations. This widget represents a geographical map that contains areas and markers. Areas embody continents and countries. Markers flag specific points on the map, for example, towns, cities or capitals.
  */
@@ -435,7 +437,7 @@ var DxVectorMapComponent = (function (_super) {
         configurable: true
     });
     DxVectorMapComponent.prototype._createInstance = function (element, options) {
-        return new DxVectorMap(element, options);
+        return new vector_map_1.default(element, options);
     };
     DxVectorMapComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -469,150 +471,150 @@ var DxVectorMapComponent = (function (_super) {
         }
     };
     DxVectorMapComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-vector-map',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxVectorMapComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxVectorMapComponent.propDecorators = {
-        "background": [{ type: Input },],
-        "bounds": [{ type: Input },],
-        "center": [{ type: Input },],
-        "controlBar": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "export": [{ type: Input },],
-        "layers": [{ type: Input },],
-        "legends": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "maxZoomFactor": [{ type: Input },],
-        "panningEnabled": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "projection": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "size": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "title": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "touchEnabled": [{ type: Input },],
-        "wheelEnabled": [{ type: Input },],
-        "zoomFactor": [{ type: Input },],
-        "zoomingEnabled": [{ type: Input },],
-        "onCenterChanged": [{ type: Output },],
-        "onClick": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "onTooltipHidden": [{ type: Output },],
-        "onTooltipShown": [{ type: Output },],
-        "onZoomFactorChanged": [{ type: Output },],
-        "backgroundChange": [{ type: Output },],
-        "boundsChange": [{ type: Output },],
-        "centerChange": [{ type: Output },],
-        "controlBarChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "layersChange": [{ type: Output },],
-        "legendsChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "maxZoomFactorChange": [{ type: Output },],
-        "panningEnabledChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "projectionChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "touchEnabledChange": [{ type: Output },],
-        "wheelEnabledChange": [{ type: Output },],
-        "zoomFactorChange": [{ type: Output },],
-        "zoomingEnabledChange": [{ type: Output },],
-        "layersChildren": [{ type: ContentChildren, args: [DxiLayerComponent,] },],
-        "legendsChildren": [{ type: ContentChildren, args: [DxiLegendComponent,] },],
+        "background": [{ type: core_1.Input },],
+        "bounds": [{ type: core_1.Input },],
+        "center": [{ type: core_1.Input },],
+        "controlBar": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "layers": [{ type: core_1.Input },],
+        "legends": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "maxZoomFactor": [{ type: core_1.Input },],
+        "panningEnabled": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "projection": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "touchEnabled": [{ type: core_1.Input },],
+        "wheelEnabled": [{ type: core_1.Input },],
+        "zoomFactor": [{ type: core_1.Input },],
+        "zoomingEnabled": [{ type: core_1.Input },],
+        "onCenterChanged": [{ type: core_1.Output },],
+        "onClick": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "onTooltipHidden": [{ type: core_1.Output },],
+        "onTooltipShown": [{ type: core_1.Output },],
+        "onZoomFactorChanged": [{ type: core_1.Output },],
+        "backgroundChange": [{ type: core_1.Output },],
+        "boundsChange": [{ type: core_1.Output },],
+        "centerChange": [{ type: core_1.Output },],
+        "controlBarChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "layersChange": [{ type: core_1.Output },],
+        "legendsChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "maxZoomFactorChange": [{ type: core_1.Output },],
+        "panningEnabledChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "projectionChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "touchEnabledChange": [{ type: core_1.Output },],
+        "wheelEnabledChange": [{ type: core_1.Output },],
+        "zoomFactorChange": [{ type: core_1.Output },],
+        "zoomingEnabledChange": [{ type: core_1.Output },],
+        "layersChildren": [{ type: core_1.ContentChildren, args: [layer_dxi_2.DxiLayerComponent,] },],
+        "legendsChildren": [{ type: core_1.ContentChildren, args: [legend_dxi_2.DxiLegendComponent,] },],
     };
     return DxVectorMapComponent;
-}(DxComponent));
-export { DxVectorMapComponent };
+}(component_1.DxComponent));
+exports.DxVectorMapComponent = DxVectorMapComponent;
 var DxVectorMapModule = (function () {
     function DxVectorMapModule() {
     }
     DxVectorMapModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoBackgroundModule,
-                        DxoControlBarModule,
-                        DxoExportModule,
-                        DxiLayerModule,
-                        DxoLabelModule,
-                        DxoFontModule,
-                        DxiLegendModule,
-                        DxoBorderModule,
-                        DxoMarginModule,
-                        DxoSourceModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoLoadingIndicatorModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoShadowModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        background_1.DxoBackgroundModule,
+                        control_bar_1.DxoControlBarModule,
+                        export_1.DxoExportModule,
+                        layer_dxi_1.DxiLayerModule,
+                        label_1.DxoLabelModule,
+                        font_1.DxoFontModule,
+                        legend_dxi_1.DxiLegendModule,
+                        border_1.DxoBorderModule,
+                        margin_1.DxoMarginModule,
+                        source_1.DxoSourceModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        shadow_1.DxoShadowModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxVectorMapComponent
                     ],
                     exports: [
                         DxVectorMapComponent,
-                        DxoBackgroundModule,
-                        DxoControlBarModule,
-                        DxoExportModule,
-                        DxiLayerModule,
-                        DxoLabelModule,
-                        DxoFontModule,
-                        DxiLegendModule,
-                        DxoBorderModule,
-                        DxoMarginModule,
-                        DxoSourceModule,
-                        DxoTitleModule,
-                        DxoSubtitleModule,
-                        DxoLoadingIndicatorModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxoShadowModule,
-                        DxTemplateModule
+                        background_1.DxoBackgroundModule,
+                        control_bar_1.DxoControlBarModule,
+                        export_1.DxoExportModule,
+                        layer_dxi_1.DxiLayerModule,
+                        label_1.DxoLabelModule,
+                        font_1.DxoFontModule,
+                        legend_dxi_1.DxiLegendModule,
+                        border_1.DxoBorderModule,
+                        margin_1.DxoMarginModule,
+                        source_1.DxoSourceModule,
+                        title_1.DxoTitleModule,
+                        subtitle_1.DxoSubtitleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        shadow_1.DxoShadowModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxVectorMapModule;
 }());
-export { DxVectorMapModule };
+exports.DxVectorMapModule = DxVectorMapModule;
 //# sourceMappingURL=vector-map.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoLinkComponent = (function (_super) {
     __extends(DxoLinkComponent, _super);
     function DxoLinkComponent(parentOptionHost, optionHost) {
@@ -89,33 +91,33 @@ var DxoLinkComponent = (function (_super) {
         configurable: true
     });
     DxoLinkComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-link',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoLinkComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoLinkComponent.propDecorators = {
-        "border": [{ type: Input },],
-        "color": [{ type: Input },],
-        "colorMode": [{ type: Input },],
-        "hoverStyle": [{ type: Input },],
-        "opacity": [{ type: Input },],
+        "border": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "colorMode": [{ type: core_1.Input },],
+        "hoverStyle": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
     };
     return DxoLinkComponent;
-}(NestedOption));
-export { DxoLinkComponent };
+}(nested_option_2.NestedOption));
+exports.DxoLinkComponent = DxoLinkComponent;
 var DxoLinkModule = (function () {
     function DxoLinkModule() {
     }
     DxoLinkModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoLinkComponent
                     ],
@@ -126,5 +128,5 @@ var DxoLinkModule = (function () {
     ];
     return DxoLinkModule;
 }());
-export { DxoLinkModule };
+exports.DxoLinkModule = DxoLinkModule;
 //# sourceMappingURL=link.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoScrollingComponent = (function (_super) {
     __extends(DxoScrollingComponent, _super);
     function DxoScrollingComponent(parentOptionHost, optionHost) {
@@ -119,36 +121,36 @@ var DxoScrollingComponent = (function (_super) {
         configurable: true
     });
     DxoScrollingComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-scrolling',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoScrollingComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoScrollingComponent.propDecorators = {
-        "columnRenderingMode": [{ type: Input },],
-        "mode": [{ type: Input },],
-        "preloadEnabled": [{ type: Input },],
-        "rowRenderingMode": [{ type: Input },],
-        "scrollByContent": [{ type: Input },],
-        "scrollByThumb": [{ type: Input },],
-        "showScrollbar": [{ type: Input },],
-        "useNative": [{ type: Input },],
+        "columnRenderingMode": [{ type: core_1.Input },],
+        "mode": [{ type: core_1.Input },],
+        "preloadEnabled": [{ type: core_1.Input },],
+        "rowRenderingMode": [{ type: core_1.Input },],
+        "scrollByContent": [{ type: core_1.Input },],
+        "scrollByThumb": [{ type: core_1.Input },],
+        "showScrollbar": [{ type: core_1.Input },],
+        "useNative": [{ type: core_1.Input },],
     };
     return DxoScrollingComponent;
-}(NestedOption));
-export { DxoScrollingComponent };
+}(nested_option_2.NestedOption));
+exports.DxoScrollingComponent = DxoScrollingComponent;
 var DxoScrollingModule = (function () {
     function DxoScrollingModule() {
     }
     DxoScrollingModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoScrollingComponent
                     ],
@@ -159,5 +161,5 @@ var DxoScrollingModule = (function () {
     ];
     return DxoScrollingModule;
 }());
-export { DxoScrollingModule };
+exports.DxoScrollingModule = DxoScrollingModule;
 //# sourceMappingURL=scrolling.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiViewComponent = (function (_super) {
     __extends(DxiViewComponent, _super);
     function DxiViewComponent(parentOptionHost, optionHost) {
@@ -249,49 +251,49 @@ var DxiViewComponent = (function (_super) {
         configurable: true
     });
     DxiViewComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-view',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiViewComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiViewComponent.propDecorators = {
-        "agendaDuration": [{ type: Input },],
-        "appointmentCollectorTemplate": [{ type: Input },],
-        "appointmentTemplate": [{ type: Input },],
-        "appointmentTooltipTemplate": [{ type: Input },],
-        "cellDuration": [{ type: Input },],
-        "dataCellTemplate": [{ type: Input },],
-        "dateCellTemplate": [{ type: Input },],
-        "dropDownAppointmentTemplate": [{ type: Input },],
-        "endDayHour": [{ type: Input },],
-        "firstDayOfWeek": [{ type: Input },],
-        "groupByDate": [{ type: Input },],
-        "groupOrientation": [{ type: Input },],
-        "groups": [{ type: Input },],
-        "intervalCount": [{ type: Input },],
-        "maxAppointmentsPerCell": [{ type: Input },],
-        "name": [{ type: Input },],
-        "resourceCellTemplate": [{ type: Input },],
-        "startDate": [{ type: Input },],
-        "startDayHour": [{ type: Input },],
-        "timeCellTemplate": [{ type: Input },],
-        "type": [{ type: Input },],
+        "agendaDuration": [{ type: core_1.Input },],
+        "appointmentCollectorTemplate": [{ type: core_1.Input },],
+        "appointmentTemplate": [{ type: core_1.Input },],
+        "appointmentTooltipTemplate": [{ type: core_1.Input },],
+        "cellDuration": [{ type: core_1.Input },],
+        "dataCellTemplate": [{ type: core_1.Input },],
+        "dateCellTemplate": [{ type: core_1.Input },],
+        "dropDownAppointmentTemplate": [{ type: core_1.Input },],
+        "endDayHour": [{ type: core_1.Input },],
+        "firstDayOfWeek": [{ type: core_1.Input },],
+        "groupByDate": [{ type: core_1.Input },],
+        "groupOrientation": [{ type: core_1.Input },],
+        "groups": [{ type: core_1.Input },],
+        "intervalCount": [{ type: core_1.Input },],
+        "maxAppointmentsPerCell": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "resourceCellTemplate": [{ type: core_1.Input },],
+        "startDate": [{ type: core_1.Input },],
+        "startDayHour": [{ type: core_1.Input },],
+        "timeCellTemplate": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
     };
     return DxiViewComponent;
-}(CollectionNestedOption));
-export { DxiViewComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiViewComponent = DxiViewComponent;
 var DxiViewModule = (function () {
     function DxiViewModule() {
     }
     DxiViewModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiViewComponent
                     ],
@@ -302,5 +304,5 @@ var DxiViewModule = (function () {
     ];
     return DxiViewModule;
 }());
-export { DxiViewModule };
+exports.DxiViewModule = DxiViewModule;
 //# sourceMappingURL=view-dxi.js.map

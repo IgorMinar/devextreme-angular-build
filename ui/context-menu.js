@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,32 +21,33 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxContextMenu from 'devextreme/ui/context_menu';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoHideModule } from './nested/hide';
-import { DxoShowModule } from './nested/show';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxoPositionModule } from './nested/position';
-import { DxoAtModule } from './nested/at';
-import { DxoBoundaryOffsetModule } from './nested/boundary-offset';
-import { DxoCollisionModule } from './nested/collision';
-import { DxoMyModule } from './nested/my';
-import { DxoOffsetModule } from './nested/offset';
-import { DxoShowEventModule } from './nested/show-event';
-import { DxoShowSubmenuModeModule } from './nested/show-submenu-mode';
-import { DxoDelayModule } from './nested/delay';
-import { DxiItemComponent } from './nested/item-dxi';
+var context_menu_1 = require("devextreme/ui/context_menu");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var animation_1 = require("./nested/animation");
+var hide_1 = require("./nested/hide");
+var show_1 = require("./nested/show");
+var item_dxi_1 = require("./nested/item-dxi");
+var position_1 = require("./nested/position");
+var at_1 = require("./nested/at");
+var boundary_offset_1 = require("./nested/boundary-offset");
+var collision_1 = require("./nested/collision");
+var my_1 = require("./nested/my");
+var offset_1 = require("./nested/offset");
+var show_event_1 = require("./nested/show-event");
+var show_submenu_mode_1 = require("./nested/show-submenu-mode");
+var delay_1 = require("./nested/delay");
+var item_dxi_2 = require("./nested/item-dxi");
 /**
  * The ContextMenu widget displays a single- or multi-level context menu. An end user invokes this menu by a right click or a long press.
  */
@@ -505,7 +507,7 @@ var DxContextMenuComponent = (function (_super) {
         configurable: true
     });
     DxContextMenuComponent.prototype._createInstance = function (element, options) {
-        return new DxContextMenu(element, options);
+        return new context_menu_1.default(element, options);
     };
     DxContextMenuComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -535,153 +537,153 @@ var DxContextMenuComponent = (function (_super) {
         }
     };
     DxContextMenuComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-context-menu',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxContextMenuComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxContextMenuComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "animation": [{ type: Input },],
-        "closeOnOutsideClick": [{ type: Input },],
-        "cssClass": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "disabledExpr": [{ type: Input },],
-        "displayExpr": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemsExpr": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "position": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "selectByClick": [{ type: Input },],
-        "selectedExpr": [{ type: Input },],
-        "selectedItem": [{ type: Input },],
-        "selectionMode": [{ type: Input },],
-        "showEvent": [{ type: Input },],
-        "showSubmenuMode": [{ type: Input },],
-        "submenuDirection": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "target": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onHidden": [{ type: Output },],
-        "onHiding": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onItemContextMenu": [{ type: Output },],
-        "onItemRendered": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPositioning": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "onShowing": [{ type: Output },],
-        "onShown": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "closeOnOutsideClickChange": [{ type: Output },],
-        "cssClassChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "disabledExprChange": [{ type: Output },],
-        "displayExprChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemsExprChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "positionChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "selectByClickChange": [{ type: Output },],
-        "selectedExprChange": [{ type: Output },],
-        "selectedItemChange": [{ type: Output },],
-        "selectionModeChange": [{ type: Output },],
-        "showEventChange": [{ type: Output },],
-        "showSubmenuModeChange": [{ type: Output },],
-        "submenuDirectionChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "targetChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "animation": [{ type: core_1.Input },],
+        "closeOnOutsideClick": [{ type: core_1.Input },],
+        "cssClass": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "disabledExpr": [{ type: core_1.Input },],
+        "displayExpr": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemsExpr": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "selectByClick": [{ type: core_1.Input },],
+        "selectedExpr": [{ type: core_1.Input },],
+        "selectedItem": [{ type: core_1.Input },],
+        "selectionMode": [{ type: core_1.Input },],
+        "showEvent": [{ type: core_1.Input },],
+        "showSubmenuMode": [{ type: core_1.Input },],
+        "submenuDirection": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "target": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onHidden": [{ type: core_1.Output },],
+        "onHiding": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onItemContextMenu": [{ type: core_1.Output },],
+        "onItemRendered": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPositioning": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "onShowing": [{ type: core_1.Output },],
+        "onShown": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "closeOnOutsideClickChange": [{ type: core_1.Output },],
+        "cssClassChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "disabledExprChange": [{ type: core_1.Output },],
+        "displayExprChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemsExprChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "positionChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "selectByClickChange": [{ type: core_1.Output },],
+        "selectedExprChange": [{ type: core_1.Output },],
+        "selectedItemChange": [{ type: core_1.Output },],
+        "selectionModeChange": [{ type: core_1.Output },],
+        "showEventChange": [{ type: core_1.Output },],
+        "showSubmenuModeChange": [{ type: core_1.Output },],
+        "submenuDirectionChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "targetChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxContextMenuComponent;
-}(DxComponent));
-export { DxContextMenuComponent };
+}(component_1.DxComponent));
+exports.DxContextMenuComponent = DxContextMenuComponent;
 var DxContextMenuModule = (function () {
     function DxContextMenuModule() {
     }
     DxContextMenuModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxiItemModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxoShowEventModule,
-                        DxoShowSubmenuModeModule,
-                        DxoDelayModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        item_dxi_1.DxiItemModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        show_event_1.DxoShowEventModule,
+                        show_submenu_mode_1.DxoShowSubmenuModeModule,
+                        delay_1.DxoDelayModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxContextMenuComponent
                     ],
                     exports: [
                         DxContextMenuComponent,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxiItemModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxoShowEventModule,
-                        DxoShowSubmenuModeModule,
-                        DxoDelayModule,
-                        DxTemplateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        item_dxi_1.DxiItemModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        show_event_1.DxoShowEventModule,
+                        show_submenu_mode_1.DxoShowSubmenuModeModule,
+                        delay_1.DxoDelayModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxContextMenuModule;
 }());
-export { DxContextMenuModule };
+exports.DxContextMenuModule = DxContextMenuModule;
 //# sourceMappingURL=context-menu.js.map

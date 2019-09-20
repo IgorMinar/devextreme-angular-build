@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoShutterComponent = (function (_super) {
     __extends(DxoShutterComponent, _super);
     function DxoShutterComponent(parentOptionHost, optionHost) {
@@ -59,30 +61,30 @@ var DxoShutterComponent = (function (_super) {
         configurable: true
     });
     DxoShutterComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-shutter',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoShutterComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoShutterComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "opacity": [{ type: Input },],
+        "color": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
     };
     return DxoShutterComponent;
-}(NestedOption));
-export { DxoShutterComponent };
+}(nested_option_2.NestedOption));
+exports.DxoShutterComponent = DxoShutterComponent;
 var DxoShutterModule = (function () {
     function DxoShutterModule() {
     }
     DxoShutterModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoShutterComponent
                     ],
@@ -93,5 +95,5 @@ var DxoShutterModule = (function () {
     ];
     return DxoShutterModule;
 }());
-export { DxoShutterModule };
+exports.DxoShutterModule = DxoShutterModule;
 //# sourceMappingURL=shutter.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,25 +21,26 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxLoadPanel from 'devextreme/ui/load_panel';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoHideModule } from './nested/hide';
-import { DxoShowModule } from './nested/show';
-import { DxoPositionModule } from './nested/position';
-import { DxoAtModule } from './nested/at';
-import { DxoBoundaryOffsetModule } from './nested/boundary-offset';
-import { DxoCollisionModule } from './nested/collision';
-import { DxoMyModule } from './nested/my';
-import { DxoOffsetModule } from './nested/offset';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var load_panel_1 = require("devextreme/ui/load_panel");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var animation_1 = require("./nested/animation");
+var hide_1 = require("./nested/hide");
+var show_1 = require("./nested/show");
+var position_1 = require("./nested/position");
+var at_1 = require("./nested/at");
+var boundary_offset_1 = require("./nested/boundary-offset");
+var collision_1 = require("./nested/collision");
+var my_1 = require("./nested/my");
+var offset_1 = require("./nested/offset");
 /**
  * The LoadPanel is an overlay widget notifying the viewer that loading is in progress.
  */
@@ -396,131 +398,131 @@ var DxLoadPanelComponent = (function (_super) {
         configurable: true
     });
     DxLoadPanelComponent.prototype._createInstance = function (element, options) {
-        return new DxLoadPanel(element, options);
+        return new load_panel_1.default(element, options);
     };
     DxLoadPanelComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
     };
     DxLoadPanelComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-load-panel',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxLoadPanelComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxLoadPanelComponent.propDecorators = {
-        "animation": [{ type: Input },],
-        "closeOnOutsideClick": [{ type: Input },],
-        "container": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "delay": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "indicatorSrc": [{ type: Input },],
-        "maxHeight": [{ type: Input },],
-        "maxWidth": [{ type: Input },],
-        "message": [{ type: Input },],
-        "minHeight": [{ type: Input },],
-        "minWidth": [{ type: Input },],
-        "position": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "shading": [{ type: Input },],
-        "shadingColor": [{ type: Input },],
-        "showIndicator": [{ type: Input },],
-        "showPane": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onHidden": [{ type: Output },],
-        "onHiding": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onShowing": [{ type: Output },],
-        "onShown": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "closeOnOutsideClickChange": [{ type: Output },],
-        "containerChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "delayChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "indicatorSrcChange": [{ type: Output },],
-        "maxHeightChange": [{ type: Output },],
-        "maxWidthChange": [{ type: Output },],
-        "messageChange": [{ type: Output },],
-        "minHeightChange": [{ type: Output },],
-        "minWidthChange": [{ type: Output },],
-        "positionChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "shadingChange": [{ type: Output },],
-        "shadingColorChange": [{ type: Output },],
-        "showIndicatorChange": [{ type: Output },],
-        "showPaneChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
+        "animation": [{ type: core_1.Input },],
+        "closeOnOutsideClick": [{ type: core_1.Input },],
+        "container": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "delay": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "indicatorSrc": [{ type: core_1.Input },],
+        "maxHeight": [{ type: core_1.Input },],
+        "maxWidth": [{ type: core_1.Input },],
+        "message": [{ type: core_1.Input },],
+        "minHeight": [{ type: core_1.Input },],
+        "minWidth": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "shading": [{ type: core_1.Input },],
+        "shadingColor": [{ type: core_1.Input },],
+        "showIndicator": [{ type: core_1.Input },],
+        "showPane": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onHidden": [{ type: core_1.Output },],
+        "onHiding": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onShowing": [{ type: core_1.Output },],
+        "onShown": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "closeOnOutsideClickChange": [{ type: core_1.Output },],
+        "containerChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "delayChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "indicatorSrcChange": [{ type: core_1.Output },],
+        "maxHeightChange": [{ type: core_1.Output },],
+        "maxWidthChange": [{ type: core_1.Output },],
+        "messageChange": [{ type: core_1.Output },],
+        "minHeightChange": [{ type: core_1.Output },],
+        "minWidthChange": [{ type: core_1.Output },],
+        "positionChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "shadingChange": [{ type: core_1.Output },],
+        "shadingColorChange": [{ type: core_1.Output },],
+        "showIndicatorChange": [{ type: core_1.Output },],
+        "showPaneChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
     };
     return DxLoadPanelComponent;
-}(DxComponent));
-export { DxLoadPanelComponent };
+}(component_1.DxComponent));
+exports.DxLoadPanelComponent = DxLoadPanelComponent;
 var DxLoadPanelModule = (function () {
     function DxLoadPanelModule() {
     }
     DxLoadPanelModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxLoadPanelComponent
                     ],
                     exports: [
                         DxLoadPanelComponent,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxTemplateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxLoadPanelModule;
 }());
-export { DxLoadPanelModule };
+exports.DxLoadPanelModule = DxLoadPanelModule;
 //# sourceMappingURL=load-panel.js.map

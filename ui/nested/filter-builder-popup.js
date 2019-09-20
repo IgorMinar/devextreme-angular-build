@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Output, EventEmitter, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxoPopupOptions } from './base/popup-options';
-import { DxiToolbarItemComponent } from './toolbar-item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var popup_options_1 = require("./base/popup-options");
+var toolbar_item_dxi_1 = require("./toolbar-item-dxi");
 var DxoFilterBuilderPopupComponent = (function (_super) {
     __extends(DxoFilterBuilderPopupComponent, _super);
     function DxoFilterBuilderPopupComponent(parentOptionHost, optionHost) {
@@ -56,11 +58,11 @@ var DxoFilterBuilderPopupComponent = (function (_super) {
         configurable: true
     });
     DxoFilterBuilderPopupComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-filter-builder-popup',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'accessKey',
                         'animation',
@@ -111,24 +113,24 @@ var DxoFilterBuilderPopupComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxoFilterBuilderPopupComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoFilterBuilderPopupComponent.propDecorators = {
-        "heightChange": [{ type: Output },],
-        "positionChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "toolbarItemsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiToolbarItemComponent; }),] },],
+        "heightChange": [{ type: core_1.Output },],
+        "positionChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "toolbarItemsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return toolbar_item_dxi_1.DxiToolbarItemComponent; }),] },],
     };
     return DxoFilterBuilderPopupComponent;
-}(DxoPopupOptions));
-export { DxoFilterBuilderPopupComponent };
+}(popup_options_1.DxoPopupOptions));
+exports.DxoFilterBuilderPopupComponent = DxoFilterBuilderPopupComponent;
 var DxoFilterBuilderPopupModule = (function () {
     function DxoFilterBuilderPopupModule() {
     }
     DxoFilterBuilderPopupModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoFilterBuilderPopupComponent
                     ],
@@ -139,5 +141,5 @@ var DxoFilterBuilderPopupModule = (function () {
     ];
     return DxoFilterBuilderPopupModule;
 }());
-export { DxoFilterBuilderPopupModule };
+exports.DxoFilterBuilderPopupModule = DxoFilterBuilderPopupModule;
 //# sourceMappingURL=filter-builder-popup.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, Output, EventEmitter } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoLoadingIndicatorComponent = (function (_super) {
     __extends(DxoLoadingIndicatorComponent, _super);
     function DxoLoadingIndicatorComponent(parentOptionHost, optionHost) {
@@ -93,34 +95,34 @@ var DxoLoadingIndicatorComponent = (function (_super) {
         configurable: true
     });
     DxoLoadingIndicatorComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-loading-indicator',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoLoadingIndicatorComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoLoadingIndicatorComponent.propDecorators = {
-        "backgroundColor": [{ type: Input },],
-        "font": [{ type: Input },],
-        "show": [{ type: Input },],
-        "text": [{ type: Input },],
-        "enabled": [{ type: Input },],
-        "showChange": [{ type: Output },],
+        "backgroundColor": [{ type: core_1.Input },],
+        "font": [{ type: core_1.Input },],
+        "show": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "enabled": [{ type: core_1.Input },],
+        "showChange": [{ type: core_1.Output },],
     };
     return DxoLoadingIndicatorComponent;
-}(NestedOption));
-export { DxoLoadingIndicatorComponent };
+}(nested_option_2.NestedOption));
+exports.DxoLoadingIndicatorComponent = DxoLoadingIndicatorComponent;
 var DxoLoadingIndicatorModule = (function () {
     function DxoLoadingIndicatorModule() {
     }
     DxoLoadingIndicatorModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoLoadingIndicatorComponent
                     ],
@@ -131,5 +133,5 @@ var DxoLoadingIndicatorModule = (function () {
     ];
     return DxoLoadingIndicatorModule;
 }());
-export { DxoLoadingIndicatorModule };
+exports.DxoLoadingIndicatorModule = DxoLoadingIndicatorModule;
 //# sourceMappingURL=loading-indicator.js.map

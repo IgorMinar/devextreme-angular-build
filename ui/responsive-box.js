@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,24 +21,25 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxResponsiveBox from 'devextreme/ui/responsive_box';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiColModule } from './nested/col-dxi';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiLocationModule } from './nested/location-dxi';
-import { DxiRowModule } from './nested/row-dxi';
-import { DxiColComponent } from './nested/col-dxi';
-import { DxiItemComponent } from './nested/item-dxi';
-import { DxiRowComponent } from './nested/row-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var responsive_box_1 = require("devextreme/ui/responsive_box");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var col_dxi_1 = require("./nested/col-dxi");
+var item_dxi_1 = require("./nested/item-dxi");
+var location_dxi_1 = require("./nested/location-dxi");
+var row_dxi_1 = require("./nested/row-dxi");
+var col_dxi_2 = require("./nested/col-dxi");
+var item_dxi_2 = require("./nested/item-dxi");
+var row_dxi_2 = require("./nested/row-dxi");
 /**
  * The ResponsiveBox widget allows you to create an application or a website with a layout adapted to different screen sizes.
  */
@@ -302,7 +304,7 @@ var DxResponsiveBoxComponent = (function (_super) {
         configurable: true
     });
     DxResponsiveBoxComponent.prototype._createInstance = function (element, options) {
-        return new DxResponsiveBox(element, options);
+        return new responsive_box_1.default(element, options);
     };
     DxResponsiveBoxComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -336,102 +338,102 @@ var DxResponsiveBoxComponent = (function (_super) {
         }
     };
     DxResponsiveBoxComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-responsive-box',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxResponsiveBoxComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxResponsiveBoxComponent.propDecorators = {
-        "cols": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "itemHoldTimeout": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "rows": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "screenByWidth": [{ type: Input },],
-        "singleColumnScreen": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onItemContextMenu": [{ type: Output },],
-        "onItemHold": [{ type: Output },],
-        "onItemRendered": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "colsChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "itemHoldTimeoutChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "rowsChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "screenByWidthChange": [{ type: Output },],
-        "singleColumnScreenChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "colsChildren": [{ type: ContentChildren, args: [DxiColComponent,] },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
-        "rowsChildren": [{ type: ContentChildren, args: [DxiRowComponent,] },],
+        "cols": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "itemHoldTimeout": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "rows": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "screenByWidth": [{ type: core_1.Input },],
+        "singleColumnScreen": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onItemContextMenu": [{ type: core_1.Output },],
+        "onItemHold": [{ type: core_1.Output },],
+        "onItemRendered": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "colsChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "itemHoldTimeoutChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "rowsChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "screenByWidthChange": [{ type: core_1.Output },],
+        "singleColumnScreenChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "colsChildren": [{ type: core_1.ContentChildren, args: [col_dxi_2.DxiColComponent,] },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
+        "rowsChildren": [{ type: core_1.ContentChildren, args: [row_dxi_2.DxiRowComponent,] },],
     };
     return DxResponsiveBoxComponent;
-}(DxComponent));
-export { DxResponsiveBoxComponent };
+}(component_1.DxComponent));
+exports.DxResponsiveBoxComponent = DxResponsiveBoxComponent;
 var DxResponsiveBoxModule = (function () {
     function DxResponsiveBoxModule() {
     }
     DxResponsiveBoxModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiColModule,
-                        DxiItemModule,
-                        DxiLocationModule,
-                        DxiRowModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        col_dxi_1.DxiColModule,
+                        item_dxi_1.DxiItemModule,
+                        location_dxi_1.DxiLocationModule,
+                        row_dxi_1.DxiRowModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxResponsiveBoxComponent
                     ],
                     exports: [
                         DxResponsiveBoxComponent,
-                        DxiColModule,
-                        DxiItemModule,
-                        DxiLocationModule,
-                        DxiRowModule,
-                        DxTemplateModule
+                        col_dxi_1.DxiColModule,
+                        item_dxi_1.DxiItemModule,
+                        location_dxi_1.DxiLocationModule,
+                        row_dxi_1.DxiRowModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxResponsiveBoxModule;
 }());
-export { DxResponsiveBoxModule };
+exports.DxResponsiveBoxModule = DxResponsiveBoxModule;
 //# sourceMappingURL=responsive-box.js.map

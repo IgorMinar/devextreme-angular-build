@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,21 +21,22 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener } from '@angular/core';
-import DxTextArea from 'devextreme/ui/text_area';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var text_area_1 = require("devextreme/ui/text_area");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxTextAreaComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxTextAreaComponent; }),
     multi: true
 };
 /**
@@ -461,7 +463,7 @@ var DxTextAreaComponent = (function (_super) {
     });
     DxTextAreaComponent.prototype.change = function (_) { };
     DxTextAreaComponent.prototype._createInstance = function (element, options) {
-        return new DxTextArea(element, options);
+        return new text_area_1.default(element, options);
     };
     DxTextAreaComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -496,128 +498,128 @@ var DxTextAreaComponent = (function (_super) {
         }
     };
     DxTextAreaComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-text-area',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost
+                        nested_option_1.NestedOptionHost
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxTextAreaComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxTextAreaComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "autoResizeEnabled": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "inputAttr": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "maxHeight": [{ type: Input },],
-        "maxLength": [{ type: Input },],
-        "minHeight": [{ type: Input },],
-        "name": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "spellcheck": [{ type: Input },],
-        "stylingMode": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "text": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueChangeEvent": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onChange": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onCopy": [{ type: Output },],
-        "onCut": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEnterKey": [{ type: Output },],
-        "onFocusIn": [{ type: Output },],
-        "onFocusOut": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onInput": [{ type: Output },],
-        "onKeyDown": [{ type: Output },],
-        "onKeyPress": [{ type: Output },],
-        "onKeyUp": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPaste": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "autoResizeEnabledChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "inputAttrChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "maxHeightChange": [{ type: Output },],
-        "maxLengthChange": [{ type: Output },],
-        "minHeightChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "placeholderChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "spellcheckChange": [{ type: Output },],
-        "stylingModeChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueChangeEventChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "autoResizeEnabled": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "inputAttr": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "maxHeight": [{ type: core_1.Input },],
+        "maxLength": [{ type: core_1.Input },],
+        "minHeight": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "spellcheck": [{ type: core_1.Input },],
+        "stylingMode": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueChangeEvent": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onChange": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onCopy": [{ type: core_1.Output },],
+        "onCut": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEnterKey": [{ type: core_1.Output },],
+        "onFocusIn": [{ type: core_1.Output },],
+        "onFocusOut": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onInput": [{ type: core_1.Output },],
+        "onKeyDown": [{ type: core_1.Output },],
+        "onKeyPress": [{ type: core_1.Output },],
+        "onKeyUp": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPaste": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "autoResizeEnabledChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "inputAttrChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "maxHeightChange": [{ type: core_1.Output },],
+        "maxLengthChange": [{ type: core_1.Output },],
+        "minHeightChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "placeholderChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "spellcheckChange": [{ type: core_1.Output },],
+        "stylingModeChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueChangeEventChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
     };
     return DxTextAreaComponent;
-}(DxComponent));
-export { DxTextAreaComponent };
+}(component_1.DxComponent));
+exports.DxTextAreaComponent = DxTextAreaComponent;
 var DxTextAreaModule = (function () {
     function DxTextAreaModule() {
     }
     DxTextAreaModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxTextAreaComponent
                     ],
                     exports: [
                         DxTextAreaComponent,
-                        DxTemplateModule
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxTextAreaModule;
 }());
-export { DxTextAreaModule };
+exports.DxTextAreaModule = DxTextAreaModule;
 //# sourceMappingURL=text-area.js.map

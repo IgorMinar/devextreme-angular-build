@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxiVizScaleBreak } from './base/viz-scale-break-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var viz_scale_break_dxi_1 = require("./base/viz-scale-break-dxi");
 var DxiBreakComponent = (function (_super) {
     __extends(DxiBreakComponent, _super);
     function DxiBreakComponent(parentOptionHost, optionHost) {
@@ -39,11 +41,11 @@ var DxiBreakComponent = (function (_super) {
         configurable: true
     });
     DxiBreakComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-break',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost],
+                    providers: [nested_option_1.NestedOptionHost],
                     inputs: [
                         'endValue',
                         'startValue'
@@ -52,17 +54,17 @@ var DxiBreakComponent = (function (_super) {
     ];
     /** @nocollapse */
     DxiBreakComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     return DxiBreakComponent;
-}(DxiVizScaleBreak));
-export { DxiBreakComponent };
+}(viz_scale_break_dxi_1.DxiVizScaleBreak));
+exports.DxiBreakComponent = DxiBreakComponent;
 var DxiBreakModule = (function () {
     function DxiBreakModule() {
     }
     DxiBreakModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiBreakComponent
                     ],
@@ -73,5 +75,5 @@ var DxiBreakModule = (function () {
     ];
     return DxiBreakModule;
 }());
-export { DxiBreakModule };
+exports.DxiBreakModule = DxiBreakModule;
 //# sourceMappingURL=break-dxi.js.map

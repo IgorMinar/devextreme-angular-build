@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoMyComponent = (function (_super) {
     __extends(DxoMyComponent, _super);
     function DxoMyComponent(parentOptionHost, optionHost) {
@@ -59,30 +61,30 @@ var DxoMyComponent = (function (_super) {
         configurable: true
     });
     DxoMyComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-my',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoMyComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoMyComponent.propDecorators = {
-        "x": [{ type: Input },],
-        "y": [{ type: Input },],
+        "x": [{ type: core_1.Input },],
+        "y": [{ type: core_1.Input },],
     };
     return DxoMyComponent;
-}(NestedOption));
-export { DxoMyComponent };
+}(nested_option_2.NestedOption));
+exports.DxoMyComponent = DxoMyComponent;
 var DxoMyModule = (function () {
     function DxoMyModule() {
     }
     DxoMyModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoMyComponent
                     ],
@@ -93,5 +95,5 @@ var DxoMyModule = (function () {
     ];
     return DxoMyModule;
 }());
-export { DxoMyModule };
+exports.DxoMyModule = DxoMyModule;
 //# sourceMappingURL=my.js.map

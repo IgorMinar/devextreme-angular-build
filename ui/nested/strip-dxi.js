@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxiStripComponent = (function (_super) {
     __extends(DxiStripComponent, _super);
     function DxiStripComponent(parentOptionHost, optionHost) {
@@ -99,34 +101,34 @@ var DxiStripComponent = (function (_super) {
         configurable: true
     });
     DxiStripComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-strip',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiStripComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiStripComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "endValue": [{ type: Input },],
-        "label": [{ type: Input },],
-        "paddingLeftRight": [{ type: Input },],
-        "paddingTopBottom": [{ type: Input },],
-        "startValue": [{ type: Input },],
+        "color": [{ type: core_1.Input },],
+        "endValue": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "paddingLeftRight": [{ type: core_1.Input },],
+        "paddingTopBottom": [{ type: core_1.Input },],
+        "startValue": [{ type: core_1.Input },],
     };
     return DxiStripComponent;
-}(CollectionNestedOption));
-export { DxiStripComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiStripComponent = DxiStripComponent;
 var DxiStripModule = (function () {
     function DxiStripModule() {
     }
     DxiStripModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiStripComponent
                     ],
@@ -137,5 +139,5 @@ var DxiStripModule = (function () {
     ];
     return DxiStripModule;
 }());
-export { DxiStripModule };
+exports.DxiStripModule = DxiStripModule;
 //# sourceMappingURL=strip-dxi.js.map

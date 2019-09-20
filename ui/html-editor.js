@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,29 +21,30 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxHtmlEditor from 'devextreme/ui/html_editor';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoMediaResizingModule } from './nested/media-resizing';
-import { DxiMentionModule } from './nested/mention-dxi';
-import { DxoToolbarModule } from './nested/toolbar';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxoVariablesModule } from './nested/variables';
-import { DxiMentionComponent } from './nested/mention-dxi';
+var html_editor_1 = require("devextreme/ui/html_editor");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var media_resizing_1 = require("./nested/media-resizing");
+var mention_dxi_1 = require("./nested/mention-dxi");
+var toolbar_1 = require("./nested/toolbar");
+var item_dxi_1 = require("./nested/item-dxi");
+var variables_1 = require("./nested/variables");
+var mention_dxi_2 = require("./nested/mention-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxHtmlEditorComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxHtmlEditorComponent; }),
     multi: true
 };
 /**
@@ -431,7 +433,7 @@ var DxHtmlEditorComponent = (function (_super) {
         configurable: true
     });
     DxHtmlEditorComponent.prototype._createInstance = function (element, options) {
-        return new DxHtmlEditor(element, options);
+        return new html_editor_1.default(element, options);
     };
     DxHtmlEditorComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -488,126 +490,126 @@ var DxHtmlEditorComponent = (function (_super) {
         }
     };
     DxHtmlEditorComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-html-editor',
                     template: '<ng-content></ng-content>',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxHtmlEditorComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxHtmlEditorComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "customizeModules": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "mediaResizing": [{ type: Input },],
-        "mentions": [{ type: Input },],
-        "name": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "toolbar": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueType": [{ type: Input },],
-        "variables": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onFocusIn": [{ type: Output },],
-        "onFocusOut": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "customizeModulesChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "mediaResizingChange": [{ type: Output },],
-        "mentionsChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "placeholderChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "toolbarChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueTypeChange": [{ type: Output },],
-        "variablesChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "mentionsChildren": [{ type: ContentChildren, args: [DxiMentionComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "customizeModules": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "mediaResizing": [{ type: core_1.Input },],
+        "mentions": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "toolbar": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueType": [{ type: core_1.Input },],
+        "variables": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onFocusIn": [{ type: core_1.Output },],
+        "onFocusOut": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "customizeModulesChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "mediaResizingChange": [{ type: core_1.Output },],
+        "mentionsChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "placeholderChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "toolbarChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueTypeChange": [{ type: core_1.Output },],
+        "variablesChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "mentionsChildren": [{ type: core_1.ContentChildren, args: [mention_dxi_2.DxiMentionComponent,] },],
     };
     return DxHtmlEditorComponent;
-}(DxComponent));
-export { DxHtmlEditorComponent };
+}(component_1.DxComponent));
+exports.DxHtmlEditorComponent = DxHtmlEditorComponent;
 var DxHtmlEditorModule = (function () {
     function DxHtmlEditorModule() {
     }
     DxHtmlEditorModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoMediaResizingModule,
-                        DxiMentionModule,
-                        DxoToolbarModule,
-                        DxiItemModule,
-                        DxoVariablesModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        media_resizing_1.DxoMediaResizingModule,
+                        mention_dxi_1.DxiMentionModule,
+                        toolbar_1.DxoToolbarModule,
+                        item_dxi_1.DxiItemModule,
+                        variables_1.DxoVariablesModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxHtmlEditorComponent
                     ],
                     exports: [
                         DxHtmlEditorComponent,
-                        DxoMediaResizingModule,
-                        DxiMentionModule,
-                        DxoToolbarModule,
-                        DxiItemModule,
-                        DxoVariablesModule,
-                        DxTemplateModule
+                        media_resizing_1.DxoMediaResizingModule,
+                        mention_dxi_1.DxiMentionModule,
+                        toolbar_1.DxoToolbarModule,
+                        item_dxi_1.DxiItemModule,
+                        variables_1.DxoVariablesModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxHtmlEditorModule;
 }());
-export { DxHtmlEditorModule };
+exports.DxHtmlEditorModule = DxHtmlEditorModule;
 //# sourceMappingURL=html-editor.js.map

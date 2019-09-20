@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { CollectionNestedOption } from '../../core/nested-option';
-import { DxiLocationComponent } from './location-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var location_dxi_1 = require("./location-dxi");
 var DxiRouteComponent = (function (_super) {
     __extends(DxiRouteComponent, _super);
     function DxiRouteComponent(parentOptionHost, optionHost) {
@@ -100,34 +102,34 @@ var DxiRouteComponent = (function (_super) {
         configurable: true
     });
     DxiRouteComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-route',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxiRouteComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxiRouteComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "locations": [{ type: Input },],
-        "mode": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "weight": [{ type: Input },],
-        "locationsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiLocationComponent; }),] },],
+        "color": [{ type: core_1.Input },],
+        "locations": [{ type: core_1.Input },],
+        "mode": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "weight": [{ type: core_1.Input },],
+        "locationsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return location_dxi_1.DxiLocationComponent; }),] },],
     };
     return DxiRouteComponent;
-}(CollectionNestedOption));
-export { DxiRouteComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiRouteComponent = DxiRouteComponent;
 var DxiRouteModule = (function () {
     function DxiRouteModule() {
     }
     DxiRouteModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiRouteComponent
                     ],
@@ -138,5 +140,5 @@ var DxiRouteModule = (function () {
     ];
     return DxiRouteModule;
 }());
-export { DxiRouteModule };
+exports.DxiRouteModule = DxiRouteModule;
 //# sourceMappingURL=route-dxi.js.map

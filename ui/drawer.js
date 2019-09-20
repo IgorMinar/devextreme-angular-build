@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,16 +21,17 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter } from '@angular/core';
-import DxDrawer from 'devextreme/ui/drawer';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var drawer_1 = require("devextreme/ui/drawer");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
 /**
  * The Drawer is a dismissible or permanently visible panel used for navigation in responsive web application layouts.
  */
@@ -340,102 +342,102 @@ var DxDrawerComponent = (function (_super) {
         configurable: true
     });
     DxDrawerComponent.prototype._createInstance = function (element, options) {
-        return new DxDrawer(element, options);
+        return new drawer_1.default(element, options);
     };
     DxDrawerComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
     };
     DxDrawerComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-drawer',
                     template: '<ng-content></ng-content>',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxDrawerComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxDrawerComponent.propDecorators = {
-        "activeStateEnabled": [{ type: Input },],
-        "animationDuration": [{ type: Input },],
-        "animationEnabled": [{ type: Input },],
-        "closeOnOutsideClick": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "maxSize": [{ type: Input },],
-        "minSize": [{ type: Input },],
-        "opened": [{ type: Input },],
-        "openedStateMode": [{ type: Input },],
-        "position": [{ type: Input },],
-        "revealMode": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "shading": [{ type: Input },],
-        "target": [{ type: Input },],
-        "template": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "animationDurationChange": [{ type: Output },],
-        "animationEnabledChange": [{ type: Output },],
-        "closeOnOutsideClickChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "maxSizeChange": [{ type: Output },],
-        "minSizeChange": [{ type: Output },],
-        "openedChange": [{ type: Output },],
-        "openedStateModeChange": [{ type: Output },],
-        "positionChange": [{ type: Output },],
-        "revealModeChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "shadingChange": [{ type: Output },],
-        "targetChange": [{ type: Output },],
-        "templateChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "animationDuration": [{ type: core_1.Input },],
+        "animationEnabled": [{ type: core_1.Input },],
+        "closeOnOutsideClick": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "maxSize": [{ type: core_1.Input },],
+        "minSize": [{ type: core_1.Input },],
+        "opened": [{ type: core_1.Input },],
+        "openedStateMode": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "revealMode": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "shading": [{ type: core_1.Input },],
+        "target": [{ type: core_1.Input },],
+        "template": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "animationDurationChange": [{ type: core_1.Output },],
+        "animationEnabledChange": [{ type: core_1.Output },],
+        "closeOnOutsideClickChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "maxSizeChange": [{ type: core_1.Output },],
+        "minSizeChange": [{ type: core_1.Output },],
+        "openedChange": [{ type: core_1.Output },],
+        "openedStateModeChange": [{ type: core_1.Output },],
+        "positionChange": [{ type: core_1.Output },],
+        "revealModeChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "shadingChange": [{ type: core_1.Output },],
+        "targetChange": [{ type: core_1.Output },],
+        "templateChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
     };
     return DxDrawerComponent;
-}(DxComponent));
-export { DxDrawerComponent };
+}(component_1.DxComponent));
+exports.DxDrawerComponent = DxDrawerComponent;
 var DxDrawerModule = (function () {
     function DxDrawerModule() {
     }
     DxDrawerModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxDrawerComponent
                     ],
                     exports: [
                         DxDrawerComponent,
-                        DxTemplateModule
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxDrawerModule;
 }());
-export { DxDrawerModule };
+exports.DxDrawerModule = DxDrawerModule;
 //# sourceMappingURL=drawer.js.map

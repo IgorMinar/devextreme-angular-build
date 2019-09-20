@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,19 +21,20 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxTabs from 'devextreme/ui/tabs';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiItemModule } from './nested/item-dxi';
-import { DxiItemComponent } from './nested/item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var tabs_1 = require("devextreme/ui/tabs");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var item_dxi_1 = require("./nested/item-dxi");
+var item_dxi_2 = require("./nested/item-dxi");
 /**
  * The Tabs is a tab strip used to switch between pages or views. This widget is included in the TabPanel widget, but you can use the Tabs separately as well.
  */
@@ -432,7 +434,7 @@ var DxTabsComponent = (function (_super) {
         configurable: true
     });
     DxTabsComponent.prototype._createInstance = function (element, options) {
-        return new DxTabs(element, options);
+        return new tabs_1.default(element, options);
     };
     DxTabsComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -466,117 +468,117 @@ var DxTabsComponent = (function (_super) {
         }
     };
     DxTabsComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-tabs',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxTabsComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxTabsComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "itemHoldTimeout": [{ type: Input },],
-        "items": [{ type: Input },],
-        "itemTemplate": [{ type: Input },],
-        "keyExpr": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "repaintChangesOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scrollByContent": [{ type: Input },],
-        "scrollingEnabled": [{ type: Input },],
-        "selectedIndex": [{ type: Input },],
-        "selectedItem": [{ type: Input },],
-        "selectedItemKeys": [{ type: Input },],
-        "selectedItems": [{ type: Input },],
-        "selectionMode": [{ type: Input },],
-        "showNavButtons": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onItemClick": [{ type: Output },],
-        "onItemContextMenu": [{ type: Output },],
-        "onItemHold": [{ type: Output },],
-        "onItemRendered": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onSelectionChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "itemHoldTimeoutChange": [{ type: Output },],
-        "itemsChange": [{ type: Output },],
-        "itemTemplateChange": [{ type: Output },],
-        "keyExprChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "repaintChangesOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scrollByContentChange": [{ type: Output },],
-        "scrollingEnabledChange": [{ type: Output },],
-        "selectedIndexChange": [{ type: Output },],
-        "selectedItemChange": [{ type: Output },],
-        "selectedItemKeysChange": [{ type: Output },],
-        "selectedItemsChange": [{ type: Output },],
-        "selectionModeChange": [{ type: Output },],
-        "showNavButtonsChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "itemsChildren": [{ type: ContentChildren, args: [DxiItemComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "itemHoldTimeout": [{ type: core_1.Input },],
+        "items": [{ type: core_1.Input },],
+        "itemTemplate": [{ type: core_1.Input },],
+        "keyExpr": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "repaintChangesOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scrollByContent": [{ type: core_1.Input },],
+        "scrollingEnabled": [{ type: core_1.Input },],
+        "selectedIndex": [{ type: core_1.Input },],
+        "selectedItem": [{ type: core_1.Input },],
+        "selectedItemKeys": [{ type: core_1.Input },],
+        "selectedItems": [{ type: core_1.Input },],
+        "selectionMode": [{ type: core_1.Input },],
+        "showNavButtons": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onItemClick": [{ type: core_1.Output },],
+        "onItemContextMenu": [{ type: core_1.Output },],
+        "onItemHold": [{ type: core_1.Output },],
+        "onItemRendered": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onSelectionChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "itemHoldTimeoutChange": [{ type: core_1.Output },],
+        "itemsChange": [{ type: core_1.Output },],
+        "itemTemplateChange": [{ type: core_1.Output },],
+        "keyExprChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "repaintChangesOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scrollByContentChange": [{ type: core_1.Output },],
+        "scrollingEnabledChange": [{ type: core_1.Output },],
+        "selectedIndexChange": [{ type: core_1.Output },],
+        "selectedItemChange": [{ type: core_1.Output },],
+        "selectedItemKeysChange": [{ type: core_1.Output },],
+        "selectedItemsChange": [{ type: core_1.Output },],
+        "selectionModeChange": [{ type: core_1.Output },],
+        "showNavButtonsChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "itemsChildren": [{ type: core_1.ContentChildren, args: [item_dxi_2.DxiItemComponent,] },],
     };
     return DxTabsComponent;
-}(DxComponent));
-export { DxTabsComponent };
+}(component_1.DxComponent));
+exports.DxTabsComponent = DxTabsComponent;
 var DxTabsModule = (function () {
     function DxTabsModule() {
     }
     DxTabsModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        item_dxi_1.DxiItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxTabsComponent
                     ],
                     exports: [
                         DxTabsComponent,
-                        DxiItemModule,
-                        DxTemplateModule
+                        item_dxi_1.DxiItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxTabsModule;
 }());
-export { DxTabsModule };
+exports.DxTabsModule = DxTabsModule;
 //# sourceMappingURL=tabs.js.map

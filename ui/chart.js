@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,104 +21,105 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxChart from 'devextreme/viz/chart';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAdaptiveLayoutModule } from './nested/adaptive-layout';
-import { DxoAnimationModule } from './nested/animation';
-import { DxiAnnotationModule } from './nested/annotation-dxi';
-import { DxoBorderModule } from './nested/border';
-import { DxoFontModule } from './nested/font';
-import { DxoImageModule } from './nested/image';
-import { DxoShadowModule } from './nested/shadow';
-import { DxoArgumentAxisModule } from './nested/argument-axis';
-import { DxoAggregationIntervalModule } from './nested/aggregation-interval';
-import { DxiBreakModule } from './nested/break-dxi';
-import { DxoBreakStyleModule } from './nested/break-style';
-import { DxiConstantLineModule } from './nested/constant-line-dxi';
-import { DxoLabelModule } from './nested/label';
-import { DxoConstantLineStyleModule } from './nested/constant-line-style';
-import { DxoGridModule } from './nested/grid';
-import { DxoFormatModule } from './nested/format';
-import { DxoMinorGridModule } from './nested/minor-grid';
-import { DxoMinorTickModule } from './nested/minor-tick';
-import { DxoMinorTickIntervalModule } from './nested/minor-tick-interval';
-import { DxoMinVisualRangeLengthModule } from './nested/min-visual-range-length';
-import { DxiStripModule } from './nested/strip-dxi';
-import { DxoStripStyleModule } from './nested/strip-style';
-import { DxoTickModule } from './nested/tick';
-import { DxoTickIntervalModule } from './nested/tick-interval';
-import { DxoTitleModule } from './nested/title';
-import { DxoCommonAnnotationSettingsModule } from './nested/common-annotation-settings';
-import { DxoCommonAxisSettingsModule } from './nested/common-axis-settings';
-import { DxoCommonPaneSettingsModule } from './nested/common-pane-settings';
-import { DxoCommonSeriesSettingsModule } from './nested/common-series-settings';
-import { DxoAggregationModule } from './nested/aggregation';
-import { DxoAreaModule } from './nested/area';
-import { DxoHoverStyleModule } from './nested/hover-style';
-import { DxoHatchingModule } from './nested/hatching';
-import { DxoConnectorModule } from './nested/connector';
-import { DxoPointModule } from './nested/point';
-import { DxoHeightModule } from './nested/height';
-import { DxoUrlModule } from './nested/url';
-import { DxoWidthModule } from './nested/width';
-import { DxoSelectionStyleModule } from './nested/selection-style';
-import { DxoReductionModule } from './nested/reduction';
-import { DxoValueErrorBarModule } from './nested/value-error-bar';
-import { DxoBarModule } from './nested/bar';
-import { DxoBubbleModule } from './nested/bubble';
-import { DxoCandlestickModule } from './nested/candlestick';
-import { DxoFullstackedareaModule } from './nested/fullstackedarea';
-import { DxoFullstackedbarModule } from './nested/fullstackedbar';
-import { DxoFullstackedlineModule } from './nested/fullstackedline';
-import { DxoFullstackedsplineModule } from './nested/fullstackedspline';
-import { DxoFullstackedsplineareaModule } from './nested/fullstackedsplinearea';
-import { DxoArgumentFormatModule } from './nested/argument-format';
-import { DxoLineModule } from './nested/line';
-import { DxoRangeareaModule } from './nested/rangearea';
-import { DxoRangebarModule } from './nested/rangebar';
-import { DxoScatterModule } from './nested/scatter';
-import { DxoSplineModule } from './nested/spline';
-import { DxoSplineareaModule } from './nested/splinearea';
-import { DxoStackedareaModule } from './nested/stackedarea';
-import { DxoStackedbarModule } from './nested/stackedbar';
-import { DxoStackedlineModule } from './nested/stackedline';
-import { DxoStackedsplineModule } from './nested/stackedspline';
-import { DxoStackedsplineareaModule } from './nested/stackedsplinearea';
-import { DxoStepareaModule } from './nested/steparea';
-import { DxoSteplineModule } from './nested/stepline';
-import { DxoStockModule } from './nested/stock';
-import { DxoCrosshairModule } from './nested/crosshair';
-import { DxoHorizontalLineModule } from './nested/horizontal-line';
-import { DxoVerticalLineModule } from './nested/vertical-line';
-import { DxoDataPrepareSettingsModule } from './nested/data-prepare-settings';
-import { DxoExportModule } from './nested/export';
-import { DxoLegendModule } from './nested/legend';
-import { DxoMarginModule } from './nested/margin';
-import { DxoSubtitleModule } from './nested/subtitle';
-import { DxoLoadingIndicatorModule } from './nested/loading-indicator';
-import { DxiPaneModule } from './nested/pane-dxi';
-import { DxoScrollBarModule } from './nested/scroll-bar';
-import { DxiSeriesModule } from './nested/series-dxi';
-import { DxoSeriesTemplateModule } from './nested/series-template';
-import { DxoSizeModule } from './nested/size';
-import { DxoTooltipModule } from './nested/tooltip';
-import { DxiValueAxisModule } from './nested/value-axis-dxi';
-import { DxoZoomAndPanModule } from './nested/zoom-and-pan';
-import { DxoDragBoxStyleModule } from './nested/drag-box-style';
-import { DxiAnnotationComponent } from './nested/annotation-dxi';
-import { DxiPaneComponent } from './nested/pane-dxi';
-import { DxiSeriesComponent } from './nested/series-dxi';
-import { DxiValueAxisComponent } from './nested/value-axis-dxi';
+var chart_1 = require("devextreme/viz/chart");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var adaptive_layout_1 = require("./nested/adaptive-layout");
+var animation_1 = require("./nested/animation");
+var annotation_dxi_1 = require("./nested/annotation-dxi");
+var border_1 = require("./nested/border");
+var font_1 = require("./nested/font");
+var image_1 = require("./nested/image");
+var shadow_1 = require("./nested/shadow");
+var argument_axis_1 = require("./nested/argument-axis");
+var aggregation_interval_1 = require("./nested/aggregation-interval");
+var break_dxi_1 = require("./nested/break-dxi");
+var break_style_1 = require("./nested/break-style");
+var constant_line_dxi_1 = require("./nested/constant-line-dxi");
+var label_1 = require("./nested/label");
+var constant_line_style_1 = require("./nested/constant-line-style");
+var grid_1 = require("./nested/grid");
+var format_1 = require("./nested/format");
+var minor_grid_1 = require("./nested/minor-grid");
+var minor_tick_1 = require("./nested/minor-tick");
+var minor_tick_interval_1 = require("./nested/minor-tick-interval");
+var min_visual_range_length_1 = require("./nested/min-visual-range-length");
+var strip_dxi_1 = require("./nested/strip-dxi");
+var strip_style_1 = require("./nested/strip-style");
+var tick_1 = require("./nested/tick");
+var tick_interval_1 = require("./nested/tick-interval");
+var title_1 = require("./nested/title");
+var common_annotation_settings_1 = require("./nested/common-annotation-settings");
+var common_axis_settings_1 = require("./nested/common-axis-settings");
+var common_pane_settings_1 = require("./nested/common-pane-settings");
+var common_series_settings_1 = require("./nested/common-series-settings");
+var aggregation_1 = require("./nested/aggregation");
+var area_1 = require("./nested/area");
+var hover_style_1 = require("./nested/hover-style");
+var hatching_1 = require("./nested/hatching");
+var connector_1 = require("./nested/connector");
+var point_1 = require("./nested/point");
+var height_1 = require("./nested/height");
+var url_1 = require("./nested/url");
+var width_1 = require("./nested/width");
+var selection_style_1 = require("./nested/selection-style");
+var reduction_1 = require("./nested/reduction");
+var value_error_bar_1 = require("./nested/value-error-bar");
+var bar_1 = require("./nested/bar");
+var bubble_1 = require("./nested/bubble");
+var candlestick_1 = require("./nested/candlestick");
+var fullstackedarea_1 = require("./nested/fullstackedarea");
+var fullstackedbar_1 = require("./nested/fullstackedbar");
+var fullstackedline_1 = require("./nested/fullstackedline");
+var fullstackedspline_1 = require("./nested/fullstackedspline");
+var fullstackedsplinearea_1 = require("./nested/fullstackedsplinearea");
+var argument_format_1 = require("./nested/argument-format");
+var line_1 = require("./nested/line");
+var rangearea_1 = require("./nested/rangearea");
+var rangebar_1 = require("./nested/rangebar");
+var scatter_1 = require("./nested/scatter");
+var spline_1 = require("./nested/spline");
+var splinearea_1 = require("./nested/splinearea");
+var stackedarea_1 = require("./nested/stackedarea");
+var stackedbar_1 = require("./nested/stackedbar");
+var stackedline_1 = require("./nested/stackedline");
+var stackedspline_1 = require("./nested/stackedspline");
+var stackedsplinearea_1 = require("./nested/stackedsplinearea");
+var steparea_1 = require("./nested/steparea");
+var stepline_1 = require("./nested/stepline");
+var stock_1 = require("./nested/stock");
+var crosshair_1 = require("./nested/crosshair");
+var horizontal_line_1 = require("./nested/horizontal-line");
+var vertical_line_1 = require("./nested/vertical-line");
+var data_prepare_settings_1 = require("./nested/data-prepare-settings");
+var export_1 = require("./nested/export");
+var legend_1 = require("./nested/legend");
+var margin_1 = require("./nested/margin");
+var subtitle_1 = require("./nested/subtitle");
+var loading_indicator_1 = require("./nested/loading-indicator");
+var pane_dxi_1 = require("./nested/pane-dxi");
+var scroll_bar_1 = require("./nested/scroll-bar");
+var series_dxi_1 = require("./nested/series-dxi");
+var series_template_1 = require("./nested/series-template");
+var size_1 = require("./nested/size");
+var tooltip_1 = require("./nested/tooltip");
+var value_axis_dxi_1 = require("./nested/value-axis-dxi");
+var zoom_and_pan_1 = require("./nested/zoom-and-pan");
+var drag_box_style_1 = require("./nested/drag-box-style");
+var annotation_dxi_2 = require("./nested/annotation-dxi");
+var pane_dxi_2 = require("./nested/pane-dxi");
+var series_dxi_2 = require("./nested/series-dxi");
+var value_axis_dxi_2 = require("./nested/value-axis-dxi");
 /**
  * The Chart is a widget that visualizes data from a local or remote storage using a great variety of series types along with different interactive elements, such as tooltips, crosshair pointer, legend, etc.
  */
@@ -965,7 +967,7 @@ var DxChartComponent = (function (_super) {
         configurable: true
     });
     DxChartComponent.prototype._createInstance = function (element, options) {
-        return new DxChart(element, options);
+        return new chart_1.default(element, options);
     };
     DxChartComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -1003,353 +1005,353 @@ var DxChartComponent = (function (_super) {
         }
     };
     DxChartComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-chart',
                     template: '',
                     styles: [' :host {  display: block; }'],
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxChartComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxChartComponent.propDecorators = {
-        "adaptiveLayout": [{ type: Input },],
-        "adjustOnZoom": [{ type: Input },],
-        "animation": [{ type: Input },],
-        "annotations": [{ type: Input },],
-        "argumentAxis": [{ type: Input },],
-        "autoHidePointMarkers": [{ type: Input },],
-        "barGroupPadding": [{ type: Input },],
-        "barGroupWidth": [{ type: Input },],
-        "barWidth": [{ type: Input },],
-        "commonAnnotationSettings": [{ type: Input },],
-        "commonAxisSettings": [{ type: Input },],
-        "commonPaneSettings": [{ type: Input },],
-        "commonSeriesSettings": [{ type: Input },],
-        "containerBackgroundColor": [{ type: Input },],
-        "crosshair": [{ type: Input },],
-        "customizeAnnotation": [{ type: Input },],
-        "customizeLabel": [{ type: Input },],
-        "customizePoint": [{ type: Input },],
-        "dataPrepareSettings": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "defaultPane": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "equalBarWidth": [{ type: Input },],
-        "export": [{ type: Input },],
-        "legend": [{ type: Input },],
-        "loadingIndicator": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "maxBubbleSize": [{ type: Input },],
-        "minBubbleSize": [{ type: Input },],
-        "negativesAsZeroes": [{ type: Input },],
-        "palette": [{ type: Input },],
-        "paletteExtensionMode": [{ type: Input },],
-        "panes": [{ type: Input },],
-        "pathModified": [{ type: Input },],
-        "pointSelectionMode": [{ type: Input },],
-        "redrawOnResize": [{ type: Input },],
-        "resolveLabelOverlapping": [{ type: Input },],
-        "rotated": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "scrollBar": [{ type: Input },],
-        "scrollingMode": [{ type: Input },],
-        "series": [{ type: Input },],
-        "seriesSelectionMode": [{ type: Input },],
-        "seriesTemplate": [{ type: Input },],
-        "size": [{ type: Input },],
-        "stickyHovering": [{ type: Input },],
-        "synchronizeMultiAxes": [{ type: Input },],
-        "theme": [{ type: Input },],
-        "title": [{ type: Input },],
-        "tooltip": [{ type: Input },],
-        "useAggregation": [{ type: Input },],
-        "valueAxis": [{ type: Input },],
-        "zoomAndPan": [{ type: Input },],
-        "zoomingMode": [{ type: Input },],
-        "onArgumentAxisClick": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onDone": [{ type: Output },],
-        "onDrawn": [{ type: Output },],
-        "onExported": [{ type: Output },],
-        "onExporting": [{ type: Output },],
-        "onFileSaving": [{ type: Output },],
-        "onIncidentOccurred": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onLegendClick": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPointClick": [{ type: Output },],
-        "onPointHoverChanged": [{ type: Output },],
-        "onPointSelectionChanged": [{ type: Output },],
-        "onSeriesClick": [{ type: Output },],
-        "onSeriesHoverChanged": [{ type: Output },],
-        "onSeriesSelectionChanged": [{ type: Output },],
-        "onTooltipHidden": [{ type: Output },],
-        "onTooltipShown": [{ type: Output },],
-        "onZoomEnd": [{ type: Output },],
-        "onZoomStart": [{ type: Output },],
-        "adaptiveLayoutChange": [{ type: Output },],
-        "adjustOnZoomChange": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "annotationsChange": [{ type: Output },],
-        "argumentAxisChange": [{ type: Output },],
-        "autoHidePointMarkersChange": [{ type: Output },],
-        "barGroupPaddingChange": [{ type: Output },],
-        "barGroupWidthChange": [{ type: Output },],
-        "barWidthChange": [{ type: Output },],
-        "commonAnnotationSettingsChange": [{ type: Output },],
-        "commonAxisSettingsChange": [{ type: Output },],
-        "commonPaneSettingsChange": [{ type: Output },],
-        "commonSeriesSettingsChange": [{ type: Output },],
-        "containerBackgroundColorChange": [{ type: Output },],
-        "crosshairChange": [{ type: Output },],
-        "customizeAnnotationChange": [{ type: Output },],
-        "customizeLabelChange": [{ type: Output },],
-        "customizePointChange": [{ type: Output },],
-        "dataPrepareSettingsChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "defaultPaneChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "equalBarWidthChange": [{ type: Output },],
-        "exportChange": [{ type: Output },],
-        "legendChange": [{ type: Output },],
-        "loadingIndicatorChange": [{ type: Output },],
-        "marginChange": [{ type: Output },],
-        "maxBubbleSizeChange": [{ type: Output },],
-        "minBubbleSizeChange": [{ type: Output },],
-        "negativesAsZeroesChange": [{ type: Output },],
-        "paletteChange": [{ type: Output },],
-        "paletteExtensionModeChange": [{ type: Output },],
-        "panesChange": [{ type: Output },],
-        "pathModifiedChange": [{ type: Output },],
-        "pointSelectionModeChange": [{ type: Output },],
-        "redrawOnResizeChange": [{ type: Output },],
-        "resolveLabelOverlappingChange": [{ type: Output },],
-        "rotatedChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "scrollBarChange": [{ type: Output },],
-        "scrollingModeChange": [{ type: Output },],
-        "seriesChange": [{ type: Output },],
-        "seriesSelectionModeChange": [{ type: Output },],
-        "seriesTemplateChange": [{ type: Output },],
-        "sizeChange": [{ type: Output },],
-        "stickyHoveringChange": [{ type: Output },],
-        "synchronizeMultiAxesChange": [{ type: Output },],
-        "themeChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "tooltipChange": [{ type: Output },],
-        "useAggregationChange": [{ type: Output },],
-        "valueAxisChange": [{ type: Output },],
-        "zoomAndPanChange": [{ type: Output },],
-        "zoomingModeChange": [{ type: Output },],
-        "annotationsChildren": [{ type: ContentChildren, args: [DxiAnnotationComponent,] },],
-        "panesChildren": [{ type: ContentChildren, args: [DxiPaneComponent,] },],
-        "seriesChildren": [{ type: ContentChildren, args: [DxiSeriesComponent,] },],
-        "valueAxisChildren": [{ type: ContentChildren, args: [DxiValueAxisComponent,] },],
+        "adaptiveLayout": [{ type: core_1.Input },],
+        "adjustOnZoom": [{ type: core_1.Input },],
+        "animation": [{ type: core_1.Input },],
+        "annotations": [{ type: core_1.Input },],
+        "argumentAxis": [{ type: core_1.Input },],
+        "autoHidePointMarkers": [{ type: core_1.Input },],
+        "barGroupPadding": [{ type: core_1.Input },],
+        "barGroupWidth": [{ type: core_1.Input },],
+        "barWidth": [{ type: core_1.Input },],
+        "commonAnnotationSettings": [{ type: core_1.Input },],
+        "commonAxisSettings": [{ type: core_1.Input },],
+        "commonPaneSettings": [{ type: core_1.Input },],
+        "commonSeriesSettings": [{ type: core_1.Input },],
+        "containerBackgroundColor": [{ type: core_1.Input },],
+        "crosshair": [{ type: core_1.Input },],
+        "customizeAnnotation": [{ type: core_1.Input },],
+        "customizeLabel": [{ type: core_1.Input },],
+        "customizePoint": [{ type: core_1.Input },],
+        "dataPrepareSettings": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "defaultPane": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "equalBarWidth": [{ type: core_1.Input },],
+        "export": [{ type: core_1.Input },],
+        "legend": [{ type: core_1.Input },],
+        "loadingIndicator": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "maxBubbleSize": [{ type: core_1.Input },],
+        "minBubbleSize": [{ type: core_1.Input },],
+        "negativesAsZeroes": [{ type: core_1.Input },],
+        "palette": [{ type: core_1.Input },],
+        "paletteExtensionMode": [{ type: core_1.Input },],
+        "panes": [{ type: core_1.Input },],
+        "pathModified": [{ type: core_1.Input },],
+        "pointSelectionMode": [{ type: core_1.Input },],
+        "redrawOnResize": [{ type: core_1.Input },],
+        "resolveLabelOverlapping": [{ type: core_1.Input },],
+        "rotated": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "scrollBar": [{ type: core_1.Input },],
+        "scrollingMode": [{ type: core_1.Input },],
+        "series": [{ type: core_1.Input },],
+        "seriesSelectionMode": [{ type: core_1.Input },],
+        "seriesTemplate": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "stickyHovering": [{ type: core_1.Input },],
+        "synchronizeMultiAxes": [{ type: core_1.Input },],
+        "theme": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "tooltip": [{ type: core_1.Input },],
+        "useAggregation": [{ type: core_1.Input },],
+        "valueAxis": [{ type: core_1.Input },],
+        "zoomAndPan": [{ type: core_1.Input },],
+        "zoomingMode": [{ type: core_1.Input },],
+        "onArgumentAxisClick": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onDone": [{ type: core_1.Output },],
+        "onDrawn": [{ type: core_1.Output },],
+        "onExported": [{ type: core_1.Output },],
+        "onExporting": [{ type: core_1.Output },],
+        "onFileSaving": [{ type: core_1.Output },],
+        "onIncidentOccurred": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onLegendClick": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPointClick": [{ type: core_1.Output },],
+        "onPointHoverChanged": [{ type: core_1.Output },],
+        "onPointSelectionChanged": [{ type: core_1.Output },],
+        "onSeriesClick": [{ type: core_1.Output },],
+        "onSeriesHoverChanged": [{ type: core_1.Output },],
+        "onSeriesSelectionChanged": [{ type: core_1.Output },],
+        "onTooltipHidden": [{ type: core_1.Output },],
+        "onTooltipShown": [{ type: core_1.Output },],
+        "onZoomEnd": [{ type: core_1.Output },],
+        "onZoomStart": [{ type: core_1.Output },],
+        "adaptiveLayoutChange": [{ type: core_1.Output },],
+        "adjustOnZoomChange": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "annotationsChange": [{ type: core_1.Output },],
+        "argumentAxisChange": [{ type: core_1.Output },],
+        "autoHidePointMarkersChange": [{ type: core_1.Output },],
+        "barGroupPaddingChange": [{ type: core_1.Output },],
+        "barGroupWidthChange": [{ type: core_1.Output },],
+        "barWidthChange": [{ type: core_1.Output },],
+        "commonAnnotationSettingsChange": [{ type: core_1.Output },],
+        "commonAxisSettingsChange": [{ type: core_1.Output },],
+        "commonPaneSettingsChange": [{ type: core_1.Output },],
+        "commonSeriesSettingsChange": [{ type: core_1.Output },],
+        "containerBackgroundColorChange": [{ type: core_1.Output },],
+        "crosshairChange": [{ type: core_1.Output },],
+        "customizeAnnotationChange": [{ type: core_1.Output },],
+        "customizeLabelChange": [{ type: core_1.Output },],
+        "customizePointChange": [{ type: core_1.Output },],
+        "dataPrepareSettingsChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "defaultPaneChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "equalBarWidthChange": [{ type: core_1.Output },],
+        "exportChange": [{ type: core_1.Output },],
+        "legendChange": [{ type: core_1.Output },],
+        "loadingIndicatorChange": [{ type: core_1.Output },],
+        "marginChange": [{ type: core_1.Output },],
+        "maxBubbleSizeChange": [{ type: core_1.Output },],
+        "minBubbleSizeChange": [{ type: core_1.Output },],
+        "negativesAsZeroesChange": [{ type: core_1.Output },],
+        "paletteChange": [{ type: core_1.Output },],
+        "paletteExtensionModeChange": [{ type: core_1.Output },],
+        "panesChange": [{ type: core_1.Output },],
+        "pathModifiedChange": [{ type: core_1.Output },],
+        "pointSelectionModeChange": [{ type: core_1.Output },],
+        "redrawOnResizeChange": [{ type: core_1.Output },],
+        "resolveLabelOverlappingChange": [{ type: core_1.Output },],
+        "rotatedChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "scrollBarChange": [{ type: core_1.Output },],
+        "scrollingModeChange": [{ type: core_1.Output },],
+        "seriesChange": [{ type: core_1.Output },],
+        "seriesSelectionModeChange": [{ type: core_1.Output },],
+        "seriesTemplateChange": [{ type: core_1.Output },],
+        "sizeChange": [{ type: core_1.Output },],
+        "stickyHoveringChange": [{ type: core_1.Output },],
+        "synchronizeMultiAxesChange": [{ type: core_1.Output },],
+        "themeChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "tooltipChange": [{ type: core_1.Output },],
+        "useAggregationChange": [{ type: core_1.Output },],
+        "valueAxisChange": [{ type: core_1.Output },],
+        "zoomAndPanChange": [{ type: core_1.Output },],
+        "zoomingModeChange": [{ type: core_1.Output },],
+        "annotationsChildren": [{ type: core_1.ContentChildren, args: [annotation_dxi_2.DxiAnnotationComponent,] },],
+        "panesChildren": [{ type: core_1.ContentChildren, args: [pane_dxi_2.DxiPaneComponent,] },],
+        "seriesChildren": [{ type: core_1.ContentChildren, args: [series_dxi_2.DxiSeriesComponent,] },],
+        "valueAxisChildren": [{ type: core_1.ContentChildren, args: [value_axis_dxi_2.DxiValueAxisComponent,] },],
     };
     return DxChartComponent;
-}(DxComponent));
-export { DxChartComponent };
+}(component_1.DxComponent));
+exports.DxChartComponent = DxChartComponent;
 var DxChartModule = (function () {
     function DxChartModule() {
     }
     DxChartModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAdaptiveLayoutModule,
-                        DxoAnimationModule,
-                        DxiAnnotationModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoImageModule,
-                        DxoShadowModule,
-                        DxoArgumentAxisModule,
-                        DxoAggregationIntervalModule,
-                        DxiBreakModule,
-                        DxoBreakStyleModule,
-                        DxiConstantLineModule,
-                        DxoLabelModule,
-                        DxoConstantLineStyleModule,
-                        DxoGridModule,
-                        DxoFormatModule,
-                        DxoMinorGridModule,
-                        DxoMinorTickModule,
-                        DxoMinorTickIntervalModule,
-                        DxoMinVisualRangeLengthModule,
-                        DxiStripModule,
-                        DxoStripStyleModule,
-                        DxoTickModule,
-                        DxoTickIntervalModule,
-                        DxoTitleModule,
-                        DxoCommonAnnotationSettingsModule,
-                        DxoCommonAxisSettingsModule,
-                        DxoCommonPaneSettingsModule,
-                        DxoCommonSeriesSettingsModule,
-                        DxoAggregationModule,
-                        DxoAreaModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoConnectorModule,
-                        DxoPointModule,
-                        DxoHeightModule,
-                        DxoUrlModule,
-                        DxoWidthModule,
-                        DxoSelectionStyleModule,
-                        DxoReductionModule,
-                        DxoValueErrorBarModule,
-                        DxoBarModule,
-                        DxoBubbleModule,
-                        DxoCandlestickModule,
-                        DxoFullstackedareaModule,
-                        DxoFullstackedbarModule,
-                        DxoFullstackedlineModule,
-                        DxoFullstackedsplineModule,
-                        DxoFullstackedsplineareaModule,
-                        DxoArgumentFormatModule,
-                        DxoLineModule,
-                        DxoRangeareaModule,
-                        DxoRangebarModule,
-                        DxoScatterModule,
-                        DxoSplineModule,
-                        DxoSplineareaModule,
-                        DxoStackedareaModule,
-                        DxoStackedbarModule,
-                        DxoStackedlineModule,
-                        DxoStackedsplineModule,
-                        DxoStackedsplineareaModule,
-                        DxoStepareaModule,
-                        DxoSteplineModule,
-                        DxoStockModule,
-                        DxoCrosshairModule,
-                        DxoHorizontalLineModule,
-                        DxoVerticalLineModule,
-                        DxoDataPrepareSettingsModule,
-                        DxoExportModule,
-                        DxoLegendModule,
-                        DxoMarginModule,
-                        DxoSubtitleModule,
-                        DxoLoadingIndicatorModule,
-                        DxiPaneModule,
-                        DxoScrollBarModule,
-                        DxiSeriesModule,
-                        DxoSeriesTemplateModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxiValueAxisModule,
-                        DxoZoomAndPanModule,
-                        DxoDragBoxStyleModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        adaptive_layout_1.DxoAdaptiveLayoutModule,
+                        animation_1.DxoAnimationModule,
+                        annotation_dxi_1.DxiAnnotationModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        image_1.DxoImageModule,
+                        shadow_1.DxoShadowModule,
+                        argument_axis_1.DxoArgumentAxisModule,
+                        aggregation_interval_1.DxoAggregationIntervalModule,
+                        break_dxi_1.DxiBreakModule,
+                        break_style_1.DxoBreakStyleModule,
+                        constant_line_dxi_1.DxiConstantLineModule,
+                        label_1.DxoLabelModule,
+                        constant_line_style_1.DxoConstantLineStyleModule,
+                        grid_1.DxoGridModule,
+                        format_1.DxoFormatModule,
+                        minor_grid_1.DxoMinorGridModule,
+                        minor_tick_1.DxoMinorTickModule,
+                        minor_tick_interval_1.DxoMinorTickIntervalModule,
+                        min_visual_range_length_1.DxoMinVisualRangeLengthModule,
+                        strip_dxi_1.DxiStripModule,
+                        strip_style_1.DxoStripStyleModule,
+                        tick_1.DxoTickModule,
+                        tick_interval_1.DxoTickIntervalModule,
+                        title_1.DxoTitleModule,
+                        common_annotation_settings_1.DxoCommonAnnotationSettingsModule,
+                        common_axis_settings_1.DxoCommonAxisSettingsModule,
+                        common_pane_settings_1.DxoCommonPaneSettingsModule,
+                        common_series_settings_1.DxoCommonSeriesSettingsModule,
+                        aggregation_1.DxoAggregationModule,
+                        area_1.DxoAreaModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        connector_1.DxoConnectorModule,
+                        point_1.DxoPointModule,
+                        height_1.DxoHeightModule,
+                        url_1.DxoUrlModule,
+                        width_1.DxoWidthModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        reduction_1.DxoReductionModule,
+                        value_error_bar_1.DxoValueErrorBarModule,
+                        bar_1.DxoBarModule,
+                        bubble_1.DxoBubbleModule,
+                        candlestick_1.DxoCandlestickModule,
+                        fullstackedarea_1.DxoFullstackedareaModule,
+                        fullstackedbar_1.DxoFullstackedbarModule,
+                        fullstackedline_1.DxoFullstackedlineModule,
+                        fullstackedspline_1.DxoFullstackedsplineModule,
+                        fullstackedsplinearea_1.DxoFullstackedsplineareaModule,
+                        argument_format_1.DxoArgumentFormatModule,
+                        line_1.DxoLineModule,
+                        rangearea_1.DxoRangeareaModule,
+                        rangebar_1.DxoRangebarModule,
+                        scatter_1.DxoScatterModule,
+                        spline_1.DxoSplineModule,
+                        splinearea_1.DxoSplineareaModule,
+                        stackedarea_1.DxoStackedareaModule,
+                        stackedbar_1.DxoStackedbarModule,
+                        stackedline_1.DxoStackedlineModule,
+                        stackedspline_1.DxoStackedsplineModule,
+                        stackedsplinearea_1.DxoStackedsplineareaModule,
+                        steparea_1.DxoStepareaModule,
+                        stepline_1.DxoSteplineModule,
+                        stock_1.DxoStockModule,
+                        crosshair_1.DxoCrosshairModule,
+                        horizontal_line_1.DxoHorizontalLineModule,
+                        vertical_line_1.DxoVerticalLineModule,
+                        data_prepare_settings_1.DxoDataPrepareSettingsModule,
+                        export_1.DxoExportModule,
+                        legend_1.DxoLegendModule,
+                        margin_1.DxoMarginModule,
+                        subtitle_1.DxoSubtitleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        pane_dxi_1.DxiPaneModule,
+                        scroll_bar_1.DxoScrollBarModule,
+                        series_dxi_1.DxiSeriesModule,
+                        series_template_1.DxoSeriesTemplateModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        value_axis_dxi_1.DxiValueAxisModule,
+                        zoom_and_pan_1.DxoZoomAndPanModule,
+                        drag_box_style_1.DxoDragBoxStyleModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxChartComponent
                     ],
                     exports: [
                         DxChartComponent,
-                        DxoAdaptiveLayoutModule,
-                        DxoAnimationModule,
-                        DxiAnnotationModule,
-                        DxoBorderModule,
-                        DxoFontModule,
-                        DxoImageModule,
-                        DxoShadowModule,
-                        DxoArgumentAxisModule,
-                        DxoAggregationIntervalModule,
-                        DxiBreakModule,
-                        DxoBreakStyleModule,
-                        DxiConstantLineModule,
-                        DxoLabelModule,
-                        DxoConstantLineStyleModule,
-                        DxoGridModule,
-                        DxoFormatModule,
-                        DxoMinorGridModule,
-                        DxoMinorTickModule,
-                        DxoMinorTickIntervalModule,
-                        DxoMinVisualRangeLengthModule,
-                        DxiStripModule,
-                        DxoStripStyleModule,
-                        DxoTickModule,
-                        DxoTickIntervalModule,
-                        DxoTitleModule,
-                        DxoCommonAnnotationSettingsModule,
-                        DxoCommonAxisSettingsModule,
-                        DxoCommonPaneSettingsModule,
-                        DxoCommonSeriesSettingsModule,
-                        DxoAggregationModule,
-                        DxoAreaModule,
-                        DxoHoverStyleModule,
-                        DxoHatchingModule,
-                        DxoConnectorModule,
-                        DxoPointModule,
-                        DxoHeightModule,
-                        DxoUrlModule,
-                        DxoWidthModule,
-                        DxoSelectionStyleModule,
-                        DxoReductionModule,
-                        DxoValueErrorBarModule,
-                        DxoBarModule,
-                        DxoBubbleModule,
-                        DxoCandlestickModule,
-                        DxoFullstackedareaModule,
-                        DxoFullstackedbarModule,
-                        DxoFullstackedlineModule,
-                        DxoFullstackedsplineModule,
-                        DxoFullstackedsplineareaModule,
-                        DxoArgumentFormatModule,
-                        DxoLineModule,
-                        DxoRangeareaModule,
-                        DxoRangebarModule,
-                        DxoScatterModule,
-                        DxoSplineModule,
-                        DxoSplineareaModule,
-                        DxoStackedareaModule,
-                        DxoStackedbarModule,
-                        DxoStackedlineModule,
-                        DxoStackedsplineModule,
-                        DxoStackedsplineareaModule,
-                        DxoStepareaModule,
-                        DxoSteplineModule,
-                        DxoStockModule,
-                        DxoCrosshairModule,
-                        DxoHorizontalLineModule,
-                        DxoVerticalLineModule,
-                        DxoDataPrepareSettingsModule,
-                        DxoExportModule,
-                        DxoLegendModule,
-                        DxoMarginModule,
-                        DxoSubtitleModule,
-                        DxoLoadingIndicatorModule,
-                        DxiPaneModule,
-                        DxoScrollBarModule,
-                        DxiSeriesModule,
-                        DxoSeriesTemplateModule,
-                        DxoSizeModule,
-                        DxoTooltipModule,
-                        DxiValueAxisModule,
-                        DxoZoomAndPanModule,
-                        DxoDragBoxStyleModule,
-                        DxTemplateModule
+                        adaptive_layout_1.DxoAdaptiveLayoutModule,
+                        animation_1.DxoAnimationModule,
+                        annotation_dxi_1.DxiAnnotationModule,
+                        border_1.DxoBorderModule,
+                        font_1.DxoFontModule,
+                        image_1.DxoImageModule,
+                        shadow_1.DxoShadowModule,
+                        argument_axis_1.DxoArgumentAxisModule,
+                        aggregation_interval_1.DxoAggregationIntervalModule,
+                        break_dxi_1.DxiBreakModule,
+                        break_style_1.DxoBreakStyleModule,
+                        constant_line_dxi_1.DxiConstantLineModule,
+                        label_1.DxoLabelModule,
+                        constant_line_style_1.DxoConstantLineStyleModule,
+                        grid_1.DxoGridModule,
+                        format_1.DxoFormatModule,
+                        minor_grid_1.DxoMinorGridModule,
+                        minor_tick_1.DxoMinorTickModule,
+                        minor_tick_interval_1.DxoMinorTickIntervalModule,
+                        min_visual_range_length_1.DxoMinVisualRangeLengthModule,
+                        strip_dxi_1.DxiStripModule,
+                        strip_style_1.DxoStripStyleModule,
+                        tick_1.DxoTickModule,
+                        tick_interval_1.DxoTickIntervalModule,
+                        title_1.DxoTitleModule,
+                        common_annotation_settings_1.DxoCommonAnnotationSettingsModule,
+                        common_axis_settings_1.DxoCommonAxisSettingsModule,
+                        common_pane_settings_1.DxoCommonPaneSettingsModule,
+                        common_series_settings_1.DxoCommonSeriesSettingsModule,
+                        aggregation_1.DxoAggregationModule,
+                        area_1.DxoAreaModule,
+                        hover_style_1.DxoHoverStyleModule,
+                        hatching_1.DxoHatchingModule,
+                        connector_1.DxoConnectorModule,
+                        point_1.DxoPointModule,
+                        height_1.DxoHeightModule,
+                        url_1.DxoUrlModule,
+                        width_1.DxoWidthModule,
+                        selection_style_1.DxoSelectionStyleModule,
+                        reduction_1.DxoReductionModule,
+                        value_error_bar_1.DxoValueErrorBarModule,
+                        bar_1.DxoBarModule,
+                        bubble_1.DxoBubbleModule,
+                        candlestick_1.DxoCandlestickModule,
+                        fullstackedarea_1.DxoFullstackedareaModule,
+                        fullstackedbar_1.DxoFullstackedbarModule,
+                        fullstackedline_1.DxoFullstackedlineModule,
+                        fullstackedspline_1.DxoFullstackedsplineModule,
+                        fullstackedsplinearea_1.DxoFullstackedsplineareaModule,
+                        argument_format_1.DxoArgumentFormatModule,
+                        line_1.DxoLineModule,
+                        rangearea_1.DxoRangeareaModule,
+                        rangebar_1.DxoRangebarModule,
+                        scatter_1.DxoScatterModule,
+                        spline_1.DxoSplineModule,
+                        splinearea_1.DxoSplineareaModule,
+                        stackedarea_1.DxoStackedareaModule,
+                        stackedbar_1.DxoStackedbarModule,
+                        stackedline_1.DxoStackedlineModule,
+                        stackedspline_1.DxoStackedsplineModule,
+                        stackedsplinearea_1.DxoStackedsplineareaModule,
+                        steparea_1.DxoStepareaModule,
+                        stepline_1.DxoSteplineModule,
+                        stock_1.DxoStockModule,
+                        crosshair_1.DxoCrosshairModule,
+                        horizontal_line_1.DxoHorizontalLineModule,
+                        vertical_line_1.DxoVerticalLineModule,
+                        data_prepare_settings_1.DxoDataPrepareSettingsModule,
+                        export_1.DxoExportModule,
+                        legend_1.DxoLegendModule,
+                        margin_1.DxoMarginModule,
+                        subtitle_1.DxoSubtitleModule,
+                        loading_indicator_1.DxoLoadingIndicatorModule,
+                        pane_dxi_1.DxiPaneModule,
+                        scroll_bar_1.DxoScrollBarModule,
+                        series_dxi_1.DxiSeriesModule,
+                        series_template_1.DxoSeriesTemplateModule,
+                        size_1.DxoSizeModule,
+                        tooltip_1.DxoTooltipModule,
+                        value_axis_dxi_1.DxiValueAxisModule,
+                        zoom_and_pan_1.DxoZoomAndPanModule,
+                        drag_box_style_1.DxoDragBoxStyleModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxChartModule;
 }());
-export { DxChartModule };
+exports.DxChartModule = DxChartModule;
 //# sourceMappingURL=chart.js.map

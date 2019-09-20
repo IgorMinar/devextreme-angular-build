@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoHoverStyleComponent = (function (_super) {
     __extends(DxoHoverStyleComponent, _super);
     function DxoHoverStyleComponent(parentOptionHost, optionHost) {
@@ -109,35 +111,35 @@ var DxoHoverStyleComponent = (function (_super) {
         configurable: true
     });
     DxoHoverStyleComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-hover-style',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoHoverStyleComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoHoverStyleComponent.propDecorators = {
-        "border": [{ type: Input },],
-        "color": [{ type: Input },],
-        "dashStyle": [{ type: Input },],
-        "hatching": [{ type: Input },],
-        "width": [{ type: Input },],
-        "size": [{ type: Input },],
-        "opacity": [{ type: Input },],
+        "border": [{ type: core_1.Input },],
+        "color": [{ type: core_1.Input },],
+        "dashStyle": [{ type: core_1.Input },],
+        "hatching": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "size": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
     };
     return DxoHoverStyleComponent;
-}(NestedOption));
-export { DxoHoverStyleComponent };
+}(nested_option_2.NestedOption));
+exports.DxoHoverStyleComponent = DxoHoverStyleComponent;
 var DxoHoverStyleModule = (function () {
     function DxoHoverStyleModule() {
     }
     DxoHoverStyleModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoHoverStyleComponent
                     ],
@@ -148,5 +150,5 @@ var DxoHoverStyleModule = (function () {
     ];
     return DxoHoverStyleModule;
 }());
-export { DxoHoverStyleModule };
+exports.DxoHoverStyleModule = DxoHoverStyleModule;
 //# sourceMappingURL=hover-style.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
-import { DxiBreakComponent } from './break-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var break_dxi_1 = require("./break-dxi");
 var DxoScaleComponent = (function (_super) {
     __extends(DxoScaleComponent, _super);
     function DxoScaleComponent(parentOptionHost, optionHost) {
@@ -380,62 +382,62 @@ var DxoScaleComponent = (function (_super) {
         configurable: true
     });
     DxoScaleComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-scale',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoScaleComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoScaleComponent.propDecorators = {
-        "allowDecimals": [{ type: Input },],
-        "customMinorTicks": [{ type: Input },],
-        "customTicks": [{ type: Input },],
-        "endValue": [{ type: Input },],
-        "label": [{ type: Input },],
-        "minorTick": [{ type: Input },],
-        "minorTickInterval": [{ type: Input },],
-        "orientation": [{ type: Input },],
-        "scaleDivisionFactor": [{ type: Input },],
-        "startValue": [{ type: Input },],
-        "tick": [{ type: Input },],
-        "tickInterval": [{ type: Input },],
-        "horizontalOrientation": [{ type: Input },],
-        "verticalOrientation": [{ type: Input },],
-        "aggregationGroupWidth": [{ type: Input },],
-        "aggregationInterval": [{ type: Input },],
-        "breaks": [{ type: Input },],
-        "breakStyle": [{ type: Input },],
-        "categories": [{ type: Input },],
-        "endOnTick": [{ type: Input },],
-        "holidays": [{ type: Input },],
-        "logarithmBase": [{ type: Input },],
-        "marker": [{ type: Input },],
-        "maxRange": [{ type: Input },],
-        "minorTickCount": [{ type: Input },],
-        "minRange": [{ type: Input },],
-        "placeholderHeight": [{ type: Input },],
-        "showCustomBoundaryTicks": [{ type: Input },],
-        "singleWorkdays": [{ type: Input },],
-        "type": [{ type: Input },],
-        "valueType": [{ type: Input },],
-        "workdaysOnly": [{ type: Input },],
-        "workWeek": [{ type: Input },],
-        "breaksChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiBreakComponent; }),] },],
+        "allowDecimals": [{ type: core_1.Input },],
+        "customMinorTicks": [{ type: core_1.Input },],
+        "customTicks": [{ type: core_1.Input },],
+        "endValue": [{ type: core_1.Input },],
+        "label": [{ type: core_1.Input },],
+        "minorTick": [{ type: core_1.Input },],
+        "minorTickInterval": [{ type: core_1.Input },],
+        "orientation": [{ type: core_1.Input },],
+        "scaleDivisionFactor": [{ type: core_1.Input },],
+        "startValue": [{ type: core_1.Input },],
+        "tick": [{ type: core_1.Input },],
+        "tickInterval": [{ type: core_1.Input },],
+        "horizontalOrientation": [{ type: core_1.Input },],
+        "verticalOrientation": [{ type: core_1.Input },],
+        "aggregationGroupWidth": [{ type: core_1.Input },],
+        "aggregationInterval": [{ type: core_1.Input },],
+        "breaks": [{ type: core_1.Input },],
+        "breakStyle": [{ type: core_1.Input },],
+        "categories": [{ type: core_1.Input },],
+        "endOnTick": [{ type: core_1.Input },],
+        "holidays": [{ type: core_1.Input },],
+        "logarithmBase": [{ type: core_1.Input },],
+        "marker": [{ type: core_1.Input },],
+        "maxRange": [{ type: core_1.Input },],
+        "minorTickCount": [{ type: core_1.Input },],
+        "minRange": [{ type: core_1.Input },],
+        "placeholderHeight": [{ type: core_1.Input },],
+        "showCustomBoundaryTicks": [{ type: core_1.Input },],
+        "singleWorkdays": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "valueType": [{ type: core_1.Input },],
+        "workdaysOnly": [{ type: core_1.Input },],
+        "workWeek": [{ type: core_1.Input },],
+        "breaksChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return break_dxi_1.DxiBreakComponent; }),] },],
     };
     return DxoScaleComponent;
-}(NestedOption));
-export { DxoScaleComponent };
+}(nested_option_2.NestedOption));
+exports.DxoScaleComponent = DxoScaleComponent;
 var DxoScaleModule = (function () {
     function DxoScaleModule() {
     }
     DxoScaleModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoScaleComponent
                     ],
@@ -446,5 +448,5 @@ var DxoScaleModule = (function () {
     ];
     return DxoScaleModule;
 }());
-export { DxoScaleModule };
+exports.DxoScaleModule = DxoScaleModule;
 //# sourceMappingURL=scale.js.map

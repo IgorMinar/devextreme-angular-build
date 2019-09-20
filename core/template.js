@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,17 +11,18 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Directive, NgModule, TemplateRef, ViewContainerRef, Input, Renderer2, NgZone } from '@angular/core';
-import { DxTemplateHost } from './template-host';
-import { getElement } from './utils';
-import * as events from 'devextreme/events';
-export var DX_TEMPLATE_WRAPPER_CLASS = 'dx-template-wrapper';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var template_host_1 = require("./template-host");
+var utils_1 = require("./utils");
+var events = require("devextreme/events");
+exports.DX_TEMPLATE_WRAPPER_CLASS = 'dx-template-wrapper';
 var RenderData = (function () {
     function RenderData() {
     }
     return RenderData;
 }());
-export { RenderData };
+exports.RenderData = RenderData;
 var DxTemplateDirective = (function () {
     function DxTemplateDirective(templateRef, viewContainerRef, templateHost, renderer, zone) {
         this.templateRef = templateRef;
@@ -43,7 +45,7 @@ var DxTemplateDirective = (function () {
             '$implicit': renderData.model,
             index: renderData.index
         });
-        var container = getElement(renderData.container);
+        var container = utils_1.getElement(renderData.container);
         if (renderData.container) {
             childView.rootNodes.forEach(function (element) {
                 _this.renderer.appendChild(container, element);
@@ -68,7 +70,7 @@ var DxTemplateDirective = (function () {
         }
         childView.rootNodes.forEach(function (element) {
             if (element.nodeType === 1) {
-                _this.renderer.addClass(element, DX_TEMPLATE_WRAPPER_CLASS);
+                _this.renderer.addClass(element, exports.DX_TEMPLATE_WRAPPER_CLASS);
             }
             events.one(element, 'dxremove', function (_a, params) {
                 if (!params || !params._angularIntegration) {
@@ -79,34 +81,34 @@ var DxTemplateDirective = (function () {
         return childView.rootNodes;
     };
     DxTemplateDirective.decorators = [
-        { type: Directive, args: [{
+        { type: core_1.Directive, args: [{
                     selector: '[dxTemplate]'
                 },] },
     ];
     /** @nocollapse */
     DxTemplateDirective.ctorParameters = function () { return [
-        { type: TemplateRef, },
-        { type: ViewContainerRef, },
-        { type: DxTemplateHost, },
-        { type: Renderer2, },
-        { type: NgZone, },
+        { type: core_1.TemplateRef, },
+        { type: core_1.ViewContainerRef, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: core_1.Renderer2, },
+        { type: core_1.NgZone, },
     ]; };
     DxTemplateDirective.propDecorators = {
-        "dxTemplateOf": [{ type: Input },],
+        "dxTemplateOf": [{ type: core_1.Input },],
     };
     return DxTemplateDirective;
 }());
-export { DxTemplateDirective };
+exports.DxTemplateDirective = DxTemplateDirective;
 var DxTemplateModule = (function () {
     function DxTemplateModule() {
     }
     DxTemplateModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [DxTemplateDirective],
                     exports: [DxTemplateDirective]
                 },] },
     ];
     return DxTemplateModule;
 }());
-export { DxTemplateModule };
+exports.DxTemplateModule = DxTemplateModule;
 //# sourceMappingURL=template.js.map

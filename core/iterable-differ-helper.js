@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,7 +11,8 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Injectable, IterableDiffers } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var IterableDifferHelper = (function () {
     function IterableDifferHelper(_differs) {
         this._differs = _differs;
@@ -60,13 +62,13 @@ var IterableDifferHelper = (function () {
         }
     };
     IterableDifferHelper.decorators = [
-        { type: Injectable },
+        { type: core_1.Injectable },
     ];
     /** @nocollapse */
     IterableDifferHelper.ctorParameters = function () { return [
-        { type: IterableDiffers, },
+        { type: core_1.IterableDiffers, },
     ]; };
     return IterableDifferHelper;
 }());
-export { IterableDifferHelper };
+exports.IterableDifferHelper = IterableDifferHelper;
 //# sourceMappingURL=iterable-differ-helper.js.map

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoTickComponent = (function (_super) {
     __extends(DxoTickComponent, _super);
     function DxoTickComponent(parentOptionHost, optionHost) {
@@ -99,34 +101,34 @@ var DxoTickComponent = (function (_super) {
         configurable: true
     });
     DxoTickComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-tick',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoTickComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoTickComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "length": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "shift": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
+        "color": [{ type: core_1.Input },],
+        "length": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "shift": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
     };
     return DxoTickComponent;
-}(NestedOption));
-export { DxoTickComponent };
+}(nested_option_2.NestedOption));
+exports.DxoTickComponent = DxoTickComponent;
 var DxoTickModule = (function () {
     function DxoTickModule() {
     }
     DxoTickModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoTickComponent
                     ],
@@ -137,5 +139,5 @@ var DxoTickModule = (function () {
     ];
     return DxoTickModule;
 }());
-export { DxoTickModule };
+exports.DxoTickModule = DxoTickModule;
 //# sourceMappingURL=tick.js.map

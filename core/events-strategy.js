@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,7 +11,8 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { EventEmitter } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var NgEventsStrategy = (function () {
     function NgEventsStrategy(instance) {
         this.instance = instance;
@@ -55,13 +57,13 @@ var NgEventsStrategy = (function () {
     };
     NgEventsStrategy.prototype.getEmitter = function (eventName) {
         if (!this.events[eventName]) {
-            this.events[eventName] = new EventEmitter();
+            this.events[eventName] = new core_1.EventEmitter();
         }
         return this.events[eventName];
     };
     return NgEventsStrategy;
 }());
-export { NgEventsStrategy };
+exports.NgEventsStrategy = NgEventsStrategy;
 var EmitterHelper = (function () {
     function EmitterHelper(zone, component) {
         this.zone = zone;
@@ -82,10 +84,10 @@ var EmitterHelper = (function () {
     EmitterHelper.prototype.createEmitters = function (events) {
         var _this = this;
         events.forEach(function (event) {
-            _this.component[event.emit] = new EventEmitter();
+            _this.component[event.emit] = new core_1.EventEmitter();
         });
     };
     return EmitterHelper;
 }());
-export { EmitterHelper };
+exports.EmitterHelper = EmitterHelper;
 //# sourceMappingURL=events-strategy.js.map

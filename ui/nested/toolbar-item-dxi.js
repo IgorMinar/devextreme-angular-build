@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,11 +21,12 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, ElementRef, Renderer2, Inject, SkipSelf, Input } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { NestedOptionHost, extractTemplate } from '../../core/nested-option';
-import { DxTemplateHost } from '../../core/template-host';
-import { CollectionNestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var nested_option_1 = require("../../core/nested-option");
+var template_host_1 = require("../../core/template-host");
+var nested_option_2 = require("../../core/nested-option");
 var DxiToolbarItemComponent = (function (_super) {
     __extends(DxiToolbarItemComponent, _super);
     function DxiToolbarItemComponent(parentOptionHost, optionHost, renderer, document, templateHost, element) {
@@ -138,44 +140,44 @@ var DxiToolbarItemComponent = (function (_super) {
         this.template = template;
     };
     DxiToolbarItemComponent.prototype.ngAfterViewInit = function () {
-        extractTemplate(this, this.element, this.renderer, this.document);
+        nested_option_1.extractTemplate(this, this.element, this.renderer, this.document);
     };
     DxiToolbarItemComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxi-toolbar-item',
                     template: '<ng-content></ng-content>',
                     styles: [':host { display: block; }'],
-                    providers: [NestedOptionHost, DxTemplateHost]
+                    providers: [nested_option_1.NestedOptionHost, template_host_1.DxTemplateHost]
                 },] },
     ];
     /** @nocollapse */
     DxiToolbarItemComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
-        { type: Renderer2, },
-        { type: undefined, decorators: [{ type: Inject, args: [DOCUMENT,] },] },
-        { type: DxTemplateHost, decorators: [{ type: Host },] },
-        { type: ElementRef, },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
+        { type: core_1.Renderer2, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [common_1.DOCUMENT,] },] },
+        { type: template_host_1.DxTemplateHost, decorators: [{ type: core_1.Host },] },
+        { type: core_1.ElementRef, },
     ]; };
     DxiToolbarItemComponent.propDecorators = {
-        "disabled": [{ type: Input },],
-        "html": [{ type: Input },],
-        "location": [{ type: Input },],
-        "options": [{ type: Input },],
-        "template": [{ type: Input },],
-        "text": [{ type: Input },],
-        "toolbar": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "widget": [{ type: Input },],
+        "disabled": [{ type: core_1.Input },],
+        "html": [{ type: core_1.Input },],
+        "location": [{ type: core_1.Input },],
+        "options": [{ type: core_1.Input },],
+        "template": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "toolbar": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "widget": [{ type: core_1.Input },],
     };
     return DxiToolbarItemComponent;
-}(CollectionNestedOption));
-export { DxiToolbarItemComponent };
+}(nested_option_2.CollectionNestedOption));
+exports.DxiToolbarItemComponent = DxiToolbarItemComponent;
 var DxiToolbarItemModule = (function () {
     function DxiToolbarItemModule() {
     }
     DxiToolbarItemModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxiToolbarItemComponent
                     ],
@@ -186,5 +188,5 @@ var DxiToolbarItemModule = (function () {
     ];
     return DxiToolbarItemModule;
 }());
-export { DxiToolbarItemModule };
+exports.DxiToolbarItemModule = DxiToolbarItemModule;
 //# sourceMappingURL=toolbar-item-dxi.js.map

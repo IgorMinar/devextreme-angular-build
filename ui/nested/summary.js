@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,11 +21,12 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
-import { DxiGroupItemComponent } from './group-item-dxi';
-import { DxiTotalItemComponent } from './total-item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var group_item_dxi_1 = require("./group-item-dxi");
+var total_item_dxi_1 = require("./total-item-dxi");
 var DxoSummaryComponent = (function (_super) {
     __extends(DxoSummaryComponent, _super);
     function DxoSummaryComponent(parentOptionHost, optionHost) {
@@ -121,36 +123,36 @@ var DxoSummaryComponent = (function (_super) {
         configurable: true
     });
     DxoSummaryComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-summary',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoSummaryComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoSummaryComponent.propDecorators = {
-        "calculateCustomSummary": [{ type: Input },],
-        "groupItems": [{ type: Input },],
-        "recalculateWhileEditing": [{ type: Input },],
-        "skipEmptyValues": [{ type: Input },],
-        "texts": [{ type: Input },],
-        "totalItems": [{ type: Input },],
-        "groupItemsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiGroupItemComponent; }),] },],
-        "totalItemsChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiTotalItemComponent; }),] },],
+        "calculateCustomSummary": [{ type: core_1.Input },],
+        "groupItems": [{ type: core_1.Input },],
+        "recalculateWhileEditing": [{ type: core_1.Input },],
+        "skipEmptyValues": [{ type: core_1.Input },],
+        "texts": [{ type: core_1.Input },],
+        "totalItems": [{ type: core_1.Input },],
+        "groupItemsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return group_item_dxi_1.DxiGroupItemComponent; }),] },],
+        "totalItemsChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return total_item_dxi_1.DxiTotalItemComponent; }),] },],
     };
     return DxoSummaryComponent;
-}(NestedOption));
-export { DxoSummaryComponent };
+}(nested_option_2.NestedOption));
+exports.DxoSummaryComponent = DxoSummaryComponent;
 var DxoSummaryModule = (function () {
     function DxoSummaryModule() {
     }
     DxoSummaryModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoSummaryComponent
                     ],
@@ -161,5 +163,5 @@ var DxoSummaryModule = (function () {
     ];
     return DxoSummaryModule;
 }());
-export { DxoSummaryModule };
+exports.DxoSummaryModule = DxoSummaryModule;
 //# sourceMappingURL=summary.js.map

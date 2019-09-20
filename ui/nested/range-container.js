@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input, ContentChildren, forwardRef, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
-import { DxiRangeComponent } from './range-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
+var range_dxi_1 = require("./range-dxi");
 var DxoRangeContainerComponent = (function (_super) {
     __extends(DxoRangeContainerComponent, _super);
     function DxoRangeContainerComponent(parentOptionHost, optionHost) {
@@ -140,38 +142,38 @@ var DxoRangeContainerComponent = (function (_super) {
         configurable: true
     });
     DxoRangeContainerComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-range-container',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoRangeContainerComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoRangeContainerComponent.propDecorators = {
-        "backgroundColor": [{ type: Input },],
-        "offset": [{ type: Input },],
-        "orientation": [{ type: Input },],
-        "palette": [{ type: Input },],
-        "paletteExtensionMode": [{ type: Input },],
-        "ranges": [{ type: Input },],
-        "width": [{ type: Input },],
-        "horizontalOrientation": [{ type: Input },],
-        "verticalOrientation": [{ type: Input },],
-        "rangesChildren": [{ type: ContentChildren, args: [forwardRef(function () { return DxiRangeComponent; }),] },],
+        "backgroundColor": [{ type: core_1.Input },],
+        "offset": [{ type: core_1.Input },],
+        "orientation": [{ type: core_1.Input },],
+        "palette": [{ type: core_1.Input },],
+        "paletteExtensionMode": [{ type: core_1.Input },],
+        "ranges": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "horizontalOrientation": [{ type: core_1.Input },],
+        "verticalOrientation": [{ type: core_1.Input },],
+        "rangesChildren": [{ type: core_1.ContentChildren, args: [core_1.forwardRef(function () { return range_dxi_1.DxiRangeComponent; }),] },],
     };
     return DxoRangeContainerComponent;
-}(NestedOption));
-export { DxoRangeContainerComponent };
+}(nested_option_2.NestedOption));
+exports.DxoRangeContainerComponent = DxoRangeContainerComponent;
 var DxoRangeContainerModule = (function () {
     function DxoRangeContainerModule() {
     }
     DxoRangeContainerModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoRangeContainerComponent
                     ],
@@ -182,5 +184,5 @@ var DxoRangeContainerModule = (function () {
     ];
     return DxoRangeContainerModule;
 }());
-export { DxoRangeContainerModule };
+exports.DxoRangeContainerModule = DxoRangeContainerModule;
 //# sourceMappingURL=range-container.js.map

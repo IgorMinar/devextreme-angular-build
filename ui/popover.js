@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,30 +21,31 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxPopover from 'devextreme/ui/popover';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoAnimationModule } from './nested/animation';
-import { DxoHideModule } from './nested/hide';
-import { DxoShowModule } from './nested/show';
-import { DxoHideEventModule } from './nested/hide-event';
-import { DxoPositionModule } from './nested/position';
-import { DxoAtModule } from './nested/at';
-import { DxoBoundaryOffsetModule } from './nested/boundary-offset';
-import { DxoCollisionModule } from './nested/collision';
-import { DxoMyModule } from './nested/my';
-import { DxoOffsetModule } from './nested/offset';
-import { DxoShowEventModule } from './nested/show-event';
-import { DxiToolbarItemModule } from './nested/toolbar-item-dxi';
-import { DxiToolbarItemComponent } from './nested/toolbar-item-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var popover_1 = require("devextreme/ui/popover");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var animation_1 = require("./nested/animation");
+var hide_1 = require("./nested/hide");
+var show_1 = require("./nested/show");
+var hide_event_1 = require("./nested/hide-event");
+var position_1 = require("./nested/position");
+var at_1 = require("./nested/at");
+var boundary_offset_1 = require("./nested/boundary-offset");
+var collision_1 = require("./nested/collision");
+var my_1 = require("./nested/my");
+var offset_1 = require("./nested/offset");
+var show_event_1 = require("./nested/show-event");
+var toolbar_item_dxi_1 = require("./nested/toolbar-item-dxi");
+var toolbar_item_dxi_2 = require("./nested/toolbar-item-dxi");
 /**
  * The Popover is a widget that shows notifications within a box with an arrow pointing to a specified UI element.
  */
@@ -485,7 +487,7 @@ var DxPopoverComponent = (function (_super) {
         configurable: true
     });
     DxPopoverComponent.prototype._createInstance = function (element, options) {
-        return new DxPopover(element, options);
+        return new popover_1.default(element, options);
     };
     DxPopoverComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -513,145 +515,145 @@ var DxPopoverComponent = (function (_super) {
         }
     };
     DxPopoverComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-popover',
                     template: '<ng-content></ng-content>',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxPopoverComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxPopoverComponent.propDecorators = {
-        "animation": [{ type: Input },],
-        "closeOnBackButton": [{ type: Input },],
-        "closeOnOutsideClick": [{ type: Input },],
-        "container": [{ type: Input },],
-        "contentTemplate": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hideEvent": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "maxHeight": [{ type: Input },],
-        "maxWidth": [{ type: Input },],
-        "minHeight": [{ type: Input },],
-        "minWidth": [{ type: Input },],
-        "position": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "shading": [{ type: Input },],
-        "shadingColor": [{ type: Input },],
-        "showCloseButton": [{ type: Input },],
-        "showEvent": [{ type: Input },],
-        "showTitle": [{ type: Input },],
-        "target": [{ type: Input },],
-        "title": [{ type: Input },],
-        "titleTemplate": [{ type: Input },],
-        "toolbarItems": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onHidden": [{ type: Output },],
-        "onHiding": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onShowing": [{ type: Output },],
-        "onShown": [{ type: Output },],
-        "onTitleRendered": [{ type: Output },],
-        "animationChange": [{ type: Output },],
-        "closeOnBackButtonChange": [{ type: Output },],
-        "closeOnOutsideClickChange": [{ type: Output },],
-        "containerChange": [{ type: Output },],
-        "contentTemplateChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hideEventChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "maxHeightChange": [{ type: Output },],
-        "maxWidthChange": [{ type: Output },],
-        "minHeightChange": [{ type: Output },],
-        "minWidthChange": [{ type: Output },],
-        "positionChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "shadingChange": [{ type: Output },],
-        "shadingColorChange": [{ type: Output },],
-        "showCloseButtonChange": [{ type: Output },],
-        "showEventChange": [{ type: Output },],
-        "showTitleChange": [{ type: Output },],
-        "targetChange": [{ type: Output },],
-        "titleChange": [{ type: Output },],
-        "titleTemplateChange": [{ type: Output },],
-        "toolbarItemsChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "toolbarItemsChildren": [{ type: ContentChildren, args: [DxiToolbarItemComponent,] },],
+        "animation": [{ type: core_1.Input },],
+        "closeOnBackButton": [{ type: core_1.Input },],
+        "closeOnOutsideClick": [{ type: core_1.Input },],
+        "container": [{ type: core_1.Input },],
+        "contentTemplate": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hideEvent": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "maxHeight": [{ type: core_1.Input },],
+        "maxWidth": [{ type: core_1.Input },],
+        "minHeight": [{ type: core_1.Input },],
+        "minWidth": [{ type: core_1.Input },],
+        "position": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "shading": [{ type: core_1.Input },],
+        "shadingColor": [{ type: core_1.Input },],
+        "showCloseButton": [{ type: core_1.Input },],
+        "showEvent": [{ type: core_1.Input },],
+        "showTitle": [{ type: core_1.Input },],
+        "target": [{ type: core_1.Input },],
+        "title": [{ type: core_1.Input },],
+        "titleTemplate": [{ type: core_1.Input },],
+        "toolbarItems": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onHidden": [{ type: core_1.Output },],
+        "onHiding": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onShowing": [{ type: core_1.Output },],
+        "onShown": [{ type: core_1.Output },],
+        "onTitleRendered": [{ type: core_1.Output },],
+        "animationChange": [{ type: core_1.Output },],
+        "closeOnBackButtonChange": [{ type: core_1.Output },],
+        "closeOnOutsideClickChange": [{ type: core_1.Output },],
+        "containerChange": [{ type: core_1.Output },],
+        "contentTemplateChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hideEventChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "maxHeightChange": [{ type: core_1.Output },],
+        "maxWidthChange": [{ type: core_1.Output },],
+        "minHeightChange": [{ type: core_1.Output },],
+        "minWidthChange": [{ type: core_1.Output },],
+        "positionChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "shadingChange": [{ type: core_1.Output },],
+        "shadingColorChange": [{ type: core_1.Output },],
+        "showCloseButtonChange": [{ type: core_1.Output },],
+        "showEventChange": [{ type: core_1.Output },],
+        "showTitleChange": [{ type: core_1.Output },],
+        "targetChange": [{ type: core_1.Output },],
+        "titleChange": [{ type: core_1.Output },],
+        "titleTemplateChange": [{ type: core_1.Output },],
+        "toolbarItemsChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "toolbarItemsChildren": [{ type: core_1.ContentChildren, args: [toolbar_item_dxi_2.DxiToolbarItemComponent,] },],
     };
     return DxPopoverComponent;
-}(DxComponent));
-export { DxPopoverComponent };
+}(component_1.DxComponent));
+exports.DxPopoverComponent = DxPopoverComponent;
 var DxPopoverModule = (function () {
     function DxPopoverModule() {
     }
     DxPopoverModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoHideEventModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxoShowEventModule,
-                        DxiToolbarItemModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        hide_event_1.DxoHideEventModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        show_event_1.DxoShowEventModule,
+                        toolbar_item_dxi_1.DxiToolbarItemModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxPopoverComponent
                     ],
                     exports: [
                         DxPopoverComponent,
-                        DxoAnimationModule,
-                        DxoHideModule,
-                        DxoShowModule,
-                        DxoHideEventModule,
-                        DxoPositionModule,
-                        DxoAtModule,
-                        DxoBoundaryOffsetModule,
-                        DxoCollisionModule,
-                        DxoMyModule,
-                        DxoOffsetModule,
-                        DxoShowEventModule,
-                        DxiToolbarItemModule,
-                        DxTemplateModule
+                        animation_1.DxoAnimationModule,
+                        hide_1.DxoHideModule,
+                        show_1.DxoShowModule,
+                        hide_event_1.DxoHideEventModule,
+                        position_1.DxoPositionModule,
+                        at_1.DxoAtModule,
+                        boundary_offset_1.DxoBoundaryOffsetModule,
+                        collision_1.DxoCollisionModule,
+                        my_1.DxoMyModule,
+                        offset_1.DxoOffsetModule,
+                        show_event_1.DxoShowEventModule,
+                        toolbar_item_dxi_1.DxiToolbarItemModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxPopoverModule;
 }());
-export { DxPopoverModule };
+exports.DxPopoverModule = DxPopoverModule;
 //# sourceMappingURL=popover.js.map

@@ -1,7 +1,8 @@
+"use strict";
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,11 +11,12 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { PLATFORM_ID, Inject, NgModule } from '@angular/core';
-import { isPlatformServer } from '@angular/common';
-import * as ajax from 'devextreme/core/utils/ajax';
-import * as deferred from 'devextreme/core/utils/deferred';
-import { TransferState, makeStateKey, BrowserTransferStateModule } from '@angular/platform-browser';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var ajax = require("devextreme/core/utils/ajax");
+var deferred = require("devextreme/core/utils/deferred");
+var platform_browser_1 = require("@angular/platform-browser");
 var DxServerTransferStateModule = (function () {
     function DxServerTransferStateModule(state, platformId) {
         this.state = state;
@@ -26,8 +28,8 @@ var DxServerTransferStateModule = (function () {
                 for (var _i = 0; _i < arguments.length; _i++) {
                     args[_i] = arguments[_i];
                 }
-                var key = makeStateKey(that.generateKey(args)), cachedData = that.state.get(key, null);
-                if (isPlatformServer(that.platformId)) {
+                var key = platform_browser_1.makeStateKey(that.generateKey(args)), cachedData = that.state.get(key, null);
+                if (common_1.isPlatformServer(that.platformId)) {
                     var result = this.callBase.apply(this, args);
                     result.always(function (data, status) {
                         var dataForCache = {
@@ -64,18 +66,18 @@ var DxServerTransferStateModule = (function () {
         return keyValue;
     };
     DxServerTransferStateModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        BrowserTransferStateModule
+                        platform_browser_1.BrowserTransferStateModule
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxServerTransferStateModule.ctorParameters = function () { return [
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: platform_browser_1.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     return DxServerTransferStateModule;
 }());
-export { DxServerTransferStateModule };
+exports.DxServerTransferStateModule = DxServerTransferStateModule;
 //# sourceMappingURL=transfer-state.js.map

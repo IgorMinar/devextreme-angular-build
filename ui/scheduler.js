@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,22 +21,23 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChildren, QueryList } from '@angular/core';
-import DxScheduler from 'devextreme/ui/scheduler';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxoEditingModule } from './nested/editing';
-import { DxiResourceModule } from './nested/resource-dxi';
-import { DxiViewModule } from './nested/view-dxi';
-import { DxiResourceComponent } from './nested/resource-dxi';
-import { DxiViewComponent } from './nested/view-dxi';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
+var scheduler_1 = require("devextreme/ui/scheduler");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var editing_1 = require("./nested/editing");
+var resource_dxi_1 = require("./nested/resource-dxi");
+var view_dxi_1 = require("./nested/view-dxi");
+var resource_dxi_2 = require("./nested/resource-dxi");
+var view_dxi_2 = require("./nested/view-dxi");
 /**
  * The Scheduler is a widget that represents scheduled data and allows a user to manage and edit it.
  */
@@ -874,7 +876,7 @@ var DxSchedulerComponent = (function (_super) {
         configurable: true
     });
     DxSchedulerComponent.prototype._createInstance = function (element, options) {
-        return new DxScheduler(element, options);
+        return new scheduler_1.default(element, options);
     };
     DxSchedulerComponent.prototype.ngOnDestroy = function () {
         this._destroyWidget();
@@ -910,191 +912,191 @@ var DxSchedulerComponent = (function (_super) {
         }
     };
     DxSchedulerComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-scheduler',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxSchedulerComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxSchedulerComponent.propDecorators = {
-        "accessKey": [{ type: Input },],
-        "adaptivityEnabled": [{ type: Input },],
-        "allDayExpr": [{ type: Input },],
-        "appointmentCollectorTemplate": [{ type: Input },],
-        "appointmentTemplate": [{ type: Input },],
-        "appointmentTooltipTemplate": [{ type: Input },],
-        "cellDuration": [{ type: Input },],
-        "crossScrollingEnabled": [{ type: Input },],
-        "currentDate": [{ type: Input },],
-        "currentView": [{ type: Input },],
-        "customizeDateNavigatorText": [{ type: Input },],
-        "dataCellTemplate": [{ type: Input },],
-        "dataSource": [{ type: Input },],
-        "dateCellTemplate": [{ type: Input },],
-        "dateSerializationFormat": [{ type: Input },],
-        "descriptionExpr": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "dropDownAppointmentTemplate": [{ type: Input },],
-        "editing": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "endDateExpr": [{ type: Input },],
-        "endDateTimeZoneExpr": [{ type: Input },],
-        "endDayHour": [{ type: Input },],
-        "firstDayOfWeek": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "groupByDate": [{ type: Input },],
-        "groups": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "indicatorUpdateInterval": [{ type: Input },],
-        "max": [{ type: Input },],
-        "maxAppointmentsPerCell": [{ type: Input },],
-        "min": [{ type: Input },],
-        "noDataText": [{ type: Input },],
-        "recurrenceEditMode": [{ type: Input },],
-        "recurrenceExceptionExpr": [{ type: Input },],
-        "recurrenceRuleExpr": [{ type: Input },],
-        "remoteFiltering": [{ type: Input },],
-        "resourceCellTemplate": [{ type: Input },],
-        "resources": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "selectedCellData": [{ type: Input },],
-        "shadeUntilCurrentTime": [{ type: Input },],
-        "showAllDayPanel": [{ type: Input },],
-        "showCurrentTimeIndicator": [{ type: Input },],
-        "startDateExpr": [{ type: Input },],
-        "startDateTimeZoneExpr": [{ type: Input },],
-        "startDayHour": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "textExpr": [{ type: Input },],
-        "timeCellTemplate": [{ type: Input },],
-        "timeZone": [{ type: Input },],
-        "useDropDownViewSwitcher": [{ type: Input },],
-        "views": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onAppointmentAdded": [{ type: Output },],
-        "onAppointmentAdding": [{ type: Output },],
-        "onAppointmentClick": [{ type: Output },],
-        "onAppointmentContextMenu": [{ type: Output },],
-        "onAppointmentDblClick": [{ type: Output },],
-        "onAppointmentDeleted": [{ type: Output },],
-        "onAppointmentDeleting": [{ type: Output },],
-        "onAppointmentFormCreated": [{ type: Output },],
-        "onAppointmentFormOpening": [{ type: Output },],
-        "onAppointmentRendered": [{ type: Output },],
-        "onAppointmentUpdated": [{ type: Output },],
-        "onAppointmentUpdating": [{ type: Output },],
-        "onCellClick": [{ type: Output },],
-        "onCellContextMenu": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "adaptivityEnabledChange": [{ type: Output },],
-        "allDayExprChange": [{ type: Output },],
-        "appointmentCollectorTemplateChange": [{ type: Output },],
-        "appointmentTemplateChange": [{ type: Output },],
-        "appointmentTooltipTemplateChange": [{ type: Output },],
-        "cellDurationChange": [{ type: Output },],
-        "crossScrollingEnabledChange": [{ type: Output },],
-        "currentDateChange": [{ type: Output },],
-        "currentViewChange": [{ type: Output },],
-        "customizeDateNavigatorTextChange": [{ type: Output },],
-        "dataCellTemplateChange": [{ type: Output },],
-        "dataSourceChange": [{ type: Output },],
-        "dateCellTemplateChange": [{ type: Output },],
-        "dateSerializationFormatChange": [{ type: Output },],
-        "descriptionExprChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "dropDownAppointmentTemplateChange": [{ type: Output },],
-        "editingChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "endDateExprChange": [{ type: Output },],
-        "endDateTimeZoneExprChange": [{ type: Output },],
-        "endDayHourChange": [{ type: Output },],
-        "firstDayOfWeekChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "groupByDateChange": [{ type: Output },],
-        "groupsChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "indicatorUpdateIntervalChange": [{ type: Output },],
-        "maxChange": [{ type: Output },],
-        "maxAppointmentsPerCellChange": [{ type: Output },],
-        "minChange": [{ type: Output },],
-        "noDataTextChange": [{ type: Output },],
-        "recurrenceEditModeChange": [{ type: Output },],
-        "recurrenceExceptionExprChange": [{ type: Output },],
-        "recurrenceRuleExprChange": [{ type: Output },],
-        "remoteFilteringChange": [{ type: Output },],
-        "resourceCellTemplateChange": [{ type: Output },],
-        "resourcesChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "selectedCellDataChange": [{ type: Output },],
-        "shadeUntilCurrentTimeChange": [{ type: Output },],
-        "showAllDayPanelChange": [{ type: Output },],
-        "showCurrentTimeIndicatorChange": [{ type: Output },],
-        "startDateExprChange": [{ type: Output },],
-        "startDateTimeZoneExprChange": [{ type: Output },],
-        "startDayHourChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textExprChange": [{ type: Output },],
-        "timeCellTemplateChange": [{ type: Output },],
-        "timeZoneChange": [{ type: Output },],
-        "useDropDownViewSwitcherChange": [{ type: Output },],
-        "viewsChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "resourcesChildren": [{ type: ContentChildren, args: [DxiResourceComponent,] },],
-        "viewsChildren": [{ type: ContentChildren, args: [DxiViewComponent,] },],
+        "accessKey": [{ type: core_1.Input },],
+        "adaptivityEnabled": [{ type: core_1.Input },],
+        "allDayExpr": [{ type: core_1.Input },],
+        "appointmentCollectorTemplate": [{ type: core_1.Input },],
+        "appointmentTemplate": [{ type: core_1.Input },],
+        "appointmentTooltipTemplate": [{ type: core_1.Input },],
+        "cellDuration": [{ type: core_1.Input },],
+        "crossScrollingEnabled": [{ type: core_1.Input },],
+        "currentDate": [{ type: core_1.Input },],
+        "currentView": [{ type: core_1.Input },],
+        "customizeDateNavigatorText": [{ type: core_1.Input },],
+        "dataCellTemplate": [{ type: core_1.Input },],
+        "dataSource": [{ type: core_1.Input },],
+        "dateCellTemplate": [{ type: core_1.Input },],
+        "dateSerializationFormat": [{ type: core_1.Input },],
+        "descriptionExpr": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "dropDownAppointmentTemplate": [{ type: core_1.Input },],
+        "editing": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "endDateExpr": [{ type: core_1.Input },],
+        "endDateTimeZoneExpr": [{ type: core_1.Input },],
+        "endDayHour": [{ type: core_1.Input },],
+        "firstDayOfWeek": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "groupByDate": [{ type: core_1.Input },],
+        "groups": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "indicatorUpdateInterval": [{ type: core_1.Input },],
+        "max": [{ type: core_1.Input },],
+        "maxAppointmentsPerCell": [{ type: core_1.Input },],
+        "min": [{ type: core_1.Input },],
+        "noDataText": [{ type: core_1.Input },],
+        "recurrenceEditMode": [{ type: core_1.Input },],
+        "recurrenceExceptionExpr": [{ type: core_1.Input },],
+        "recurrenceRuleExpr": [{ type: core_1.Input },],
+        "remoteFiltering": [{ type: core_1.Input },],
+        "resourceCellTemplate": [{ type: core_1.Input },],
+        "resources": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "selectedCellData": [{ type: core_1.Input },],
+        "shadeUntilCurrentTime": [{ type: core_1.Input },],
+        "showAllDayPanel": [{ type: core_1.Input },],
+        "showCurrentTimeIndicator": [{ type: core_1.Input },],
+        "startDateExpr": [{ type: core_1.Input },],
+        "startDateTimeZoneExpr": [{ type: core_1.Input },],
+        "startDayHour": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "textExpr": [{ type: core_1.Input },],
+        "timeCellTemplate": [{ type: core_1.Input },],
+        "timeZone": [{ type: core_1.Input },],
+        "useDropDownViewSwitcher": [{ type: core_1.Input },],
+        "views": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onAppointmentAdded": [{ type: core_1.Output },],
+        "onAppointmentAdding": [{ type: core_1.Output },],
+        "onAppointmentClick": [{ type: core_1.Output },],
+        "onAppointmentContextMenu": [{ type: core_1.Output },],
+        "onAppointmentDblClick": [{ type: core_1.Output },],
+        "onAppointmentDeleted": [{ type: core_1.Output },],
+        "onAppointmentDeleting": [{ type: core_1.Output },],
+        "onAppointmentFormCreated": [{ type: core_1.Output },],
+        "onAppointmentFormOpening": [{ type: core_1.Output },],
+        "onAppointmentRendered": [{ type: core_1.Output },],
+        "onAppointmentUpdated": [{ type: core_1.Output },],
+        "onAppointmentUpdating": [{ type: core_1.Output },],
+        "onCellClick": [{ type: core_1.Output },],
+        "onCellContextMenu": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "adaptivityEnabledChange": [{ type: core_1.Output },],
+        "allDayExprChange": [{ type: core_1.Output },],
+        "appointmentCollectorTemplateChange": [{ type: core_1.Output },],
+        "appointmentTemplateChange": [{ type: core_1.Output },],
+        "appointmentTooltipTemplateChange": [{ type: core_1.Output },],
+        "cellDurationChange": [{ type: core_1.Output },],
+        "crossScrollingEnabledChange": [{ type: core_1.Output },],
+        "currentDateChange": [{ type: core_1.Output },],
+        "currentViewChange": [{ type: core_1.Output },],
+        "customizeDateNavigatorTextChange": [{ type: core_1.Output },],
+        "dataCellTemplateChange": [{ type: core_1.Output },],
+        "dataSourceChange": [{ type: core_1.Output },],
+        "dateCellTemplateChange": [{ type: core_1.Output },],
+        "dateSerializationFormatChange": [{ type: core_1.Output },],
+        "descriptionExprChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "dropDownAppointmentTemplateChange": [{ type: core_1.Output },],
+        "editingChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "endDateExprChange": [{ type: core_1.Output },],
+        "endDateTimeZoneExprChange": [{ type: core_1.Output },],
+        "endDayHourChange": [{ type: core_1.Output },],
+        "firstDayOfWeekChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "groupByDateChange": [{ type: core_1.Output },],
+        "groupsChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "indicatorUpdateIntervalChange": [{ type: core_1.Output },],
+        "maxChange": [{ type: core_1.Output },],
+        "maxAppointmentsPerCellChange": [{ type: core_1.Output },],
+        "minChange": [{ type: core_1.Output },],
+        "noDataTextChange": [{ type: core_1.Output },],
+        "recurrenceEditModeChange": [{ type: core_1.Output },],
+        "recurrenceExceptionExprChange": [{ type: core_1.Output },],
+        "recurrenceRuleExprChange": [{ type: core_1.Output },],
+        "remoteFilteringChange": [{ type: core_1.Output },],
+        "resourceCellTemplateChange": [{ type: core_1.Output },],
+        "resourcesChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "selectedCellDataChange": [{ type: core_1.Output },],
+        "shadeUntilCurrentTimeChange": [{ type: core_1.Output },],
+        "showAllDayPanelChange": [{ type: core_1.Output },],
+        "showCurrentTimeIndicatorChange": [{ type: core_1.Output },],
+        "startDateExprChange": [{ type: core_1.Output },],
+        "startDateTimeZoneExprChange": [{ type: core_1.Output },],
+        "startDayHourChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textExprChange": [{ type: core_1.Output },],
+        "timeCellTemplateChange": [{ type: core_1.Output },],
+        "timeZoneChange": [{ type: core_1.Output },],
+        "useDropDownViewSwitcherChange": [{ type: core_1.Output },],
+        "viewsChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "resourcesChildren": [{ type: core_1.ContentChildren, args: [resource_dxi_2.DxiResourceComponent,] },],
+        "viewsChildren": [{ type: core_1.ContentChildren, args: [view_dxi_2.DxiViewComponent,] },],
     };
     return DxSchedulerComponent;
-}(DxComponent));
-export { DxSchedulerComponent };
+}(component_1.DxComponent));
+exports.DxSchedulerComponent = DxSchedulerComponent;
 var DxSchedulerModule = (function () {
     function DxSchedulerModule() {
     }
     DxSchedulerModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxoEditingModule,
-                        DxiResourceModule,
-                        DxiViewModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        editing_1.DxoEditingModule,
+                        resource_dxi_1.DxiResourceModule,
+                        view_dxi_1.DxiViewModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxSchedulerComponent
                     ],
                     exports: [
                         DxSchedulerComponent,
-                        DxoEditingModule,
-                        DxiResourceModule,
-                        DxiViewModule,
-                        DxTemplateModule
+                        editing_1.DxoEditingModule,
+                        resource_dxi_1.DxiResourceModule,
+                        view_dxi_1.DxiViewModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxSchedulerModule;
 }());
-export { DxSchedulerModule };
+exports.DxSchedulerModule = DxSchedulerModule;
 //# sourceMappingURL=scheduler.js.map

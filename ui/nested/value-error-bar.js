@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoValueErrorBarComponent = (function (_super) {
     __extends(DxoValueErrorBarComponent, _super);
     function DxoValueErrorBarComponent(parentOptionHost, optionHost) {
@@ -129,37 +131,37 @@ var DxoValueErrorBarComponent = (function (_super) {
         configurable: true
     });
     DxoValueErrorBarComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-value-error-bar',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoValueErrorBarComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoValueErrorBarComponent.propDecorators = {
-        "color": [{ type: Input },],
-        "displayMode": [{ type: Input },],
-        "edgeLength": [{ type: Input },],
-        "highValueField": [{ type: Input },],
-        "lineWidth": [{ type: Input },],
-        "lowValueField": [{ type: Input },],
-        "opacity": [{ type: Input },],
-        "type": [{ type: Input },],
-        "value": [{ type: Input },],
+        "color": [{ type: core_1.Input },],
+        "displayMode": [{ type: core_1.Input },],
+        "edgeLength": [{ type: core_1.Input },],
+        "highValueField": [{ type: core_1.Input },],
+        "lineWidth": [{ type: core_1.Input },],
+        "lowValueField": [{ type: core_1.Input },],
+        "opacity": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
     };
     return DxoValueErrorBarComponent;
-}(NestedOption));
-export { DxoValueErrorBarComponent };
+}(nested_option_2.NestedOption));
+exports.DxoValueErrorBarComponent = DxoValueErrorBarComponent;
 var DxoValueErrorBarModule = (function () {
     function DxoValueErrorBarModule() {
     }
     DxoValueErrorBarModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoValueErrorBarComponent
                     ],
@@ -170,5 +172,5 @@ var DxoValueErrorBarModule = (function () {
     ];
     return DxoValueErrorBarModule;
 }());
-export { DxoValueErrorBarModule };
+exports.DxoValueErrorBarModule = DxoValueErrorBarModule;
 //# sourceMappingURL=value-error-bar.js.map

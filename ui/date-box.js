@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,28 +21,29 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { BrowserTransferStateModule } from '@angular/platform-browser';
-import { TransferState } from '@angular/platform-browser';
-import { Component, NgModule, ElementRef, NgZone, PLATFORM_ID, Inject, Input, Output, EventEmitter, ContentChild, forwardRef, HostListener, ContentChildren, QueryList } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = require("@angular/platform-browser");
+var platform_browser_2 = require("@angular/platform-browser");
+var core_1 = require("@angular/core");
 
-import DxDateBox from 'devextreme/ui/date_box';
-import { DxValidatorComponent } from './validator';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { DxComponent } from '../core/component';
-import { DxTemplateHost } from '../core/template-host';
-import { DxIntegrationModule } from '../core/integration';
-import { DxTemplateModule } from '../core/template';
-import { NestedOptionHost } from '../core/nested-option';
-import { WatcherHelper } from '../core/watcher-helper';
-import { IterableDifferHelper } from '../core/iterable-differ-helper';
-import { DxiButtonModule } from './nested/button-dxi';
-import { DxoOptionsModule } from './nested/options';
-import { DxoCalendarOptionsModule } from './nested/calendar-options';
-import { DxoDisplayFormatModule } from './nested/display-format';
-import { DxiButtonComponent } from './nested/button-dxi';
+var date_box_1 = require("devextreme/ui/date_box");
+var validator_1 = require("./validator");
+var forms_1 = require("@angular/forms");
+var component_1 = require("../core/component");
+var template_host_1 = require("../core/template-host");
+var integration_1 = require("../core/integration");
+var template_1 = require("../core/template");
+var nested_option_1 = require("../core/nested-option");
+var watcher_helper_1 = require("../core/watcher-helper");
+var iterable_differ_helper_1 = require("../core/iterable-differ-helper");
+var button_dxi_1 = require("./nested/button-dxi");
+var options_1 = require("./nested/options");
+var calendar_options_1 = require("./nested/calendar-options");
+var display_format_1 = require("./nested/display-format");
+var button_dxi_2 = require("./nested/button-dxi");
 var CUSTOM_VALUE_ACCESSOR_PROVIDER = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(function () { return DxDateBoxComponent; }),
+    provide: forms_1.NG_VALUE_ACCESSOR,
+    useExisting: core_1.forwardRef(function () { return DxDateBoxComponent; }),
     multi: true
 };
 /**
@@ -819,7 +821,7 @@ var DxDateBoxComponent = (function (_super) {
         configurable: true
     });
     DxDateBoxComponent.prototype._createInstance = function (element, options) {
-        return new DxDateBox(element, options);
+        return new date_box_1.default(element, options);
     };
     DxDateBoxComponent.prototype.writeValue = function (value) {
         this.eventHelper.lockedValueChangeEvent = true;
@@ -878,189 +880,189 @@ var DxDateBoxComponent = (function (_super) {
         }
     };
     DxDateBoxComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dx-date-box',
                     template: '',
                     providers: [
-                        DxTemplateHost,
-                        WatcherHelper,
+                        template_host_1.DxTemplateHost,
+                        watcher_helper_1.WatcherHelper,
                         CUSTOM_VALUE_ACCESSOR_PROVIDER,
-                        NestedOptionHost,
-                        IterableDifferHelper
+                        nested_option_1.NestedOptionHost,
+                        iterable_differ_helper_1.IterableDifferHelper
                     ]
                 },] },
     ];
     /** @nocollapse */
     DxDateBoxComponent.ctorParameters = function () { return [
-        { type: ElementRef, },
-        { type: NgZone, },
-        { type: DxTemplateHost, },
-        { type: WatcherHelper, },
-        { type: IterableDifferHelper, },
-        { type: NestedOptionHost, },
-        { type: TransferState, },
-        { type: undefined, decorators: [{ type: Inject, args: [PLATFORM_ID,] },] },
+        { type: core_1.ElementRef, },
+        { type: core_1.NgZone, },
+        { type: template_host_1.DxTemplateHost, },
+        { type: watcher_helper_1.WatcherHelper, },
+        { type: iterable_differ_helper_1.IterableDifferHelper, },
+        { type: nested_option_1.NestedOptionHost, },
+        { type: platform_browser_2.TransferState, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [core_1.PLATFORM_ID,] },] },
     ]; };
     DxDateBoxComponent.propDecorators = {
-        "validator": [{ type: ContentChild, args: [DxValidatorComponent,] },],
-        "acceptCustomValue": [{ type: Input },],
-        "accessKey": [{ type: Input },],
-        "activeStateEnabled": [{ type: Input },],
-        "adaptivityEnabled": [{ type: Input },],
-        "applyButtonText": [{ type: Input },],
-        "applyValueMode": [{ type: Input },],
-        "buttons": [{ type: Input },],
-        "calendarOptions": [{ type: Input },],
-        "cancelButtonText": [{ type: Input },],
-        "dateOutOfRangeMessage": [{ type: Input },],
-        "dateSerializationFormat": [{ type: Input },],
-        "deferRendering": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "disabledDates": [{ type: Input },],
-        "displayFormat": [{ type: Input },],
-        "dropDownButtonTemplate": [{ type: Input },],
-        "elementAttr": [{ type: Input },],
-        "focusStateEnabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "hint": [{ type: Input },],
-        "hoverStateEnabled": [{ type: Input },],
-        "inputAttr": [{ type: Input },],
-        "interval": [{ type: Input },],
-        "invalidDateMessage": [{ type: Input },],
-        "isValid": [{ type: Input },],
-        "max": [{ type: Input },],
-        "maxLength": [{ type: Input },],
-        "maxZoomLevel": [{ type: Input },],
-        "min": [{ type: Input },],
-        "minZoomLevel": [{ type: Input },],
-        "name": [{ type: Input },],
-        "opened": [{ type: Input },],
-        "openOnFieldClick": [{ type: Input },],
-        "pickerType": [{ type: Input },],
-        "placeholder": [{ type: Input },],
-        "readOnly": [{ type: Input },],
-        "rtlEnabled": [{ type: Input },],
-        "showAnalogClock": [{ type: Input },],
-        "showClearButton": [{ type: Input },],
-        "showDropDownButton": [{ type: Input },],
-        "spellcheck": [{ type: Input },],
-        "stylingMode": [{ type: Input },],
-        "tabIndex": [{ type: Input },],
-        "text": [{ type: Input },],
-        "type": [{ type: Input },],
-        "useMaskBehavior": [{ type: Input },],
-        "validationError": [{ type: Input },],
-        "validationMessageMode": [{ type: Input },],
-        "value": [{ type: Input },],
-        "valueChangeEvent": [{ type: Input },],
-        "visible": [{ type: Input },],
-        "width": [{ type: Input },],
-        "onChange": [{ type: Output },],
-        "onClosed": [{ type: Output },],
-        "onContentReady": [{ type: Output },],
-        "onCopy": [{ type: Output },],
-        "onCut": [{ type: Output },],
-        "onDisposing": [{ type: Output },],
-        "onEnterKey": [{ type: Output },],
-        "onFocusIn": [{ type: Output },],
-        "onFocusOut": [{ type: Output },],
-        "onInitialized": [{ type: Output },],
-        "onInput": [{ type: Output },],
-        "onKeyDown": [{ type: Output },],
-        "onKeyPress": [{ type: Output },],
-        "onKeyUp": [{ type: Output },],
-        "onOpened": [{ type: Output },],
-        "onOptionChanged": [{ type: Output },],
-        "onPaste": [{ type: Output },],
-        "onValueChanged": [{ type: Output },],
-        "acceptCustomValueChange": [{ type: Output },],
-        "accessKeyChange": [{ type: Output },],
-        "activeStateEnabledChange": [{ type: Output },],
-        "adaptivityEnabledChange": [{ type: Output },],
-        "applyButtonTextChange": [{ type: Output },],
-        "applyValueModeChange": [{ type: Output },],
-        "buttonsChange": [{ type: Output },],
-        "calendarOptionsChange": [{ type: Output },],
-        "cancelButtonTextChange": [{ type: Output },],
-        "dateOutOfRangeMessageChange": [{ type: Output },],
-        "dateSerializationFormatChange": [{ type: Output },],
-        "deferRenderingChange": [{ type: Output },],
-        "disabledChange": [{ type: Output },],
-        "disabledDatesChange": [{ type: Output },],
-        "displayFormatChange": [{ type: Output },],
-        "dropDownButtonTemplateChange": [{ type: Output },],
-        "elementAttrChange": [{ type: Output },],
-        "focusStateEnabledChange": [{ type: Output },],
-        "heightChange": [{ type: Output },],
-        "hintChange": [{ type: Output },],
-        "hoverStateEnabledChange": [{ type: Output },],
-        "inputAttrChange": [{ type: Output },],
-        "intervalChange": [{ type: Output },],
-        "invalidDateMessageChange": [{ type: Output },],
-        "isValidChange": [{ type: Output },],
-        "maxChange": [{ type: Output },],
-        "maxLengthChange": [{ type: Output },],
-        "maxZoomLevelChange": [{ type: Output },],
-        "minChange": [{ type: Output },],
-        "minZoomLevelChange": [{ type: Output },],
-        "nameChange": [{ type: Output },],
-        "openedChange": [{ type: Output },],
-        "openOnFieldClickChange": [{ type: Output },],
-        "pickerTypeChange": [{ type: Output },],
-        "placeholderChange": [{ type: Output },],
-        "readOnlyChange": [{ type: Output },],
-        "rtlEnabledChange": [{ type: Output },],
-        "showAnalogClockChange": [{ type: Output },],
-        "showClearButtonChange": [{ type: Output },],
-        "showDropDownButtonChange": [{ type: Output },],
-        "spellcheckChange": [{ type: Output },],
-        "stylingModeChange": [{ type: Output },],
-        "tabIndexChange": [{ type: Output },],
-        "textChange": [{ type: Output },],
-        "typeChange": [{ type: Output },],
-        "useMaskBehaviorChange": [{ type: Output },],
-        "validationErrorChange": [{ type: Output },],
-        "validationMessageModeChange": [{ type: Output },],
-        "valueChange": [{ type: Output },],
-        "valueChangeEventChange": [{ type: Output },],
-        "visibleChange": [{ type: Output },],
-        "widthChange": [{ type: Output },],
-        "onBlur": [{ type: Output },],
-        "change": [{ type: HostListener, args: ['valueChange', ['$event'],] },],
-        "touched": [{ type: HostListener, args: ['onBlur', ['$event'],] },],
-        "buttonsChildren": [{ type: ContentChildren, args: [DxiButtonComponent,] },],
+        "validator": [{ type: core_1.ContentChild, args: [validator_1.DxValidatorComponent,] },],
+        "acceptCustomValue": [{ type: core_1.Input },],
+        "accessKey": [{ type: core_1.Input },],
+        "activeStateEnabled": [{ type: core_1.Input },],
+        "adaptivityEnabled": [{ type: core_1.Input },],
+        "applyButtonText": [{ type: core_1.Input },],
+        "applyValueMode": [{ type: core_1.Input },],
+        "buttons": [{ type: core_1.Input },],
+        "calendarOptions": [{ type: core_1.Input },],
+        "cancelButtonText": [{ type: core_1.Input },],
+        "dateOutOfRangeMessage": [{ type: core_1.Input },],
+        "dateSerializationFormat": [{ type: core_1.Input },],
+        "deferRendering": [{ type: core_1.Input },],
+        "disabled": [{ type: core_1.Input },],
+        "disabledDates": [{ type: core_1.Input },],
+        "displayFormat": [{ type: core_1.Input },],
+        "dropDownButtonTemplate": [{ type: core_1.Input },],
+        "elementAttr": [{ type: core_1.Input },],
+        "focusStateEnabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "hint": [{ type: core_1.Input },],
+        "hoverStateEnabled": [{ type: core_1.Input },],
+        "inputAttr": [{ type: core_1.Input },],
+        "interval": [{ type: core_1.Input },],
+        "invalidDateMessage": [{ type: core_1.Input },],
+        "isValid": [{ type: core_1.Input },],
+        "max": [{ type: core_1.Input },],
+        "maxLength": [{ type: core_1.Input },],
+        "maxZoomLevel": [{ type: core_1.Input },],
+        "min": [{ type: core_1.Input },],
+        "minZoomLevel": [{ type: core_1.Input },],
+        "name": [{ type: core_1.Input },],
+        "opened": [{ type: core_1.Input },],
+        "openOnFieldClick": [{ type: core_1.Input },],
+        "pickerType": [{ type: core_1.Input },],
+        "placeholder": [{ type: core_1.Input },],
+        "readOnly": [{ type: core_1.Input },],
+        "rtlEnabled": [{ type: core_1.Input },],
+        "showAnalogClock": [{ type: core_1.Input },],
+        "showClearButton": [{ type: core_1.Input },],
+        "showDropDownButton": [{ type: core_1.Input },],
+        "spellcheck": [{ type: core_1.Input },],
+        "stylingMode": [{ type: core_1.Input },],
+        "tabIndex": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "type": [{ type: core_1.Input },],
+        "useMaskBehavior": [{ type: core_1.Input },],
+        "validationError": [{ type: core_1.Input },],
+        "validationMessageMode": [{ type: core_1.Input },],
+        "value": [{ type: core_1.Input },],
+        "valueChangeEvent": [{ type: core_1.Input },],
+        "visible": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
+        "onChange": [{ type: core_1.Output },],
+        "onClosed": [{ type: core_1.Output },],
+        "onContentReady": [{ type: core_1.Output },],
+        "onCopy": [{ type: core_1.Output },],
+        "onCut": [{ type: core_1.Output },],
+        "onDisposing": [{ type: core_1.Output },],
+        "onEnterKey": [{ type: core_1.Output },],
+        "onFocusIn": [{ type: core_1.Output },],
+        "onFocusOut": [{ type: core_1.Output },],
+        "onInitialized": [{ type: core_1.Output },],
+        "onInput": [{ type: core_1.Output },],
+        "onKeyDown": [{ type: core_1.Output },],
+        "onKeyPress": [{ type: core_1.Output },],
+        "onKeyUp": [{ type: core_1.Output },],
+        "onOpened": [{ type: core_1.Output },],
+        "onOptionChanged": [{ type: core_1.Output },],
+        "onPaste": [{ type: core_1.Output },],
+        "onValueChanged": [{ type: core_1.Output },],
+        "acceptCustomValueChange": [{ type: core_1.Output },],
+        "accessKeyChange": [{ type: core_1.Output },],
+        "activeStateEnabledChange": [{ type: core_1.Output },],
+        "adaptivityEnabledChange": [{ type: core_1.Output },],
+        "applyButtonTextChange": [{ type: core_1.Output },],
+        "applyValueModeChange": [{ type: core_1.Output },],
+        "buttonsChange": [{ type: core_1.Output },],
+        "calendarOptionsChange": [{ type: core_1.Output },],
+        "cancelButtonTextChange": [{ type: core_1.Output },],
+        "dateOutOfRangeMessageChange": [{ type: core_1.Output },],
+        "dateSerializationFormatChange": [{ type: core_1.Output },],
+        "deferRenderingChange": [{ type: core_1.Output },],
+        "disabledChange": [{ type: core_1.Output },],
+        "disabledDatesChange": [{ type: core_1.Output },],
+        "displayFormatChange": [{ type: core_1.Output },],
+        "dropDownButtonTemplateChange": [{ type: core_1.Output },],
+        "elementAttrChange": [{ type: core_1.Output },],
+        "focusStateEnabledChange": [{ type: core_1.Output },],
+        "heightChange": [{ type: core_1.Output },],
+        "hintChange": [{ type: core_1.Output },],
+        "hoverStateEnabledChange": [{ type: core_1.Output },],
+        "inputAttrChange": [{ type: core_1.Output },],
+        "intervalChange": [{ type: core_1.Output },],
+        "invalidDateMessageChange": [{ type: core_1.Output },],
+        "isValidChange": [{ type: core_1.Output },],
+        "maxChange": [{ type: core_1.Output },],
+        "maxLengthChange": [{ type: core_1.Output },],
+        "maxZoomLevelChange": [{ type: core_1.Output },],
+        "minChange": [{ type: core_1.Output },],
+        "minZoomLevelChange": [{ type: core_1.Output },],
+        "nameChange": [{ type: core_1.Output },],
+        "openedChange": [{ type: core_1.Output },],
+        "openOnFieldClickChange": [{ type: core_1.Output },],
+        "pickerTypeChange": [{ type: core_1.Output },],
+        "placeholderChange": [{ type: core_1.Output },],
+        "readOnlyChange": [{ type: core_1.Output },],
+        "rtlEnabledChange": [{ type: core_1.Output },],
+        "showAnalogClockChange": [{ type: core_1.Output },],
+        "showClearButtonChange": [{ type: core_1.Output },],
+        "showDropDownButtonChange": [{ type: core_1.Output },],
+        "spellcheckChange": [{ type: core_1.Output },],
+        "stylingModeChange": [{ type: core_1.Output },],
+        "tabIndexChange": [{ type: core_1.Output },],
+        "textChange": [{ type: core_1.Output },],
+        "typeChange": [{ type: core_1.Output },],
+        "useMaskBehaviorChange": [{ type: core_1.Output },],
+        "validationErrorChange": [{ type: core_1.Output },],
+        "validationMessageModeChange": [{ type: core_1.Output },],
+        "valueChange": [{ type: core_1.Output },],
+        "valueChangeEventChange": [{ type: core_1.Output },],
+        "visibleChange": [{ type: core_1.Output },],
+        "widthChange": [{ type: core_1.Output },],
+        "onBlur": [{ type: core_1.Output },],
+        "change": [{ type: core_1.HostListener, args: ['valueChange', ['$event'],] },],
+        "touched": [{ type: core_1.HostListener, args: ['onBlur', ['$event'],] },],
+        "buttonsChildren": [{ type: core_1.ContentChildren, args: [button_dxi_2.DxiButtonComponent,] },],
     };
     return DxDateBoxComponent;
-}(DxComponent));
-export { DxDateBoxComponent };
+}(component_1.DxComponent));
+exports.DxDateBoxComponent = DxDateBoxComponent;
 var DxDateBoxModule = (function () {
     function DxDateBoxModule() {
     }
     DxDateBoxModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     imports: [
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxoCalendarOptionsModule,
-                        DxoDisplayFormatModule,
-                        DxIntegrationModule,
-                        DxTemplateModule,
-                        BrowserTransferStateModule
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        calendar_options_1.DxoCalendarOptionsModule,
+                        display_format_1.DxoDisplayFormatModule,
+                        integration_1.DxIntegrationModule,
+                        template_1.DxTemplateModule,
+                        platform_browser_1.BrowserTransferStateModule
                     ],
                     declarations: [
                         DxDateBoxComponent
                     ],
                     exports: [
                         DxDateBoxComponent,
-                        DxiButtonModule,
-                        DxoOptionsModule,
-                        DxoCalendarOptionsModule,
-                        DxoDisplayFormatModule,
-                        DxTemplateModule
+                        button_dxi_1.DxiButtonModule,
+                        options_1.DxoOptionsModule,
+                        calendar_options_1.DxoCalendarOptionsModule,
+                        display_format_1.DxoDisplayFormatModule,
+                        template_1.DxTemplateModule
                     ]
                 },] },
     ];
     return DxDateBoxModule;
 }());
-export { DxDateBoxModule };
+exports.DxDateBoxModule = DxDateBoxModule;
 //# sourceMappingURL=date-box.js.map

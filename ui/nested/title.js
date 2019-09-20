@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,10 +21,11 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoTitleComponent = (function (_super) {
     __extends(DxoTitleComponent, _super);
     function DxoTitleComponent(parentOptionHost, optionHost) {
@@ -140,38 +142,38 @@ var DxoTitleComponent = (function (_super) {
         configurable: true
     });
     DxoTitleComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-title',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoTitleComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoTitleComponent.propDecorators = {
-        "font": [{ type: Input },],
-        "horizontalAlignment": [{ type: Input },],
-        "margin": [{ type: Input },],
-        "placeholderSize": [{ type: Input },],
-        "subtitle": [{ type: Input },],
-        "text": [{ type: Input },],
-        "verticalAlignment": [{ type: Input },],
-        "textOverflow": [{ type: Input },],
-        "wordWrap": [{ type: Input },],
-        "alignment": [{ type: Input },],
+        "font": [{ type: core_1.Input },],
+        "horizontalAlignment": [{ type: core_1.Input },],
+        "margin": [{ type: core_1.Input },],
+        "placeholderSize": [{ type: core_1.Input },],
+        "subtitle": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "verticalAlignment": [{ type: core_1.Input },],
+        "textOverflow": [{ type: core_1.Input },],
+        "wordWrap": [{ type: core_1.Input },],
+        "alignment": [{ type: core_1.Input },],
     };
     return DxoTitleComponent;
-}(NestedOption));
-export { DxoTitleComponent };
+}(nested_option_2.NestedOption));
+exports.DxoTitleComponent = DxoTitleComponent;
 var DxoTitleModule = (function () {
     function DxoTitleModule() {
     }
     DxoTitleModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoTitleComponent
                     ],
@@ -182,5 +184,5 @@ var DxoTitleModule = (function () {
     ];
     return DxoTitleModule;
 }());
-export { DxoTitleModule };
+exports.DxoTitleModule = DxoTitleModule;
 //# sourceMappingURL=title.js.map

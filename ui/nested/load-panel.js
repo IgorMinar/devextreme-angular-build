@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -11,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Thu Sep 19 2019
+ * Build date: Fri Sep 20 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -20,9 +21,10 @@ var __extends = (this && this.__extends) || (function () {
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { Component, NgModule, Host, SkipSelf, Input } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var nested_option_1 = require("../../core/nested-option");
+var nested_option_2 = require("../../core/nested-option");
 var DxoLoadPanelComponent = (function (_super) {
     __extends(DxoLoadPanelComponent, _super);
     function DxoLoadPanelComponent(parentOptionHost, optionHost) {
@@ -129,37 +131,37 @@ var DxoLoadPanelComponent = (function (_super) {
         configurable: true
     });
     DxoLoadPanelComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'dxo-load-panel',
                     template: '',
                     styles: [''],
-                    providers: [NestedOptionHost]
+                    providers: [nested_option_1.NestedOptionHost]
                 },] },
     ];
     /** @nocollapse */
     DxoLoadPanelComponent.ctorParameters = function () { return [
-        { type: NestedOptionHost, decorators: [{ type: SkipSelf }, { type: Host },] },
-        { type: NestedOptionHost, decorators: [{ type: Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.SkipSelf }, { type: core_1.Host },] },
+        { type: nested_option_1.NestedOptionHost, decorators: [{ type: core_1.Host },] },
     ]; };
     DxoLoadPanelComponent.propDecorators = {
-        "enabled": [{ type: Input },],
-        "height": [{ type: Input },],
-        "indicatorSrc": [{ type: Input },],
-        "shading": [{ type: Input },],
-        "shadingColor": [{ type: Input },],
-        "showIndicator": [{ type: Input },],
-        "showPane": [{ type: Input },],
-        "text": [{ type: Input },],
-        "width": [{ type: Input },],
+        "enabled": [{ type: core_1.Input },],
+        "height": [{ type: core_1.Input },],
+        "indicatorSrc": [{ type: core_1.Input },],
+        "shading": [{ type: core_1.Input },],
+        "shadingColor": [{ type: core_1.Input },],
+        "showIndicator": [{ type: core_1.Input },],
+        "showPane": [{ type: core_1.Input },],
+        "text": [{ type: core_1.Input },],
+        "width": [{ type: core_1.Input },],
     };
     return DxoLoadPanelComponent;
-}(NestedOption));
-export { DxoLoadPanelComponent };
+}(nested_option_2.NestedOption));
+exports.DxoLoadPanelComponent = DxoLoadPanelComponent;
 var DxoLoadPanelModule = (function () {
     function DxoLoadPanelModule() {
     }
     DxoLoadPanelModule.decorators = [
-        { type: NgModule, args: [{
+        { type: core_1.NgModule, args: [{
                     declarations: [
                         DxoLoadPanelComponent
                     ],
@@ -170,5 +172,5 @@ var DxoLoadPanelModule = (function () {
     ];
     return DxoLoadPanelModule;
 }());
-export { DxoLoadPanelModule };
+exports.DxoLoadPanelModule = DxoLoadPanelModule;
 //# sourceMappingURL=load-panel.js.map
