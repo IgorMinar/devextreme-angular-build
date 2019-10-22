@@ -1,6 +1,6 @@
 {
   "name": "devextreme-angular",
-  "version": "19.1.5",
+  "version": "19.1.6",
   "description": "Angular UI and visualization components based on DevExtreme widgets",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "author": "Developer Express Inc.",
   "license": "MIT",
   "peerDependencies": {
-    "devextreme": "~19.1.5",
+    "devextreme": "~19.1.6",
     "@angular/core": ">6.0.0",
     "@angular/common": ">6.0.0",
     "@angular/forms": ">6.0.0"
@@ -30,11 +30,11 @@
     "@types/mkdirp": "^0.3.29",
     "@types/node": "^6.0.51",
     "@types/yargs": "^6.3.2",
-    "codelyzer": "5.1.0",
+    "codelyzer": "2.0.0-beta.4",
     "core-js": "^2.4.1",
     "deepmerge": "^2.0.1",
     "del": "^2.2.0",
-    "devextreme": "~19.1.5",
+    "devextreme": "~19.1.6",
     "dot": "^1.0.3",
     "gulp": "^3.9.1",
     "gulp-header": "^1.8.8",
@@ -58,17 +58,19 @@
     "karma-webpack": "^2.0.9",
     "lite-server": "^2.2.0",
     "mkdirp": "^0.5.1",
-    "ng-packagr": "^5.5.0",
+    "ng-packagr": "^5.6.1",
+    "plugin-typescript": "^8.0.0",
     "puppeteer": "^1.11.0",
     "run-sequence": "^1.2.2",
-    "rxjs": "6.3.3",
+    "rxjs": "^6.0.0",
     "systemjs": "0.19.39",
-    "tslint": "^5.0.0",
-    "typescript": "~2.7.0",
+    "tslint": "^4.5.1",
+    "typescript": "~2.8.0",
     "webpack": "^3.8.1",
     "yargs": "^6.0.0",
     "zone.js": "^0.8.25"
   },
+  "main": "bundles/devextreme-angular.umd.js",
   "keywords": [
     "angular",
     "devextreme",
@@ -79,6 +81,7 @@
     "devextreme-schematics": "latest",
     "tslib": "^1.9.0"
   },
+  "schematics": "./schematics/collection.json",
   "module": "fesm5/devextreme-angular.js",
   "es2015": "fesm2015/devextreme-angular.js",
   "esm5": "esm5/devextreme-angular.js",
