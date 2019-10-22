@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -12,10 +12,8 @@
  */
 import { ElementRef, Renderer2, AfterViewInit, QueryList } from '@angular/core';
 import DevExpress from 'devextreme/bundles/dx.all';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxTemplateDirective } from '../../core/template';
-import { IDxTemplateHost, DxTemplateHost } from '../../core/template-host';
-import { CollectionNestedOption } from '../../core/nested-option';
+import { NestedOptionHost, DxTemplateDirective, IDxTemplateHost, DxTemplateHost } from 'devextreme-angular/core';
+import { CollectionNestedOption } from 'devextreme-angular/core';
 import { DxiItemComponent } from './item-dxi';
 export declare class DxiTabComponent extends CollectionNestedOption implements AfterViewInit, IDxTemplateHost {
     private renderer;

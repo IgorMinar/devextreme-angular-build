@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -11,10 +11,8 @@
  * https://github.com/DevExpress/devextreme-angular
  */
 import { ElementRef, Renderer2, AfterViewInit } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { DxTemplateDirective } from '../../core/template';
-import { IDxTemplateHost, DxTemplateHost } from '../../core/template-host';
-import { NestedOption } from '../../core/nested-option';
+import { NestedOptionHost, DxTemplateDirective, IDxTemplateHost, DxTemplateHost } from 'devextreme-angular/core';
+import { NestedOption } from 'devextreme-angular/core';
 export declare class DxoMasterDetailComponent extends NestedOption implements AfterViewInit, IDxTemplateHost {
     private renderer;
     private document;

@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -12,8 +12,8 @@
  */
 import { EventEmitter, QueryList } from '@angular/core';
 import DevExpress from 'devextreme/bundles/dx.all';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+import { NestedOptionHost } from 'devextreme-angular/core';
+import { NestedOption } from 'devextreme-angular/core';
 import { DxiBreakComponent } from './break-dxi';
 import { DxiConstantLineComponent } from './constant-line-dxi';
 import { DxiStripComponent } from './strip-dxi';
@@ -248,7 +248,7 @@ export declare class DxoArgumentAxisComponent extends NestedOption {
     period: number;
     startAngle: number;
     /**
-     * A handler for the visualRangeChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     visualRangeChange: EventEmitter<DevExpress.viz.VizRange | Array<number | string | Date>>;
     protected readonly _optionPath: string;

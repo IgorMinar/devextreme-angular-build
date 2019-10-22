@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,7 +10,7 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { NestedOption } from '../../../core/nested-option';
+import { NestedOption } from 'devextreme-angular/core';
 export declare abstract class DxoHtmlEditorMediaResizing extends NestedOption {
     allowedTargets: Array<string>;
     enabled: boolean;

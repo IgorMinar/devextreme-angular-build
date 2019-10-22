@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -11,8 +11,8 @@
  * https://github.com/DevExpress/devextreme-angular
  */
 import { EventEmitter } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
-import { NestedOption } from '../../core/nested-option';
+import { NestedOptionHost } from 'devextreme-angular/core';
+import { NestedOption } from 'devextreme-angular/core';
 export declare class DxoFilterPanelComponent extends NestedOption {
     customizeText: Function;
     filterEnabled: boolean;
@@ -23,7 +23,7 @@ export declare class DxoFilterPanelComponent extends NestedOption {
     };
     visible: boolean;
     /**
-     * A handler for the filterEnabledChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     filterEnabledChange: EventEmitter<boolean>;
     protected readonly _optionPath: string;

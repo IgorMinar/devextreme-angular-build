@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -10,7 +10,7 @@
  *
  * https://github.com/DevExpress/devextreme-angular
  */
-import { NestedOptionHost } from '../../core/nested-option';
+import { NestedOptionHost } from 'devextreme-angular/core';
 import { DxiTextEditorButton } from './base/text-editor-button-dxi';
 export declare class DxiButtonComponent extends DxiTextEditorButton {
     protected readonly _optionPath: string;

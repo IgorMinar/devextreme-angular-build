@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -11,15 +11,15 @@
  * https://github.com/DevExpress/devextreme-angular
  */
 import { EventEmitter } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
+import { NestedOptionHost } from 'devextreme-angular/core';
 import { DxoCalendarOptions } from './base/calendar-options';
 export declare class DxoCalendarOptionsComponent extends DxoCalendarOptions {
     /**
-     * A handler for the valueChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     valueChange: EventEmitter<Date | number | string>;
     /**
-     * A handler for the zoomLevelChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     zoomLevelChange: EventEmitter<string>;
     protected readonly _optionPath: string;

@@ -1,7 +1,7 @@
 /*!
  * devextreme-angular
  * Version: 19.1.6
- * Build date: Fri Sep 20 2019
+ * Build date: Tue Oct 22 2019
  *
  * Copyright (c) 2012 - 2019 Developer Express Inc. ALL RIGHTS RESERVED
  *
@@ -11,41 +11,41 @@
  * https://github.com/DevExpress/devextreme-angular
  */
 import { EventEmitter, QueryList } from '@angular/core';
-import { NestedOptionHost } from '../../core/nested-option';
+import { NestedOptionHost } from 'devextreme-angular/core';
 import { DxiDataGridColumn } from './base/data-grid-column-dxi';
 import { DxiButtonComponent } from './button-dxi';
 import { DxiValidationRuleComponent } from './validation-rule-dxi';
 export declare class DxiColumnComponent extends DxiDataGridColumn {
     /**
-     * A handler for the filterValueChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     filterValueChange: EventEmitter<any>;
     /**
-     * A handler for the filterValuesChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     filterValuesChange: EventEmitter<Array<any>>;
     /**
-     * A handler for the groupIndexChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     groupIndexChange: EventEmitter<number>;
     /**
-     * A handler for the selectedFilterOperationChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     selectedFilterOperationChange: EventEmitter<string>;
     /**
-     * A handler for the sortIndexChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     sortIndexChange: EventEmitter<number>;
     /**
-     * A handler for the sortOrderChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     sortOrderChange: EventEmitter<string>;
     /**
-     * A handler for the visibleChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     visibleChange: EventEmitter<boolean>;
     /**
-     * A handler for the visibleIndexChange event.
+     * This member supports the internal infrastructure and is not intended to be used directly from your code.
      */
     visibleIndexChange: EventEmitter<number>;
     protected readonly _optionPath: string;
